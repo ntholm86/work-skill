@@ -54,7 +54,7 @@ This *replaces* a standalone Intent invocation — it is not optional, only its 
 
 ### 2. Work — examine, challenge, decide, act
 
-Do the work. Scale the rigor of examination to the stakes, using the same lenses `improve` uses as thinking tools (not a checklist): **Purpose** (does the target achieve what it's for, against `.acm/destination.md`?), **Inconsistency**, **Overburden**, **Waste** — plus whatever the target actually invites (security, performance, correctness...). Name the lenses that were actually load-bearing; skip narrating the ones that weren't.
+Do the work. Scale the rigor of examination to the stakes, using the same lenses `improve` uses as thinking tools (not a checklist): **Purpose** (does the target achieve what it's for, against `.acm/destination.md`?), **Inconsistency** (does the target contradict itself or its own stated rules?), **Overburden** (does it ask more of its users or maintainers than it's worth?), **Waste** (does everything here still earn its place?) — plus whatever the target actually invites (security, performance, correctness...). Name the lenses that were actually load-bearing; skip narrating the ones that weren't.
 
 For anything beyond the most mechanical fix, ask once: *is the target's structure itself wrong, such that no incremental fix will help?* If yes, argue for redesign rather than patching — sketch the alternative, estimate the cost of redesign against the cost of continuing to patch, and stop for the operator's decision rather than redesigning unasked.
 
@@ -82,7 +82,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo (create it with a o
 
 - **Tier 3 — Full** (structural or architectural decisions, redesign arguments, anything the operator would want deeply audited, anything touching an area a past `[!REVERSAL]` or recurring finding-class already flagged). The complete original shape: Interpretation, Examination (lenses named), Challenge, Decision + Prediction, Action, Reflection (falsifiable model-claim, named blind spot, imagined expert pushback), the four across-trail triggers each explicitly evaluated, Candidate Next Moves.
 
-**Escalate a tier** (never de-escalate below what's honest) when: the operator pushes back, the change is hard to reverse, a past `[!REVERSAL]` touched this area, or something about the run surprised you mid-work. When genuinely unsure which tier, pick the higher one — the cost of over-recording a routine entry is small; the cost of under-recording a real decision is a broken audit trail.
+**Escalate a tier** (never de-escalate below what's honest) when: the operator pushes back, the change is hard to reverse, a past `[!REVERSAL]` touched this area, or something about the run surprised you mid-work. When genuinely unsure which tier, pick the higher one — the cost of over-recording a routine entry is small; the cost of under-recording a real decision is a broken audit trail. If the surprise surfaces only after the entry is already committed, don't edit it in place — append a short follow-up entry cross-referencing the original by slug, at whatever tier the new information actually warrants.
 
 Use `[!DECISION]`, `[!REALIZATION]`, and `[!REVERSAL]` markers exactly as the full suite does, at whatever tier — these markers are what makes the trail searchable and are never cut for cost, even in a Tier 1 entry, if one genuinely applies.
 

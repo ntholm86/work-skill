@@ -267,3 +267,28 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 
 1. The still-unresolved item, stated once and not re-argued: which external repo should `pea-lite` actually be tried on for a real *code* repo test (per `orientation.md`'s own noted successor test)? Both tests so far were content/markup repos with no code logic.
 2. Neither external run so far has exercised Tier 3 (Full) trail entries, a mid-run `[!REVERSAL]` of the agent's own decision, or the "argue for redesign" branch of step 2 — these remain the least-tested parts of the mechanism.
+
+## 2026-07-03 — kaizen-audit-lens-glosses-and-escalation-note
+
+**Tier: Standard.** Operator ran the (archived) Kaizen skill against `pea-lite/SKILL.md` as a document-target audit — first holistic, dimension-scored review of this file (distinct from the many prior Improve micro-fixes). Full scorecard, blind-spot analysis, and ROI-ranked priority queue were produced (overall 7.4/10, weighted toward Clarity/Audience-Fit and Mechanism Soundness given this file's confirmed stranger-pickup bar and its now-real empirical track record). Two of five findings were selected for this cycle by ROI; the operator then said "use improve skill to do it," so the actual edit was executed under Improve's decide/predict/act/verify discipline rather than Kaizen's own ACT phase narration.
+
+**Findings acted on:**
+1. Step 2's lens list defined **Purpose** inline but left **Inconsistency**, **Overburden**, **Waste** unglossed — a real violation of the confirmed stranger-pickup bar, not a style nit (a stranger has no way to decode Toyota-Production-System-derived terms without already having the full `improve` skill).
+2. The "Escalate a tier" paragraph had no guidance for a surprise surfacing *after* a trail entry is already committed — a real gap, evidenced by the `linkedin/` run's `TRAIL/.gitkeep` anomaly, which needed an improvised append-only follow-up entry rather than any prescribed pattern.
+
+**Decision + prediction.** Added inline parenthetical glosses to the three lenses (matching Purpose's existing style exactly) and one sentence to the escalation paragraph naming the append-a-follow-up pattern. Predicted both additions would fit without restructuring, total under ~60 words combined — confirmed by re-reading the edited sections: both landed as single in-place insertions, no reflow needed.
+
+**Findings deliberately not acted on this cycle (lower ROI, logged so they aren't silently dropped):** a worked Tier-2 trail example (Tier 1 already has one; Tier 2's prose recipe is already reasonably explicit and has real validated examples from this session); foreign/malformed `.acm/` format handling; concurrent-run race-condition guidance (explicitly rejected as in tension with the file's own anti-bloat design principle, not just deferred for cost).
+
+**Reflection.**
+- *Model of the target, falsifiable:* a periodic holistic audit (Kaizen-style) surfaces a different class of finding than iterative Improve passes do — Improve found and fixed one structural mechanism bug (mini-orient timing) via dogfooding, but neither Improve iteration this session caught the lens-gloss gap, because no single iteration was scoped to read the *whole* document against its own confirmed design bars at once. If a future holistic audit finds another gap Improve passes kept missing, that would confirm holistic and iterative review are genuinely complementary here, not redundant.
+- *Blind spot:* did not re-run the Kaizen CHECK phase (re-audit affected dimensions post-edit) — the scorecard above is not re-verified against the edited file in this entry.
+- *Imagined pushback:* someone could ask why an archived (v1_archive) skill was invoked at all instead of just running Improve again — answered by: the operator explicitly asked for Kaizen by name, and its holistic scored-dimension format did in fact surface a real gap that iterative Improve passes had missed three times over.
+
+**Across-trail triggers:** operator explicitly asked — fired (both the Kaizen invocation and the follow-up "use improve to do it" instruction). Recurring finding-class — not fired. Reversal — not fired. About to declare silence — not fired (changes were made).
+
+### Candidate Next Moves
+
+1. Run the Kaizen CHECK phase (re-audit Clarity and Completeness specifically) against the now-edited file to confirm the predicted score improvement actually landed, rather than assuming it.
+2. The two deferred-lower-ROI findings (Tier-2 worked example, foreign `.acm/` format handling) remain open, correctly deferred rather than silently dropped.
+3. Still unresolved: which external repo should `pea-lite` be tried on next for a real *code* test?
