@@ -36,3 +36,7 @@ Read as: build a genuinely usable, standalone skill — not a stub or a router t
 1. Run `pea-lite` for real, on a real target repo, and see whether the depth-tier judgment holds — this is the one untested mechanism and the fastest way to find out if it's right.
 2. Confirm or correct the two sourced inferences in `.acm/destination.md` (Probe excluded; personal-use-only scope for now) — low cost to check, meaningfully changes what gets built next if either is wrong.
 3. Once real use has happened a few times, decide whether `pea-skills-lite` belongs in `pea/.acm/destination.md`'s workspace-level layer table as a variant of the "Reasoning" layer — not done this session since that file is operator-held.
+
+## 2026-07-03 — confirm-probe-exclusion
+
+Asked whether Probe belongs in the lite consolidation; operator confirmed it doesn't ("I dont think the probe skill is needed in pea-skills-lite"). Updated `.acm/destination.md`'s sourced-inference entry from `[Inference, unconfirmed]` to `[Confirmed 2026-07-03]`. No change needed to `pea-lite/SKILL.md` itself — it already excluded Probe. No decisions, nothing else notable.

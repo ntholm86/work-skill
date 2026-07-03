@@ -28,7 +28,7 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 
 ## Sourced inferences (not literally stated — offered for confirmation, not blocking)
 
-- **[Inference, unconfirmed]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Treated as: Probe stays a separate, occasionally-invoked skill outside `pea-lite`, not folded in. **If wrong, say so** and a mini-Probe trigger can be added later.
+- **[Confirmed 2026-07-03]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Operator confirmed directly: "I dont think the probe skill is needed in pea-skills-lite." Probe stays a separate, occasionally-invoked skill outside `pea-lite`, not folded in — settled, not just assumed.
 - **[Inference, unconfirmed]** This is, for now, meant for the operator's own personal/local use across their own repos, not yet a public-distribution package with install scripts, badges, CI, etc. — mirroring `pea/skills`'s full packaging (install.ps1/.sh, CHANGELOG, CITATION.cff) is a later step, not this one. *Source:* the framing "I find myself mostly using..." reads as a personal-workflow observation; the ask was to "initiate ACM" and "initialize a repo," not to write install docs. **If wrong, say so** and full packaging can be added.
 
 ## Constraints carried over from the workspace destination
@@ -43,6 +43,6 @@ Not a fixed release. Working-in-use signal: the operator actually reaches for `p
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
-- Confirm or correct the two sourced inferences above.
+- Confirm or correct the remaining sourced inference above (personal-use scope for now).
 - Decide whether `pea-skills-lite` should eventually be listed as a variant of the "Reasoning" layer in `pea/.acm/destination.md`'s layer table (not done in this session — that file is operator-held and wasn't asked to be changed).
 - Decide whether to add install tooling (`install.ps1`/`install.sh`) mirroring `pea/skills` once the design has proven itself in real use.
