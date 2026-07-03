@@ -1,6 +1,6 @@
 ---
 name: pea-lite
-version: 2.1.0
+version: 2.1.1
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 ---
@@ -9,7 +9,7 @@ argument-hint: 'The target (repo, file, system) and the request itself'
 
 *One skill. The same governing principles. A fraction of the token cost.*
 
-**If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. `.acm/` is a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three files — `destination.md` (what this target is for), `orientation.md` (what recent work has concluded, once enough runs exist to conclude anything), and `audit-trail.md` (what happened and why, one entry per run). This file reads and writes those three files and needs nothing else: no tooling, no install step, no sibling files. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
+**If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. "Subagent" means a separate helper agent dispatched with its own fresh context; if your tooling has none, every mention of them is skippable. `.acm/` is short for Agent Context Memory — a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three files — `destination.md` (what this target is for), `orientation.md` (what recent work has concluded, once enough runs exist to conclude anything), and `audit-trail.md` (what happened and why, one entry per run). This file reads and writes those three files and needs nothing else: no tooling, no install step, no sibling files. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
 
 ## Why this exists, and what it trades away
 
@@ -38,7 +38,7 @@ Before anything else, check the **target repo's** `.acm/` folder (always at the 
   1. From the request and any visible repo signal (README, recent commits, folder structure), form **1-3 sourced guesses** about what this target is for and who it serves.
   2. Turn the single most load-bearing guess into **one short, answerable question**.
   3. Ask it. If the operator answers, write `.acm/destination.md` from the answer plus the unasked guesses (marked open — not asked, not confirmed). Plain markdown, no special format: what the target is for, who it serves, any confirmed constraints, then an "Open" list holding the unasked guesses.
-  4. If no answer is available this run (operator unreachable, or says "proceed"), write `.acm/destination.md` from your best reading, clearly marked `**Operator not yet confirmed** — revise on first pushback.` Don't block: a marked assumption is a legitimate, auditable state; a missing destination file is not.
+  4. If no answer is available this run (operator unreachable, or says "proceed"), write `.acm/destination.md` from your best reading, clearly marked unconfirmed — the recommended phrase, verbatim: `**Operator not yet confirmed** — revise on first pushback.` Any wording works as long as the unconfirmed status is impossible to miss. Don't block: a marked assumption is a legitimate, auditable state; a missing destination file is not.
   5. Never re-run this step automatically once `.acm/destination.md` exists — only when explicitly invoked, or when the operator's own signal says the destination is stale or thin.
   6. **Do not build other committed files around an unconfirmed guess in the same pass.** A guess labeled `unconfirmed` in `destination.md` does not license writing the rest of the target's files as though it were settled — ask before producing those artifacts too.
 
@@ -72,7 +72,7 @@ If you back out of something mid-run (tried X, reverted when Y proved it wrong),
 
 ### 3. Trail — always, every run, no exceptions
 
-Append one entry to `.acm/audit-trail.md` in the target repo, using the header format `## <date> — <slug>` (create the file with a one-line header if absent: `# Audit Trail — <repo name>`). This is the one step never skipped and never optional, however trivial the run: a run with no entry is a run that didn't happen, as far as anyone auditing later can tell.
+Append one entry to `.acm/audit-trail.md` in the target repo, using the header format `## <date> — <slug>` (create the file with a one-line header if absent: `# Audit Trail — <repo name>`, where the repo name is simply the name of the folder holding this `.acm/`). This is the one step never skipped and never optional, however trivial the run: a run with no entry is a run that didn't happen, as far as anyone auditing later can tell.
 
 **Depth tiers — pick the lowest one that's honest:**
 
@@ -98,7 +98,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
 
 **Escalate a tier — never de-escalate below what's honest — when:** the operator pushes back, the change is hard to reverse, a past `[!REVERSAL]` touched this area, or something about the run surprised you mid-work. Genuinely unsure which tier? Take the higher one: over-recording a routine entry costs little; under-recording a real decision breaks the audit trail. If a surprise surfaces only after the entry is committed, don't edit it in place — append a short follow-up entry cross-referencing the original by slug, at whatever tier the new information warrants.
 
-**Cost line — every entry, every tier.** End each entry with one line of observed run cost: a bucket (light / moderate / heavy) plus the countable proxies behind it — tool operations, files read or written, subagents dispatched. Use real token counts only if the platform actually exposes them; **never invent a token number** — a plausible-looking count with no source is fabricated telemetry in the one file that must never lie. And the cost line is telemetry to reflect on, never a target to minimize: cutting honest depth to make the line look cheaper is the de-escalation this step already forbids, now with a number attached.
+**Cost line — every entry, every tier.** End each entry with one line of observed run cost: a bucket (light / moderate / heavy) plus the countable proxies behind it — tool operations, files read or written, subagents dispatched. Count the proxies roughly but consistently from run to run — the trend across entries is what the mini-orient reads, not the unit definition. Use real token counts only if the platform actually exposes them; **never invent a token number** — a plausible-looking count with no source is fabricated telemetry in the one file that must never lie. And the cost line is telemetry to reflect on, never a target to minimize: cutting honest depth to make the line look cheaper is the de-escalation this step already forbids, now with a number attached.
 
 **Markers** make the trail searchable and are never cut for cost, at any tier, when one genuinely applies:
 
@@ -110,7 +110,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
 
 ### 4. Mini-Orient — every 5 entries since orientation.md was last written
 
-Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries **after its own dated header** (the `_Last updated: YYYY-MM-DD ..._` line it carries) — a repo with a long pre-existing trail should not have its mini-orient timed by history that predates this loop's involvement. At every 5th entry:
+Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries **after its own dated header** (the `_Last updated: YYYY-MM-DD ..._` line it carries) — a repo with a long pre-existing trail should not have its mini-orient timed by history that predates this loop's involvement. The mini-orient runs **in the same run that writes the 5th (10th, 15th…) entry** — not deferred to the next one:
 
 1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.

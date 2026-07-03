@@ -442,3 +442,13 @@ Operator's proposed resolution, stated directly: a score is legitimate *if and o
 Predicted: usable cost-trend data within ~5 entries; the guard sentence prevents tier-shopping. Outcome: edits verified in place; prediction's trend half is open until entries accumulate.
 Blind spot: "light/moderate/heavy" buckets are self-assigned and uncalibrated across models — a heavier model may bucket the same run differently. Next: let ~5 entries accumulate, then let the next mini-orient make the first cost-drift read.
 Cost: moderate — 3 tool ops, 2 files, no subagent (this entry is the mechanism's first datapoint).
+
+## 2026-07-03 — cold-read-retest-conditional-pass
+
+**Tier: Standard.** Bare ask ("use pea-lite skill") → hunch protocol: sourced two candidates from orientation.md's open items, asked; operator chose the cold-read re-test. Zero-context subagent read v2.1.0 against the stranger bar.
+
+**Outcome vs. prediction.** The standing claim predicted a clean pass. Result: **CONDITIONAL PASS** — half-confirmed, half-refuted. Confirmed: all 7 previously repaired defects stayed closed (the repairs were real), verdict improved FAIL → operable. Refuted: 5 *new* same-class items surfaced (`ACM` acronym unexplained, "subagent" unglossed, `<repo name>` ambiguous, every-5th off-by-one timing, verbatim-vs-example unconfirmed marker) plus a real friction point (cost-proxy counting consistency). [!REALIZATION] The pre-registered structural threshold fired: the explanation-defect class is generative — each audit finds new instances — so definitions were *concentrated* (ACM + subagent added to the existing newcomer terms paragraph, the file's de-facto glossary) rather than only scattering more inline glosses. The claim's stronger remedy (a separate glossary section) was judged unnecessary: the newcomer paragraph already is that structure; the defects were terms that had missed it.
+
+**Action.** All 5 items + the cost-counting friction repaired, v2.1.0 → 2.1.1. `ACM = Agent Context Memory` sourced from the spec repo (agent-context-memory/README.md), not invented. Also fixed in passing: a stray backtick artifact in step 0.4 left by the 2.0.1 edit. Friction items 2-3 (full-suite mentions distracting; tier judgment uncalibrated for first-timers) judged below the change bar — the first is a deliberate design trade already framed as skippable, the second is what the escalation rule and self-check exist to calibrate. Disclosed, not fixed.
+Blind spot: repairs again self-verified — but the trend across two audits (7 defects → 5 lesser ones → repaired set stays closed) suggests the loop converges rather than churns. Next: the real code-repo test, now the only open item of substance.
+Cost: moderate — 5 tool ops, 2 files, 1 subagent.
