@@ -365,3 +365,27 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Gloss `[!DECISION]`/`[!REALIZATION]`/`[!REVERSAL]` inline in `pea-lite/SKILL.md` itself, closing the same class of stranger-pickup gap the lens fix already addressed once — highest-ROI open item now, by direct analogy to item 1 of the original priority queue.
 2. Refresh `.acm/orientation.md` — still stale relative to everything folded in this session (nilsholmager.dk test, Kaizen audit, both fix cycles, this CHECK phase).
 3. Test `pea-lite` on a real *code* repo — the only way Mechanism Soundness's 6/10 can honestly move, since it's gated on external evidence this session hasn't produced.
+
+## 2026-07-03 — gloss-markers-and-bound-measurement-philosophy
+
+**Tier: Full.** Two things in one entry: (1) an Improve iteration closing the marker-gloss gap named in the CHECK-phase entry above; (2) a `[!REALIZATION]` the operator surfaced directly, about why Kaizen keeps getting reached for despite the full suite's own rejection of fixed scoring — material enough to warrant Full depth on its own.
+
+**Action (item 1).** Glossed `[!DECISION]`, `[!REALIZATION]`, `[!REVERSAL]` inline in step 3, matching the style already used for the four lenses — each now has a short parenthetical definition instead of deferring to "the full suite." Prediction: single in-place sentence edit, no restructuring. Verified by re-read: confirmed, one sentence replaced, rest of the paragraph unchanged.
+
+**The realization (item 2), sourced.** Operator noticed a pattern in their own behavior this session: repeatedly reaching for Kaizen specifically for its scored dimensions, despite the fact that (per operator: "we have been over that in the PEA skills — measurements was tried and set aside because it also gave blindness") the full suite already tried and rejected fixed scoring. Fetched `https://ntholm86.github.io/earned-autonomy/` to check this against the source rather than memory; confirmed verbatim: *"Metrics were tried — rubrics, fixed scoring, dynamic targets. Each surfaced the same realization: any metric prescribes a route, and if the agent optimizes toward a score, it limits its own reasoning and autonomy."*
+
+Operator's proposed resolution, stated directly: a score is legitimate *if and only if* it is explicitly understood as temporary and local — a diagnostic for reaching a "nearby plateau," not the destination itself — and is discarded or redefined the moment the destination or focus shifts, rather than persisting as a fixed target the agent starts optimizing toward. `[!REALIZATION]` This does not contradict the full suite's finding; it names the exact boundary condition the finding was implicitly drawing. A metric becomes the problem the full suite found (route-prescription, reasoning-narrowing) only once it outlives the plateau it was measuring and starts being treated as ground truth across destination-shifts. A metric that is explicitly time-boxed and discardable is a thermometer, not a route.
+
+**Applied to this session's own Kaizen numbers, retroactively:** the 7.4→~7.6/10 scores produced in the `kaizen-audit-lens-glosses-and-escalation-note` and `kaizen-check-phase-reaudit` entries above should be read as *local, plateau-relative diagnostics for pea-lite's current shape* — not as a fixed target this file should be optimized toward in perpetuity. If pea-lite's destination or scope materially shifts (e.g. it stops being a lite fork and becomes something else), those numbers become void, not a debt still owed.
+
+**Blind spot:** this entry states the resolution but does not yet encode it anywhere operationally (no change to how future Kaizen CHECK phases present their numbers) — it's captured as understanding, not yet as a rule. Left open deliberately rather than over-engineering a policy from one conversation.
+
+**Imagined pushback:** someone could argue this is a distinction without a difference — a "temporary" metric still shapes attention the same way a permanent one does while it's active. Fair, and unresolved here; the operator's own framing answers it partially (the discipline is in the *discarding*, not the *having*), but this hasn't been tested against a case where letting go of a plateau-score was actually hard to do in practice.
+
+**Across-trail triggers:** operator explicitly asked (implicitly, by raising the pattern and asking me to understand it) — fired. Recurring finding-class — fired (this is the second entry in a row surfacing a "same class of gap, different instance" pattern — first the marker-gloss/lens-gloss parallel, now the metrics-tension parallel). Contradicts prior realization — not fired; this refines rather than reverses the CHECK-phase entry's numbers. About to declare silence — not fired.
+
+### Candidate Next Moves
+
+1. If this measurement-philosophy resolution proves durable across future sessions, it may be worth a short, explicit note in `pea-lite/SKILL.md` itself (not just the trail) the next time Kaizen is invoked against it — something like "any score Kaizen produces here is a local diagnostic, void on destination-shift, never a standing target." Not done now, to avoid encoding a one-conversation insight as permanent doctrine prematurely.
+2. Refresh `.acm/orientation.md` — still the longest-standing stale item.
+3. Test `pea-lite` on a real *code* repo — still the only way Mechanism Soundness can honestly move.
