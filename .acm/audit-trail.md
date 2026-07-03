@@ -187,3 +187,33 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 
 1. `orientation.md` itself says not to restate "run pea-lite on a real target repo" a fourth time without either doing it or explaining the deferral. Explaining it now: it hasn't happened because no target repo has been specified, and picking one unilaterally would be a bigger, less-reversible choice than editing this file — the concrete unblock is to ask the operator directly which repo to try it on next, rather than defaulting to silently deferring again.
 2. Weigh the token/readability cost of this entry's own step-0 addition against the stranger-pickup and lean-files bars — not done this run, flagged rather than skipped silently.
+
+## 2026-07-03 — trim-step0-rule-for-stranger-bar
+
+**Tier: Standard.** Operator: "run the improve skill on C:\git\pea\pea-skills-lite" — target now explicit (this repo, not an external one; the still-open "run on a real unrelated repo" item remains unresolved by this entry, noted below rather than silently dropped).
+
+**Interpretation.** Continuing from the prior entry's own flagged follow-up: weigh the token/readability cost of the step-0 addition against the confirmed stranger-pickup and lean-files bars.
+
+**Examination (Waste + Purpose lenses).** Point 6 in step 0 (added last iteration) was ~90 words — the longest bullet in that list by a wide margin — and justified itself by citing "`pea-lite`'s own bootstrap... found by an Orient run on 2026-07-03." That citation is a real defect, not a style nit: a stranger dropping this file into their own project has no context for this repo's private history and doesn't need it to follow the rule. It directly worked against the stranger-pickup bar confirmed earlier this session.
+
+**Challenge.** The previous iteration's fix was substantively correct — the rule itself is worth keeping — but was written navel-gazing-inward instead of outward to a first-time reader. Incremental trim, not a reversal of the underlying decision.
+
+**Decision `[!DECISION]` + prediction.** Cut point 6 to match the terse, generic style of the other five points in step 0; removed the dated self-citation entirely. Predicted no loss of guidance and a cleaner read for someone with zero context on this repo's history — confirmed by re-reading the trimmed version against the same imagined-stranger test used in the earlier stranger-pickup review.
+
+**Action.** Edited `pea-lite/SKILL.md` step 0, point 6 (single bullet, ~90 words → ~40 words).
+
+**Reflection.**
+- *Model of the target, falsifiable:* this repo's own recent history is turning out to be a recurring source of exactly the kind of unexplained-context leakage the stranger-pickup bar was meant to catch — twice now (the sibling-skill references, and now this self-citation) a design fix motivated by this repo's own experience got written directly into the generically-distributed file instead of being generalized first. Future edits sourced from "what just happened in this repo's trail" should be checked against the stranger-pickup bar before being written, not after.
+- *Blind spot:* did not re-check the rest of step 0 (points 1-5, the ACM §4 paragraph) for the same self-citation pattern — only the newest addition was audited this run.
+- *Imagined pushback:* someone could ask whether the rule is even generalizable enough to keep without an example — answered by keeping the guidance itself (ask before building other artifacts) generic and self-evidently applicable, rather than needing a specific incident to justify it.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* FIRED — named explicitly in Reflection above (this repo's own history leaking into the generic file, twice now).
+- *About to declare silence:* not fired.
+- *Contradicts prior `[!REALIZATION]`:* not fired — refines the previous entry's fix rather than contradicting its underlying decision.
+- *Operator explicitly asked:* fired.
+
+### Candidate Next Moves
+
+1. Audit the rest of `pea-lite/SKILL.md` (points 1-5, the ACM §4 paragraph, the mini-Orient and Trail sections) for the same self-citation pattern — only the newest addition was checked this run.
+2. The still-standing, still-unresolved item: run `pea-lite` on a real, external, unrelated target repo. This run's target was explicitly this repo again, so it remains open — asking directly: which repo should this be tried on next?
