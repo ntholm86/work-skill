@@ -1,6 +1,6 @@
 ---
 name: pea-lite
-version: 2.0.0
+version: 2.0.1
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 ---
@@ -37,12 +37,12 @@ Before anything else, check the **target repo's** `.acm/` folder (always at the 
 - If neither exists, this is a first run against this target. Run the condensed Destination:
   1. From the request and any visible repo signal (README, recent commits, folder structure), form **1-3 sourced guesses** about what this target is for and who it serves.
   2. Turn the single most load-bearing guess into **one short, answerable question**.
-  3. Ask it. If the operator answers, write `.acm/destination.md` from the answer plus the unasked guesses (marked open — not asked, not confirmed).
+  3. Ask it. If the operator answers, write `.acm/destination.md` from the answer plus the unasked guesses (marked open — not asked, not confirmed). Plain markdown, no special format: what the target is for, who it serves, any confirmed constraints, then an "Open" list holding the unasked guesses.
   4. If no answer is available this run (operator unreachable, or says "proceed"), write `.acm/destination.md` from your best reading, clearly marked `**Operator not yet confirmed** — revise on first pushback.` Don't block: a marked assumption is a legitimate, auditable state; a missing destination file is not.
   5. Never re-run this step automatically once `.acm/destination.md` exists — only when explicitly invoked, or when the operator's own signal says the destination is stale or thin.
   6. **Do not build other committed files around an unconfirmed guess in the same pass.** A guess labeled `unconfirmed` in `destination.md` does not license writing the rest of the target's files as though it were settled — ask before producing those artifacts too.
 
-**Scoped memory (ACM §4).** Before trusting the target repo's own destination, walk parent directories upward looking for a higher-scope `.acm/destination.md`. Stop at a `.acm-root` marker file, the filesystem root, or after 4 levels. Higher scope wins on coordination matters. When the difference matters to a decision, label which scope you're reading from ("workspace mandate" vs. "repo mandate").
+**Scoped memory.** Before trusting the target repo's own destination, walk parent directories upward looking for a higher-scope `.acm/destination.md`. Stop at a `.acm-root` marker file (an empty file an operator drops at the top of a workspace to say "don't look higher"), the filesystem root, or after 4 levels. Higher scope wins on coordination matters. When the difference matters to a decision, label which scope you're reading from ("workspace mandate" vs. "repo mandate").
 
 ### 1. Understand the ask (Intent, fused)
 
@@ -72,7 +72,7 @@ If you back out of something mid-run (tried X, reverted when Y proved it wrong),
 
 ### 3. Trail — always, every run, no exceptions
 
-Append one entry to `.acm/audit-trail.md` in the target repo (create it with a one-line header if absent: `# Audit Trail — <repo name>`). This is the one step never skipped and never optional, however trivial the run: a run with no entry is a run that didn't happen, as far as anyone auditing later can tell.
+Append one entry to `.acm/audit-trail.md` in the target repo, using the header format `## <date> — <slug>` (create the file with a one-line header if absent: `# Audit Trail — <repo name>`). This is the one step never skipped and never optional, however trivial the run: a run with no entry is a run that didn't happen, as far as anyone auditing later can tell.
 
 **Depth tiers — pick the lowest one that's honest:**
 
@@ -85,7 +85,14 @@ Append one entry to `.acm/audit-trail.md` in the target repo (create it with a o
 
 - **Tier 2 — Standard** (a real choice existed between plausible alternatives, or the work could plausibly be second-guessed later). Compact: interpretation in one line (only if it wasn't obvious), decision plus a one-line prediction, outcome vs. prediction, one line naming the blind spot (or the nothing-found), and one line naming the most obvious next-step candidate if one stands out — skip it if none does; silence is valid here too. Skip the full reflection ceremony unless one of the escalation triggers below fires.
 
-- **Tier 3 — Full** (structural or architectural decisions, redesign arguments, anything the operator would want deeply audited, anything touching an area a past `[!REVERSAL]` or a recurring finding-class already flagged). The complete shape: interpretation, examination with lenses named, challenge, decision + prediction, action, reflection (a falsifiable claim about the target, a named blind spot, an imagined expert's pushback), the four across-trail triggers each explicitly evaluated, and candidate next moves.
+  ```
+  ## 2026-07-03 — split-config-loader
+  Read "clean up config handling" as splitting the loader, not rewriting it. [!DECISION] — rewrite was plausible but riskier.
+  Predicted the split leaves all 12 tests green; it did.
+  Blind spot: no test covers the env-override path. Next: cover it.
+  ```
+
+- **Tier 3 — Full** (structural or architectural decisions, redesign arguments, anything the operator would want deeply audited, anything touching an area a past `[!REVERSAL]` or a recurring finding-class — the same kind of defect turning up across separate runs — already flagged). The complete shape: interpretation, examination with lenses named, challenge, decision + prediction, action, reflection (a falsifiable claim about the target, a named blind spot, an imagined expert's pushback), the four across-trail triggers each explicitly evaluated — *did the operator ask for a deeper audit? is a recurring finding-class present? does this run contradict a prior `[!REALIZATION]`? is a silence declaration imminent?* — and candidate next moves.
 
 **Escalate a tier — never de-escalate below what's honest — when:** the operator pushes back, the change is hard to reverse, a past `[!REVERSAL]` touched this area, or something about the run surprised you mid-work. Genuinely unsure which tier? Take the higher one: over-recording a routine entry costs little; under-recording a real decision breaks the audit trail. If a surprise surfaces only after the entry is committed, don't edit it in place — append a short follow-up entry cross-referencing the original by slug, at whatever tier the new information warrants.
 
@@ -101,7 +108,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo (create it with a o
 
 Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries **after its own dated header** (the `_Last updated: YYYY-MM-DD ..._` line it carries) — a repo with a long pre-existing trail should not have its mini-orient timed by history that predates this loop's involvement. At every 5th entry:
 
-1. Read only the **last ~5-10 entries** — not the full history. That limit is the deliberate cut versus real Orient, which reads the whole arc.
+1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.
 3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries.
 4. If something material emerged, update `.acm/orientation.md` (create it if absent, dating its header) with a short "Current claims" section and a "Watch for" line. If nothing material emerged, say so in one line in this run's own trail entry and leave `orientation.md` alone — a mini-orient with nothing to say should say nothing.

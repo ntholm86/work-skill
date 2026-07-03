@@ -414,3 +414,24 @@ Operator's proposed resolution, stated directly: a score is legitimate *if and o
 1. Independent verification of the rewrite: have a different model (or the operator) read v2.0.0 cold against the stranger-pickup bar — the one check this run structurally cannot perform on itself.
 2. Refresh `.acm/orientation.md` — now even more stale; the rewrite is exactly the kind of material change a mini-orient should fold in.
 3. Test v2.0.0 on a real *code* repo — unchanged, still the missing data point.
+
+## 2026-07-03 — cold-read-verification-and-defect-repair
+
+**Tier: Full** (escalated: prediction failed mid-run — a surprise trigger). Run executed under pea-lite itself, on operator instruction ("use pea-lite skill to execute on that").
+
+**Interpretation.** "That" = the previous entry's Candidate Next Move #1: independent cold-read of v2.0.0 against the stranger-pickup bar. Rejected alternative: "that" = the orientation refresh — rejected as primary since the cold-read was explicitly flagged as *the* next step; but the mini-orient trigger had also fired (8 entries since orientation.md's dated header), so both were in scope. Independence achieved via a zero-context subagent — no session history, instructed to read only the SKILL.md file.
+
+**Decision + prediction.** [!DECISION] Dispatch cold reader before any further edits. Predicted: bar passes with 1-3 friction points; no missing mechanism.
+
+**Outcome vs. prediction.** [!REALIZATION] **Prediction half-failed: verdict was FAIL** — 7 defects, all explanation-layer (dangling `ACM §4` reference, unexplained `.acm-root`, `destination.md` format unspecified, no Tier 2 example, phantom "four across-trail triggers" never enumerated, "finding-class" unglossed, `~5-10` read-window fuzziness), plus 3 friction points. The no-missing-mechanism half held. This empirically confirms the previous entry's named blind spot: the author cannot verify its own file's self-sufficiency. New operational rule (encoded in orientation.md): a zero-context reader must run *before* any stranger-pickup claim, not after.
+
+**Action.** (1) Repaired all 7 defects in `pea-lite/SKILL.md`, version 2.0.0 → 2.0.1: §4 reference dropped, `.acm-root` glossed, `destination.md` shape specified in step 0.3, Tier 2 worked example added (also closes the long-deferred Kaizen item 3), the four across-trail triggers enumerated inline in Tier 3, "finding-class" glossed, header format stated at step 3's opening, read-window fuzziness explicitly marked deliberate. Friction point 3 (trigger list formatting) resolved by the enumeration; friction 1-2 judged below the change bar — disclosed, not fixed. (2) Mini-orient executed: orientation.md rewritten (replace-not-append per convention) — mechanism-layer-sound/explanation-layer-recurring finding-class promoted to the arc's central claim; author-self-verification limit recorded as demonstrated; accretion-seam prediction clock started (2.0.1 = patch #1).
+
+**Reflection.** Falsifiable claim: a second zero-context cold read of 2.0.1 will now pass the bar — if it fails again on *new* explanation-layer defects, the defect class is unbounded and the file needs a different structure (e.g., a glossary section), not more patches. Blind spot: the repair was again self-verified; the re-test loop is open and disclosed in orientation.md. Imagined pushback: "the subagent isn't truly a different model." Correct — but zero context is the load-bearing property for this bar, not model identity.
+
+**Across-trail triggers:** operator asked — fired (this run). Recurring finding-class — fired (third consecutive audit finding the same class; now promoted to orientation claim 1). Contradicts prior realization — fired in the useful sense: refutes the previous entry's implicit claim that the rewrite met the stranger bar. Silence imminent — no.
+
+### Candidate Next Moves
+
+1. Re-run the zero-context cold read against 2.0.1 to close the open verification loop.
+2. Real code-repo test — unchanged.
