@@ -217,3 +217,26 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 
 1. Audit the rest of `pea-lite/SKILL.md` (points 1-5, the ACM §4 paragraph, the mini-Orient and Trail sections) for the same self-citation pattern — only the newest addition was checked this run.
 2. The still-standing, still-unresolved item: run `pea-lite` on a real, external, unrelated target repo. This run's target was explicitly this repo again, so it remains open — asking directly: which repo should this be tried on next?
+
+## 2026-07-03 — audit-rest-of-file-for-self-citation
+
+**Tier: Standard.** Operator: "run the improve skill on C:\git\pea\pea-skills-lite" (repeated, same target). Continuing from the prior entry's own candidate next move #1.
+
+**Examination.** Read step 0 (bullets 1-5, the ACM §4 paragraph), steps 1 through 4, the Trail tier examples, and the self-check section, specifically hunting for the pattern just fixed: this repo's own private history (dates, entry slugs, "found by an Orient run") leaking into generically-distributed guidance.
+
+**Silence `[!DECISION]`.** Nothing found. **Bar tested:** self-referential/dated-citation leakage that violates the stranger-pickup bar, across every remaining section of the file. **Surfaces in scope:** step 0 bullets 1-5, the ACM §4 paragraph, steps 1-4, the Trail tier code example, self-check. **Bars not tested by this run:** general prose/jargon quality beyond this specific pattern, whether the illustrative example dates/slugs read naturally to a stranger, and the frontmatter `description` field (already flagged and explicitly left alone in an earlier entry — not re-litigated here). This is a bounded silence, not a claim that the file overall is finished.
+
+**Reflection.**
+- *Model of the target, falsifiable:* the self-citation pattern was real but localized — it appeared once (point 6, already fixed), not systemically. If a future run finds a second instance somewhere not listed in "surfaces in scope" above, that would mean this audit's bound was too narrow and should be revised.
+- *Blind spot:* did not re-read the frontmatter `description` or the intro blurb with fresh eyes this run — carried forward from prior entries' judgment without re-checking.
+- *Imagined pushback:* a careful reviewer might ask why a clean audit gets a Tier: Standard entry instead of Tier 1 (nothing found, arguably mechanical) — answered by: this closes out a named candidate-next-move from a Tier: Standard entry, and the bound itself (exactly which surfaces were checked) is worth recording at that level rather than a one-line log.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* not fired — this entry found nothing, breaking rather than extending the recent run of active findings.
+- *About to declare silence:* fired, per the Silence entry above — bar and surfaces named per 5a-equivalent discipline.
+- *Contradicts prior `[!REALIZATION]`:* not fired.
+- *Operator explicitly asked:* fired.
+
+### Candidate Next Moves
+
+1. The still-unresolved item, stated once and not re-argued: which external repo should `pea-lite` actually be tried on? This has been explained twice already (entries "improve-closes-orient-finding" and "trim-step0-rule-for-stranger-bar"); repeating the explanation a third time would itself become the kind of repetition-without-action this repo's own orientation.md warns against. Simply asking now.
