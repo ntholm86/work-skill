@@ -135,3 +135,25 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. If the operator ever shares this file with someone outside the project, treat their actual points of confusion as ground truth over this entry's guesses.
 2. The frontmatter `description` field still assumes suite-familiarity — low priority, flagged not fixed, since it's metadata rather than body text.
 3. First real non-meta run of `pea-lite` remains the biggest untested claim in this repo (carried over from the prior entry).
+
+## 2026-07-03 — orient-was-bootstrap-too-fast
+
+**Standalone Orient run** (the full skill, not pea-lite's mini-orient — operator explicitly requested it, and this isn't the 5th/10th entry anyway). No decision or action field — Orient is observational, per its own "what this skill does not do."
+
+**Destination read first:** workspace mandate (`pea/.acm/destination.md`, already read earlier this session) and this repo's own `.acm/destination.md` — including the newly-confirmed daily-default and stranger-pickup bars.
+
+**Freshness guard:** N/A. This repo has no `tools/record.py`, `history.md`, or `learning.md` by design — `pea-lite` deliberately cuts that derived-artifact tooling. Nothing to regenerate; noted rather than silently skipped.
+
+**Scope statement:** operator asked directly, "Did you start making the pea-lite skill too fast?" Read the full 6-entry trail to answer that question honestly, and form general arc-claims about the repo's short life so far.
+
+**Arc-claims** (full detail in `.acm/orientation.md`):
+1. The core mechanism (fused-intent, tiered trail, mini-orient cadence, mini-destination bootstrap) has needed zero corrections across 6 entries — the operator's original mandate was specific enough for fast construction to be appropriate there.
+2. **The framing/destination layer is a different story — yes, that part moved too fast.** The agent built committed files encoding unconfirmed inferences (Probe scope, installer permanence, daily-use scope, audience) in the same pass it formed them, instead of asking before writing. Destination's own guidance names exactly this situation ("a long autonomous run is about to start") as a moment to run the full conversational process *first*; the agent instead folded a condensed version into the bootstrap and only ran the full process after being explicitly told to.
+3. The trail shows genuine self-correction (entry 5 reversing entry 4's resolution once real signal arrived), which is good trail hygiene but does not excuse claim 2 — it's evidence something needed correcting, not evidence the pace was fine.
+4. The single largest untested claim, repeated across three entries now without being acted on: `pea-lite` has never been run on anything but itself.
+
+**Loop-effectiveness `[!REALIZATION]`:** yes, the bootstrap moved faster than its own confirmation loop — specifically, confirmation-seeking lagged behind artifact-construction. This repo's mandate happened to be unusually explicit, which limited the damage to cosmetic corrections; the same habit against thinner signal would likely produce more than cosmetic rework. Named as an operational rule in `orientation.md`: ask before encoding an unconfirmed inference into a committed file, not after.
+
+**Candidate Next Moves** (synthesized from repeated-but-unactioned prior suggestions):
+1. Actually run `pea-lite` on a real, unrelated target repo — this has been suggested in entries 1, 5, and 6 without being done. Named here as a repetition-without-action finding in its own right, not just restated a fourth time.
+2. Apply the "ask before encoding" rule the next time a genuinely open scope question comes up for this repo.
