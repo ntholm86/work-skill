@@ -12,11 +12,11 @@ The full suite was built during a period where token cost wasn't the binding con
 - **Orient** — a "mini" tripwire: a condensed arc-read every 5th trail entry, not the full freshness-guard/derived-artifact machinery.
 - **Trail** — always happens, every run, with a variable-depth entry format (Micro / Standard / Full) so routine work costs little and real decisions still get full reasoning.
 
-`probe` (contamination / pattern-matching detection) is intentionally left out of this consolidation for now — see `.acm/destination.md` for the reasoning and the open item.
+`probe` (contamination / pattern-matching detection) is intentionally excluded from this consolidation — confirmed by the operator, not a placeholder for later.
 
 ## Status
 
-v1.0.0 — first draft, not yet battle-tested against a real multi-session run. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the record of how this repo came to exist.
+v1.0.0 — confirmed as the operator's daily-usage skill going forward (superseding day-to-day use of the full `pea/skills` suite, which stays available for whatever still warrants its depth). Not yet battle-tested against a long multi-session run. A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `pea-lite/SKILL.md` and use it without the author explaining anything** — jargon or unexplained references to the original five-skill suite are defects. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the record of how this repo came to exist.
 
 ## Use
 

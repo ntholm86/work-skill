@@ -77,3 +77,32 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Watch whether the "trimming, not adding" pattern (inference 2 / the recurring-finding-class above) continues or breaks on the next interaction — if it breaks, that's worth its own trail note.
 2. When the operator is next available, confirm or correct inference 1 (daily-default) and inference 4 (audience) specifically — those are the two weakest and most consequential if wrong.
 3. Consider whether this run itself demonstrates that `pea-lite`'s mini-Destination step (auto-bootstrap only, no full conversational Destination) is correctly scoped — this full run happened *outside* pea-lite, on the operator's explicit request, exactly as `pea-lite/SKILL.md` says a full Destination invocation should when its own mini version isn't enough.
+
+## 2026-07-03 — destination-run-second-pass-operator-response
+
+**Tier: Standard.** Operator answered the four questions from the previous entry.
+
+**Responses, verbatim:**
+1. "Yes i want pea skills lite to become my new daily usage skill" — confirms inference 1.
+2. "yes i want the repo files kept clean" — confirms inference 2.
+3. "im not sure what you mean abotu question 3 i will decide later" — question 3 (workspace layer-table listing) was unclear as asked; operator wants to leave it open and decide later, not have it dropped as I'd provisionally done in the prior entry.
+4. "Yes it should also be that a stranger could pick up the skill" — confirms inference 4.
+
+**Decision `[!DECISION]`.** Updated `.acm/destination.md`: moved inferences 1, 2, 4 from "unconfirmed" to "confirmed" and reflected them as real statements in "Why this repo exists" (daily-default) and "What 'done' looks like" (stranger-pickup as an explicit second bar). For inference 3, reversed the prior entry's "dropped" resolution — the operator did not reject the item, they didn't understand the question and want to defer it; that is a materially different state from "not needed," and collapsing the two would have misrepresented an explicit operator request to keep something open as if I had judged it unnecessary. Added a one-line plain-language explanation of what the question was actually about, so it's answerable next time without needing to re-derive context. Also fixed stale wording in `README.md` ("left out for now" → "confirmed excluded") since Probe's status had already been confirmed but the README hadn't been updated to match — caught while touching the same section for the stranger-pickup bar.
+
+**Reflection.**
+- *Model of the target, falsifiable:* the "trimming, not adding" pattern named as `[!REALIZATION]` two entries ago just partially broke — the operator confirmed two trims (1, 2) but explicitly asked for one item to stay open (3), and confirmed a new commitment (4) that adds a real constraint (the stranger-pickup bar) rather than removing one. The pattern is better restated as "remove hedges I invent, but keep items the operator actually owns" — not a blanket preference for less process.
+- *Blind spot:* I have not yet tested whether the stranger-pickup bar changes anything concrete in `pea-lite/SKILL.md` itself (as opposed to the surrounding README/destination framing) — that file was written before this bar was confirmed, and hasn't been re-read against it yet.
+- *Imagined pushback:* someone might ask why item 3 wasn't just re-asked for clarification before editing anything — answer: the operator said "I will decide later," which is itself a complete, actionable answer (defer), even though the sub-question of *what* to decide remains unresolved; re-blocking on it would have ignored what they actually said.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* not fired — this entry corrects the pattern named two entries ago rather than extending it unchanged.
+- *About to declare silence:* not fired.
+- *Contradicts prior `[!REALIZATION]`:* fired — see Reflection above; the "trimming, not adding" realization from the prior entry is revised, not repeated as-is.
+- *Operator explicitly asked:* fired — direct responses to a direct question round.
+
+### Candidate Next Moves
+
+1. Re-read `pea-lite/SKILL.md` against the newly-confirmed stranger-pickup bar specifically — check for any unexplained jargon or assumed shared context with the operator that a genuine outside reader would trip on.
+2. When the operator wants to pick item 3 back up, the plain-language restatement is already in `.acm/destination.md` — no re-derivation needed.
+3. Watch whether "daily use" actually starts happening — the first real non-meta run of `pea-lite` against another target repo is still the single biggest untested claim in this repo.

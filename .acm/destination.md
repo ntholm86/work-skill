@@ -16,6 +16,8 @@ The full skills suite (`pea/skills`: intent, improve, destination, orient, trail
 
 `pea-skills-lite` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
 
+**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed `pea-lite` is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `pea-lite`.
+
 ## Operator's direct mandate
 
 Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audit-trail.md`, first entry). Verbatim requirements:
@@ -41,6 +43,8 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 
 Not a fixed release. Working-in-use signal: the operator actually reaches for `pea-lite` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
 
+**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `pea-lite/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
+
 ## Open items (not blocking, revisit when the operator has a moment)
 
 _(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
@@ -64,13 +68,13 @@ Operator asked to run the full Destination skill again (not the mini version). S
 
 All four inferences above were surfaced as direct questions. **The operator was not available to respond** ("Work autonomously and make good decisions").
 
-### What I now believe (provisional, unconfirmed — revise on first pushback)
+### What I now believe (confirmed 2026-07-03 by the operator, except where noted)
 
-- Treating `pea-lite` as the operator's intended default going forward. This does not delete or deprecate `pea/skills` — it stays available for whatever still warrants the full suite's depth.
-- Adopting inference 2 as a working practice immediately: no more speculative open items added to this repo's files unless asked for.
-- Resolving inference 3 by dropping the workspace-layer-table open item entirely (consistent with inference 2) rather than leaving it dangling or acting on it unasked.
-- Treating inference 4 as unconfirmed and *not* acting on it — no README changes inviting outside use. "ppl" is provisionally read as informal phrasing, not a stated audience requirement, but this is the least-confident of the four and should be the first one revisited if the operator says otherwise.
+- **Confirmed.** `pea-lite` is the operator's new daily-usage skill. "Yes i want pea skills lite to become my new daily usage skill." This is now stated in "Why this repo exists" above, not just this section.
+- **Confirmed.** Keep this repo's files clean — no speculative open items added unprompted. "yes i want the repo files kept clean." Adopted as an ongoing practice, not just a one-time correction.
+- **Deferred by the operator, not dropped.** The workspace-layer-table question confused as asked ("im not sure what you mean abotu question 3 i will decide later"). Clarifying it here for whenever it's picked back up: `pea/.acm/destination.md` (the workspace-level file, one directory up, operator-held) has a table listing the research program's repos by role (Theory, Construct, Runtime, Reasoning, etc.) — `pea/skills` is currently listed there as "Reasoning." The open question was whether `pea-skills-lite` should also get a row in that table, or stay unlisted since it's a fork of an already-listed repo. This is a real open item now, explicitly operator-owned and deferred — not one I invented and should trim per the lean-files practice above.
+- **Confirmed.** "ppl that can use it" was literal, not just phrasing: "Yes it should also be that a stranger could pick up the skill." This is now reflected as an explicit second success bar in "What 'done' looks like" above.
 
 ### What's still open
 
-- All four inferences above remain operator-unconfirmed. None are treated as settled the way the two bootstrap inferences are — they are working assumptions this run adopted in the absence of a response, not decisions.
+- The workspace-layer-table question (see above) — operator-deferred, revisit when they want to decide.
