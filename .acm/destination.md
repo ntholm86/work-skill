@@ -43,6 +43,34 @@ Not a fixed release. Working-in-use signal: the operator actually reaches for `p
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
-- Decide whether `pea-skills-lite` should eventually be listed as a variant of the "Reasoning" layer in `pea/.acm/destination.md`'s layer table (not done in this session — that file is operator-held and wasn't asked to be changed).
+_(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
 
 Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `pea-lite/SKILL.md`, not just a scope cut.
+
+---
+
+## Destination run — 2026-07-03 (second pass)
+
+Operator asked to run the full Destination skill again (not the mini version). Signal gathered: this file, `.acm/audit-trail.md`'s 4 entries, and the pattern across the two prior corrections this session.
+
+### Sourced inferences
+
+1. **[Direction, unconfirmed]** The operator wants `pea-lite` to become their actual day-to-day default, not a parallel experiment. *Source:* the original bootstrap message ("I find myself mostly using Intent and improve"), plus both corrections since bootstrap pushing toward permanence rather than provisional framing ("not ever," not "not yet").
+2. **[Priority, unconfirmed]** The operator wants this repo's files kept lean — no speculative "decide later" open items invented unprompted. *Source:* twice now (Probe exclusion, no-installer) the operator corrected an open item or hedge that was added without being asked for.
+3. **[Question being asked, resolved this run]** The one open item left (whether to list this repo in the workspace layer table) was itself something added unprompted, not requested.
+4. **[Quality bar, unconfirmed]** "ppl that can use it" may signal the actual bar is "a stranger could pick this up," not just "works for the operator."
+
+### Questions asked
+
+All four inferences above were surfaced as direct questions. **The operator was not available to respond** ("Work autonomously and make good decisions").
+
+### What I now believe (provisional, unconfirmed — revise on first pushback)
+
+- Treating `pea-lite` as the operator's intended default going forward. This does not delete or deprecate `pea/skills` — it stays available for whatever still warrants the full suite's depth.
+- Adopting inference 2 as a working practice immediately: no more speculative open items added to this repo's files unless asked for.
+- Resolving inference 3 by dropping the workspace-layer-table open item entirely (consistent with inference 2) rather than leaving it dangling or acting on it unasked.
+- Treating inference 4 as unconfirmed and *not* acting on it — no README changes inviting outside use. "ppl" is provisionally read as informal phrasing, not a stated audience requirement, but this is the least-confident of the four and should be the first one revisited if the operator says otherwise.
+
+### What's still open
+
+- All four inferences above remain operator-unconfirmed. None are treated as settled the way the two bootstrap inferences are — they are working assumptions this run adopted in the absence of a response, not decisions.

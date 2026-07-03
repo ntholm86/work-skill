@@ -44,3 +44,36 @@ Asked whether Probe belongs in the lite consolidation; operator confirmed it doe
 ## 2026-07-03 — no-installer-is-permanent-not-deferred
 
 Operator: "I dont want an installer, its should be so easy its just a skill that ppl can use." This corrects, rather than just confirms, the second bootstrap inference — I had framed the lack of an installer as a v1 scope cut ("later step, not this one"); the operator is saying it's permanent, and that ease-of-adoption (one file, no build step) is itself part of what "lite" means. Updated `.acm/destination.md` (inference marked `[Corrected 2026-07-03]`, install-tooling open item removed) and `README.md`'s Use section to state no installer will ever be built, rather than "not yet." No change needed to `pea-lite/SKILL.md` — it was already a single self-contained file with no install dependency. No decisions, nothing else notable.
+
+## 2026-07-03 — destination-run-second-pass
+
+**Tier: Standard.** Operator explicitly invoked the full Destination skill (not pea-lite's mini version) with no further argument.
+
+**Signal gathered:** `.acm/destination.md` (both bootstrap inferences already settled), this trail's 4 prior entries, and the pattern across the two corrections this session (both pushed unprompted-added hedges toward removal/permanence).
+
+**Sourced inferences formed** (full detail in `.acm/destination.md` under "Destination run — 2026-07-03 (second pass)"):
+1. Operator wants `pea-lite` as their actual daily default, not a parallel experiment — cited to the original bootstrap message and the direction of both corrections.
+2. Operator wants this repo's files kept lean, no speculative open items added unprompted — cited to both corrections explicitly removing hedges nobody asked for.
+3. The one remaining open item (workspace layer-table listing) was itself an unprompted addition.
+4. "ppl that can use it" may signal a "stranger could pick this up" bar, not just a personal-use bar.
+
+**Questions asked:** all four, via a direct question tool. **No operator response was available** ("Work autonomously and make good decisions").
+
+**Decision `[!DECISION]`.** Per Destination's own design ("silence is signal too," "make what is uncertain visible rather than resolve everything"), proceeded on the higher-confidence readings rather than blocking: adopted inference 1 and 2 as provisional working assumptions, resolved inference 3 by dropping the open item (consistent with inference 2), and explicitly did *not* act on inference 4 (lowest confidence, would require a visible README change) — left unconfirmed and flagged as the first one to revisit. All four are recorded in `.acm/destination.md` as unconfirmed/provisional, not settled the way the two bootstrap inferences are — this is a meaningful distinction: bootstrap inferences were confirmed/corrected by the operator directly; these were adopted in the absence of a response and must not be conflated with operator-confirmed destination in any future run.
+
+**Reflection.**
+- *Model of the target, falsifiable:* the operator's corrections so far form a consistent pattern — trimming unprompted scaffolding, not adding it. If a future correction instead asks me to *add* process back (e.g. "actually, track that open item"), that would overturn this run's read on inference 2 and should be treated as a real surprise, not absorbed quietly.
+- *Blind spot:* I have no direct evidence for inference 1 (pea-lite as literal daily default) beyond the original bootstrap framing — it's plausible but the two corrections since then were about specific design details, not about usage frequency. Weakest inference of the four next to inference 4.
+- *Imagined pushback:* an operator reviewing this later might ask why I asked four questions at once rather than one at a time as the Destination skill itself prescribes — answer: the interaction model here is turn-based (no live back-and-forth within one tool call), so batching was the closest available approximation, ordered by priority as the skill requires even though delivered together.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* FIRED — third entry in a row involving the operator correcting/trimming something this repo's own files claimed. Named explicitly as `[!REALIZATION]` above (the "trimming, not adding" pattern) rather than left implicit.
+- *About to declare silence:* not fired — this run produced concrete file changes.
+- *Contradicts prior `[!REALIZATION]`:* not fired.
+- *Operator explicitly asked:* fired — this whole run was operator-initiated ("Use the destination skill again").
+
+### Candidate Next Moves
+
+1. Watch whether the "trimming, not adding" pattern (inference 2 / the recurring-finding-class above) continues or breaks on the next interaction — if it breaks, that's worth its own trail note.
+2. When the operator is next available, confirm or correct inference 1 (daily-default) and inference 4 (audience) specifically — those are the two weakest and most consequential if wrong.
+3. Consider whether this run itself demonstrates that `pea-lite`'s mini-Destination step (auto-bootstrap only, no full conversational Destination) is correctly scoped — this full run happened *outside* pea-lite, on the operator's explicit request, exactly as `pea-lite/SKILL.md` says a full Destination invocation should when its own mini version isn't enough.
