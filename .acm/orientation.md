@@ -1,6 +1,6 @@
 # orientation.md — pea-skills-lite
 
-_Last updated: 2026-07-03 (run: orient-was-bootstrap-too-fast)_
+_Last updated: 2026-07-03 (run: orient-was-bootstrap-too-fast; brief fold-in note added after first external test, same day)_
 
 ## Current claims
 
@@ -10,12 +10,12 @@ _Last updated: 2026-07-03 (run: orient-was-bootstrap-too-fast)_
 
 3. **The trail shows genuine self-correction, not post-hoc rationalization — which is separate from, and does not excuse, claim 2.** Entry 5 explicitly reverses entry 4's "dropped" resolution on the workspace-listing question once the operator's actual answer came back, and names the reversal as a correction to a named prior `[!REALIZATION]` rather than quietly absorbing it. A trail this young showing an honest self-correction is a good sign for trail integrity — but it is evidence *of* claim 2 (something had to be corrected) as much as it is evidence of good trail hygiene.
 
-4. **The single largest untested claim in this repo is unchanged across three straight entries: `pea-lite` has never been run on anything but itself.** 5 of 6 trail entries are about pea-skills-lite's own bootstrap and destination-capture. The depth-tier judgment call — the one genuinely new mechanism not lifted directly from a source skill — remains completely unvalidated against real, non-meta work. Everything in claims 1-3 is reasoning about the *scaffolding*; none of it is evidence about whether the skill works.
+4. **Partially resolved.** `pea-lite` has now run once on a real external target (`c:\git\linkedin`, 2026-07-03): fresh mini-Destination bootstrap, one confirmed inference before acting (not after), a genuine silence outcome on the editorial-review portion, and — notably — the run caught and disclosed an anomaly (`TRAIL/.gitkeep` unexpectedly missing, cause unconfirmed) rather than absorbing it silently. That's a good first data point specifically against claim 2's finding (ask-before-building held this time). But it is one run, on a two-file markdown repo with no code and no structural complexity — it does not yet test the depth-tier judgment call under real pressure (competing plausible interpretations, higher stakes, larger surface area). The claim is downgraded from "completely unvalidated" to "validated once, on the easiest possible case."
 
 ## What the next runs should test
 
-- Run `pea-lite` on an actual, unrelated target repo — not this one. This is the most-repeated, least-acted-on candidate next move across the trail (present in entries 1, 5, and 6 in some form) and is now named here explicitly so it stops being restated without being done.
-- When a genuinely ambiguous scope question comes up for this repo again, ask before writing it into a committed file — not after. This is the direct operational fix for claim 2.
+- ~~Run `pea-lite` on an actual, unrelated target repo.~~ **Done 2026-07-03** (`linkedin/`) — see claim 4. Superseded by a sharper version: run it on a real *code* repo with actual structural stakes, not another small markdown-only target, to test the depth-tier call under real pressure.
+- When a genuinely ambiguous scope question comes up for this repo again, ask before writing it into a committed file — not after. This is the direct operational fix for claim 2. (First external run followed this correctly — one data point, not a closed loop.)
 
 ## Active operational rules
 
