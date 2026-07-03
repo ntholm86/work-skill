@@ -335,3 +335,33 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Finding 3 from the comparative-rating entry (no `probe` analog, unlike `orient` which is explicitly named as an upgrade path) remains open and undecided — not queued as urgent, but shouldn't be dropped silently.
 2. The Kaizen CHECK-phase re-audit remains the most direct way to verify the current ~7.5-8/10 comparative estimate rather than leave it as a prediction.
 3. Testing `pea-lite` on a real *code* repo (not markdown/content-only) remains the longest-standing deferred item this session.
+
+## 2026-07-03 — kaizen-check-phase-reaudit
+
+**Tier: Full.** Operator asked "what's next"; offered three sourced candidates (refresh `orientation.md`, run Kaizen CHECK phase, test on a real code repo); operator picked **Kaizen CHECK phase**. Escalating to Full because this run surfaces a recurring finding-class (undefined jargon — the same class as the already-fixed lens-gloss gap) and re-derives a numeric claim from a prior audit, both explicit escalation triggers.
+
+**Action.** The original Kaizen scorecard's full dimension table was never persisted as a file artifact — only summarized in the `kaizen-audit-lens-glosses-and-escalation-note` entry above ("overall 7.4/10, weighted toward Clarity/Mechanism Soundness"). Rather than reconstruct dimension scores from memory (a confabulation risk), retrieved the actual original message verbatim from the raw session transcript via `Select-String` + `ConvertFrom-Json`, extracted to a scratch temp file, and read it directly.
+
+**Re-score, dimension by dimension:**
+- Clarity & Audience Fit: 6 → 7.5. Named cause (undefined Inconsistency/Overburden/Waste) fixed. `[!REALIZATION]` **new finding**: `[!DECISION]`/`[!REALIZATION]`/`[!REVERSAL]` markers are specified only as "exactly as the full suite does" — a stranger without the full suite cannot decode them, the same class of gap as the one just fixed, and a direct contradiction of the file's own "no sibling file required" claim. Not fixed this entry (CHECK is observation-only).
+- Completeness: 6.5 → 7. Post-commit escalation gap closed; foreign/malformed `.acm/` format handling remains open (correctly deferred, ROI 1.0 in the original priority queue).
+- Internal Consistency: 8 → 8, unchanged. Minor watch-item: Tier 1's exclusion from the new next-move requirement is reasoned in the trail but not explained in the file's own text.
+- Actionability/Self-Containment: 9 → 9, unchanged (overlaps the marker-gloss finding above; not double-counted).
+- Proportionality: 8 → 8.5. Two further single-clause, evidence-traced additions since; discipline held.
+- Mechanism Soundness (empirical): 6 → 6, unchanged — no new external dogfooding occurred between the Kaizen fixes and this entry, so this honestly cannot move yet.
+- Innovation: 8 → 8, unchanged.
+
+**`[!REALIZATION]` Arithmetic check on the prior audit itself.** Recomputing the original scorecard's own stated weighting formula (Clarity ×1.5, Mechanism Soundness ×1.5, others ×1) against its own stated per-dimension numbers gives 7.19, not the 7.4 it reported — a real discrepancy, not a rounding nicety. Applying the same formula consistently to the revised numbers gives **≈7.6/10**, against a recomputed (not the original's stated) baseline of **≈7.2/10** — a genuine +0.4 improvement, attributable almost entirely to the two Kaizen-selected fixes. The two later comparative-rating fixes (rejected-alternative naming, Tier 2 next-move) are not reflected in this dimension table — they were sourced from a different audit (full-suite fidelity, not this Kaizen cycle) and don't map cleanly onto these seven dimensions; forcing them in would have been the kind of manufactured precision Convergence Is Silence warns against.
+
+**Reflection.**
+- *Model of the target, falsifiable:* every holistic audit pass on this file so far (both the original Kaizen cycle and this CHECK phase) has found at least one undefined-jargon instance that all prior iterative Improve passes missed. If a third holistic pass finds yet another instance, that would confirm this is a structural blind spot of iterative review specifically — not a one-off — and would argue for a standing "no unglossed markers" self-check rather than relying on periodic audits to keep catching it.
+- *Blind spot:* did not verify whether the original scorecard's arithmetic error changes any of the ROI rankings in the priority queue (items 3-5 remain deferred either way, so it's unlikely to matter operationally, but it wasn't explicitly checked).
+- *Imagined pushback:* someone could argue re-deriving a two-months-old score's arithmetic is pedantry given the practical ranking didn't change — the counter is that Orient's own adversarial-audit guidance ("diff vs. claim: do actual figures support the grand claims made") exists precisely because small unverified arithmetic drifts are how confabulation accumulates unnoticed across many audits.
+
+**Across-trail triggers:** operator explicitly asked — fired (picked this from the offered options). Recurring finding-class — fired (undefined-jargon gap recurring; see model-claim above). Contradicts prior realization — not fired. About to declare silence — not fired (produced new findings, though no code change).
+
+### Candidate Next Moves
+
+1. Gloss `[!DECISION]`/`[!REALIZATION]`/`[!REVERSAL]` inline in `pea-lite/SKILL.md` itself, closing the same class of stranger-pickup gap the lens fix already addressed once — highest-ROI open item now, by direct analogy to item 1 of the original priority queue.
+2. Refresh `.acm/orientation.md` — still stale relative to everything folded in this session (nilsholmager.dk test, Kaizen audit, both fix cycles, this CHECK phase).
+3. Test `pea-lite` on a real *code* repo — the only way Mechanism Soundness's 6/10 can honestly move, since it's gated on external evidence this session hasn't produced.
