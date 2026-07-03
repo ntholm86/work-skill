@@ -240,3 +240,30 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 ### Candidate Next Moves
 
 1. The still-unresolved item, stated once and not re-argued: which external repo should `pea-lite` actually be tried on? This has been explained twice already (entries "improve-closes-orient-finding" and "trim-step0-rule-for-stranger-bar"); repeating the explanation a third time would itself become the kind of repetition-without-action this repo's own orientation.md warns against. Simply asking now.
+## 2026-07-03 — fix-mini-orient-trigger-for-preexisting-trails `[!DECISION]`
+
+**Tier: Full.** Structural fix to a core mechanism, evidenced by real dogfooding rather than a hypothetical. Operator: "run improve on pea-skills-lite" preceded by two real external `pea-lite` runs this session — `linkedin/` (fresh bootstrap, no prior `.acm/`) and `nilsholmager.dk/` (17 pre-existing trail entries from the full skill suite, `.acm/` already established).
+
+**Examination.** The `nilsholmager.dk` run surfaced a genuine gap: step 4's mini-orient trigger counted *all* `## ` headers in `audit-trail.md` and fired every 5th, globally. That repo already had 17 entries before `pea-lite` touched it; `pea-lite`'s first entry became #18 — not a multiple of 5, so the mechanism would not have fired, despite `orientation.md` being 12 entries stale and obviously due for a refresh. The refresh only happened because step 0's own reading of `orientation.md` surfaced the staleness directly, not because the mini-orient trigger caught it. On a repo with pre-existing history, the mod-5 global counter is arbitrary relative to `pea-lite`'s own involvement: it could fire on the very first entry (if the pre-existing count happened to be a multiple of 4) or not fire for many entries, purely by accident of history that predates this loop.
+
+**Challenge.** Real bug or edge case not worth the complexity? Real — it happened on the second external test (not contrived), and "repo with pre-existing `.acm/` history" is exactly one of the two branches step 0 already explicitly handles (bootstrap vs. read-existing). A mechanism that only works correctly for the fresh-bootstrap branch is a real, not hypothetical, gap.
+
+**Decision + prediction.** Anchored the mini-orient counter to entries *since `orientation.md`'s own dated header*, not the trail's absolute position — counting from the trail's start only when `orientation.md` doesn't exist yet (unchanged behavior for the common fresh-repo case). Predicted this makes the trigger timing correct regardless of how much pre-existing history a target repo already has, without adding meaningful complexity (still a simple count, just anchored differently) — verified by re-reading the edited step 4 text against both the `linkedin` case (no `orientation.md`, count-from-start, unaffected) and the `nilsholmager.dk` case (would now correctly count from its dated header forward, catching staleness within 5 real `pea-lite` entries instead of an arbitrary global position).
+
+**Action.** Edited `pea-lite/SKILL.md` step 4's heading and first paragraph.
+
+**Reflection.**
+- *Model of the target, falsifiable:* dogfooding against real, differently-shaped repos (fresh vs. established) surfaces structural gaps that reasoning about the design in the abstract does not — if a third external test (on an actual code repo, per orientation.md's own next-test note) surfaces another such gap, that would confirm this is the more productive way to find `pea-lite`'s real weaknesses going forward, over further self-review.
+- *Blind spot:* did not verify this fix against a repo where `orientation.md` exists but its dated header is malformed, missing, or ambiguous to parse — an edge case within the edge case, not tested here.
+- *Imagined pushback:* someone could ask why not just always count from `orientation.md`'s date regardless of whether it exists — answered by: when it doesn't exist yet, there's nothing to anchor to, so counting from the trail's start is the only coherent behavior, and happens to match the original (working) fresh-repo mechanism exactly.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* not fired — first mechanism-level (not framing-level) fix found via external dogfooding.
+- *About to declare silence:* not fired.
+- *Contradicts prior `[!REALIZATION]`:* not fired.
+- *Operator explicitly asked:* fired — operator asked to focus on `pea-skills-lite` using the two real samples just gathered.
+
+### Candidate Next Moves
+
+1. The still-unresolved item, stated once and not re-argued: which external repo should `pea-lite` actually be tried on for a real *code* repo test (per `orientation.md`'s own noted successor test)? Both tests so far were content/markup repos with no code logic.
+2. Neither external run so far has exercised Tier 3 (Full) trail entries, a mid-run `[!REVERSAL]` of the agent's own decision, or the "argue for redesign" branch of step 2 — these remain the least-tested parts of the mechanism.

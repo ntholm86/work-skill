@@ -88,9 +88,9 @@ Use `[!DECISION]`, `[!REALIZATION]`, and `[!REVERSAL]` markers exactly as the fu
 
 **What's cut vs. the full Trail skill, on purpose:** no `history.md`/`learning.md` derived-artifact regeneration, no `record.py` dependency, no writer-splitting (having a second, independent agent write the trail entry so the same agent that made the decision can't also be the one who describes it — a stronger anti-rationalization safeguard than this file uses). None of that is required to use this file. If you separately have access to the full suite's `record.py` tooling, it can run against this same `audit-trail.md` later — the entry header format (`## <date> — <slug>`) and marker vocabulary are kept compatible on purpose — but that's optional, not a dependency of anything above.
 
-### 4. Mini-Orient — every 5th iteration
+### 4. Mini-Orient — every 5 entries since orientation.md was last written
 
-Count entries in `.acm/audit-trail.md` (count `## ` headers). When the entry you're about to write would be the 5th, 10th, 15th... in that count:
+Count `## ` headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries written **after its own dated header** — a repo that already had a long trail before this skill ever touched it should not have its first mini-orient timed by an arbitrary global position in history that predates this loop's involvement. When that count reaches 5 (and every 5 after):
 
 1. Read only the **last ~5-10 entries** (not the full history — that's the deliberate cut vs. real Orient, which reads the whole arc).
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what's changing.
