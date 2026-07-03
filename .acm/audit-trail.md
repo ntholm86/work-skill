@@ -292,3 +292,28 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Run the Kaizen CHECK phase (re-audit Clarity and Completeness specifically) against the now-edited file to confirm the predicted score improvement actually landed, rather than assuming it.
 2. The two deferred-lower-ROI findings (Tier-2 worked example, foreign `.acm/` format handling) remain open, correctly deferred rather than silently dropped.
 3. Still unresolved: which external repo should `pea-lite` be tried on next for a real *code* test?
+
+## 2026-07-03 — comparative-rating-vs-full-suite
+
+**Tier: Standard.** Operator asked "how good is the skill now? Compare it to other skills — rate it. understand my intent." Interpreted as: a comparative fidelity/coverage audit of `pea-lite` against the five full-suite skills it was forked from (`intent`, `improve`, `destination`, `orient`, `trail`), not a re-run of the prior Kaizen scorecard. Read all four live full-suite skill files in full to do this precisely rather than from memory. No code change requested or made in this entry — pure evaluation, per Convergence Is Silence a rating-only outcome is legitimate.
+
+**Findings (new, surfaced only by direct line-by-line comparison, not previously named in this session):**
+1. Intent's `Extract` step requires naming an alternative interpretation *considered and rejected* ("if you cannot name one, you probably pattern-matched rather than interpreted"). `pea-lite`'s fused step 1 material-divergence branch only requires stating the believed destination and success criteria — it does not carry forward the rejected-alternative requirement. Real fidelity gap.
+2. Improve's step 4b (Offer Next Moves) runs every iteration, ranked, regardless of stakes. `pea-lite` only includes "Candidate Next Moves" inside Tier 3 (Full) trail entries — the majority of real runs (Tier 1/2) never surface a next-move signal at all. Unlike the writer-splitting and `history.md`/`learning.md` cuts (both explicitly disclosed in the file's own text as deliberate), this gap is not named anywhere in `pea-lite/SKILL.md` — it was found only by comparison, not by the file's own self-description.
+3. No analog to `probe` (adversarial/independent-evaluator audit) exists in or is referenced by `pea-lite`, unlike `orient`, which is explicitly named as an available heavier upgrade path. Likely a defensible permanent omission (probe's value is evaluator independence, which one fused skill structurally cannot provide) — but it should be named as a permanent gap, not left silently absent, for parity with how the other cuts are handled.
+
+**Comparative scoring (rough, not a formal Kaizen re-run):** principle fidelity 9/10; Intent-step fidelity 7/10 (finding 1); Improve-step fidelity 8/10 (finding 2, otherwise strong post-Kaizen-fix); Destination-step fidelity 8/10; Orient-step fidelity 7/10 (no scope-statement requirement, no adversarial-audit-mode analog); Trail-step fidelity 9/10 (tiering is arguably an improvement over full Trail's flatter ceremony, not merely a cut). Overall ~7.5-8/10. Kaizen's own prior 7.4/10 scorecard was not re-run here — its CHECK phase remains open from the previous entry.
+
+**Reflection.** `[!REALIZATION]` The file is markedly more honest about what it *deliberately* cuts (writer-splitting, derived-artifact regeneration — both named explicitly in its own text) than about what it silently fails to carry forward (findings 1 and 2 above, neither mentioned anywhere in the file). This is a genuine model-claim about the target: self-audits of `pea-lite` that only read the file's own text will systematically miss the second category, because the file doesn't flag its own blind spots there the way it flags its acknowledged cuts. Only a direct comparison against the source skills surfaced them.
+
+**Named blind spot:** this entry did not check whether findings 1 or 2 have already caused a real problem in either external test run (`linkedin`, `nilsholmager.dk`) — it's a structural comparison, not evidence of actual harm yet.
+
+**Imagined pushback:** a reader could argue finding 2 is fine as-is, since Tier 1/2 runs are by definition low-stakes and a next-move ranking matters least there — the counter is that most *real* runs land at Tier 1/2, so if next-move signal has value at all, this is where most of it is currently being lost.
+
+**Across-trail triggers:** operator explicitly asked — fired. Recurring finding-class — not fired (first time comparing against the full suite this precisely). Contradicts prior realization — not fired. About to declare silence — not fired (three real findings produced; none acted on this entry, by design, since only a rating was requested).
+
+### Candidate Next Moves
+
+1. Decide whether finding 1 (rejected-alternative naming) is worth a one-clause addition to step 1's material-divergence branch.
+2. Decide whether finding 2 (Offer-Next-Moves at Tier 3 only) is an intentional design choice worth stating explicitly in the file's "what's cut" disclosure, or a real coverage gap worth extending to Tier 2.
+3. The still-open Kaizen CHECK-phase re-audit (from the previous entry) remains the most direct way to verify the ~7.5-8/10 estimate above rather than leave it as a prediction.
