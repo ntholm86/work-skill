@@ -389,3 +389,28 @@ Operator's proposed resolution, stated directly: a score is legitimate *if and o
 1. If this measurement-philosophy resolution proves durable across future sessions, it may be worth a short, explicit note in `pea-lite/SKILL.md` itself (not just the trail) the next time Kaizen is invoked against it — something like "any score Kaizen produces here is a local diagnostic, void on destination-shift, never a standing target." Not done now, to avoid encoding a one-conversation insight as permanent doctrine prematurely.
 2. Refresh `.acm/orientation.md` — still the longest-standing stale item.
 3. Test `pea-lite` on a real *code* repo — still the only way Mechanism Soundness can honestly move.
+
+## 2026-07-03 — full-authorial-rewrite-v2-by-new-model
+
+**Tier: Full.** [!DECISION] Complete authorial rewrite of `pea-lite/SKILL.md`, version 1.0.0 → 2.0.0. Model identity, for provenance: Claude Fable 5 (first session with this model; all prior entries this arc were authored by a different Claude model). Operator's ask, near-verbatim: read the repo, the `.acm/` (especially destination), and the skill; understand it; then "re-write the entire skill so that YOU are the AI that created the basis for the skill. We dont want to lose quality — we want to raise it."
+
+**Interpretation.** Read as: full rewrite in the new model's own authorial voice, raising prose quality and coherence — *not* a mechanism redesign. Rejected alternative reading: "created the basis" = invent a new loop from first principles. Rejected because the current mechanics carry this repo's entire empirical validation (two external runs, a Kaizen cycle + CHECK phase, a comparative fidelity audit, six committed evidence-traced fixes); discarding them would lose exactly the quality the operator wants raised. Narrated this interpretation to the operator before acting.
+
+**Examination (lenses: Purpose, Waste load-bearing).** Read `.acm/destination.md` in full (both success bars re-confirmed: daily-usage skill; stranger-pickup), the current SKILL.md in full, and carried the session's known watch-items. The file's mechanics are sound; its prose showed accretion seams — six sequential patches had left locally-correct but globally uneven texture (defensive repetitions, inconsistent gloss styles, no overview of the loop's shape).
+
+**Decision + prediction.** Rewrite section-by-section with a hard contract: every hard-won rule survives in meaning; prose tightens; three known watch-items close in the same pass. Predicted: zero mechanisms dropped (verified against an explicit checklist), four named improvements, length within ±10%.
+
+**Outcome vs. prediction.** Held. Checklist verified post-edit: all six bootstrap points, scoped-memory walk, three intent branches incl. rejected-alternative naming, four glossed lenses, redesign gate, three bounded outcomes, within-run reversal rule, three tiers incl. Tier 2 next-move line, escalation triggers incl. post-commit follow-up pattern, glossed markers, what's-cut disclosure with format compatibility, mini-orient anchor rule, and all four self-check bullets — present. Improvements beyond prose: (1) a one-line map of the loop's shape before step 0; (2) Tier 1's next-move exclusion now *explained* in the file, closing the CHECK-phase watch-item; (3) `orientation.md`'s dated header format pinned (`_Last updated: YYYY-MM-DD ..._`), closing the "own dated header isn't given an exact format" residual; (4) the measurement-as-temporary-plateau rule from the previous entry now encoded operationally in step 2 ("a metric that outlives its plateau starts prescribing a route") — the operator's latest message ("as long as the skills are aware that measurements are temporary") converted it from one-conversation insight to explicit mandate, which is why it's now safe to encode where the previous entry deliberately declined to.
+
+**Reflection.**
+- *Falsifiable model-claim:* the accretion-seam problem this rewrite fixed will recur — future Improve passes will re-introduce local patches with globally uneven texture, and by roughly the fifth or sixth post-rewrite patch the file will warrant another coherence pass. If the seams don't reappear, the tier/patch discipline is stronger than this claim assumes.
+- *Blind spot:* the rewrite was verified for mechanism-preservation by the same model that wrote it — no independent reader (human or other-model) has yet confirmed nothing subtle shifted in meaning. The stranger-pickup bar in particular deserves an independent pass.
+- *Imagined pushback:* "a v2.0.0 bump for a prose rewrite overstates the change." Counter: the authorial basis changed models and three behavioral details changed (Tier 1 rationale, pinned header format, plateau-metric rule) — minor versions shouldn't hide a full-text replacement.
+
+**Across-trail triggers:** operator explicitly asked — fired. Recurring finding-class — fired (accretion seams are the structural cause behind both gloss-gap findings this session; this rewrite addresses the class, not another instance). Contradicts prior realization — not fired (the plateau-metric encoding *fulfills* rather than contradicts the previous entry's "left open deliberately"). About to declare silence — not fired.
+
+### Candidate Next Moves
+
+1. Independent verification of the rewrite: have a different model (or the operator) read v2.0.0 cold against the stranger-pickup bar — the one check this run structurally cannot perform on itself.
+2. Refresh `.acm/orientation.md` — now even more stale; the rewrite is exactly the kind of material change a mini-orient should fold in.
+3. Test v2.0.0 on a real *code* repo — unchanged, still the missing data point.
