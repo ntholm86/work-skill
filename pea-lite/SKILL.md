@@ -1,6 +1,6 @@
 ---
 name: pea-lite
-version: 2.0.1
+version: 2.1.0
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 ---
@@ -81,6 +81,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
   ```
   ## 2026-07-03 — fix-typo-readme
   Asked to fix "recieve" typo in README. Fixed. No decisions, nothing notable.
+  Cost: light — 2 tool ops, 1 file.
   ```
 
 - **Tier 2 — Standard** (a real choice existed between plausible alternatives, or the work could plausibly be second-guessed later). Compact: interpretation in one line (only if it wasn't obvious), decision plus a one-line prediction, outcome vs. prediction, one line naming the blind spot (or the nothing-found), and one line naming the most obvious next-step candidate if one stands out — skip it if none does; silence is valid here too. Skip the full reflection ceremony unless one of the escalation triggers below fires.
@@ -90,11 +91,14 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
   Read "clean up config handling" as splitting the loader, not rewriting it. [!DECISION] — rewrite was plausible but riskier.
   Predicted the split leaves all 12 tests green; it did.
   Blind spot: no test covers the env-override path. Next: cover it.
+  Cost: moderate — 9 tool ops, 4 files, no subagent.
   ```
 
 - **Tier 3 — Full** (structural or architectural decisions, redesign arguments, anything the operator would want deeply audited, anything touching an area a past `[!REVERSAL]` or a recurring finding-class — the same kind of defect turning up across separate runs — already flagged). The complete shape: interpretation, examination with lenses named, challenge, decision + prediction, action, reflection (a falsifiable claim about the target, a named blind spot, an imagined expert's pushback), the four across-trail triggers each explicitly evaluated — *did the operator ask for a deeper audit? is a recurring finding-class present? does this run contradict a prior `[!REALIZATION]`? is a silence declaration imminent?* — and candidate next moves.
 
 **Escalate a tier — never de-escalate below what's honest — when:** the operator pushes back, the change is hard to reverse, a past `[!REVERSAL]` touched this area, or something about the run surprised you mid-work. Genuinely unsure which tier? Take the higher one: over-recording a routine entry costs little; under-recording a real decision breaks the audit trail. If a surprise surfaces only after the entry is committed, don't edit it in place — append a short follow-up entry cross-referencing the original by slug, at whatever tier the new information warrants.
+
+**Cost line — every entry, every tier.** End each entry with one line of observed run cost: a bucket (light / moderate / heavy) plus the countable proxies behind it — tool operations, files read or written, subagents dispatched. Use real token counts only if the platform actually exposes them; **never invent a token number** — a plausible-looking count with no source is fabricated telemetry in the one file that must never lie. And the cost line is telemetry to reflect on, never a target to minimize: cutting honest depth to make the line look cheaper is the de-escalation this step already forbids, now with a number attached.
 
 **Markers** make the trail searchable and are never cut for cost, at any tier, when one genuinely applies:
 
@@ -111,7 +115,8 @@ Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doe
 1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.
 3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries.
-4. If something material emerged, update `.acm/orientation.md` (create it if absent, dating its header) with a short "Current claims" section and a "Watch for" line. If nothing material emerged, say so in one line in this run's own trail entry and leave `orientation.md` alone — a mini-orient with nothing to say should say nothing.
+4. Read the cost lines across those entries: is cost drifting upward without the stakes drifting with it — ceremony creep, habitual high tiers, runs heavier than their decisions warrant? A cost trend is a plateau diagnostic like any other score: worth one line if it says something, void when the focus shifts.
+5. If something material emerged, update `.acm/orientation.md` (create it if absent, dating its header) with a short "Current claims" section and a "Watch for" line. If nothing material emerged, say so in one line in this run's own trail entry and leave `orientation.md` alone — a mini-orient with nothing to say should say nothing.
 
 No freshness guard, no `record.py`, no `learning.md` extraction — exactly the heavy tooling this cut removes. If you separately have the full `orient` skill and the target needs its deeper discipline (quality-bar naming, adversarial arc-audit, loop-effectiveness review), invoke that instead: this mini-orient is a cheap tripwire, not a replacement. If you don't have it, the mini-orient above is the ceiling this file offers — a design choice, not a gap.
 

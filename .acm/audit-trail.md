@@ -435,3 +435,10 @@ Operator's proposed resolution, stated directly: a score is legitimate *if and o
 
 1. Re-run the zero-context cold read against 2.0.1 to close the open verification loop.
 2. Real code-repo test — unchanged.
+
+## 2026-07-03 — add-cost-line-to-trail-and-orient
+
+**Tier: Standard.** Operator asked to track token usage in trail entries so the mini-orient can reflect on cost. [!DECISION] Recorded cost as *observable proxies* (bucket + tool ops, files touched, subagents) rather than token estimates — the agent usually cannot see true token counts, and an invented count is fabricated telemetry in the file that must never lie. Real counts allowed only when the platform exposes them. Second choice folded in: cost line required at *every* tier (a when-notable rule would give orient biased, gap-ridden trend data). Goodhart risk named and guarded in the text itself: the line is telemetry, never a target — cutting honest depth to look cheap is forbidden de-escalation with a number attached. Mini-orient gains a cost-drift check (step 4.4), framed as a plateau diagnostic per the step 2 rule. Version 2.0.1 → 2.1.0 — first mechanism addition since v1.
+Predicted: usable cost-trend data within ~5 entries; the guard sentence prevents tier-shopping. Outcome: edits verified in place; prediction's trend half is open until entries accumulate.
+Blind spot: "light/moderate/heavy" buckets are self-assigned and uncalibrated across models — a heavier model may bucket the same run differently. Next: let ~5 entries accumulate, then let the next mini-orient make the first cost-drift read.
+Cost: moderate — 3 tool ops, 2 files, no subagent (this entry is the mechanism's first datapoint).
