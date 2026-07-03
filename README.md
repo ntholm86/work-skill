@@ -20,4 +20,4 @@ v1.0.0 — first draft, not yet battle-tested against a real multi-session run. 
 
 ## Use
 
-Point an agent at [`pea-lite/SKILL.md`](./pea-lite/SKILL.md) the same way you'd point it at any of the `pea/skills` skill files (e.g. copy the `pea-lite/` folder into wherever your agent loads skills from, such as `~/.copilot/skills/`). No install script yet — that's a deliberate scope cut for this first version, not an oversight.
+Point an agent at [`pea-lite/SKILL.md`](./pea-lite/SKILL.md) the same way you'd point it at any of the `pea/skills` skill files (e.g. copy the `pea-lite/` folder into wherever your agent loads skills from, such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point of "lite" is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.

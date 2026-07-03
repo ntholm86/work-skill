@@ -40,3 +40,7 @@ Read as: build a genuinely usable, standalone skill — not a stub or a router t
 ## 2026-07-03 — confirm-probe-exclusion
 
 Asked whether Probe belongs in the lite consolidation; operator confirmed it doesn't ("I dont think the probe skill is needed in pea-skills-lite"). Updated `.acm/destination.md`'s sourced-inference entry from `[Inference, unconfirmed]` to `[Confirmed 2026-07-03]`. No change needed to `pea-lite/SKILL.md` itself — it already excluded Probe. No decisions, nothing else notable.
+
+## 2026-07-03 — no-installer-is-permanent-not-deferred
+
+Operator: "I dont want an installer, its should be so easy its just a skill that ppl can use." This corrects, rather than just confirms, the second bootstrap inference — I had framed the lack of an installer as a v1 scope cut ("later step, not this one"); the operator is saying it's permanent, and that ease-of-adoption (one file, no build step) is itself part of what "lite" means. Updated `.acm/destination.md` (inference marked `[Corrected 2026-07-03]`, install-tooling open item removed) and `README.md`'s Use section to state no installer will ever be built, rather than "not yet." No change needed to `pea-lite/SKILL.md` — it was already a single self-contained file with no install dependency. No decisions, nothing else notable.

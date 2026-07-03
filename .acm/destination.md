@@ -29,7 +29,7 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 ## Sourced inferences (not literally stated — offered for confirmation, not blocking)
 
 - **[Confirmed 2026-07-03]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Operator confirmed directly: "I dont think the probe skill is needed in pea-skills-lite." Probe stays a separate, occasionally-invoked skill outside `pea-lite`, not folded in — settled, not just assumed.
-- **[Inference, unconfirmed]** This is, for now, meant for the operator's own personal/local use across their own repos, not yet a public-distribution package with install scripts, badges, CI, etc. — mirroring `pea/skills`'s full packaging (install.ps1/.sh, CHANGELOG, CITATION.cff) is a later step, not this one. *Source:* the framing "I find myself mostly using..." reads as a personal-workflow observation; the ask was to "initiate ACM" and "initialize a repo," not to write install docs. **If wrong, say so** and full packaging can be added.
+- **[Corrected 2026-07-03]** No installer — permanently, by design, not a temporary v1 scope cut. Operator's own words: "I dont want an installer, its should be so easy its just a skill that ppl can use." Ease-of-adoption is itself part of what "lite" means here: a single self-contained `SKILL.md` a person can read, drop into wherever their agent loads skills from, or paste straight into a prompt — no build step, no script to trust, no packaging ceremony between the file and using it. This supersedes the earlier unconfirmed inference, which had incorrectly framed the lack of an installer as "not yet" rather than "not ever."
 
 ## Constraints carried over from the workspace destination
 
@@ -43,6 +43,6 @@ Not a fixed release. Working-in-use signal: the operator actually reaches for `p
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
-- Confirm or correct the remaining sourced inference above (personal-use scope for now).
 - Decide whether `pea-skills-lite` should eventually be listed as a variant of the "Reasoning" layer in `pea/.acm/destination.md`'s layer table (not done in this session — that file is operator-held and wasn't asked to be changed).
-- Decide whether to add install tooling (`install.ps1`/`install.sh`) mirroring `pea/skills` once the design has proven itself in real use.
+
+Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `pea-lite/SKILL.md`, not just a scope cut.
