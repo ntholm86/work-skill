@@ -317,3 +317,21 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Decide whether finding 1 (rejected-alternative naming) is worth a one-clause addition to step 1's material-divergence branch.
 2. Decide whether finding 2 (Offer-Next-Moves at Tier 3 only) is an intentional design choice worth stating explicitly in the file's "what's cut" disclosure, or a real coverage gap worth extending to Tier 2.
 3. The still-open Kaizen CHECK-phase re-audit (from the previous entry) remains the most direct way to verify the ~7.5-8/10 estimate above rather than leave it as a prediction.
+
+## 2026-07-03 — close-comparative-rating-gaps-1-and-2
+
+**Tier: Standard.** Operator said "use improve skill to do it," authorizing action on the two items queued as decisions in the previous entry's Candidate Next Moves (findings 1 and 2 from the comparative-rating pass). Framed as an Improve iteration: decide, predict, act, verify, record. Finding 3 (no `probe` analog) was not queued as a decision in that entry — left open, not acted on here, to avoid scope creep beyond what was asked.
+
+**Decision + prediction.** (1) Add a clause to step 1's material-divergence branch requiring the agent to name an alternative reading it considered and rejected, matching Intent's own `Extract` requirement. (2) Extend Tier 2's trail-entry shape to require one line naming the single most obvious next-step candidate (skippable if none stands out), closing the gap where the majority of real runs (Tier 1/2) never surfaced next-move signal — while deliberately leaving Tier 1 (mechanical, no real decision) without this requirement, since a next-move signal has little value there. Predicted: both additions fit inline, no restructuring, combined under ~50 words, no renumbering elsewhere needed.
+
+**Outcome vs. prediction.** Confirmed by re-reading both edited sections directly: 35 words added combined, both landed as single in-place clause insertions, no reflow or renumbering required. Prediction held exactly.
+
+**Blind spot:** did not check whether Tier 1's exclusion from the next-move requirement will itself later look like an inconsistency to a future audit — it's a deliberate asymmetry (mechanical work rarely has a meaningful next step) but isn't explicitly justified in the file's own text the way other tier distinctions are.
+
+**Across-trail triggers:** operator explicitly asked — fired. Recurring finding-class — not fired. Contradicts prior realization — not fired. About to declare silence — not fired (a real change was made).
+
+### Candidate Next Moves
+
+1. Finding 3 from the comparative-rating entry (no `probe` analog, unlike `orient` which is explicitly named as an upgrade path) remains open and undecided — not queued as urgent, but shouldn't be dropped silently.
+2. The Kaizen CHECK-phase re-audit remains the most direct way to verify the current ~7.5-8/10 comparative estimate rather than leave it as a prediction.
+3. Testing `pea-lite` on a real *code* repo (not markdown/content-only) remains the longest-standing deferred item this session.
