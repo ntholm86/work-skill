@@ -157,3 +157,33 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 **Candidate Next Moves** (synthesized from repeated-but-unactioned prior suggestions):
 1. Actually run `pea-lite` on a real, unrelated target repo — this has been suggested in entries 1, 5, and 6 without being done. Named here as a repetition-without-action finding in its own right, not just restated a fourth time.
 2. Apply the "ask before encoding" rule the next time a genuinely open scope question comes up for this repo.
+
+## 2026-07-03 — improve-closes-orient-finding
+
+**Tier: Full.** Closes the loop from the standalone Orient run — worth full treatment since it's the first real test of whether an Orient finding actually changes anything, not just gets written down.
+
+**Interpretation of the ask.** Operator: "use improve skill now we have destination and orientation" — no specific target named. Underspecified per Improve's own step 1 handling. Highest-confidence hunch, sourced from `orientation.md`'s "Active operational rules": the most load-bearing next move is operationalizing the just-found lesson ("ask before encoding unconfirmed inferences into committed files") *inside* `pea-lite/SKILL.md` itself — otherwise the Orient run's finding is just a paragraph nobody acts on, which would be a worse outcome than not having run Orient at all. Proceeded on this hunch as an explicit assumption; low-stakes and reversible.
+
+**Examination (Purpose lens, against orientation.md's claim 2).** `pea-lite/SKILL.md` step 0 already handled "no operator answer available → write a labeled assumption." It said nothing about *other files* built around that same assumption in the same pass — exactly the gap `orientation.md` identified in this repo's own bootstrap.
+
+**Challenge.** Considered a heavier fix — a structural gate (e.g., refuse to write more than one committed file per run until an inference is confirmed). Rejected for now: too rigid for a "lite" skill whose whole premise is judgment over hard rules, and untested against real use; a written rule is the honest first step, a hard gate is not yet earned.
+
+**Decision `[!DECISION]` + prediction.** Added an explicit rule to step 0 (point 6) and a new self-check bullet, both naming this repo's own bootstrap as the concrete precedent. Predicted: this reduces recurrence of the exact failure mode without changing behavior for the common case (destination already exists). Not predicted to eliminate the pattern outright — it's a written reminder, not a structural gate, and that limit is stated in the entry rather than overclaimed.
+
+**Action.** Edited `pea-lite/SKILL.md` in two places (step 0, self-check section).
+
+**Reflection.**
+- *Model of the target, falsifiable:* the remaining vulnerability shifts from "the rule doesn't exist" to "the rule exists but its enforcement is unverified" — a written reminder is weaker than a structural gate by construction. The real test is whether the *next* bootstrap-like run (a fresh `.acm/` on a new target) actually honors it.
+- *Blind spot:* did not check whether this addition itself works against the stranger-pickup and lean-files bars confirmed earlier — one more paragraph in step 0 is a small but real token/readability cost, and this entry didn't weigh that trade-off explicitly before making the edit.
+- *Imagined pushback:* someone could reasonably call this navel-gazing — editing the skill about itself rather than testing it on real, unrelated work. That's a fair challenge, and it's exactly `orientation.md`'s claim 4, still unaddressed.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* FIRED — this is the fourth entry in a row (5, 6, orient, this one) engaging with some form of "did the agent move too fast / build on unconfirmed ground." Named explicitly rather than left implicit; see Reflection above.
+- *About to declare silence:* not fired.
+- *Contradicts prior `[!REALIZATION]`:* not fired.
+- *Operator explicitly asked:* fired.
+
+### Candidate Next Moves
+
+1. `orientation.md` itself says not to restate "run pea-lite on a real target repo" a fourth time without either doing it or explaining the deferral. Explaining it now: it hasn't happened because no target repo has been specified, and picking one unilaterally would be a bigger, less-reversible choice than editing this file — the concrete unblock is to ask the operator directly which repo to try it on next, rather than defaulting to silently deferring again.
+2. Weigh the token/readability cost of this entry's own step-0 addition against the stranger-pickup and lean-files bars — not done this run, flagged rather than skipped silently.
