@@ -9,6 +9,8 @@ argument-hint: 'The target (repo, file, system) and the request itself'
 
 *One skill. The same governing principles. A fraction of the token cost.*
 
+**If you're new to this:** "operator" means whoever is directing the work — you, if you're the one using this. `.acm/` is a small convention: a folder at the root of whatever repo you're working in, holding plain-text memory — `destination.md` (what this target is for), `orientation.md` (what recent work has concluded, if anything has run enough times to conclude something), and `audit-trail.md` (a log of what happened and why, one entry per run). This file reads and writes those three plain-text files. No other tooling, install step, or sibling file is required to use it — a handful of mentions below point to a larger "full suite" of separate skills; those are for people who happen to also have that suite, and are safe to skip if you don't.
+
 ## Why this exists, and what it trades away
 
 The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe`) was built when token cost wasn't the binding constraint. Loading five skill files and running their full ceremony — every time, at every scale of task — costs tokens on two axes: **loading the instructions** (five files instead of one) and **per-run ceremony** (a full Interpretation + 4-lens Examination + 4-trigger Reflection essay, even for a one-line fix).
@@ -83,7 +85,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo (create it with a o
 
 Use `[!DECISION]`, `[!REALIZATION]`, and `[!REVERSAL]` markers exactly as the full suite does, at whatever tier — these markers are what makes the trail searchable and are never cut for cost, even in a Tier 1 entry, if one genuinely applies.
 
-**What's cut vs. the full Trail skill, on purpose:** no `history.md`/`learning.md` derived-artifact regeneration, no `record.py` dependency, no writer-splitting (independent second-agent trail authoring). If the operator later wants those, the full Trail skill's tooling can run against this same `audit-trail.md` — the entry header format (`## <date> — <slug>`) and marker vocabulary are kept compatible on purpose.
+**What's cut vs. the full Trail skill, on purpose:** no `history.md`/`learning.md` derived-artifact regeneration, no `record.py` dependency, no writer-splitting (having a second, independent agent write the trail entry so the same agent that made the decision can't also be the one who describes it — a stronger anti-rationalization safeguard than this file uses). None of that is required to use this file. If you separately have access to the full suite's `record.py` tooling, it can run against this same `audit-trail.md` later — the entry header format (`## <date> — <slug>`) and marker vocabulary are kept compatible on purpose — but that's optional, not a dependency of anything above.
 
 ### 4. Mini-Orient — every 5th iteration
 
@@ -94,7 +96,7 @@ Count entries in `.acm/audit-trail.md` (count `## ` headers). When the entry you
 3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries.
 4. If something material emerged: update `.acm/orientation.md` (create if absent) with a short "Current claims" section and a "Watch for" line. If nothing material emerged: say so in one line inside this iteration's own trail entry and do **not** rewrite `orientation.md` just to have written something — a mini-orient with nothing to say should say nothing (Convergence Is Silence applies here too).
 
-No freshness-guard, no `record.py`, no `learning.md` extraction — those are exactly the heavy-tooling pieces this cut removes. If the target needs the full Orient discipline (deep quality-bar naming, adversarial audit of the arc, loop-effectiveness review), invoke the standalone `orient` skill instead — `pea-lite`'s mini-orient is a cheap tripwire, not a replacement for that.
+No freshness-guard, no `record.py`, no `learning.md` extraction — those are exactly the heavy-tooling pieces this cut removes. If you also have access to the full, separate `orient` skill and the target needs its deeper discipline (quality-bar naming, adversarial audit of the arc, loop-effectiveness review), invoke that instead — this mini-orient is a cheap tripwire, not a replacement for it. If you don't have that skill, the mini-orient above is the ceiling this file offers, and that's a deliberate design choice, not a gap to apologize for.
 
 ## Self-check before calling a run done
 

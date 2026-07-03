@@ -106,3 +106,32 @@ Operator: "I dont want an installer, its should be so easy its just a skill that
 1. Re-read `pea-lite/SKILL.md` against the newly-confirmed stranger-pickup bar specifically — check for any unexplained jargon or assumed shared context with the operator that a genuine outside reader would trip on.
 2. When the operator wants to pick item 3 back up, the plain-language restatement is already in `.acm/destination.md` — no re-derivation needed.
 3. Watch whether "daily use" actually starts happening — the first real non-meta run of `pea-lite` against another target repo is still the single biggest untested claim in this repo.
+
+## 2026-07-03 — stranger-pickup-review-of-pea-lite
+
+**Tier: Standard.** Real judgment call (what counts as a stranger-readability defect), not mechanical, but not structural/architectural either — no redesign, no reversal.
+
+**Interpretation.** Operator said "yes do that" in response to the offered next move: re-read `pea-lite/SKILL.md` against the newly-confirmed stranger-pickup bar. Unambiguous — proceeded directly.
+
+**Examination (Purpose lens, against the confirmed bar).** Read the file imagining a reader with none of this session's context. Found two real gaps: (1) `.acm/`, `.acm-root`, and "operator" are used throughout with zero definition — a stranger has no way to know these are a plain-text-memory convention rather than something requiring external tooling; (2) three places point to "the standalone `orient` skill" or "the full Trail skill's tooling" as if the reader has those sibling files — which they may not, since this file is meant to work standalone. That second gap directly contradicts the confirmed design bar, not just a style nit.
+
+**Decision `[!DECISION]`.** Added a short "If you're new to this" context blurb right after the title (defines operator, `.acm/`, and states explicitly that no other file or tool is required), and softened the three sibling-skill references to explicitly say they're optional pointers for people who happen to have the full suite, not dependencies. Considered writing a separate "Glossary" section instead; rejected — a stranger reading top-to-bottom shouldn't have to jump to a glossary before the first section makes sense, so inline-and-early was the better fit.
+
+**Action.** Edited `pea-lite/SKILL.md` in three places (intro blurb; mini-Orient's sibling-skill reference; Trail's writer-splitting/record.py reference).
+
+**Reflection.**
+- *Model of the target, falsifiable:* the confirmed stranger-pickup bar is going to keep surfacing small softenings like this rather than one big rewrite — the core structure (loop, tiers, mini-Destination/Orient) was already reasonably self-contained; the gaps were specifically in places where the file leaked assumptions about what else the reader has access to.
+- *Blind spot:* this review was done by reading the file, not by actually handing it to someone unfamiliar with the project — "imagined stranger" is a proxy, not a test. If the operator ever does hand this to someone else, their real confusion points should be treated as higher-quality evidence than this entry's guesses.
+- *Imagined pushback:* someone might argue the frontmatter `description` field still name-drops "the full skills suite (intent/improve/destination/orient/trail)" without explanation — left as-is, since that field is metadata for a skill-loading system, not body text a stranger reads top-to-bottom; flagged here rather than silently left unconsidered.
+
+**Across-trail triggers:**
+- *Recurring finding-class:* not fired — first review of this specific kind.
+- *About to declare silence:* not fired — concrete edits made.
+- *Contradicts prior `[!REALIZATION]`:* not fired.
+- *Operator explicitly asked:* fired — direct "yes do that" in response to an offered next move.
+
+### Candidate Next Moves
+
+1. If the operator ever shares this file with someone outside the project, treat their actual points of confusion as ground truth over this entry's guesses.
+2. The frontmatter `description` field still assumes suite-familiarity — low priority, flagged not fixed, since it's metadata rather than body text.
+3. First real non-meta run of `pea-lite` remains the biggest untested claim in this repo (carried over from the prior entry).
