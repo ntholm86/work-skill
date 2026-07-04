@@ -58,3 +58,22 @@ _Last updated: 2026-07-04 (run: full-orient-and-rescore-under-corrected-destinat
 - Attention has been ~90% on the skill's own text and identity; the destination's weight lives in external exercise, which has ~3 entries. The loop finds genuine findings (not excuses to act — silence has been declared and bounded when earned), but it has been finding them on the surface it already knows.
 - What this loop would structurally miss, named concretely: failures that only manifest on unfamiliar target shapes (metric 4), and cost regressions (metric 9 — nobody reads the trend). Both named in prior entries; neither yet closed.
 - Silence claim, bounded per Orient 5a: **silence on mechanism-layer correctness for the SKILL.md text as written** (zero broken mechanisms, 28 entries, multiple audit styles). Bars not tested by this orient run: behavior under a real code-repo run, cost-trend health, post-reframing stranger-pickup.
+
+## Scorecard — 2026-07-04, post-v2.7.0 (rating run, same plateau — delta vs. the 7.2 baseline above is valid)
+
+| # | Measurement | /10 | Δ | Evidence | Bounded improvement suggestion |
+|---|---|---|---|---|---|
+| 1 | Interpretive depth | 8 | +1 | The baseline's own suggested fix is now in step 1 (pre-commit read-back for destination-layer edits, commit `7aaa3d5`) — the cited defect (rule lived outside the loop) is closed at the text level. Never fired on a live edit yet. | Exercise it: next destination-touching edit must show the read-back happening before commit. |
+| 2 | Examination depth | 8 | +1 | Comparison-against-source folded into step 2; and the v2.7.0 run demonstrated the method — one root cause diagnosed behind three 7s instead of four scattered patches. | Fire the fidelity-audit rule on a real derivative outside this repo. |
+| 3 | Arc/meta-reasoning | 8 | +1 | Both cited gaps closed: the twice-carried append-time due-check is now in the self-check, and the first cost-trend read actually happened (v2.7.0 entry). | Observe whether the mini-orient self-fires at entry 33 without operator prompting — the real test of the folded rule. |
+| 4 | **Target-agnostic capability** | 5 | 0 | No new external evidence since baseline; still zero non-text, zero code-repo runs. | Unchanged: the external-target test — which now also tests whether the three folded rules fire on a fresh run. |
+| 5 | Auditability | 9 | 0 | v2.7.0 entry held the bar: prediction stated and checked (6 lines vs. <12 predicted), blind spot named, declined to self-rate in the same run. | None owed — maintenance bar. |
+| 6 | Self-correction honesty | 8 | +1 | Demonstrated by behavior, not text: v2.7.0 named its own fix-pattern as twice-failed before ("folding rules into text failed cold reads twice") and refused a same-run self-grade. | Keep the separation: the run that changes never scores itself. |
+| 7 | Loading cost | 9 | 0 | +6 lines under a <12 prediction, description untouched. Watch: three consecutive versions each grew the file. | Record the current line count as a creep baseline at the next rating. |
+| 8 | Ceremony/tier discipline | 8 | 0 | v2.7.0 correctly tiered (moderate cost, Standard-shaped entry for a real decision). | Unchanged: still untested on a high-stakes code change. |
+| 9 | Cost telemetry maturity | 7 | +2 | Step 4.4 fired on real data for the first time: 11 cost lines read, 2 light / 7 moderate / 2 heavy, heavies stake-justified, verdict "cost tracks stakes" (v2.7.0 entry). Not higher: fired once, operator-occasioned — recurrence on its own schedule unproven. | Entry-33 mini-orient must repeat the read unprompted; two self-scheduled reads = a habit, not an event. |
+| 10 | Cost-quality trade visibility | 8 | 0 | No new evidence either way. | Unchanged — Goodhart watch stands. |
+
+**Plateau average: 7.8/10 (capability 7.7, cost 8.0) — Δ +0.6 from the same-day baseline.**
+
+**Honesty bound on this delta:** metric 9's +2 is the only fully-evidenced gain (the read demonstrably happened). The three capability +1s reward closing the *cited* defects at the text level — but folding rules into text is the same move that failed two prior cold reads, so **if the next fresh run shows the rules don't fire, those three points revert.** The scorecard's weakest metric is unchanged and unmoved: metric 4 has now survived three scorecards at 5 with the same suggestion attached.

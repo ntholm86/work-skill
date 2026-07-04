@@ -637,3 +637,16 @@ Predicted: under 12 lines added, description/frontmatter unchanged except versio
 Blind spot: folding rules into text is the same move that has failed a cold read twice before -- whether a fresh run actually fires them is untested until the next external run or cold read. Scores not re-rated this run: the delta belongs to the next rating, not to the run that made the change.
 Next: the external-target test remains the arc's most-repeated unactioned item -- it now also tests whether the folded rules fire.
 Cost: moderate -- 6 tool ops, 2 files, no subagent.
+
+## 2026-07-04 -- rating-post-v2.7.0
+
+Operator asked "rate it" -- rating run per the scoring convention, same plateau (destination unchanged since cost-co-equal correction), so the delta vs. the same-day 7.2 baseline is valid and is the signal.
+
+**Result: 7.8/10 (capability 7.7, cost 8.0), delta +0.6.** Full scorecard with per-metric evidence appended, dated, to orientation.md. Moves: metrics 1, 2, 3, 6 each +1 (the three folded rules closed the cited defects; honesty demonstrated by behavior in the v2.7.0 run); metric 9 +2 (the trend read demonstrably fired on real data -- the only fully-evidenced gain). Unmoved: 4 (still 5 -- zero new external evidence, now three scorecards at 5 with the same suggestion), 5, 7, 8, 10.
+
+[!DECISION] Honesty bound stated in the scorecard itself: the three capability +1s reward text-level closure of cited defects, and folding rules into text is the same move that failed two prior cold reads -- if the next fresh run shows the rules don't fire, those points revert. The delta is conditional and says so.
+
+Self-check per new v2.7.0 rule: entry count after orientation.md's dated header = 3 (Orient, v2.7.0, this). Mini-orient due at 5 -- not due; the folded due-check fired for the first time this run.
+
+Blind spot: same-day rating of a same-day change is the thinnest possible evidence window -- the scores measure whether the cited defects were addressed, not whether the skill got better in use. Next: unchanged, the external-target test (three scorecards running).
+Cost: light -- 3 tool ops, 2 files, no subagent.
