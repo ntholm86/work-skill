@@ -595,3 +595,31 @@ Cost: moderate -- 6 tool ops, 3 files, no subagent.
 
 Predicted: this closes the destination-definition arc (4 corrections in 2 days); the next run can finally be the external-target test. Blind spot: the trail entry before this one confidently framed the reframing as complete -- two entries in a row now corrected within hours, which suggests destination edits should be read back to the operator for confirmation *before* being committed, not after.
 Cost: light -- 3 tool ops, 3 files, no subagent.
+
+## 2026-07-04 -- full-orient-and-rescore-under-corrected-destination
+
+**Standalone full Orient run** (operator asked: "rate the auditonomy skill and use orientation skill") plus the scorecard per this repo's own operator-mandated scoring convention. Orient is observational -- no changes to the target; orientation.md rewritten (replace-on-run per Orient's own convention).
+
+**Scope statement.** Read the whole 28-entry arc and rate auditonomy against the corrected destination (target-agnostic capability x cost, co-equal): is the loop's attention where the destination's weight actually lies?
+
+**Freshness guard:** N/A by design -- this repo deliberately has no record.py/history.md/learning.md; noted, not skipped.
+
+**Scorecard result: 7.2/10 plateau average (capability 7.0, cost 7.5), 10 metrics rebuilt on the two destination axes** -- full table in orientation.md. The prior same-day baseline (7.1) is void per the plateau rule, not comparable: different axes.
+
+**Arc-claims (full versions in orientation.md, falsifiable forms stated there):**
+1. Capability is proven only on self-referential and text/content targets -- the one mechanism bug ever found came from external dogfooding, so remaining bugs live on untouched target shapes.
+2. The definitional layer consumed the recent arc: 4 operator corrections in 2 days, all caught after commit, never by step 1 before it.
+3. The explanation-layer defect-class may be closed (last 3 known unglossed terms fixed) -- but this claim has been refuted twice before; unverified until a fresh cold read passes.
+4. The scoring convention proved load-bearing on cycle 1: it exposed a destination drift four narrative audits missed.
+5. Cost discipline is real but unmeasured -- ~10 entries carry cost lines and no run has ever read the trend. [!REALIZATION] Both halves of the destination are under-evidenced in the same way: mechanisms exist, real-world exercise doesn't (metric 4 = 5/10 and metric 9 = 5/10, one per axis).
+
+**Loop-effectiveness (step 4, fired -- operator asked how it's doing):** ~90% of attention has gone to the skill's own text/identity; the destination's weight lives in external exercise (~3 entries). Findings are genuine, not manufactured -- but they are findings on the surface the loop already knows. Structurally missed finding-classes, named: failures on unfamiliar target shapes; cost regressions. Silence claim, bounded per Orient 5a: silence on mechanism-layer correctness for the SKILL.md text as written; bars NOT tested: real code-repo behavior, cost-trend health, post-reframing stranger-pickup.
+
+**New operational rules extracted (step 4b, now in orientation.md):** destination-level edits read back before commit; comparison-against-source over self-review for fidelity audits; scorecards must carry both destination axes or they silently re-weight the identity.
+
+### Candidate Next Moves
+
+1. The external-target test on a structurally different target (code repo, or plan/letter per the operator's own examples) -- the only direct test of the capability half; most-repeated unactioned item in the arc (10+ mentions).
+2. First real cost-trend read over the ~10 cost lines that now exist -- the only direct test of the cost half.
+3. Fresh zero-context cold read of v2.6.0 -- tests arc-claim 3 and the post-reframing opening.
+Cost: heavy -- 8 tool ops, 4 files read (2 in full, ~560-line trail included), 1 file rewritten, no subagent.
