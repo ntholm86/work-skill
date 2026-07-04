@@ -3,7 +3,7 @@ name: auditonomy
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.6.0"
+  version: "2.7.0"
 ---
 
 # auditonomy
@@ -56,11 +56,13 @@ Before touching the target, run one fast check: *what does the operator actually
 - **Material divergence** (the literal request and the likely goal point different directions, or the ask is bare — "continue", "keep going", "next"): stop and narrate before acting. State what you believe the destination is, what would count as success, and at least one alternative reading you considered and rejected, with why — if you can't name one, you likely pattern-matched instead of interpreting. For a bare ask, form 1-3 sourced hunches from `.acm/destination.md`, `.acm/orientation.md`, the last few trail entries, and what the conversation itself has emphasized, corrected, or redirected toward, about what matters most now; surface the single most useful question; and if no answer comes back, proceed on your best hunch as an explicit assumption.
 - **Internal contradiction** (the request conflicts with itself, or with something the operator stated earlier): name the contradiction explicitly rather than silently resolving it by picking one side. Surface both readings and let the operator adjudicate — a confidently-executed resolution of a contradiction the operator never saw is a distinct failure from misreading a clear-enough ask.
 
+One class of edit always gets its interpretation read back to the operator **before** committing, not after: anything touching `.acm/destination.md` or the target's own statement of what it is. A misreading at that layer is cheap to catch before commit and compounding after — every downstream run inherits it.
+
 This step replaces a standalone Intent invocation. It is never optional — only its narration length varies.
 
 ### 2. Work — examine, challenge, decide, act
 
-Do the work, scaling the rigor of examination to the stakes. Four lenses are available as thinking tools, not a checklist: **Purpose** (does the target achieve what it's for, against `.acm/destination.md`?), **Inconsistency** (does it contradict itself or its own stated rules?), **Overburden** (does it ask more of its users or maintainers than it's worth?), **Waste** (does everything here still earn its place?) — plus whatever the target itself invites (security, performance, correctness...). Name the lenses that were actually load-bearing; don't narrate the ones that weren't.
+Do the work, scaling the rigor of examination to the stakes. Four lenses are available as thinking tools, not a checklist: **Purpose** (does the target achieve what it's for, against `.acm/destination.md`?), **Inconsistency** (does it contradict itself or its own stated rules?), **Overburden** (does it ask more of its users or maintainers than it's worth?), **Waste** (does everything here still earn its place?) — plus whatever the target itself invites (security, performance, correctness...). Name the lenses that were actually load-bearing; don't narrate the ones that weren't. When the examination is a fidelity audit — checking a derivative against its source (a consolidation against its suite, a summary against its document, a port against its original) — compare against the source directly; self-review of the derivative alone reliably misses what was dropped.
 
 If a score or rubric helps the examination, treat it as a temporary diagnostic of the current plateau — void when the destination or focus shifts — never a standing target to optimize toward. A metric that outlives its plateau starts prescribing a route.
 
@@ -129,6 +131,7 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 ## Self-check before calling a run done
 
 - Did step 3 (Trail) actually happen? If not, the run isn't done, whatever else was accomplished.
+- At append time, did you count the trail's `## ` headers — and if this entry was the 5th (10th, 15th…) since `orientation.md`'s dated header, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a schedule breach, not a deferral.
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
 - If this run built more than one new committed file around an inference from step 0 or step 1, did you ask before building the rest — or only label the first one unconfirmed and proceed as if that were enough?

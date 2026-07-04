@@ -623,3 +623,17 @@ Cost: light -- 3 tool ops, 3 files, no subagent.
 2. First real cost-trend read over the ~10 cost lines that now exist -- the only direct test of the cost half.
 3. Fresh zero-context cold read of v2.6.0 -- tests arc-claim 3 and the post-reframing opening.
 Cost: heavy -- 8 tool ops, 4 files read (2 in full, ~560-line trail included), 1 file rewritten, no subagent.
+
+## 2026-07-04 -- fold-arc-rules-into-loop-v2.7.0
+
+Operator endorsed the dual-axis scorecard and directed: improve the skill on those measurements -- raise interpretive depth (7), examination depth (7), arc/meta-reasoning (7), cost telemetry (5), without regressing loading cost (9) or ceremony discipline (8). Read as: a real Improve cycle where loading cost is a hard constraint on every fix.
+
+[!DECISION] One coherent change over four scattered ones: the three capability-7s share a root cause -- rules discovered in the arc (read destination edits back BEFORE commit; comparison-against-source for fidelity audits; entry-count check at append time) lived only in orientation.md, where a fresh run won't reliably fire them. Folded each into the exact loop step that previously missed its catch: step 1 (pre-commit read-back for destination-layer edits), step 2 (fidelity audits compare against source), self-check (mini-orient due-check at append time -- a due-but-skipped mini-orient is a schedule breach, not a deferral). Alternative rejected: an "operational rules" appendix section -- cheaper to write, but rules outside the step they guard are exactly what just failed.
+
+Predicted: under 12 lines added, description/frontmatter unchanged except version. Outcome: 6 lines, description untouched. v2.6.0 -> v2.7.0.
+
+[!REALIZATION] First real cost-trend read executed (metric 9's zero-fires gap): 11 cost lines -- 2 light / 7 moderate / 2 heavy. Heavies both stake-justified (suite fidelity audit, full Orient). Mid-arc ops spike (~15, ~12) was the folder-move incident, not ceremony creep; runs after settled to 6-7-3 ops. Verdict: cost tracks stakes. Step 4.4 has now fired once on real data.
+
+Blind spot: folding rules into text is the same move that has failed a cold read twice before -- whether a fresh run actually fires them is untested until the next external run or cold read. Scores not re-rated this run: the delta belongs to the next rating, not to the run that made the change.
+Next: the external-target test remains the arc's most-repeated unactioned item -- it now also tests whether the folded rules fire.
+Cost: moderate -- 6 tool ops, 2 files, no subagent.
