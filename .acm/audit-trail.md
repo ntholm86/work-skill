@@ -655,3 +655,15 @@ Cost: light -- 3 tool ops, 2 files, no subagent.
 
 Operator confirmed the scoring model and asked whether it works as they picture it: scores as plateau-not-convergence, measurements derived from destination x target, measurement-improvement equating to target-quality improvement. Answered: yes on all three, with one distinction now settled. [!REALIZATION] Measurement mechanisms are target features ONLY in the self-referential case (auditonomy pointed at itself, where the destination's cost half demands measurement) -- on external targets, measurements are disposable scaffolding, and improving them may legitimately LOWER a score; a score that rises because the yardstick changed is the Goodhart failure the plateau rule voids. The guard between the two cases is the evidence requirement: points move only with cited evidence of the target itself moving.
 No file changes. Cost: light -- 1 tool op, 1 file.
+
+## 2026-07-04 -- external-target-test-ai-steward-plus-mini-orient
+
+Operator: "rate it and then improve it." Rated first: 7.8 held, delta 0 -- no new evidence since the same-day scorecard; declared unchanged rather than padded. [!DECISION] Read "improve it" as: the only non-Goodhart improvement available was the external-target test (metric 4 at 5 across four scorecards; the conditional +0.6 needing a fresh-run rule-firing), not another SKILL.md edit. Asked the operator for the target; answer: ai-steward.
+
+External run executed (ai-steward commit e29dbdd, entry "readme-front-door-matches-ledger" in its own trail): bootstrap gate found a mature .acm/ (no question needed), examination via comparison-against-source found the README front door contradicting the repo's own ledger (66 vs 187 tests verified live, stale cost claim, V1 status omitting ACHIEVED, superseded V2 list). README-only fix, prediction confirmed.
+
+[!REALIZATION] Rule-firing evidence, honestly bounded: the append-time due-check self-fired (this is entry 33 -- 5th since orientation's header -- mini-orient ran unprompted, metric 9's recurrence test passed) and comparison-against-source was the load-bearing method. But this is the same session that wrote those rules; a fresh-context firing is still unproven. And metric 4 only half-converts: the target was code-shaped but the accepted change was documentation -- the loop has still never changed source code under test coverage. The gap is now precisely "code change under tests," recorded in orientation.md's mini-orient section so the softer version can't be re-counted as done.
+
+Mini-orient written into orientation.md (3 arc-claims + watch-for). Scores not re-rated this run -- the run that produces the evidence doesn't grade it.
+Next: re-rate with this run as evidence; then the sharpened metric-4 test (a source-code change in an external repo, verified by its tests).
+Cost: heavy -- 14 tool ops across 2 repos, 8 files read, 3 files written, no subagent.

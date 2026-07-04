@@ -77,3 +77,11 @@ _Last updated: 2026-07-04 (run: full-orient-and-rescore-under-corrected-destinat
 **Plateau average: 7.8/10 (capability 7.7, cost 8.0) — Δ +0.6 from the same-day baseline.**
 
 **Honesty bound on this delta:** metric 9's +2 is the only fully-evidenced gain (the read demonstrably happened). The three capability +1s reward closing the *cited* defects at the text level — but folding rules into text is the same move that failed two prior cold reads, so **if the next fresh run shows the rules don't fire, those three points revert.** The scorecard's weakest metric is unchanged and unmoved: metric 4 has now survived three scorecards at 5 with the same suggestion attached.
+
+## Mini-orient — 2026-07-04 (entry 33, self-fired by the append-time due-check)
+
+1. **The v2.7.0 folded rules fired on a real run.** The append-time due-check triggered this mini-orient unprompted; the external run used comparison-against-source as its examination method (README vs. the target's own `.acm/` ledger). The conditional +0.6 partially converts — caveat: same session that wrote the rules, so a truly fresh-context firing is still unproven.
+2. **The external-target test happened (ai-steward, entry 33) after four scorecards demanding it — but only half-converts metric 4.** The target was code-repo-shaped (Python, 187 tests, its own mature `.acm/`), yet the finding and fix were documentation, not code. The loop has now *read* a code repo's evidence structure; it has still never *changed code under test coverage*. Falsified as a limit by a future run whose accepted change is source code.
+3. **Cost trend (second consecutive self-scheduled read — metric 9's habit test, passed):** last 5 entries: heavy 8 / moderate 6 / light 3 / light 1 / moderate 8 ops — flat, stakes-matched, no creep. Also: a delta-0 rating was declared and *not* padded (7.8 held with no new evidence), which is the plateau discipline working.
+
+Watch for: the remaining metric-4 gap is now precisely "code change under tests," not "external target" — don't let the softer version get re-counted as done.
