@@ -8,13 +8,15 @@ _Operator: Nils Holmager | Initialised: 2026-07-03_
 
 ## The One Question
 
-> What does the accountability-architecture skill suite look like once the binding constraint is cost-per-unit-of-reasoning-quality, not reasoning quality alone?
+> What does a **standalone, target-agnostic improvement-reasoning architecture with full auditability** look like — one that can reason about and improve *anything* the model it runs on can reason about, adhering to PEA principles?
+
+*(Superseded framing, kept for the record: "What does the accountability-architecture skill suite look like once the binding constraint is cost-per-unit-of-reasoning-quality, not reasoning quality alone?" — that was the question during this repo's birth as a fork; see "Destination run — 2026-07-04 (standalone reframing)" below for why it no longer leads.)*
 
 ## Why this repo exists
 
-The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator finds they mostly invoke two of those six skills — Intent and Improve — for almost everything, and is now **"running out of tokens too fast"** using the full multi-skill-invocation discipline.
+**[Reframed 2026-07-04, operator-confirmed — see "Destination run — 2026-07-04 (standalone reframing)" below.]** `auditonomy` is a **standalone skill**: an autonomous improvement-reasoning architecture with full auditability that is *target-agnostic* — it can work on anything the model it runs on can reason about: code, music, letters, books, plans, whatever. Its lineage (below) is a fork of the full suite, but lineage is not identity: the suite comparison was scaffolding during its birth, not its purpose. When this skill is pointed at itself, the thing being improved is **that general capability** — the ability to understand and improve anything — not fidelity to its parent suite.
 
-`auditonomy-skill` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
+*Lineage, kept for the record:* The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator found they mostly invoked two of those six skills — Intent and Improve — for almost everything, and was **"running out of tokens too fast"** using the full multi-skill-invocation discipline. This repo began as a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many. That cost discipline remains a real constraint — it just isn't the destination anymore.
 
 **[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through` then `auditonomy` on 2026-07-04) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `auditonomy`.
 
@@ -129,3 +131,25 @@ Operator judged `think-it-through` itself not quite right either: it reads as a 
 - The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `auditonomy-skill`.
 - The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
 - The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+
+---
+
+## Destination run — 2026-07-04 (standalone reframing)
+
+Operator corrected the repo's core identity, prompted by reading the baseline 10-metric scorecard: the measurements ("reasoning-depth parity **vs. full suite**", "mechanism integrity") revealed the working destination had drifted into *"make an economical copy of this other skillset"* — a derivative identity. Operator's correction, near-verbatim: it should be **"standalone"** — *"an autonomous skill with improve reasoning and full auditability that is target-agnostic — can work on anything the model you use can reason about: code, music, letters, books, whatever, anything."* One overall destination point is unchanged from the skillset era: something with the ability to reason about and improve **anything**, adhering to PEA principles.
+
+The self-targeting arc (24+ trail entries of this skill auditing and improving itself) is not self-polish — *"we just happen to point it at itself"*, and what's actually being improved in those runs is the **general improvement-reasoning capability itself**, exactly as was done with the skillset before it. The skill must know this overall purpose when it reasons about itself.
+
+**What this changes:**
+
+- "The One Question" and "Why this repo exists" above — rewritten to lead with standalone identity; the fork framing demoted to lineage-for-the-record.
+- **Future scorecards:** measurements must weight *target-agnostic improvement capability* — how well this skill understands and improves arbitrary targets — as the primary axis. Suite-parity metrics are lineage diagnostics at best; a scorecard dominated by them is measuring the scaffolding, not the building. (The baseline scorecard in `orientation.md` stands as an honest record of the plateau *as it was framed then* — per the plateau rule, this destination shift voids it; the next rating starts from this reframed axis.)
+- **The external-target test rises further in priority:** under the old framing it was one open item among several; under this one it is the *only* direct test of the actual destination — a target-agnostic improver that has almost never left its own repo is unproven at precisely the thing it is for.
+
+**What this does not change:** the three PEA principles (constraints, not preferences), the cost discipline (real constraint, just not the identity), the no-installer rule, Probe's exclusion, the stranger-pickup bar, lean files. All confirmed constraints, all still binding.
+
+### What's still open
+
+- The workspace-layer-table question — operator-deferred.
+- **The external-target test — now the top item by an even wider margin** (see above): point this skill at something that isn't itself and isn't software — a letter, a plan, a piece of writing — and see whether the improvement reasoning holds.
+- The reasoning-quality depth assessment — subsumed into the above: the external test *is* that assessment under the corrected framing.

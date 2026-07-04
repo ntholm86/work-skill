@@ -1,18 +1,20 @@
 ---
 name: auditonomy
-description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
+description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.5.0"
+  version: "2.6.0"
 ---
 
 # auditonomy
 
-*One skill. The same governing principles. A fraction of the token cost.*
+*Auditable autonomy: reason about anything, improve anything, show every step.*
 
 **If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. "Subagent" means a separate helper agent dispatched with its own fresh context; if your tooling has none, every mention of them is skippable. `.acm/` is short for Agent Context Memory — a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three files — `destination.md` (what this target is for), `orientation.md` (what recent work has concluded, once enough runs exist to conclude anything), and `audit-trail.md` (what happened and why, one entry per run). This file reads and writes those three files and needs nothing else: no tooling, no install step, no sibling files. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
 
 ## Why this exists, and what it trades away
+
+`auditonomy` is a standalone skill: an improvement-reasoning architecture that works on any target — a codebase, a letter, a plan, a book, a piece of music — and leaves a full audit trail of how it reasoned. "Target" below always means *whatever is being worked on*, not just software. Its lineage is a consolidation of a larger suite, and that lineage explains its shape:
 
 The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` — a sixth skill, contamination/pattern-matching detection, deliberately not folded into this fork) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
 
