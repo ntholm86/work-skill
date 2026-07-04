@@ -27,6 +27,7 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 3. **Mini-Destination.** If `.acm/destination.md` doesn't exist yet in the *target* repo being worked on, ask the operator a short question or two and write it. If it exists, just read it.
 4. **Mini-Orient.** Every 5th iteration, do a condensed arc-read (not the full freshness-guard / derived-artifact machinery of real Orient) and note what's changing.
 5. **The explicit trade-off:** lower token cost per session, *without* silently lowering reasoning quality at the moments quality actually matters (real decisions). If a cost/quality trade-off is unavoidable, it must be visible and justified in the trail entry, never silently absorbed.
+6. **[Confirmed 2026-07-04]** Between the two axes this fork trades on, **reasoning quality outranks mechanism completeness.** Operator's words, verbatim: "capability is one of the most important things for pea-lite... mechanisms are less important... Similar Quality with much less cost is the goal." Concretely: whether `pea-lite` carries the full suite's harder tooling (freshness guards on derived artifacts, writer-splitting, ARF/Probe, session-transcript capture) matters far less than whether its three core reasoning moments are *as good* as the suite's — not merely structurally present. The operator named those three moments directly: **Intent** ("understand what and why, not how"), **Improve's examination** ("surroundings" — reading the target's actual context before deciding), and **Orient** ("meta" — arc-level reasoning about the work itself). And explicitly general-purpose: this reasoning quality is what makes the skill work on *any* kind of target, not just software.
 
 ## Sourced inferences (not literally stated — offered for confirmation, not blocking)
 
@@ -78,3 +79,19 @@ All four inferences above were surfaced as direct questions. **The operator was 
 ### What's still open
 
 - The workspace-layer-table question (see above) — operator-deferred, revisit when they want to decide.
+
+---
+
+## Destination run — 2026-07-04 (third pass)
+
+Operator corrected the priority ordering implicit in the prior day's comparative-rating work. That rating had weighted mechanism-completeness (freshness guards, writer-splitting, ARF/Probe, session/transcript capture) as a significant gap against the full suite. The operator's correction: those mechanisms matter comparatively little; what must hold up is **reasoning quality**, specifically in the three moments that carry the actual thinking — interpreting the ask (Intent), examining the target and its surroundings (Improve's step 2), and arc-level meta-reasoning about the work itself (Orient). This is now folded into the confirmed mandate above as point 6, verbatim-sourced.
+
+### What this changes going forward
+
+- Future comparative ratings of `pea-lite` against the full suite should weight **interpretive depth, examination depth, and meta/arc-reasoning depth** as the primary axis — not mechanism parity.
+- A legitimate open question this creates, not yet answered: is `pea-lite`'s current step 1 (Intent-fused), step 2 (Work/examine), and step 4 (mini-Orient) text actually *as rigorous* as the full suite's `intent`, `improve` step 2, and `orient` — or only structurally analogous? That assessment has not yet been done under this corrected priority and is the natural next piece of work.
+
+### What's still open
+
+- The workspace-layer-table question — operator-deferred, revisit when they want to decide.
+- **New:** the reasoning-quality depth assessment named above — not yet run.

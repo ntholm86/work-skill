@@ -1,6 +1,6 @@
 ---
 name: pea-lite
-version: 2.1.1
+version: 2.2.0
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 ---
@@ -50,7 +50,8 @@ Before touching the target, run one fast check: *what does the operator actually
 
 - **Unambiguous and mechanical** (a named file, a one-line fix, a direct yes/no): don't narrate at length — one clause inside the trail entry's own description is enough. A paragraph explaining that "fix the typo on line 12" means fixing the typo on line 12 is waste, and waste is what this skill exists to cut.
 - **Minor interpretive gap** (clear enough to act, but you're making a judgment call on scope, format, or approach): proceed, and flag the specific choice in one sentence in the trail entry, so a wrong call is cheap to correct.
-- **Material divergence** (the literal request and the likely goal point different directions, or the ask is bare — "continue", "keep going", "next"): stop and narrate before acting. State what you believe the destination is, what would count as success, and at least one alternative reading you considered and rejected, with why — if you can't name one, you likely pattern-matched instead of interpreting. For a bare ask, form 1-3 sourced hunches from `.acm/destination.md`, `.acm/orientation.md`, and the last few trail entries about what matters most now; surface the single most useful question; and if no answer comes back, proceed on your best hunch as an explicit assumption.
+- **Material divergence** (the literal request and the likely goal point different directions, or the ask is bare — "continue", "keep going", "next"): stop and narrate before acting. State what you believe the destination is, what would count as success, and at least one alternative reading you considered and rejected, with why — if you can't name one, you likely pattern-matched instead of interpreting. For a bare ask, form 1-3 sourced hunches from `.acm/destination.md`, `.acm/orientation.md`, the last few trail entries, and what the conversation itself has emphasized, corrected, or redirected toward, about what matters most now; surface the single most useful question; and if no answer comes back, proceed on your best hunch as an explicit assumption.
+- **Internal contradiction** (the request conflicts with itself, or with something the operator stated earlier): name the contradiction explicitly rather than silently resolving it by picking one side. Surface both readings and let the operator adjudicate — a confidently-executed resolution of a contradiction the operator never saw is a distinct failure from misreading a clear-enough ask.
 
 This step replaces a standalone Intent invocation. It is never optional — only its narration length varies.
 
@@ -60,7 +61,7 @@ Do the work, scaling the rigor of examination to the stakes. Four lenses are ava
 
 If a score or rubric helps the examination, treat it as a temporary diagnostic of the current plateau — void when the destination or focus shifts — never a standing target to optimize toward. A metric that outlives its plateau starts prescribing a route.
 
-For anything beyond a mechanical fix, ask once: *is the target's structure itself wrong, so that no incremental fix will help?* If yes, don't patch — argue for redesign: sketch the alternative, weigh redesign cost against the cost of continuing to patch, and stop for the operator's decision.
+For anything beyond a mechanical fix, pause on this before deciding: *What am I not seeing? Am I anchored on the most obvious finding and missing a subtler, more important one?* Then the redesign question: *is the target's structure itself wrong, so that no incremental fix will help?* If the structure itself is wrong, don't patch — argue for redesign: sketch the alternative, weigh redesign cost against the cost of continuing to patch, and stop for the operator's decision.
 
 Then pick exactly one outcome:
 
@@ -114,7 +115,7 @@ Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doe
 
 1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.
-3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries.
+3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries — and check the opposite too: a suspiciously clean run with no reversals, no missed predictions, and no named blind spots is itself a finding (likely rationalization, not a job well done). Where an earlier entry made a prediction, check whether a later entry's actual outcome confirms it or quietly contradicts it without saying so.
 4. Read the cost lines across those entries: is cost drifting upward without the stakes drifting with it — ceremony creep, habitual high tiers, runs heavier than their decisions warrant? A cost trend is a plateau diagnostic like any other score: worth one line if it says something, void when the focus shifts.
 5. If something material emerged, update `.acm/orientation.md` (create it if absent, dating its header) with a short "Current claims" section and a "Watch for" line. If nothing material emerged, say so in one line in this run's own trail entry and leave `orientation.md` alone — a mini-orient with nothing to say should say nothing.
 
