@@ -761,3 +761,8 @@ Predicted <=10 net lines and a description change. Outcome: +8 net (139 -> 147),
 Mini-orient check per the new rule itself: need-signals -- operator pushback? This turn was extension-with-confirmation, not correction of an arc misread; no reversal, no closed stretch, orientation current as of entry 38. Backstop: 2 of this loop's entries since the mini-orient at entry 38 -- not due. No orient this run.
 Next: unchanged movers plus the newest conversion event -- a mini-orient fired by a need-signal before the counter.
 Cost: moderate -- 7 tool ops, 3 files written, no subagent.
+
+## 2026-07-04 -- whats-next-answered
+
+Bare ask ("whats next then?") -- hunches sourced from orientation.md's movers and the v3.0.0 entry's queue. Recommended: cold-session non-software artifact test (a real letter, Ansoegning.txt candidate) -- converts the oldest open item (4 scorecards) plus first-contact bootstrap, skill-leads-workflow, and need-signals in one run. Rating v3.0.0 now deprioritized: text-only changes, expected delta ~0. No changes made; awaiting operator's pick.
+Cost: light -- 1 tool op, 1 file.
