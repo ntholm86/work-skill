@@ -1,23 +1,29 @@
 # auditonomy-skill
 
-A cost-optimized, single-file fork of the [pea/skills](../skills/) suite. Where the full suite is five separate skills (`intent`, `improve`, `destination`, `orient`, `trail` — plus `probe`), `auditonomy-skill` is **one skill**: [`auditonomy/SKILL.md`](./auditonomy/SKILL.md).
+**Auditable autonomy in one file.** `auditonomy` is a standalone, target-agnostic improvement-reasoning skill: point an agent at anything it can reason about — code, documents, plans, letters, music — and it examines, improves, and records every reasoning step in an auditable trail. The whole skill is one readable markdown file: [`auditonomy/SKILL.md`](./auditonomy/SKILL.md). No installer, no tooling, no dependencies — by design, permanently.
+
+It is built on the three [Principles of Earned Autonomy](https://github.com/ntholm86/principles-of-earned-autonomy):
+
+1. **Operator's Intent** — the agent is given a destination, not a route.
+2. **Observable Autonomy** — every reasoning step is recorded as it happens; an observer can reconstruct what was done and why from the trail alone.
+3. **Convergence Is Silence** — finding nothing actionable is a valid outcome; ceremony is never manufactured to look thorough.
 
 ## Why
 
-The full suite was built during a period where token cost wasn't the binding constraint. In practice, most sessions only ever invoke Intent and Improve, chained together, with Trail always following. Loading and running five skill files' worth of ceremony for that common case costs more than it needs to. `auditonomy` merges:
+Its parent, the full [skills suite](https://github.com/ntholm86/principles-of-earned-autonomy-skills-suite), delivers the same discipline as five separate skills (`intent`, `improve`, `destination`, `orient`, `trail`) — and proved the capability, but priced itself out of daily use: five skill-loads and full ceremony on every run, even a one-line fix. `auditonomy` is the consolidation — one skill-load, one loop, with reasoning depth scaled to the stakes of the moment instead of a fixed template:
 
 - **Intent** — folded into the loop's own first step, narrated only when the interpretation is genuinely uncertain.
 - **Improve** — the base loop (examine → challenge → decide → act → reflect), depth-scaled to the stakes of the change.
-- **Destination** — a "mini" bootstrap: only runs if the target repo has no `.acm/destination.md` yet, and asks a short question instead of running the full multi-session signal-gathering process.
-- **Orient** — a "mini" tripwire: a condensed arc-read every 5th trail entry, not the full freshness-guard/derived-artifact machinery.
+- **Destination** — a "mini" bootstrap: asks one short question on first contact with a target that has no `.acm/destination.md` yet — and can re-trigger *itself* when its own evidence says the destination is exhausted or wrong, while the operator always owns what the destination becomes.
+- **Orient** — a condensed arc-read the skill triggers itself when the work signals a need (contradictions, pushback, a stretch closing, staleness), with an entry-count backstop catching what judgment misses.
 - **Trail** — always happens, every run, with a variable-depth entry format (Micro / Standard / Full) so routine work costs little and real decisions still get full reasoning.
 
-`probe` (contamination / pattern-matching detection) is intentionally excluded from this consolidation — confirmed by the operator, not a placeholder for later.
+The skill leads the workflow, not the operator: it announces what it's doing and why, and names the one decision that belongs to the operator at each moment. `probe` (contamination / pattern-matching detection) is intentionally excluded from this consolidation — a settled decision, not a placeholder.
 
 ## Status
 
-v2.4.0 — confirmed as the operator's daily-usage skill going forward (superseding day-to-day use of the full `pea/skills` suite, which stays available for whatever still warrants its depth). Not yet battle-tested against a long multi-session run. A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `auditonomy/SKILL.md` and use it without the author explaining anything** — jargon or unexplained references to the original five-skill suite are defects. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the record of how this repo came to exist.
+v3.0.0 — the operator's confirmed daily-usage skill, and dogfooded hard: the skill has been pointed at itself and at external targets (a Python code repo where it made a test-verified source change, and editorial/content repos), with every run — including its own design decisions — recorded in this repo's trail. Scored against its own destination on a dual-axis (capability × cost) evidence-cited scorecard; ratings and their deltas live in [`.acm/orientation.md`](./.acm/orientation.md). A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `auditonomy/SKILL.md` and use it without the author explaining anything** — jargon or unexplained references to the parent suite are treated as defects. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the complete record of how this repo came to be — including the wrong turns.
 
 ## Use
 
-Point an agent at [`auditonomy/SKILL.md`](./auditonomy/SKILL.md) the same way you'd point it at any of the `pea/skills` skill files (e.g. copy the `auditonomy/` folder into wherever your agent loads skills from, such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point of this fork is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.
+Point an agent at [`auditonomy/SKILL.md`](./auditonomy/SKILL.md) — copy the `auditonomy/` folder into wherever your agent loads skills from (such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.
