@@ -766,3 +766,9 @@ Cost: moderate -- 7 tool ops, 3 files written, no subagent.
 
 Bare ask ("whats next then?") -- hunches sourced from orientation.md's movers and the v3.0.0 entry's queue. Recommended: cold-session non-software artifact test (a real letter, Ansoegning.txt candidate) -- converts the oldest open item (4 scorecards) plus first-contact bootstrap, skill-leads-workflow, and need-signals in one run. Rating v3.0.0 now deprioritized: text-only changes, expected delta ~0. No changes made; awaiting operator's pick.
 Cost: light -- 1 tool op, 1 file.
+
+## 2026-07-04 -- cold-session-prompt-drafted-for-letter-test
+
+Operator picked the recommended mover and asked for the paste-ready cold prompt targeting Ansoegning.txt (a real Danish job-application letter -- the destination's own "letter" example). [!DECISION] Withheld from the prompt: that it tests the non-software half of metric 4, the four-deep conversion queue, the need-signals expectation, and any hint about where .acm/ should live for a bare non-repo file at a multi-repo root -- that placement ambiguity is deliberately left as part of the test, since external dogfooding has been the only source of mechanism-bug discoveries. Included as legitimate operator content: the paths, "improve it to land the interview," a voice-preservation constraint, work-in-Danish, and "I'm new to this skill -- guide me" (the literal skill-leads-workflow scenario, stated as operator context, not as a test hint).
+Not yet run -- this entry records the prompt-construction decision only.
+Cost: light -- 1 tool op, 1 file.
