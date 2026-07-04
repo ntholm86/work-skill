@@ -777,3 +777,8 @@ Cost: light -- 1 tool op, 1 file.
 
 Operator asked to publish this repo to GitHub (ntholm86) with the same metadata treatment as the sibling repos. Examination before pushing found the README front door failing the repo's own stranger-pickup bar: led with the demoted fork identity, claimed v2.4.0 (current 3.0.0), described the superseded every-5th orient, and linked ../skills/ which cannot resolve on GitHub -- the exact defect-class this skill found in ai-steward's README (66-vs-187). [!DECISION] Rewrote the README forward-facing prose to match the confirmed destination (standalone identity leading, suite demoted to lineage with a GitHub-resolvable link, v3.0.0 status, need-triggered orient, self-triggered destination, skill-leads-workflow) and added an MIT LICENSE matching the skills suite's treatment (author sourced from git config user.name). Trail/destination history untouched.
 Cost: moderate -- 8 tool ops, 2 files written.
+
+## 2026-07-04 -- published-to-github
+
+Repo published: https://github.com/ntholm86/auditonomy-skill (public, full history -- 252 objects incl. the complete trail and every wrong turn, which is the point). Metadata treatment matched to the sibling repos by reading their live API metadata first (skills suite, agent-context-memory, ai-steward, principles-of-earned-autonomy): description with a concrete hook, 19 topics from the family vocabulary (earned-autonomy, observable-autonomy, audit-trail, agent-skills, copilot-skills, ...), homepage -> the earned-autonomy site, MIT license matching the suite. The stranger-pickup bar is now live for real: the file is public.
+Cost: light -- 5 tool ops (1 interactive auth), 1 file.
