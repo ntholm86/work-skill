@@ -477,3 +477,28 @@ Cost: moderate — 5 tool ops, 2 files, 1 subagent.
 2. Real code-repo test — still open, still valuable, now secondary to (1) given the operator's explicit generalization concern.
 3. Resolve the workspace-layer-table question — operator-owned, unrelated to this thread, long-deferred.
 Cost: heavy — 9 tool ops, 3 files, 1 subagent (parallel reads across 6 suite files).
+
+## 2026-07-04 — frontmatter-spec-compliance-fix
+
+**Run via Improve skill (operator's explicit choice, not pea-lite's own tiering).**
+
+**Interpretation.** "Low hanging fruit... frontmatter spec compliance" reads as: fix the one concrete, previously-identified deviation from the actual Agent Skills open standard (`version` as a bare top-level frontmatter key, which the spec doesn't define — it only defines `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`). Not asked: touch the sibling suite in `c:\git\pea\skills` (out of scope, different repo, not requested).
+
+**Examine.** Purpose lens: pea-lite's own description calls itself an Agent-Skills-format file ("at a single skill-load") — carrying a nonstandard field undercuts that claim for any strict validator (`skills-ref validate`) or unfamiliar loader, even though most loaders tolerate unknown YAML keys. Inconsistency lens: two nonstandard fields were flagged in the prior research turn (`version`, `argument-hint`), not one — worth treating them differently, see below.
+
+**Challenge.** Not a redesign question — mechanical, low-stakes, fully reversible. The one real judgment call: `argument-hint` is not an Agent Skills field either, but unlike `version` it has no clearly-designated home in the spec (`metadata` would work structurally, but `argument-hint` functions as a live invocation hint in Claude-Code-style command tooling, and I don't have confirmed evidence of which tool(s) actually parse this file at runtime). Moving it could be a pure compliance win or could silently drop working functionality in an environment I can't observe from here.
+
+**Decision + prediction.** [!DECISION] Fix only `version` — move it into `metadata.version: "2.2.0"`, the exact pattern the spec itself recommends. Leave `argument-hint` untouched pending operator input. Predicted: this is a pure syntax relocation, zero semantic change, file remains valid YAML and a stricter-spec-compliant Agent Skill.
+
+**Act + verify.** Edited frontmatter (single `multi_replace`-equivalent block edit), re-read the file's first 10 lines to confirm: `name`, `description`, `argument-hint` unchanged, `version` now nested under `metadata`, frontmatter delimiters intact. Prediction held.
+
+**Reflection.** Falsifiable claim: pea-lite's frontmatter is now fully spec-compliant for every field except `argument-hint`, which is a genre-appropriate hybrid (Agent Skill body + command-style invocation hint) rather than an oversight. Blind spot: I have not actually run `skills-ref validate` against this file — the compliance claim rests on reading the spec table, not on running the real validator. Imagined pushback: "if you really cared about compliance you'd have asked about `argument-hint` before deciding to leave it, not after" — fair; asking now rather than guessing.
+
+**Across-trail triggers:** operator explicitly asked (fired — this run exists because of it). Recurring finding-class: not fired — first frontmatter-compliance fix in this trail. Contradicts prior realization: not fired. Silence imminent: not fired — a real, if small, change was made.
+
+### Candidate Next Moves
+
+1. Ask the operator whether `argument-hint` needs to stay top-level for a specific tool, or can move into `metadata` too — resolves the one open judgment call from this run.
+2. Run the real `skills-ref validate` tool (if installable) against this file to confirm the compliance claim empirically rather than by spec-reading alone.
+3. The still-standing higher-value item from the prior turn: a real with/without-skill empirical test, which no amount of frontmatter tidying substitutes for.
+Cost: light — 3 tool ops, 2 files, no subagent.
