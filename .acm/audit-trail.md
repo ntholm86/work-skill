@@ -650,3 +650,8 @@ Self-check per new v2.7.0 rule: entry count after orientation.md's dated header 
 
 Blind spot: same-day rating of a same-day change is the thinnest possible evidence window -- the scores measure whether the cited defects were addressed, not whether the skill got better in use. Next: unchanged, the external-target test (three scorecards running).
 Cost: light -- 3 tool ops, 2 files, no subagent.
+
+## 2026-07-04 -- scoring-model-confirmed-self-referential-distinction
+
+Operator confirmed the scoring model and asked whether it works as they picture it: scores as plateau-not-convergence, measurements derived from destination x target, measurement-improvement equating to target-quality improvement. Answered: yes on all three, with one distinction now settled. [!REALIZATION] Measurement mechanisms are target features ONLY in the self-referential case (auditonomy pointed at itself, where the destination's cost half demands measurement) -- on external targets, measurements are disposable scaffolding, and improving them may legitimately LOWER a score; a score that rises because the yardstick changed is the Goodhart failure the plateau rule voids. The guard between the two cases is the evidence requirement: points move only with cited evidence of the target itself moving.
+No file changes. Cost: light -- 1 tool op, 1 file.
