@@ -3,7 +3,7 @@ name: auditonomy
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.7.0"
+  version: "2.8.0"
 ---
 
 # auditonomy
@@ -120,6 +120,8 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
 
 Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries **after its own dated header** (the `_Last updated: YYYY-MM-DD ..._` line it carries) — a repo with a long pre-existing trail should not have its mini-orient timed by history that predates this loop's involvement. The mini-orient runs **in the same run that writes the 5th (10th, 15th…) entry** — not deferred to the next one:
 
+**Multi-writer trails.** On targets whose `.acm/` is also written by other agents or the target's own tooling (a pipeline's own record phase, other skills), the every-5th count applies to **entries this loop wrote** — other writers' entries are context to read, not a schedule this loop can breach; a "missed" mini-orient charged to sessions that never loaded this skill is a false positive, not a backlog to catch up. And where `orientation.md` is owned by the target's own machinery (rewritten by its own arc-reading phase), don't overwrite its claims: append a dated mini-orient addendum and leave the owner's sections intact.
+
 1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.
 3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries — and check the opposite too: a suspiciously clean run with no reversals, no missed predictions, and no named blind spots is itself a finding (likely rationalization, not a job well done). Where an earlier entry made a prediction, check whether a later entry's actual outcome confirms it or quietly contradicts it without saying so.
@@ -131,7 +133,7 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 ## Self-check before calling a run done
 
 - Did step 3 (Trail) actually happen? If not, the run isn't done, whatever else was accomplished.
-- At append time, did you count the trail's `## ` headers — and if this entry was the 5th (10th, 15th…) since `orientation.md`'s dated header, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a schedule breach, not a deferral.
+- At append time, did you count the trail's `## ` headers (on multi-writer trails, only this loop's) — and if this entry was the 5th (10th, 15th…) since `orientation.md`'s dated header, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a schedule breach, not a deferral.
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
 - If this run built more than one new committed file around an inference from step 0 or step 1, did you ask before building the rest — or only label the first one unconfirmed and proceed as if that were enough?
