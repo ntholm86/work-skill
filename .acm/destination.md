@@ -1,8 +1,8 @@
-# Destination — pea-skills-lite
+# Destination — think-it-through-skill
 
 _Operator: Nils Holmager | Initialised: 2026-07-03_
 
-> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* pea-skills-lite.
+> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* think-it-through-skill (renamed from `pea-skills-lite` — see "Destination run — 2026-07-04 (rename)" below).
 
 ---
 
@@ -14,9 +14,9 @@ _Operator: Nils Holmager | Initialised: 2026-07-03_
 
 The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator finds they mostly invoke two of those six skills — Intent and Improve — for almost everything, and is now **"running out of tokens too fast"** using the full multi-skill-invocation discipline.
 
-`pea-skills-lite` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
+`think-it-through-skill` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
 
-**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed `pea-lite` is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `pea-lite`.
+**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through` on 2026-07-04) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `think-it-through`.
 
 ## Operator's direct mandate
 
@@ -27,30 +27,30 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 3. **Mini-Destination.** If `.acm/destination.md` doesn't exist yet in the *target* repo being worked on, ask the operator a short question or two and write it. If it exists, just read it.
 4. **Mini-Orient.** Every 5th iteration, do a condensed arc-read (not the full freshness-guard / derived-artifact machinery of real Orient) and note what's changing.
 5. **The explicit trade-off:** lower token cost per session, *without* silently lowering reasoning quality at the moments quality actually matters (real decisions). If a cost/quality trade-off is unavoidable, it must be visible and justified in the trail entry, never silently absorbed.
-6. **[Confirmed 2026-07-04]** Between the two axes this fork trades on, **reasoning quality outranks mechanism completeness.** Operator's words, verbatim: "capability is one of the most important things for pea-lite... mechanisms are less important... Similar Quality with much less cost is the goal." Concretely: whether `pea-lite` carries the full suite's harder tooling (freshness guards on derived artifacts, writer-splitting, ARF/Probe, session-transcript capture) matters far less than whether its three core reasoning moments are *as good* as the suite's — not merely structurally present. The operator named those three moments directly: **Intent** ("understand what and why, not how"), **Improve's examination** ("surroundings" — reading the target's actual context before deciding), and **Orient** ("meta" — arc-level reasoning about the work itself). And explicitly general-purpose: this reasoning quality is what makes the skill work on *any* kind of target, not just software.
+6. **[Confirmed 2026-07-04]** Between the two axes this fork trades on, **reasoning quality outranks mechanism completeness.** Operator's words, verbatim: "capability is one of the most important things for pea-lite... mechanisms are less important... Similar Quality with much less cost is the goal." Concretely: whether `think-it-through` (then named `pea-lite`) carries the full suite's harder tooling (freshness guards on derived artifacts, writer-splitting, ARF/Probe, session-transcript capture) matters far less than whether its three core reasoning moments are *as good* as the suite's — not merely structurally present. The operator named those three moments directly: **Intent** ("understand what and why, not how"), **Improve's examination** ("surroundings" — reading the target's actual context before deciding), and **Orient** ("meta" — arc-level reasoning about the work itself). And explicitly general-purpose: this reasoning quality is what makes the skill work on *any* kind of target, not just software.
 
 ## Sourced inferences (not literally stated — offered for confirmation, not blocking)
 
-- **[Confirmed 2026-07-03]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Operator confirmed directly: "I dont think the probe skill is needed in pea-skills-lite." Probe stays a separate, occasionally-invoked skill outside `pea-lite`, not folded in — settled, not just assumed.
+- **[Confirmed 2026-07-03]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Operator confirmed directly: "I dont think the probe skill is needed in pea-skills-lite." Probe stays a separate, occasionally-invoked skill outside `think-it-through`, not folded in — settled, not just assumed.
 - **[Corrected 2026-07-03]** No installer — permanently, by design, not a temporary v1 scope cut. Operator's own words: "I dont want an installer, its should be so easy its just a skill that ppl can use." Ease-of-adoption is itself part of what "lite" means here: a single self-contained `SKILL.md` a person can read, drop into wherever their agent loads skills from, or paste straight into a prompt — no build step, no script to trust, no packaging ceremony between the file and using it. This supersedes the earlier unconfirmed inference, which had incorrectly framed the lack of an installer as "not yet" rather than "not ever."
 
 ## Constraints carried over from the workspace destination
 
 - Higher scope wins on coordination matters (ACM §4) — `pea/.acm/destination.md` governs if this repo's direction ever conflicts with cross-repo coordination.
 - Append-only memory — corrections happen by appending, never rewriting.
-- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `pea-lite/SKILL.md` file exists to resolve.
+- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `think-it-through/SKILL.md` file exists to resolve.
 
 ## What "done" looks like for this repo
 
-Not a fixed release. Working-in-use signal: the operator actually reaches for `pea-lite` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
+Not a fixed release. Working-in-use signal: the operator actually reaches for `think-it-through` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
 
-**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `pea-lite/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
+**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `think-it-through/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
 _(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
 
-Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `pea-lite/SKILL.md`, not just a scope cut.
+Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `think-it-through/SKILL.md`, not just a scope cut.
 
 ---
 
@@ -95,3 +95,19 @@ Operator corrected the priority ordering implicit in the prior day's comparative
 
 - The workspace-layer-table question — operator-deferred, revisit when they want to decide.
 - **New:** the reasoning-quality depth assessment named above — not yet run.
+
+---
+
+## Destination run — 2026-07-04 (rename)
+
+Operator judged the name `pea-lite` a defect in its own right: it tells an outsider nothing about what the skill does, and fails the same stranger-pickup bar this file already holds as a confirmed design constraint. Three rounds of candidate names were proposed and rejected on the operator's own explicit criteria — round 1 rejected for not "sounding useful" on sight, round 2 (`show-your-work`) rejected for not capturing the reasoning-and-generality dimension, round 3 confirmed: **`think-it-through`**. The repo itself was renamed too (operator's explicit choice): `pea-skills-lite` → `think-it-through-skill`, avoiding a redundant nested `think-it-through/think-it-through/SKILL.md` by keeping the skill subfolder as `think-it-through/`.
+
+**What changed:** `pea-lite/` → `think-it-through/` (git mv, history preserved), repo folder `pea-skills-lite` → `think-it-through-skill`, frontmatter `name:` field, the `# think-it-through` H1, the one in-body mention, README.md, and this file's forward-facing prose (mandate, current-state, "what done looks like" sections). Version bumped 2.2.0 → 2.3.0 (a structural/identity change, not a prose polish).
+
+**What was deliberately left alone:** every verbatim operator quote naming `pea-lite` or `pea-skills-lite` (e.g. "capability is one of the most important things for pea-lite...", "I dont think the probe skill is needed in pea-skills-lite", "Yes i want pea skills lite to become my new daily usage skill") — quotes are a historical record of what was literally said and are not rewritten. The two dated "Destination run" sections above (2026-07-03 second pass, 2026-07-04 third pass) are likewise left using the old name throughout, by the same logic applied to `.acm/audit-trail.md`'s append-only rule: they are historical log entries describing what was true and what things were called at that point in time, not living/forward-facing prose.
+
+### What's still open
+
+- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `think-it-through-skill`.
+- The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
+- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.

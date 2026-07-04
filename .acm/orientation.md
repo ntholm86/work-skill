@@ -1,4 +1,4 @@
-# orientation.md — pea-skills-lite
+# orientation.md — think-it-through-skill (renamed 2026-07-04, was pea-skills-lite)
 
 _Last updated: 2026-07-03 (run: cold-read-verification-and-defect-repair)_
 

@@ -502,3 +502,13 @@ Cost: heavy — 9 tool ops, 3 files, 1 subagent (parallel reads across 6 suite f
 2. Run the real `skills-ref validate` tool (if installable) against this file to confirm the compliance claim empirically rather than by spec-reading alone.
 3. The still-standing higher-value item from the prior turn: a real with/without-skill empirical test, which no amount of frontmatter tidying substitutes for.
 Cost: light — 3 tool ops, 2 files, no subagent.
+## 2026-07-04 -- rename-pea-lite-to-think-it-through
+
+**Tier: Standard.** [!DECISION] Operator judged `pea-lite` a bad name: gives an outsider no clue what it does, failing the same stranger-pickup bar destination.md already holds as confirmed. Three rounds of candidate names proposed, each round rejected on the operator's own explicit criteria (round 1: not "sounding useful" on sight; round 2 `show-your-work`: didn't capture reasoning + domain-generality). Round 3 confirmed: `think-it-through`. Operator also chose to rename the repo (`pea-skills-lite` -> `think-it-through-skill`), avoiding a redundant nested `think-it-through/think-it-through/SKILL.md` by keeping the inner skill folder as `think-it-through/`.
+
+**Action.** `git mv pea-lite think-it-through` (history preserved), OS-level rename of the repo folder itself, updated frontmatter `name:`, the H1, and the one in-body mention in SKILL.md; updated README.md; updated destination.md's forward-facing prose (mandate/current-state sections) and appended a new dated "Destination run -- 2026-07-04 (rename)" section; updated orientation.md's title line. Version 2.2.0 -> 2.3.0.
+
+**Deliberately not touched:** every verbatim operator quote containing the old names (preserved as historical record, per this repo's own append-only convention applied by analogy to destination.md's dated run-sections); this audit-trail.md's own historical entries above this one, which still correctly say `pea-lite` because that was its name at the time.
+
+Blind spot: the new name has not been tested against the stranger-pickup bar the same way the body text has (no fresh cold-read of the *name* alone, only the operator's own judgment across three rounds). Next: resolve the still-open `argument-hint` question, and the still-pending real empirical with/without-skill test -- both older, higher-value open items than this rename.
+Cost: moderate -- roughly 15 tool ops across 4 files, no subagent.
