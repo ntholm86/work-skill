@@ -667,3 +667,15 @@ External run executed (ai-steward commit e29dbdd, entry "readme-front-door-match
 Mini-orient written into orientation.md (3 arc-claims + watch-for). Scores not re-rated this run -- the run that produces the evidence doesn't grade it.
 Next: re-rate with this run as evidence; then the sharpened metric-4 test (a source-code change in an external repo, verified by its tests).
 Cost: heavy -- 14 tool ops across 2 repos, 8 files read, 3 files written, no subagent.
+
+## 2026-07-04 -- rating-post-external-run
+
+Operator approved the recommended path ("lets do this"): re-rate now with the ai-steward run as evidence; reserve the code-change test for a fresh session so it doubles as the fresh-context proof.
+
+**Result: 8.2/10 (capability 8.2, cost 8.3), delta +0.4 from 7.8.** Scorecard appended, dated, to orientation.md. Moves, all on demonstrated behavior with named artifacts: metric 2 +1 (comparison-against-source found an externally verifiable defect, 66-vs-187), metric 3 +1 (due-check self-fired at exactly entry 33), metric 4 +1 to 6 (first completed external code-repo run; half-conversion, change was docs), metric 9 +1 (second self-scheduled trend read -- its own stated habit bar met). Held: 1 (conditional persists -- same-session firing), 5, 6 (delta-0 resisted under score-liking operator: established behavior, not new capability), 7 (creep baseline recorded: 137 lines), 8, 10.
+
+[!DECISION] Stated in the scorecard: the next honest rating is expected to be delta ~0 unless the fresh-session code-change test happens -- pre-committing to that expectation now so a future flat rating cannot be spun as failure, nor a padded one as progress.
+
+Blind spot: two same-day upward ratings (7.2 -> 7.8 -> 8.2) risk looking like score-chasing even though each cited artifacts; the pre-committed delta-0 expectation is the guard.
+Next: fresh session, external repo, source-code change under test coverage -- converts the conditional fully and is the only remaining mover.
+Cost: light -- 4 tool ops, 2 files, no subagent.

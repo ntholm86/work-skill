@@ -85,3 +85,22 @@ _Last updated: 2026-07-04 (run: full-orient-and-rescore-under-corrected-destinat
 3. **Cost trend (second consecutive self-scheduled read — metric 9's habit test, passed):** last 5 entries: heavy 8 / moderate 6 / light 3 / light 1 / moderate 8 ops — flat, stakes-matched, no creep. Also: a delta-0 rating was declared and *not* padded (7.8 held with no new evidence), which is the plateau discipline working.
 
 Watch for: the remaining metric-4 gap is now precisely "code change under tests," not "external target" — don't let the softer version get re-counted as done.
+
+## Scorecard — 2026-07-04, post-external-run (rating run; evidence = ai-steward `e29dbdd` + auditonomy entry 33)
+
+| # | Measurement | /10 | Δ | Evidence | Bounded improvement suggestion |
+|---|---|---|---|---|---|
+| 1 | Interpretive depth | 8 | 0 | "Improve it" correctly read as the external test, not another text edit (the non-Goodhart reading); one question asked before writing into another repo. Conditional point holds but does not fully convert — rules fired in the session that wrote them. | The fresh-session run — the one remaining bound. |
+| 2 | Examination depth | 9 | +1 | Comparison-against-source fired as the load-bearing method on a real external target and found an externally verifiable Purpose-level defect (README "66 tests" vs. 187 collected live). Behavior, not text. | Fire it on a non-text artifact (plan/letter) — the non-software half of the destination claim is still untested. |
+| 3 | Arc/meta-reasoning | 9 | +1 | The append-time due-check self-fired at exactly entry 33, unprompted; the mini-orient produced 3 falsifiable claims and sharpened the metric-4 gap. Same-session caveat noted. | Next self-fire due at entry 38 — observe in a fresh session. |
+| 4 | Target-agnostic capability | 6 | +1 | First completed external code-repo run: real finding, real fix, target's own trail conventions honored (its rule 6 followed, its entry format used). Half-conversion only — the accepted change was documentation. | The sharpened test: a source-code change in an external repo, verified by its tests. |
+| 5 | Auditability | 9 | 0 | Dual-repo trailing, both commits verified, bounds recorded where evidence is weak. Maintenance bar held. | None owed. |
+| 6 | Self-correction honesty | 8 | 0 | Delta-0 declared under an operator who visibly enjoys rising scores — real pressure resisted. Good, but one more datapoint of established behavior, not a new capability. | Hold the separation rule as runs multiply. |
+| 7 | Loading cost | 9 | 0 | No text change this cycle. **Creep baseline recorded: 137 lines (v2.7.0).** | Future ratings compare against 137. |
+| 8 | Ceremony/tier discipline | 8 | 0 | Heavies stake-justified, rating kept light (3 ops). Still untested on a high-stakes code change. | Same test as metric 4 — they share the proof. |
+| 9 | Cost telemetry maturity | 8 | +1 | Second consecutive self-scheduled trend read — the scorecard's own stated bar ("two self-scheduled reads = a habit, not an event") was met. | Add cross-repo comparison: cost of external-run entries vs. self-targeted entries, once 2-3 external runs exist. |
+| 10 | Cost-quality trade visibility | 8 | 0 | No new evidence either way. | Goodhart watch stands. |
+
+**Plateau average: 8.2/10 (capability 8.2, cost 8.3) — Δ +0.4 from 7.8.**
+
+**Bounds:** every point moved on demonstrated behavior with a named artifact behind it; nothing moved on text. The conditional from v2.7.0 is now *partially* converted (rules fired on a real run, same session) — full conversion and the next real score movement both hang on the same event: **a fresh-session external run making a source-code change under test coverage.** Until that happens, expect the next honest rating to be Δ ≈ 0.
