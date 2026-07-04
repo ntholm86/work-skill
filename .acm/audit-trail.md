@@ -743,3 +743,21 @@ Predicted <=4 net lines, description untouched. Outcome: 0 net lines (139 -> 139
 Entry count since orientation header: 11 (mini-orient ran at 10, next due at 15) -- not due.
 Next: unchanged movers (non-software artifact, second fresh multi-writer trail, destination read-back live firing) plus the new one: the self-trigger's first real fire.
 Cost: moderate -- 6 tool ops, 3 files written, no subagent.
+
+## 2026-07-04 -- need-triggered-orient-skill-leads-workflow-v3.0.0
+
+**Tier: Full** -- changes the trigger philosophy of a core loop step and adds a confirmed operator constraint; description changed for the first time in 5 versions.
+
+**Interpretation.** [!DECISION] Operator confirmed the v2.9.0 boundary and extended it: the "every 5th" orient cadence was arbitrary by their own account ("just a value I tossed out") -- the trigger logic must live in the flow, skill-owned, same detection-ownership principle as destination. Plus a new constraint: the operator will be NEW to the skill and must be guided/hand-held -- the skill leads the workflow, never waits to be invoked. Alternative reading considered and rejected: delete the counter entirely (the literal reading of "the every-5th was arbitrary"). Rejected because the run that most needs an arc-read is the one least able to notice it -- a rationalizing run won't feel its own need-signal -- and the append-time due-check is this repo's only mechanism with behaviorally converted evidence (self-fired at entries 33 and 38). Trading the one proven tripwire for pure judgment would be an unfalsifiable regression. Chosen design: four need-signals lead (arc self-contradiction; operator pushback; a stretch closing; orientation.md staleness), the counter demoted to an explicitly-arbitrary backstop.
+
+**Action.** Step 4 retitled and rewritten (need-signals primary, backstop counter secondary, multi-writer rule preserved against the backstop); loop intro gains the skill-leads-the-workflow paragraph (announce what's due, why, and the one operator decision at that moment); self-check bullet updated to check signals AND backstop; description updated ("every 5th entry" -> "self-triggered when the arc needs one") -- leaving it would state a rule the file no longer contains. destination.md: dated section appended correcting mandate point 4 at the trigger level and recording the new confirmed constraint, with the counter-demotion judgment read back explicitly for pushback. v2.9.0 -> v3.0.0 (major: core trigger semantics changed).
+
+Predicted <=10 net lines and a description change. Outcome: +8 net (139 -> 147), description changed as predicted. Displaced weight: the old counting-mechanics paragraph.
+
+**Reflection.** Falsifiable claim: the next mini-orient on a live target will fire off a need-signal BEFORE the backstop count is reached -- if every future firing is still the counter, the need-signals are decorative and this change added text without adding behavior. Blind spot: four need-signals chosen by the same agent that wrote the loop -- no external check these are the right four; also "the skill leads the workflow" is only testable with a genuinely new operator, which this operator no longer is. Imagined pushback: "you kept the counter the operator just called arbitrary" -- answered in destination.md's read-back paragraph; if the operator wanted it gone entirely, that paragraph is the marked pushback point.
+
+**Across-trail triggers:** operator asked (fired). Recurring finding-class: text-to-behavior conversion lag -- now four rule-sets in queue (multi-writer, destination self-trigger, plateau-exit, need-signals), the queue itself is becoming the pattern to watch. Contradicts a prior [!REALIZATION]? No -- generalizes v2.9.0's detection-ownership principle from destination to orient. Silence imminent: no.
+
+Mini-orient check per the new rule itself: need-signals -- operator pushback? This turn was extension-with-confirmation, not correction of an arc misread; no reversal, no closed stretch, orientation current as of entry 38. Backstop: 2 of this loop's entries since the mini-orient at entry 38 -- not due. No orient this run.
+Next: unchanged movers plus the newest conversion event -- a mini-orient fired by a need-signal before the counter.
+Cost: moderate -- 7 tool ops, 3 files written, no subagent.

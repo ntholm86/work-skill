@@ -196,3 +196,20 @@ This widens the previous step 0.5 rule ("never re-run automatically") by the ope
 
 - The three standing items (workspace-layer table, non-software artifact test, second fresh multi-writer trail) — unchanged.
 - **New:** the self-trigger has never fired — it becomes real the first time a plateaued scorecard's empty coverage diff actually initiates a destination question. Until then it is text, like every rule before its first conversion.
+
+---
+
+## Destination run — 2026-07-04 (need-triggered orient; the skill leads the workflow)
+
+Operator, same session, confirming the v2.9.0 boundary ("Yes, the operator owns the destination") and extending the principle:
+
+1. **The "every 5th" orient cadence was arbitrary, by the operator's own account** — "just a value I tossed out," not a principled rule. The mandate's original point 4 ("Mini-Orient. Every 5th iteration...") is hereby corrected at the trigger level: the *logic* to run orient must live in the flow — the skill triggers it when the work signals a need — exactly the detection-ownership principle v2.9.0 established for destination. (The condensed arc-read itself, versus full Orient machinery, is unchanged.)
+2. **New confirmed constraint — the skill leads the workflow.** Operator verbatim: the operator "will be new to the skill... they must be guided and hand-held through the workflow." This extends the stranger-pickup bar from *reading* the file to *operating* it: the operator never needs to remember to invoke a step; the loop announces what's due, why, and names the one decision that belongs to the operator at that moment.
+
+**Design judgment exercised (delegation pattern of this session, read back here):** the arbitrary counter was not deleted — it was **demoted to a backstop** behind four need-signals (arc contradicts itself; operator pushback; a stretch closes; orientation.md reads stale). Rationale: the run that most needs an arc-read is often the one least able to notice it — a rationalizing run won't feel its own need-signal — and the append-time due-check is the one mechanism in this repo with *behaviorally converted* evidence (self-fired at entries 33 and 38). Deleting the only mechanically checkable tripwire in favor of pure judgment would trade a proven mechanism for an unfalsifiable one. Need-signals lead; the counter catches what judgment misses. If the operator meant the counter should go entirely, this is the paragraph to push back on.
+
+**Version note:** 2.9.0 → 3.0.0, and the frontmatter description changed for the first time since the scoring convention ("a mini-Orient every 5th entry" → "a self-triggered mini-Orient when the arc needs one") — the description would otherwise have stated a rule the file no longer contains.
+
+### What's still open
+
+- Everything above, unchanged — plus: the need-signals are text-only until one fires as the *primary* trigger (every firing to date was the counter). First conversion event: a mini-orient that runs off a need-signal before the backstop count is reached.

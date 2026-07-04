@@ -1,9 +1,9 @@
 ---
 name: auditonomy
-description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
+description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a self-triggered mini-Orient when the arc needs one, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.9.0"
+  version: "3.0.0"
 ---
 
 # auditonomy
@@ -30,7 +30,9 @@ And if a cost/quality trade-off is ever genuinely unavoidable in a run, say so i
 
 ## The loop
 
-Four steps every run — **bootstrap** (step 0, first contact with a target only), **understand** (step 1), **work** (step 2), **record** (step 3) — plus a periodic **arc-read** (step 4) every fifth entry.
+Four steps every run — **bootstrap** (step 0, first contact with a target only), **understand** (step 1), **work** (step 2), **record** (step 3) — plus an **arc-read** (step 4) whenever the work signals it needs one.
+
+**The skill leads this workflow, not the operator.** Assume the operator is new to this file: they should never need to remember to invoke a step. The loop decides when its own moments are due — a destination question, an arc-read, a trail entry — announces in one line what it's doing and why, and names the one decision that belongs to the operator at that moment (confirm a destination, rule on a proposal, answer a question). Hand-holding is part of the job: a workflow the operator has to drive from memory is a workflow that won't happen.
 
 ### 0. Bootstrap gate — mini-Destination
 
@@ -116,13 +118,19 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
 
 **Cut from the full Trail skill, on purpose:** derived-artifact regeneration (`history.md`/`learning.md` — rebuilt summary files the full suite maintains alongside its trail), the `record.py` tooling (the full suite's script that runs that regeneration and enforces entry formatting), and writer-splitting (a second, independent agent writing the trail entry, so the agent that decided isn't also the one describing — a stronger anti-rationalization safeguard than this file uses). None of it is required here. The entry header format (`## <date> — <slug>`) and the marker vocabulary are kept compatible with that tooling on purpose, so it can be run against this same `audit-trail.md` later if you have it — optional, never a dependency.
 
-### 4. Mini-Orient — every 5 entries since orientation.md was last written
+### 4. Mini-Orient — when the work signals it, with a backstop counter
 
-Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doesn't exist yet, count from the start of the trail. If it does exist, count only entries **after its own dated header** (the `_Last updated: YYYY-MM-DD ..._` line it carries) — a repo with a long pre-existing trail should not have its mini-orient timed by history that predates this loop's involvement. The mini-orient runs **in the same run that writes the 5th (10th, 15th…) entry** — not deferred to the next one:
+The skill decides when an arc-read is due — never wait for the operator to ask for one. Check at trail-append time, and run the mini-orient **in this same run** when any of these fires:
 
-**Multi-writer trails.** On targets whose `.acm/` is also written by other agents or the target's own tooling (a pipeline's own record phase, other skills), the every-5th count applies to **entries this loop wrote** — other writers' entries are context to read, not a schedule this loop can breach; a "missed" mini-orient charged to sessions that never loaded this skill is a false positive, not a backlog to catch up. And where `orientation.md` is owned by the target's own machinery (rewritten by its own arc-reading phase), don't overwrite its claims: append a dated mini-orient addendum and leave the owner's sections intact.
+- **The arc contradicts itself** — this run hit a `[!REVERSAL]` or a missed prediction in territory recent entries treated as settled, or the same finding-class has now turned up across separate runs.
+- **The operator pushed back** — a correction means the arc misread something; check what else the misreading touched before building on it.
+- **A stretch just closed** — a tracked open item converted, a phase completed, or the next move is genuinely unclear: natural arc boundaries are where an arc-read pays best.
+- **`orientation.md` reads stale** — its claims are contradicted by what recent entries actually show, or cost lines look like they're drifting without the stakes drifting with them.
+- **Backstop:** none of the above has fired within the last **~5 of this loop's entries** (count `## ` headers after `orientation.md`'s dated header; if the file doesn't exist yet, from the start of the trail). The 5 is deliberately arbitrary — a cheap tripwire, not the logic. It exists because the run that most needs an arc-read is often the one least able to notice it; the signals above are the real trigger, the counter only catches what judgment misses.
 
-1. Read only the **last ~5-10 entries** — not the full history. (The every-5th trigger is exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
+**Multi-writer trails.** On targets whose `.acm/` is also written by other agents or the target's own tooling (a pipeline's own record phase, other skills), the backstop count applies to **entries this loop wrote** — other writers' entries are context to read, not a schedule this loop can breach; a "missed" mini-orient charged to sessions that never loaded this skill is a false positive, not a backlog to catch up. And where `orientation.md` is owned by the target's own machinery (rewritten by its own arc-reading phase), don't overwrite its claims: append a dated mini-orient addendum and leave the owner's sections intact.
+
+1. Read only the **last ~5-10 entries** — not the full history. (The trigger check is per-run and exact; this read window is deliberately approximate.) That limit is the deliberate cut versus real Orient, which reads the whole arc.
 2. Form **1-3 falsifiable arc-claims** about what this stretch of work shows is true of the target, or what is changing.
 3. Check whether a `[!REVERSAL]` or a recurring finding-class shows up across those entries — and check the opposite too: a suspiciously clean run with no reversals, no missed predictions, and no named blind spots is itself a finding (likely rationalization, not a job well done). Where an earlier entry made a prediction, check whether a later entry's actual outcome confirms it or quietly contradicts it without saying so.
 4. Read the cost lines across those entries: is cost drifting upward without the stakes drifting with it — ceremony creep, habitual high tiers, runs heavier than their decisions warrant? A cost trend is a plateau diagnostic like any other score: worth one line if it says something, void when the focus shifts.
@@ -133,7 +141,7 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 ## Self-check before calling a run done
 
 - Did step 3 (Trail) actually happen? If not, the run isn't done, whatever else was accomplished.
-- At append time, did you count the trail's `## ` headers (on multi-writer trails, only this loop's) — and if this entry was the 5th (10th, 15th…) since `orientation.md`'s dated header, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a schedule breach, not a deferral.
+- At append time, did you check the mini-orient's need-signals and the ~5-entry backstop (on multi-writer trails, counting only this loop's entries)? If either fired, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a breach, not a deferral.
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
 - If this run built more than one new committed file around an inference from step 0 or step 1, did you ask before building the rest — or only label the first one unconfirmed and proceed as if that were enough?
