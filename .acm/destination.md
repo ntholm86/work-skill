@@ -8,7 +8,9 @@ _Operator: Nils Holmager | Initialised: 2026-07-03_
 
 ## The One Question
 
-> What does a **standalone, target-agnostic improvement-reasoning architecture with full auditability** look like — one that can reason about and improve *anything* the model it runs on can reason about, adhering to PEA principles?
+> What does a **standalone, target-agnostic improvement-reasoning architecture with full auditability** look like — one that can reason about and improve *anything* the model it runs on can reason about, adhering to PEA principles, **and cheap enough to actually use every day without losing quality**?
+
+*(Cost is not a side constraint on this question — it is half of it. The full suite already proved the capability; what killed its daily use was cost. See "Destination run — 2026-07-04 (cost is co-equal)" below.)*
 
 *(Superseded framing, kept for the record: "What does the accountability-architecture skill suite look like once the binding constraint is cost-per-unit-of-reasoning-quality, not reasoning quality alone?" — that was the question during this repo's birth as a fork; see "Destination run — 2026-07-04 (standalone reframing)" below for why it no longer leads.)*
 
@@ -153,3 +155,21 @@ The self-targeting arc (24+ trail entries of this skill auditing and improving i
 - The workspace-layer-table question — operator-deferred.
 - **The external-target test — now the top item by an even wider margin** (see above): point this skill at something that isn't itself and isn't software — a letter, a plan, a piece of writing — and see whether the improvement reasoning holds.
 - The reasoning-quality depth assessment — subsumed into the above: the external test *is* that assessment under the corrected framing.
+
+---
+
+## Destination run — 2026-07-04 (cost is co-equal)
+
+Same-day correction to the standalone reframing above, operator-initiated. That reframing over-rotated: it demoted cost to "a real constraint, just not the identity." The operator's correction, paraphrased per their instruction to capture intent rather than exact words: **cost is half the identity.** This repo is about creating the target-agnostic improvement-reasoning architecture *in a way that makes it cheap to use without losing quality* — because cost, not capability or effectiveness, is what became the problem with the full skillset. The suite already proved the capability; it priced itself out of daily use.
+
+**What this means operationally:**
+
+- The destination is a single product with two inseparable halves: **capability** (target-agnostic improvement reasoning, full auditability) × **affordability** (cheap enough to reach for by default, every session). An improvement to one that regresses the other is not an improvement — it is the failure mode that killed the suite, or a lobotomy that saves tokens by cutting judgment.
+- **Future scorecards** must carry both axes: alongside the target-agnostic capability metrics (per the reframing above), at least one or two measurements must track cost-per-run / ceremony-weight — and a capability gain that shows up with a cost regression should be scored as the trade-off it is, not celebrated on the capability axis alone.
+- Self-targeting runs improve *the capability-at-a-price*, not capability in the abstract.
+
+**Unchanged:** everything else in the standalone reframing — target-agnosticism, the demotion of *suite-parity* (not cost) to lineage, the external-target test as top open item.
+
+### What's still open
+
+- Same three items as the reframing above — this correction changes the weighting of future work, not the open list.

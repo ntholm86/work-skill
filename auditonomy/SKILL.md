@@ -8,7 +8,7 @@ metadata:
 
 # auditonomy
 
-*Auditable autonomy: reason about anything, improve anything, show every step.*
+*Auditable autonomy: reason about anything, improve anything, show every step — cheap enough to use every day, without losing the quality.*
 
 **If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. "Subagent" means a separate helper agent dispatched with its own fresh context; if your tooling has none, every mention of them is skippable. `.acm/` is short for Agent Context Memory — a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three files — `destination.md` (what this target is for), `orientation.md` (what recent work has concluded, once enough runs exist to conclude anything), and `audit-trail.md` (what happened and why, one entry per run). This file reads and writes those three files and needs nothing else: no tooling, no install step, no sibling files. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
 

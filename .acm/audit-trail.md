@@ -586,3 +586,12 @@ Cost: moderate -- 7 tool ops, 2 files, no subagent.
 2. Zero-context cold read testing specifically whether the new standalone frame wins over the remaining in-body suite comparisons.
 3. Next scorecard: rebuild the 10 measurements around target-agnostic improvement capability as the primary axis, then compare deltas where metrics survived the reframe.
 Cost: moderate -- 6 tool ops, 3 files, no subagent.
+
+## 2026-07-04 -- correction-cost-is-co-equal `[!REALIZATION]`
+
+**Tier: Standard.** [!REALIZATION] Same-day operator correction to the standalone reframing (previous entry): that reframing over-rotated by demoting cost to "a real constraint, just not the identity." Operator's point, captured as intent per their explicit instruction: cost is half the identity -- the full suite's problem was never capability or effectiveness, it was cost; it priced itself out of daily use. The destination is one product with two inseparable halves: target-agnostic improvement capability x cheap-enough-to-use-daily, and improving one while regressing the other reproduces the suite's failure mode (or lobotomizes the skill to save tokens).
+
+[!DECISION] Corrected by appending a new dated "Destination run -- 2026-07-04 (cost is co-equal)" section to destination.md (not by rewriting the same-day reframing section -- append-only convention applies to sections written hours ago as much as months ago), updating The One Question to carry both halves, and restoring cost to SKILL.md's tagline (the reframing edit had silently dropped it from the tagline -- the exact over-rotation the operator caught). Future scorecards must now carry both axes, with cost regressions scored as trade-offs rather than ignored.
+
+Predicted: this closes the destination-definition arc (4 corrections in 2 days); the next run can finally be the external-target test. Blind spot: the trail entry before this one confidently framed the reframing as complete -- two entries in a row now corrected within hours, which suggests destination edits should be read back to the operator for confirmation *before* being committed, not after.
+Cost: light -- 3 tool ops, 3 files, no subagent.
