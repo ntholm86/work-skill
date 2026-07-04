@@ -679,3 +679,9 @@ Operator approved the recommended path ("lets do this"): re-rate now with the ai
 Blind spot: two same-day upward ratings (7.2 -> 7.8 -> 8.2) risk looking like score-chasing even though each cited artifacts; the pre-committed delta-0 expectation is the guard.
 Next: fresh session, external repo, source-code change under test coverage -- converts the conditional fully and is the only remaining mover.
 Cost: light -- 4 tool ops, 2 files, no subagent.
+
+## 2026-07-04 -- cold-session-prompt-drafted-for-fresh-context-test
+
+Operator asked for a standalone prompt for a fresh cold session, targeting ai-steward, to close the one remaining gap (source-code change under test coverage) and convert the v2.7.0 conditional fully. [!DECISION] Deliberately excluded from the prompt: this session's scores, predictions, and the "expected delta ~0" pre-commitment -- including any of that would contaminate the fresh-context test the next run exists to be. Included only what a genuinely cold operator would give: the skill's file path, the target's path and its existing .acm/ maturity, and the specific bar (source code, test-verified, not docs) as a legitimate operator constraint rather than a hint about what to find.
+Not yet run -- this entry records the prompt-construction decision only; the actual external run is the next session's job.
+Cost: light -- 0 tool ops beyond this trail write, 1 file.
