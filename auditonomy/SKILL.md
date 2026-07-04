@@ -3,7 +3,7 @@ name: auditonomy
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.4.0"
+  version: "2.5.0"
 ---
 
 # auditonomy
@@ -14,7 +14,7 @@ metadata:
 
 ## Why this exists, and what it trades away
 
-The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe`) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
+The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` — a sixth skill, contamination/pattern-matching detection, deliberately not folded into this fork) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
 
 `auditonomy` cuts both axes without cutting the three principles beneath them:
 
@@ -62,6 +62,8 @@ Do the work, scaling the rigor of examination to the stakes. Four lenses are ava
 
 If a score or rubric helps the examination, treat it as a temporary diagnostic of the current plateau — void when the destination or focus shifts — never a standing target to optimize toward. A metric that outlives its plateau starts prescribing a route.
 
+**Scoring, when the operator asks for a rating.** "Rate this" is a distinct request from a plain examination: produce roughly **10 relevant measurements**, chosen for this target's actual destination and evidence — not a fixed universal checklist reused unchanged across unrelated targets. For each measurement give a score, the evidence it rests on (name the trail entry, file, or test it's read from — a score with no cited evidence is a guess wearing a number), and exactly one concrete improvement suggestion, checked against `.acm/destination.md`'s confirmed constraints before it's offered — a suggestion that would violate a settled constraint (e.g. reintroducing dropped mechanism weight, adding an installer where one was permanently rejected) is not valid here; name the tension instead of proposing it. Record the scorecard, dated, in `.acm/orientation.md` so the *next* rating can show whether a score moved — the delta is the actual signal, not the absolute number. This is still bound by the plateau rule above: a scorecard is void the moment the destination or focus shifts, never a standing target pursued for its own sake.
+
 For anything beyond a mechanical fix, pause on this before deciding: *What am I not seeing? Am I anchored on the most obvious finding and missing a subtler, more important one?* Then the redesign question: *is the target's structure itself wrong, so that no incremental fix will help?* If the structure itself is wrong, don't patch — argue for redesign: sketch the alternative, weigh redesign cost against the cost of continuing to patch, and stop for the operator's decision.
 
 Then pick exactly one outcome:
@@ -108,7 +110,7 @@ Append one entry to `.acm/audit-trail.md` in the target repo, using the header f
 - `[!REALIZATION]` — something shifted in what this run understood about the target that wasn't known going in.
 - `[!REVERSAL]` — an attempted approach was backed out of after it proved wrong.
 
-**Cut from the full Trail skill, on purpose:** derived-artifact regeneration (`history.md`/`learning.md`), the `record.py` tooling, and writer-splitting (a second, independent agent writing the trail entry, so the agent that decided isn't also the one describing — a stronger anti-rationalization safeguard than this file uses). None of it is required here. The entry header format (`## <date> — <slug>`) and the marker vocabulary are kept compatible with that tooling on purpose, so it can be run against this same `audit-trail.md` later if you have it — optional, never a dependency.
+**Cut from the full Trail skill, on purpose:** derived-artifact regeneration (`history.md`/`learning.md` — rebuilt summary files the full suite maintains alongside its trail), the `record.py` tooling (the full suite's script that runs that regeneration and enforces entry formatting), and writer-splitting (a second, independent agent writing the trail entry, so the agent that decided isn't also the one describing — a stronger anti-rationalization safeguard than this file uses). None of it is required here. The entry header format (`## <date> — <slug>`) and the marker vocabulary are kept compatible with that tooling on purpose, so it can be run against this same `audit-trail.md` later if you have it — optional, never a dependency.
 
 ### 4. Mini-Orient — every 5 entries since orientation.md was last written
 
@@ -120,7 +122,7 @@ Count `## ` entry headers in `.acm/audit-trail.md`. If `.acm/orientation.md` doe
 4. Read the cost lines across those entries: is cost drifting upward without the stakes drifting with it — ceremony creep, habitual high tiers, runs heavier than their decisions warrant? A cost trend is a plateau diagnostic like any other score: worth one line if it says something, void when the focus shifts.
 5. If something material emerged, update `.acm/orientation.md` (create it if absent, dating its header) with a short "Current claims" section and a "Watch for" line. If nothing material emerged, say so in one line in this run's own trail entry and leave `orientation.md` alone — a mini-orient with nothing to say should say nothing.
 
-No freshness guard, no `record.py`, no `learning.md` extraction — exactly the heavy tooling this cut removes. If you separately have the full `orient` skill and the target needs its deeper discipline (quality-bar naming, adversarial arc-audit, loop-effectiveness review), invoke that instead: this mini-orient is a cheap tripwire, not a replacement. If you don't have it, the mini-orient above is the ceiling this file offers — a design choice, not a gap.
+No freshness guard (the full suite's staleness check, flagging when a derived artifact like `history.md` no longer matches the trail it was built from), no `record.py`, no `learning.md` extraction — exactly the heavy tooling this cut removes. If you separately have the full `orient` skill and the target needs its deeper discipline (quality-bar naming, adversarial arc-audit, loop-effectiveness review), invoke that instead: this mini-orient is a cheap tripwire, not a replacement. If you don't have it, the mini-orient above is the ceiling this file offers — a design choice, not a gap.
 
 ## Self-check before calling a run done
 

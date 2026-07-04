@@ -548,3 +548,22 @@ Cost: moderate -- roughly 12 tool ops across 5 files (README.md, SKILL.md, desti
 2. Read `c:/git/linkedin/.acm/audit-trail.md` directly before the next full Orient, to fold the external-use datapoint into claim 4 as verified fact rather than a characterization taken on faith.
 3. Still-standing, still the largest: the real independent code-repo test, now 4+ entries overdue as the top candidate move.
 Cost: moderate -- 6 tool ops, 2 files, no subagent.
+
+## 2026-07-04 -- formalize-10-metric-scoring `[!DECISION]`
+
+**Tier: Full.** Operator corrected what "rate my skill" means: not a narrative four-lens audit, but roughly 10 named measurements, each scored with evidence and one destination-bounded improvement suggestion, tracked over time so a score's *movement* is visible -- while staying aware a metric can blind you to what it doesn't measure. Also flagged that "mini" (mini-Orient, mini-Destination) may not have carried this intent from the start.
+
+**Interpretation.** Read as two asks, not one: (1) encode a standing scoring convention in `auditonomy/SKILL.md` itself, so a future "rate this" request doesn't get reinterpreted differently again, and (2) actually produce the 10-metric scorecard now as the baseline, not just describe the convention abstractly. Checked against the full suite first: `pea/skills/orient/SKILL.md` explicitly forbids scoring ("no number, no rubric, no grade, claims are the output") -- confirmed this is not a new contradiction, since `auditonomy` already diverged from that on operator instruction in an earlier session (orientation.md claim 3); this request refines that existing divergence rather than creating a new one.
+
+**Action.** Added a "Scoring, when the operator asks for a rating" clause to SKILL.md step 2: ~10 target-specific measurements, each with cited evidence and one destination-bounded suggestion, stored dated in `.acm/orientation.md` for delta-tracking, still governed by the existing plateau-void rule. In the same pass, closed the 4x-named, 0x-fixed explanation-layer gap: added one-clause glosses for `probe`, `record.py`, and `freshness guard` in SKILL.md (previously named as a defect in the prior 3 audits plus this run's own mini-orient, never fixed). Version 2.4.0 -> 2.5.0. Ran the new convention against `auditonomy-skill` itself: 10-metric scorecard written into `.acm/orientation.md`, plateau average 7.1/10, lowest two (external validation coverage 4/10, three metrics tied at 6/10) matching items already named as top candidate moves, not new information manufactured by the act of scoring.
+
+**Reflection.** Falsifiable claim: this scorecard's value will be visible on the *next* rating, not this one -- if a re-rating shows metric 5 (self-scheduling) or metric 10 (finding-to-fix rate) unmoved despite this run's own fixes and clause additions, the scoring convention itself is decorative, not load-bearing. Blind spot: 10 scores were chosen and weighted by the same agent that's rating itself -- no independent check yet that these are the *right* 10 measurements, only that they're evidence-grounded. Imagined pushback: "a self-chosen rubric can always find itself improving" -- partially answered by metric 6 and 8's suggestions explicitly not crediting this session's own naming-churn as progress.
+
+**Across-trail triggers:** operator explicitly asked (fired -- this run exists because of it). Recurring finding-class: fired -- this is the *third* naming-related correction in two days (pea-lite->think-it-through, think-it-through->auditonomy, now a scoring-semantics correction), worth watching as its own pattern: definitional corrections keep costing cycles the real independent-target test could use instead. Contradicts prior realization: no -- refines the existing "scores are plateau-diagnostics" claim, doesn't reverse it. Silence imminent: no.
+
+### Candidate Next Moves
+
+1. The real independent-target test -- now overdue across 5+ entries and two lowest-tied scorecard metrics; the highest-leverage move available, named again here rather than acted on, disclosed as such.
+2. Re-run this 10-metric scorecard after the next few entries to test whether the scores actually move -- the falsifiable claim this entry itself makes.
+3. Read `linkedin/.acm/audit-trail.md` directly (metric 6's suggestion) before asserting that external-use datapoint as settled fact in a future claim.
+Cost: moderate -- 7 tool ops, 2 files, no subagent.
