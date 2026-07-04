@@ -173,3 +173,26 @@ Same-day correction to the standalone reframing above, operator-initiated. That 
 ### What's still open
 
 - Same three items as the reframing above — this correction changes the weighting of future work, not the open list.
+
+---
+
+## Destination run — 2026-07-04 (self-triggered destination)
+
+Operator directive, this session: the skill should be able to trigger its destination step **itself** when its own evidence says it's necessary — plateau exhausted, etc. The operator explicitly delegated the design decision ("Based on my destination and your own belief — make the decision. Think carefully."), instructing intent-reading over literal wording.
+
+**The decision, made under that delegation.** Intent read: "trigger its destination itself" means the skill owns **detection and initiation** — it must not sit passively on an exhausted plateau waiting for the operator to notice, and it must not silently keep polishing a destination its own evidence says is served. It does **not** mean the skill authors its own mandate: an agent that can rewrite its own destination unsupervised is the post-hoc-rationalization failure this research program exists to prevent — the destination is the alignment anchor the whole trail is audited against, and an anchor the anchored thing can move is not an anchor. The boundary chosen: **self-trigger the process, never self-settle the content.**
+
+Concretely, in SKILL.md v2.9.0:
+
+- Step 0.5 gains a third legitimate re-run trigger alongside explicit invocation and operator signal: **the loop's own evidence** — a plateaued scorecard whose destination-vs-measurements coverage diff comes back empty, or observed reality contradicting this file's claims. "Never merely because time passed" stays.
+- A self-triggered destination run may ask and propose; its output enters this file only as an appended, dated proposal **marked unconfirmed** until the operator rules. The pre-commit read-back rule applies in full.
+- The scoring clause gains the plateau-exit protocol: flat scores → first distrust the plateau (coarse metrics vs. exhausted territory) → coverage-diff destination against measurements → uncovered obligations become work or new measurements → an empty diff is the self-trigger. New metrics are *derived* from uncovered obligations, never invented to have something to score.
+
+This widens the previous step 0.5 rule ("never re-run automatically") by the operator's own instruction — the old rule guarded against re-bootstrapping churn; the new one keeps that guard ("never merely because time passed") while removing the passivity it accidentally mandated at a genuine plateau.
+
+**Read-back note:** the active operational rule says destination-layer edits are read back before commit. This session the operator explicitly delegated the decision in the same turn; that delegation is treated as the required confirmation, and this section is itself the read-back — if any part of this misreads the intent, the correction happens by appended section, per convention.
+
+### What's still open
+
+- The three standing items (workspace-layer table, non-software artifact test, second fresh multi-writer trail) — unchanged.
+- **New:** the self-trigger has never fired — it becomes real the first time a plateaued scorecard's empty coverage diff actually initiates a destination question. Until then it is text, like every rule before its first conversion.

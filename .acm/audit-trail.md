@@ -723,3 +723,23 @@ What earned no points, stated: the v2.8.0 multi-writer rule (text-only, zero beh
 Blind spot: this rater verified artifacts the trail named, but did not search for artifacts the trail omitted -- absence-of-disclosure remains unverifiable from inside the convention.
 Next: expectation reverts to delta ~0; the three named movers are a non-software artifact, a second fresh multi-writer trail, or a live destination read-back firing.
 Cost: moderate -- 12 tool ops (2 repos read, 1 external test-suite run, 2 files written), no subagent.
+
+## 2026-07-04 -- self-trigger-for-destination-v2.9.0
+
+**Tier: Full** -- structural loop change plus a destination-layer decision, made under explicit operator delegation ("Based on my destination and your own belief -- make the decision. Think carefully."), with intent-reading instructed over literal wording.
+
+**Interpretation.** [!DECISION] "Trigger its destination itself" read as: the skill owns detection and initiation of the destination conversation -- NOT authorship of the destination content. Alternative reading considered and rejected: full self-authorship (the skill rewrites destination.md when it judges the plateau exhausted). Rejected because the destination is the alignment anchor the entire trail is audited against; an agent that can move its own anchor unsupervised is the post-hoc-rationalization failure this program exists to prevent. The chosen boundary: self-trigger the process, never self-settle the content -- proposals enter destination.md appended, dated, marked unconfirmed until the operator rules.
+
+**Action.** Step 0.5 rewritten: three legitimate re-run triggers (explicit invocation; operator signal; the loop's own evidence -- plateaued scorecard with an empty coverage diff, or reality contradicting destination.md), keeping "never merely because time passed." Scoring clause gains the plateau-exit protocol: flat deltas -> distrust the plateau first (coarse metrics vs exhausted territory) -> coverage-diff destination vs measurements -> uncovered obligations become work or derived measurements -> empty diff self-triggers step 0.5. Rationale line included in the text itself: a loop that keeps polishing a served destination manufactures ceremony; one that silently stops abandons its post; it asks instead. destination.md: dated section appended recording the delegation, the decision, and the boundary. v2.8.0 -> v2.9.0.
+
+Predicted <=4 net lines, description untouched. Outcome: 0 net lines (139 -> 139; three long lines rewritten in place), description untouched. Prediction held with margin.
+
+**Read-back tension, disclosed:** the active rule says destination-layer edits are read back BEFORE commit. The operator's same-turn explicit delegation is treated as that confirmation, and the appended destination section doubles as the read-back; any misread gets corrected by appended section. This is a judgment call, named rather than smoothed over.
+
+**Reflection.** Falsifiable claim: the next genuine plateau (sustained ~0 deltas) will produce a coverage diff in the trail before any new metric appears -- if a future scorecard introduces fresh metrics at a flatline with no diff recorded, this change failed. Blind spot: the self-trigger and the plateau-exit protocol are text-only until first fired -- same conversion lag v2.7.0 and v2.8.0 rules went through; also "sustained" is deliberately unquantified (two flat ratings? three?), left to judgment, which a rationalizing run could stretch. Imagined pushback: "the skill just gave itself permission to reopen its own mandate" -- answered by the unconfirmed-proposal boundary: it gave itself permission to ask a question, not to answer it.
+
+**Across-trail triggers:** operator asked for this decision (fired). Recurring finding-class: yes -- text-to-behavior conversion lag, now the explicitly tracked pattern (three rule-sets in queue). Contradicts a prior [!REALIZATION]? No -- extends the plateau rule's one-directional voiding into a bidirectional protocol. Silence imminent: no.
+
+Entry count since orientation header: 11 (mini-orient ran at 10, next due at 15) -- not due.
+Next: unchanged movers (non-software artifact, second fresh multi-writer trail, destination read-back live firing) plus the new one: the self-trigger's first real fire.
+Cost: moderate -- 6 tool ops, 3 files written, no subagent.
