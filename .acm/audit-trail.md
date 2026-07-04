@@ -525,3 +525,26 @@ Cost: moderate -- roughly 15 tool ops across 4 files, no subagent.
 
 Blind spot: same as the first rename -- the new name has not been cold-read-tested against the stranger-pickup bar, only judged by the operator across two rounds (Reckonomy rejected, Auditonomy confirmed). Next: the still-pending real empirical with/without-skill test remains the single highest-value open item, older and larger than either rename.
 Cost: moderate -- roughly 12 tool ops across 5 files (README.md, SKILL.md, destination.md, orientation.md, plus filesystem recovery), no subagent.
+
+## 2026-07-04 -- rate-the-skill-mini-orient `[!REALIZATION]`
+
+**Tier: Full.** Operator asked directly: "rate my auditonomy skill." [!DECISION] Read this as: run the four-lens examination against the current v2.4.0 file plus the full trail-as-evidence (not just impressions of the text), since a stranger-pickup and reasoning-quality bar are both already-confirmed success criteria in destination.md this rating should be checked against.
+
+**Examination.**
+- *Purpose:* mechanism layer holds (zero corrections across 24 entries); reasoning-depth parity work (2026-07-04) closed three named, specific gaps by direct comparison against the current suite -- real, not cosmetic. But the skill's only applications to date have been auditing/renaming itself; the one external-use datapoint (`think-it-through` on `c:/git/linkedin`, this same session) has not been read back into this repo's own claims until this run.
+- *Inconsistency:* [!REALIZATION] the mini-orient's own every-5th-entry trigger was missed -- due at entry 5 (`rename-pea-lite-to-think-it-through`), not run until entry 6, and only because the operator asked for a rating rather than the mechanism firing on its own. A live process gap discovered by using the skill on itself, not a text defect.
+- *Overburden:* depth-tiering is working as designed -- tiers actually vary across entries (Micro/Standard/Full genuinely different weights), not habitual Tier 3.
+- *Waste:* `record.py`, `freshness guard`, and `probe` are still unglossed in the current file -- the same recurring explanation-layer defect-class named at least 3 times before (lens glosses, marker glosses, cold-read's 7 defects), still not fixed. Disclosed, not fixed this run -- judged lower-leverage than closing the overdue mini-orient itself.
+
+**Decision + action.** Ran the overdue mini-orient: read the 6 entries since the last orientation.md update, formed 5 current claims (2 refined, 1 new -- the missed-trigger finding), updated `.acm/orientation.md`'s "What the next runs should test" and "Active operational rules" accordingly. Did not fix the record.py/freshness-guard/probe gloss gap -- naming it a 4th time without fixing it is itself now worth flagging as a pattern, see reflection.
+
+**Reflection.** Falsifiable claim: this skill's mechanism is solid and its reasoning-depth work is real, but its actual weak point is not in the document -- it is in *executing the loop's own scheduled steps* (the missed mini-orient) and in *closing named-but-deprioritized defects* (the gloss gap, named 4 times, fixed zero times). An imagined pushback: "if a fix is named 4 times and never done, either it doesn't actually matter or the trail is lying about priority" -- fair; next run should either fix it or explicitly demote it to a permanent won't-fix with a stated reason, not name it a 5th time unchanged.
+
+**Across-trail triggers:** operator explicitly asked (fired -- this run exists because of it). Recurring finding-class: fired twice -- the gloss-gap class (4th occurrence) and a brand-new class (missed schedule trigger, 1st occurrence). Contradicts prior realization: not fired. Silence imminent: no.
+
+### Candidate Next Moves
+
+1. Either fix the record.py/freshness-guard/probe glosses now, or explicitly mark them a permanent won't-fix with a reason -- breaking the name-it-without-fixing-it pattern one way or the other.
+2. Read `c:/git/linkedin/.acm/audit-trail.md` directly before the next full Orient, to fold the external-use datapoint into claim 4 as verified fact rather than a characterization taken on faith.
+3. Still-standing, still the largest: the real independent code-repo test, now 4+ entries overdue as the top candidate move.
+Cost: moderate -- 6 tool ops, 2 files, no subagent.
