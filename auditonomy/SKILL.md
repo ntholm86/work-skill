@@ -1,12 +1,12 @@
 ---
-name: think-it-through
+name: auditonomy
 description: 'One consolidated skill: Intent, Improve, a mini-Destination bootstrap, a mini-Orient every 5th entry, and always-on Trail logging — the reasoning discipline of the full skills suite (intent/improve/destination/orient/trail) at a single skill-load. USE WHEN: you want that discipline without chaining several skills, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "2.3.0"
+  version: "2.4.0"
 ---
 
-# think-it-through
+# auditonomy
 
 *One skill. The same governing principles. A fraction of the token cost.*
 
@@ -16,7 +16,7 @@ metadata:
 
 The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe`) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
 
-`think-it-through` cuts both axes without cutting the three principles beneath them:
+`auditonomy` cuts both axes without cutting the three principles beneath them:
 
 1. **Operator's Intent** — you are given a destination, not a route.
 2. **Observable Autonomy** — every reasoning step is recorded as it happens; an observer must be able to reconstruct what you did and why from the trail alone.

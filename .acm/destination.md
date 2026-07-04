@@ -1,8 +1,8 @@
-# Destination — think-it-through-skill
+# Destination — auditonomy-skill
 
 _Operator: Nils Holmager | Initialised: 2026-07-03_
 
-> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* think-it-through-skill (renamed from `pea-skills-lite` — see "Destination run — 2026-07-04 (rename)" below).
+> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* auditonomy-skill (renamed from `pea-skills-lite`, then `think-it-through-skill` — see "Destination run — 2026-07-04 (rename)" and "Destination run — 2026-07-04 (second rename)" below).
 
 ---
 
@@ -14,9 +14,9 @@ _Operator: Nils Holmager | Initialised: 2026-07-03_
 
 The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator finds they mostly invoke two of those six skills — Intent and Improve — for almost everything, and is now **"running out of tokens too fast"** using the full multi-skill-invocation discipline.
 
-`think-it-through-skill` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
+`auditonomy-skill` is a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many.
 
-**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through` on 2026-07-04) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `think-it-through`.
+**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through` then `auditonomy` on 2026-07-04) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `auditonomy`.
 
 ## Operator's direct mandate
 
@@ -38,19 +38,19 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 
 - Higher scope wins on coordination matters (ACM §4) — `pea/.acm/destination.md` governs if this repo's direction ever conflicts with cross-repo coordination.
 - Append-only memory — corrections happen by appending, never rewriting.
-- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `think-it-through/SKILL.md` file exists to resolve.
+- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `auditonomy/SKILL.md` file exists to resolve.
 
 ## What "done" looks like for this repo
 
-Not a fixed release. Working-in-use signal: the operator actually reaches for `think-it-through` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
+Not a fixed release. Working-in-use signal: the operator actually reaches for `auditonomy` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
 
-**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `think-it-through/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
+**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `auditonomy/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
 _(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
 
-Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `think-it-through/SKILL.md`, not just a scope cut.
+Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `auditonomy/SKILL.md`, not just a scope cut.
 
 ---
 
@@ -108,6 +108,24 @@ Operator judged the name `pea-lite` a defect in its own right: it tells an outsi
 
 ### What's still open
 
-- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `think-it-through-skill`.
+- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `auditonomy-skill`.
+- The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
+- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+
+---
+
+## Destination run — 2026-07-04 (second rename)
+
+Operator judged `think-it-through` itself not quite right either: it reads as a generic reasoning-discipline slogan, not a name tied to what the skill actually enforces. The correction came in two steps — first toward a made-up word blending Improve/audit/reasoning/autonomy (`Reckonomy`, rejected: too close to the unrelated word "reckoning"), then the operator's own realization: the right word was already named in this skill's own three principles — **Principle 2, Observable Autonomy**. `auditonomy` is a portmanteau of *audit* (the always-on Trail step — what makes the autonomy observable) and *autonomy* itself, naming the skill after the one governing principle that most defines its mechanism, not an arbitrary blend of adjacent themes.
+
+**Action.** OS-level rename of the repo folder (`think-it-through-skill` → `auditonomy-skill`) and the inner skill folder (`think-it-through/` → `auditonomy/`); updated frontmatter `name:`, the H1, and the one in-body mention in SKILL.md; updated README.md throughout; updated this file's forward-facing prose (title, mandate, current-state, "what done looks like" sections). Version 2.3.0 → 2.4.0.
+
+**Operational complication, disclosed.** The folder rename did not go cleanly: a `cmd /c move` failed silently (exit code 1, no message), and a follow-up `Move-Item` failed partway with a permission error deleting `.git`'s read-only pack objects from the source — but only *after* it had already copied `.git`, `.acm/`, and `README.md` to the new destination. This left the repo split across two paths: the intact `.git` (with the working index correctly showing a staged `think-it-through/SKILL.md` → `auditonomy/SKILL.md` rename) in the new `auditonomy-skill/` folder, but the actual `SKILL.md` file itself still physically sitting in the old `think-it-through-skill/auditonomy/` path. Diagnosed via `git status` (showed the rename staged but the destination file "deleted" in the working tree — the tell that the file hadn't actually moved), fixed by moving the one straggler file into place, verified with a clean `git status`, then deleted the confirmed-empty leftover shell. No data was lost; the near-miss is disclosed here rather than smoothed over, per this skill's own Trail discipline.
+
+**Deliberately not touched:** every verbatim quote and every historical dated section above containing the old names `pea-lite`, `pea-skills-lite`, or `think-it-through` — preserved as historical record, same convention as the first rename. `audit-trail.md`'s own historical entries are likewise untouched; a new entry was appended instead.
+
+### What's still open
+
+- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `auditonomy-skill`.
 - The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
 - The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.

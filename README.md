@@ -1,10 +1,10 @@
-# think-it-through-skill
+# auditonomy-skill
 
-A cost-optimized, single-file fork of the [pea/skills](../skills/) suite. Where the full suite is five separate skills (`intent`, `improve`, `destination`, `orient`, `trail` — plus `probe`), `think-it-through-skill` is **one skill**: [`think-it-through/SKILL.md`](./think-it-through/SKILL.md).
+A cost-optimized, single-file fork of the [pea/skills](../skills/) suite. Where the full suite is five separate skills (`intent`, `improve`, `destination`, `orient`, `trail` — plus `probe`), `auditonomy-skill` is **one skill**: [`auditonomy/SKILL.md`](./auditonomy/SKILL.md).
 
 ## Why
 
-The full suite was built during a period where token cost wasn't the binding constraint. In practice, most sessions only ever invoke Intent and Improve, chained together, with Trail always following. Loading and running five skill files' worth of ceremony for that common case costs more than it needs to. `think-it-through` merges:
+The full suite was built during a period where token cost wasn't the binding constraint. In practice, most sessions only ever invoke Intent and Improve, chained together, with Trail always following. Loading and running five skill files' worth of ceremony for that common case costs more than it needs to. `auditonomy` merges:
 
 - **Intent** — folded into the loop's own first step, narrated only when the interpretation is genuinely uncertain.
 - **Improve** — the base loop (examine → challenge → decide → act → reflect), depth-scaled to the stakes of the change.
@@ -16,8 +16,8 @@ The full suite was built during a period where token cost wasn't the binding con
 
 ## Status
 
-v2.3.0 — confirmed as the operator's daily-usage skill going forward (superseding day-to-day use of the full `pea/skills` suite, which stays available for whatever still warrants its depth). Not yet battle-tested against a long multi-session run. A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `think-it-through/SKILL.md` and use it without the author explaining anything** — jargon or unexplained references to the original five-skill suite are defects. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the record of how this repo came to exist.
+v2.4.0 — confirmed as the operator's daily-usage skill going forward (superseding day-to-day use of the full `pea/skills` suite, which stays available for whatever still warrants its depth). Not yet battle-tested against a long multi-session run. A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `auditonomy/SKILL.md` and use it without the author explaining anything** — jargon or unexplained references to the original five-skill suite are defects. See [`.acm/destination.md`](./.acm/destination.md) for the full mandate and open items, and [`.acm/audit-trail.md`](./.acm/audit-trail.md) for the record of how this repo came to exist.
 
 ## Use
 
-Point an agent at [`think-it-through/SKILL.md`](./think-it-through/SKILL.md) the same way you'd point it at any of the `pea/skills` skill files (e.g. copy the `think-it-through/` folder into wherever your agent loads skills from, such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point of this fork is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.
+Point an agent at [`auditonomy/SKILL.md`](./auditonomy/SKILL.md) the same way you'd point it at any of the `pea/skills` skill files (e.g. copy the `auditonomy/` folder into wherever your agent loads skills from, such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point of this fork is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.
