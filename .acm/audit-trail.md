@@ -795,3 +795,8 @@ Cost: light -- 5 tool ops (1 interactive auth), 1 file.
 
 Blind spot: same as both prior renames -- the new name has not been cold-read-tested against the stranger-pickup bar by a fresh reader, only judged by the operator directly. A generic word (`work`) also carries a namespacing/collision risk the coined names didn't, not yet weighed. Next: the still-pending real empirical with/without-skill test remains the single highest-value open item, older and larger than any of the three renames.
 Cost: moderate -- roughly 20 tool ops across 4 files plus a GitHub API rename, no subagent.
+
+## 2026-07-05 -- github-description-sync
+
+**Tier: Micro.** Follow-up to the rename above: the live GitHub repo description still opened with "Auditable autonomy in one file" (stale post-rename). Updated via `gh repo edit --description` to open with "Real work, fully auditable, in one file", matching the new README tagline; the rest of the description and all topics were left unchanged (no other stale-name content found in them). No code or trail-structure changes.
+Cost: light -- 1 tool op, 1 remote field, no file changed.
