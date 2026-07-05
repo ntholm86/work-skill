@@ -1,8 +1,8 @@
-# Destination — auditonomy-skill
+# Destination — work-skill
 
 _Operator: Nils Holmager | Initialised: 2026-07-03_
 
-> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* auditonomy-skill (renamed from `pea-skills-lite`, then `think-it-through-skill` — see "Destination run — 2026-07-04 (rename)" and "Destination run — 2026-07-04 (second rename)" below).
+> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* work-skill (renamed from `pea-skills-lite`, then `think-it-through-skill`, then `auditonomy-skill` — see "Destination run — 2026-07-04 (rename)", "Destination run — 2026-07-04 (second rename)", and "Destination run — 2026-07-05 (third rename)" below).
 
 ---
 
@@ -16,11 +16,11 @@ _Operator: Nils Holmager | Initialised: 2026-07-03_
 
 ## Why this repo exists
 
-**[Reframed 2026-07-04, operator-confirmed — see "Destination run — 2026-07-04 (standalone reframing)" below.]** `auditonomy` is a **standalone skill**: an autonomous improvement-reasoning architecture with full auditability that is *target-agnostic* — it can work on anything the model it runs on can reason about: code, music, letters, books, plans, whatever. Its lineage (below) is a fork of the full suite, but lineage is not identity: the suite comparison was scaffolding during its birth, not its purpose. When this skill is pointed at itself, the thing being improved is **that general capability** — the ability to understand and improve anything — not fidelity to its parent suite.
+**[Reframed 2026-07-04, operator-confirmed — see "Destination run — 2026-07-04 (standalone reframing)" below.]** `work` is a **standalone skill**: an autonomous improvement-reasoning architecture with full auditability that is *target-agnostic* — it can work on anything the model it runs on can reason about: code, music, letters, books, plans, whatever. Its lineage (below) is a fork of the full suite, but lineage is not identity: the suite comparison was scaffolding during its birth, not its purpose. When this skill is pointed at itself, the thing being improved is **that general capability** — the ability to understand and improve anything — not fidelity to its parent suite.
 
 *Lineage, kept for the record:* The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator found they mostly invoked two of those six skills — Intent and Improve — for almost everything, and was **"running out of tokens too fast"** using the full multi-skill-invocation discipline. This repo began as a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many. That cost discipline remains a real constraint — it just isn't the destination anymore.
 
-**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through` then `auditonomy` on 2026-07-04) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `auditonomy`.
+**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through`, then `auditonomy`, then `work` on 2026-07-05) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `work`.
 
 ## Operator's direct mandate
 
@@ -42,19 +42,19 @@ Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audi
 
 - Higher scope wins on coordination matters (ACM §4) — `pea/.acm/destination.md` governs if this repo's direction ever conflicts with cross-repo coordination.
 - Append-only memory — corrections happen by appending, never rewriting.
-- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `auditonomy/SKILL.md` file exists to resolve.
+- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `work/SKILL.md` file exists to resolve.
 
 ## What "done" looks like for this repo
 
-Not a fixed release. Working-in-use signal: the operator actually reaches for `auditonomy` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
+Not a fixed release. Working-in-use signal: the operator actually reaches for `work` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
 
-**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `auditonomy/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
+**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `work/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
 
 ## Open items (not blocking, revisit when the operator has a moment)
 
 _(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
 
-Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `auditonomy/SKILL.md`, not just a scope cut.
+Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `work/SKILL.md`, not just a scope cut.
 
 ---
 
@@ -213,3 +213,25 @@ Operator, same session, confirming the v2.9.0 boundary ("Yes, the operator owns 
 ### What's still open
 
 - Everything above, unchanged — plus: the need-signals are text-only until one fires as the *primary* trigger (every firing to date was the counter). First conversion event: a mini-orient that runs off a need-signal before the backstop count is reached.
+
+---
+
+## Destination run — 2026-07-05 (third rename)
+
+Operator judged `auditonomy` a defect too, on different grounds than the first two renames: not wrong or unclear, but an invented word — and it doesn't actually name the whole of what the skill does. Operator's own words, verbatim: *"'Work' SKILL captures exactly what its for - its for real work. The Work skill - the only skill you need."* Confirmed: **`work`** — a real, plain word, chosen specifically *because* it is not a portmanteau or a coinage, describing the skill's actual domain (any real task the operator points it at) rather than one mechanism inside it (as `auditonomy` did, naming only the Trail/audit half).
+
+**Action.** OS-level rename of the repo folder (`auditonomy-skill` → `work-skill`, clean `Rename-Item`, no complications this time) and `git mv` of the inner skill folder (`auditonomy/` → `work/`, history preserved); updated frontmatter `name:`, the H1, and the two in-body mentions in SKILL.md; updated README.md throughout, including the tagline ("Auditable autonomy in one file" → "Real work, fully auditable, in one file" — the auditability claim is preserved, not dropped, just no longer load-bearing in the name itself); updated this file's forward-facing prose (title, blockquote naming chain, "why this repo exists", mandate constraints, "what done looks like"); updated `orientation.md`'s title line. Version 3.0.0 → 3.1.0.
+
+**Deliberately not touched:** every verbatim quote and every historical dated section above containing the old names (`pea-lite`, `pea-skills-lite`, `think-it-through`, `auditonomy`) — preserved as historical record, same convention as the first two renames. `audit-trail.md`'s own historical entries are untouched; a new entry was appended instead. Other repos in this workspace (`ai-steward`, `vectorium`) that recorded past runs of this skill under the name `auditonomy` in their own trail files were also left untouched — those are accurate historical records of what the skill was called at the time the work happened, not references that should track the current name.
+
+**Operator not consulted on GitHub rename mechanics this run** — operator was unavailable mid-task ("Work autonomously and make good decisions"); proceeded to rename the GitHub remote (`ntholm86/auditonomy-skill` → `ntholm86/work-skill`) via `gh repo rename`, on the judgment that this is what "make a proper rename... also the repo" most plausibly meant, and that GitHub's automatic redirect from the old URL makes this a low-risk, easily-visible action rather than a silently destructive one.
+
+Blind spot: same as both prior renames — the new name has not been cold-read-tested against the stranger-pickup bar by a fresh reader, only judged by the operator directly. A generic word like `work` also carries a namespacing risk the coined names didn't (collision with other tools/skills literally named "work") — not yet weighed by the operator, worth flagging if it comes up. Next: the still-pending real empirical with/without-skill test remains the single highest-value open item, older and larger than any of the three renames.
+Cost: moderate — roughly 20 tool ops across 4 files plus a GitHub API rename, no subagent.
+
+### What's still open
+
+- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `work-skill`.
+- The reasoning-quality depth assessment — still not yet run.
+- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+- **New:** whether a bare, generic word (`work`) creates any real confusion in practice (tool names, search collisions, verbal ambiguity in conversation) — not yet observed, worth a note if the operator hits it.

@@ -1,4 +1,4 @@
-# orientation.md — auditonomy-skill
+# orientation.md — work-skill
 
 _Last updated: 2026-07-04 (run: full-orient-and-rescore-under-corrected-destination)_
 

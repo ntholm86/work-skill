@@ -1,12 +1,12 @@
 ---
-name: auditonomy
+name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording every reasoning step in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a self-triggered mini-Orient when the arc needs one, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.0.0"
+  version: "3.1.0"
 ---
 
-# auditonomy
+# work
 
 *Auditable autonomy: reason about anything, improve anything, show every step — cheap enough to use every day, without losing the quality.*
 
@@ -14,11 +14,11 @@ metadata:
 
 ## Why this exists, and what it trades away
 
-`auditonomy` is a standalone skill: an improvement-reasoning architecture that works on any target — a codebase, a letter, a plan, a book, a piece of music — and leaves a full audit trail of how it reasoned. "Target" below always means *whatever is being worked on*, not just software. Its lineage is a consolidation of a larger suite, and that lineage explains its shape:
+`work` is a standalone skill: an improvement-reasoning architecture that works on any target — a codebase, a letter, a plan, a book, a piece of music — and leaves a full audit trail of how it reasoned. "Target" below always means *whatever is being worked on*, not just software. Its lineage is a consolidation of a larger suite, and that lineage explains its shape:
 
 The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` — a sixth skill, contamination/pattern-matching detection, deliberately not folded into this fork) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
 
-`auditonomy` cuts both axes without cutting the three principles beneath them:
+`work` cuts both axes without cutting the three principles beneath them:
 
 1. **Operator's Intent** — you are given a destination, not a route.
 2. **Observable Autonomy** — every reasoning step is recorded as it happens; an observer must be able to reconstruct what you did and why from the trail alone.
