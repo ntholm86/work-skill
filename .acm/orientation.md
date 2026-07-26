@@ -1,6 +1,6 @@
 # orientation.md — work-skill
 
-_Last updated: 2026-07-26 (run: fix-stale-orientation-header-date; body below through the 2026-07-04 scorecards was written by the full Orient run `full-orient-and-rescore-under-corrected-destination`; later dated sections are appended mini-orients and convergence logs)_
+_Last updated: 2026-07-26 (run: fix-trail-format-contract; body below through the 2026-07-04 scorecards was written by the full Orient run `full-orient-and-rescore-under-corrected-destination`; later dated sections are appended mini-orients and convergence logs)_
 
 > Written by a full Orient run (whole-arc read, 28 entries), not the mini-orient. Scoring included per this repo's own operator-mandated convention (SKILL.md step 2), which deliberately diverges from the full Orient skill's no-scoring stance — a settled divergence, not an oversight.
 
@@ -213,3 +213,19 @@ Append-only continuation of the tables above.
 | Date | Model / family | Verdict | Trail entry |
 |---|---|---|---|
 | 2026-07-26 | Claude Fable 5 (GitHub Copilot) | findings-fixed | [fix-stale-orientation-header-date](./audit-trail.md#2026-07-26--fix-stale-orientation-header-date) |
+
+## Mini-orient -- 2026-07-26 (fifth convergence peg; recurring metadata class plus first contract-drift instance)
+
+1. **The state-lagging-reality class hit its fourth occurrence exactly where the fourth peg predicted.** The trail file's own title line carried a repo name three renames stale (`pea-skills-lite`), confirming the class is "any surface asserting repo state," not README hygiene. Four occurrences, four different surfaces (README twice, orientation header, trail title). The class stays open: no run yet has performed a rename- or state-change with a full sweep of state-asserting surfaces.
+2. **A new class opened: declared format contract vs. actual trail practice.** SKILL.md promised record.py compatibility for the entry-header format while 27 of 53 entries used a `--` separator invisible to that parser -- an empirically false compatibility claim standing since the consolidation. v3.3.1 legitimizes the fallback (its cause is real: terminal transports corrupt em-dashes) and bounds the claim honestly. Falsified as closed if a future entry is written in mojibake or the compatibility sentence re-inflates.
+3. **The Tier 3 contemporaneous rule converted again in a second fresh session.** This run's complete pre-action segment (interpretation, examination with named method, challenge, trigger check, decision, prediction) existed in the trail before any target diff. One honest prediction miss disclosed (off-by-one on parse count -- the prediction forgot its own entry), which is the prediction discipline working, not failing.
+
+Watch for: the counterpart fix lives outside this repo -- record.py's `ENTRY_HEADING` regex (pea/skills) still reads only the em-dash form; until it learns `--`, half this trail is invisible to the promised tooling. Operator-owned.
+
+### Cross-model convergence log -- continued
+
+Append-only continuation of the tables above.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | Claude Fable 5 (GitHub Copilot) | findings-fixed | [fix-trail-format-contract](./audit-trail.md#2026-07-26--fix-trail-format-contract) |
