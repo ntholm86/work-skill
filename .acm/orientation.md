@@ -229,3 +229,11 @@ Append-only continuation of the tables above.
 | Date | Model / family | Verdict | Trail entry |
 |---|---|---|---|
 | 2026-07-26 | Claude Fable 5 (GitHub Copilot) | findings-fixed | [fix-trail-format-contract](./audit-trail.md#2026-07-26--fix-trail-format-contract) |
+
+## Mini-orient -- 2026-07-26 (mechanism-layer state-lagging class, closed proactively)
+
+1. **The state-lagging-reality class has now been observed at three distinct layers within one session: a version token, a trail file's own title metadata, and a destination-vs-mechanism gap.** This third instance is the first time in this arc the class was closed *before* an independent audit found it stale, rather than after -- the destination run confirmed four obligations and the very next run implemented them in the same conversation, instead of leaving them to drift like the prior two occurrences did. Falsified as a genuine change in discipline if a future confirmed-destination obligation sits unimplemented across several intervening runs before being caught.
+2. **`work/SKILL.md` now has a step 0.5 (Orient bootstrap) that has never fired.** Same conversion-lag every mechanism in this repo goes through: text exists, behavior doesn't yet. First real test is the next Tier 2/3 run against a target with no `.acm/orientation.md` yet.
+3. **One open sub-question from the destination run was resolved by implementer's judgment, not operator ruling:** zero-evidence rubrics on first contact get named axes with blank/provisional scores, never a fabricated number. `destination.md` still lists this as unconfirmed -- if the operator rules differently, step 0.5's text needs a follow-up edit, not silent reinterpretation.
+
+Watch for: the next fresh target's first Tier 2/3 run should show a Bootstrap-tagged `.acm/orientation.md` section appearing without being asked, and should show whether the operator's ruling on zero-evidence rubrics matches or overturns this run's default.
