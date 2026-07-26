@@ -352,3 +352,50 @@ The current v3.6.0 Orientation is void as current guidance because its Destinati
 
 - How to encode Improve-grade reasoning compactly enough to preserve the daily-use cost goal without reducing it to another checklist.
 - What minimum evidence demonstrates a sufficient risk-sized map in different target domains; the agent owns the judgment, and the Trail must make the chosen breadth inspectable.
+
+---
+
+## Destination refinement - 2026-07-26 (reasoning memory at daily-use cost)
+
+The operator identified that Work needs the reasoning-memory capability carried by the full suite's `learning.md` and `history.md`, but not necessarily those files or their maintenance machinery. The non-negotiable outcome is that Work improves its own reasoning over time instead of preserving lessons only in an append-only Trail that ordinary runs rarely revisit. Reasoning capability is part of what Work improves when pointed at itself; it is not a fixed property of the current `SKILL.md`. Token cost remains co-equal because Work is intended for daily use.
+
+### Confirmed policy
+
+1. **Use hybrid reasoning memory.** Every decision-bearing run inherits a compact set of lessons that remain operationally true now. Full chronological realizations and reversals are consulted when Orient runs or when risk, surprise, contradiction, or a touched prior reversal makes their provenance relevant.
+2. **Preserve capability, not suite artifacts.** `learning.md`, `history.md`, `record.py`, and per-run regeneration are implementation choices, not requirements. The agent may choose the lowest-cost architecture that preserves reasoning inheritance and historical challenge.
+3. **Prefer current truth in the hot path.** Superseded lessons must not consume daily context or silently govern current work. The append-only Trail keeps provenance; Orientation carries the current active synthesis.
+4. **Historical learning must remain reachable.** Cost optimization may defer the chronological read, but it may not make older realizations and reversals practically invisible when current reasoning is challenged.
+5. **Reasoning efficiency is part of Work's destination.** Self-runs should improve the quality gained per token: stronger judgment and better reuse of prior learning with less repeated reconstruction, without optimizing token count by cutting decision quality.
+
+### Operator rulings
+
+- Asked what every decision-bearing run should load: the operator chose **Hybrid** - active lessons always, chronological learning when Orient or risk requires it.
+- Asked whether to reuse Orientation plus Trail or add a derived learning file: the operator delegated the implementation choice to the agent.
+
+### Implementation direction chosen under delegation
+
+Use `orientation.md` as the compact always-read active layer, and query `[!REALIZATION]` / `[!REVERSAL]` markers directly from `audit-trail.md` on demand. Do not add a derived learning file, timeline file, generator, or freshness protocol unless evidence later shows this cheaper construction cannot preserve the reasoning capability.
+
+---
+
+## Destination refinement - 2026-07-26 (latent human direction, hunching, and autonomous convergence)
+
+The operator clarified the argument behind using Work and multiple model families to converge toward silence. Work's universal mechanism must remain target-agnostic and route-neutral. When Work is pointed at itself, the target happens to be its own improvement-reasoning architecture, so self-runs should improve that reasoning capability and its efficiency. That is a property of self-targeting under this repo's Destination, not a universal instruction for every target or a fixed route embedded in the skill.
+
+### Confirmed distinctions
+
+1. **Work's Destination and Work's mechanism are different layers.** This repo's Destination may require DRY, KISS, YAGNI, simplicity, clarity, transparency, solve-by-design, and improved reasoning efficiency. The distributed skill must not impose those doctrines on arbitrary targets merely because they guide its own design; doing so prescribes a route and weakens autonomous search.
+2. **Self-targeting improves reasoning because reasoning is the target here.** Work does not carry a separate universal command to improve "reasoning" regardless of task. Its ordinary target-agnostic loop improves whatever target the operator selects. In this repo, that includes the architecture's ability to interpret, model, challenge, remember, and decide at high quality per token.
+3. **Convergence is relative to an articulated Destination.** Independent models approaching bounded silence is strong evidence that they have exhausted materially different routes against the same current destination. It does not prove the operator's full latent intent has been captured or that the destination can never evolve.
+4. **Destination is trusted but lossy human compression.** `destination.md` externalizes a small, auditable part of a much richer and continuously processed human model. The operator may discover connections, sharpen priorities, or change course during the work. Operator recognition is a present-tense alignment check, not a claim that the gap is permanently closed.
+5. **Hunching is a standing alignment faculty.** Work should use conversation, corrections, changed emphasis, newly connected ideas, repeated near-misses, and target evidence to form 1-3 sourced guesses about the direction the operator may be moving toward. It surfaces only the highest-leverage hunch whose answer would change the work, explicitly as a question the operator can confirm, correct, or reject. The agent may detect and initiate this process; only the operator settles Destination.
+6. **Hunching is evidence-triggered, not continuous ceremony.** A meaningful signal that the written Destination may lag the operator can trigger a hunch before contradiction or plateau. Time, session count, or the mere ability to imagine alternatives is insufficient. If no genuine sourced hunch exists, silence is correct.
+7. **Destination evolution is expected, not treated as failure.** When operator learning changes the destination, the old articulation remains truthful history, the new confirmed articulation invalidates the prior Orientation, and autonomous convergence restarts against the updated basis.
+
+### Why this matters
+
+The gap between the operator's mind and the written Destination is irreducible but reducible. Models can explore several plausible futures, articulate implications the operator has not yet externalized, and ask cheap, falsifiable questions. That capability reduces articulation cost and improves alignment without transferring destination authority to the agent. It is part of why multi-model convergence is valuable: diverse autonomous routes test the target, while evidence-triggered hunching keeps the shared destination responsive to human learning.
+
+### Boundary chosen under delegated judgment
+
+The operator was unavailable to answer whether hunching should run continuously or only at existing late triggers and instructed the agent to work autonomously. The selected boundary is evidence-triggered hunching: earlier than contradiction or plateau, but only when a sourced signal indicates that the written Destination may lag the operator. Continuous hunch questions would add daily ceremony and manufacture uncertainty; retaining only late triggers would miss the moving-target gap the operator explicitly identified.
