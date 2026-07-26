@@ -833,3 +833,44 @@ Cost: light -- 2 tool ops, 1 file written, no subagent.
 
 Next: test whether a genuinely fresh model follows the new pre-action append rule without being prompted about this finding.
 Cost: moderate -- about 20 tool ops, 5 repo files read or written, no subagent.
+
+## 2026-07-26 -- sync-readme-version-after-v3-2-0
+
+**Tier: Full. Model: GitHub Copilot, fresh independent session.** I read `work/SKILL.md`, `.acm/destination.md`, and `.acm/orientation.md` in the requested order, then checked the higher-scope mandate and live repo state.
+
+**Interpretation and examination.** The bar is the repo destination's combined target-agnostic capability, full auditability, daily-use cost, and stranger-pickup constraint. Inconsistency and Purpose were load-bearing: `work/SKILL.md` and git history identify the live release as v3.2.0, while the README front door still says v3.1.0. The immediately preceding convergence entry says the README was made precise but did not catch this stale status. A stranger therefore receives contradictory release state from the two public entry points.
+
+**Challenge.** The mismatch is small, but leaving it would repeat the exact stale-README defect class already recorded in `publish-prep-readme-license`; changing mechanism text would be disproportionate because the mechanism is internally consistent. The narrow repair is to synchronize the one status token and record this independent finding without adding process weight.
+
+**Across-trail trigger check.** The operator requested an independent self-audit. A recurring finding-class is present: public front-door metadata lagged the live skill before and has done so again. This run does not contradict a prior `[!REALIZATION]`; it does falsify the practical conversion of the prior entry's claim that README precision had been completed. A silence declaration is not imminent because the mismatch is actionable. The recurrence triggers a mini-orient in this run before the backstop.
+
+**[!DECISION] Prediction, recorded before action.** I will change only the README status from v3.1.0 to v3.2.0, then append the required convergence result and mini-orient evidence to `.acm/orientation.md`. I expect the public entry points to agree on v3.2.0, no change to `work/SKILL.md`, no new mechanism or dependency, and focused text assertions plus a clean diff check to pass.
+
+**Action and outcome.** Changed the README's status token from v3.1.0 to v3.2.0. The first focused assertion caught an accidental leading space introduced on that line; I removed it and reran the same check successfully before touching orientation. Appended a need-triggered mini-orient and an append-only continuation of the Cross-model convergence log with this run's `GitHub Copilot / findings-fixed` row. Final assertions confirmed that README and SKILL versions both equal v3.2.0, the row's anchor matches this entry, `git diff --check` passes, `work/SKILL.md` is unchanged, and only README plus the two required ACM files changed. The prediction held.
+
+**Reflection.** Falsifiable claim: the repo's public entry points now agree on release state, and a future version-bearing run that asserts both surfaces before closing its trail outcome will not repeat this class. Blind spot: no automation enforces that assertion; the recurrence is procedurally watched, not structurally prevented. An expert could argue for a generated version source, but that would add tooling and violate the repo's no-dependency, cost-co-equal design for a two-surface metadata check.
+
+**Mini-orient.** The recurring-class need-signal fired before the counter. v3.2.0's pre-action sequence converted behaviorally in this fresh run: the trail decision existed while README still had no diff. The stale-front-door class remains open after its second occurrence, now narrowed to version-bearing changes that fail to verify README and SKILL together. Cost stayed proportional because the one-token target repair added no mechanism weight; the Full record and arc read were required by recurrence and the operator's independent-evaluation request.
+
+Next: on the next version-bearing change, assert README and SKILL version agreement before closing the outcome; one clean conversion would test whether this recurrence is actually controlled.
+Cost: moderate -- about 20 tool ops, 6 repo/workspace files read or written, no subagent.
+
+## 2026-07-26 — make-tier3-reasoning-contemporaneous
+**Tier: Full. Model: GitHub Copilot, fresh independent session.** I read `work/SKILL.md`, `.acm/destination.md`, and `.acm/orientation.md` in the requested order, then examined only the live repo state.
+
+**Interpretation and examination.** The evaluation bar is the repo destination's combination of target-agnostic reasoning, full auditability, daily-use cost, and stranger usability. Purpose and Inconsistency were load-bearing. v3.2.0 correctly requires Tier 2 and 3 decisions and predictions to be appended before action, but the pre-action list omits Tier 3's examination and challenge even though its complete shape requires both. A conforming agent may therefore reconstruct the reasoning that produced its decision after seeing the outcome while still passing the final self-check. That leaves the anti-rationalization guarantee incomplete at the highest-stakes tier.
+
+**Challenge.** Requiring a separate write for every reasoning stage would add ceremony and conflict with the co-equal cost mandate. Leaving the omission alone would make the previous timing fix protect the conclusion but not the material reasoning behind it. The narrow repair is to include examination and challenge in Tier 3's existing pre-action append, adding no write operation and no dependency.
+
+**Across-trail trigger check.** The operator requested an independent self-audit. A recurring finding-class is present: this is a second temporal auditability gap in the same two-stage recording rule. It does not contradict a prior `[!REALIZATION]`; it sharpens the previous fix's boundary. A silence declaration is not imminent because the omission is actionable. The recurring class triggers a mini-orient before the backstop.
+
+**[!DECISION] Prediction, recorded before action.** I will require Tier 3's examination and challenge in the existing pre-action segment, update the final self-check to verify all pre-action reasoning required by the selected tier, and bump the mechanism version from 3.2.0 to 3.3.0. I expect no extra trail append, dependency, file, or loop stage; README and SKILL version claims will agree; focused assertions and diff-format checks will pass.
+
+**Action and outcome.** Updated `work/SKILL.md` so the existing Tier 3 pre-action append must include examination and challenge as well as interpretation, decision, and prediction; changed the final self-check to verify all pre-action reasoning required by the selected tier; bumped the mechanism version to 3.3.0; and synchronized README status. Focused assertions confirmed both Tier 3 clauses, README/SKILL version agreement, and clean diff formatting. The prediction held: no extra append operation, dependency, file, or loop stage was introduced.
+
+**Reflection.** Falsifiable claim: a future Tier 3 run following v3.3.0 will have examination and challenge in its durable pre-action segment; an entry containing only decision and prediction before action falsifies behavioral conversion. Blind spot: append-only Markdown still cannot prove wall-clock order cryptographically, and the selected tier determines how much reasoning must be exposed. An expert could argue that every intermediate inference should be streamed durably, but that would replace proportional auditability with transcript capture and violate the daily-cost constraint.
+
+**Mini-orient.** The recurring temporal-auditability class fired the need-signal before the backstop. v3.2.0 protected the prediction's timing but left Tier 3's examination and challenge reconstructable after outcome; v3.3.0 closes that remaining instruction-level gap using the same write. The two consecutive findings show that timing guarantees need to be checked against each tier's complete shape, not only the shared minimum. Cost remains stakes-matched: the mechanism adds words but no per-run operation.
+
+Next: a genuinely fresh Tier 3 run should demonstrate that examination and challenge are appended before the target diff exists.
+Cost: moderate -- about 15 tool ops, 5 repo files read or written, no subagent.

@@ -156,3 +156,35 @@ A row is added only for a **genuinely fresh session** (not the session that auth
 | 2026-07-26 | GitHub Copilot | findings-fixed | [make-predictions-contemporaneous](./audit-trail.md#2026-07-26----make-predictions-contemporaneous) |
 
 Next: run the same independent evaluation in another fresh model/family session and test whether v3.2.0's pre-action append rule converts without prompting.
+
+## Mini-orient -- 2026-07-26 (second convergence peg; recurring-class need-signal)
+
+1. **v3.2.0's pre-action rule converted in a fresh run.** The decision and prediction for `sync-readme-version-after-v3-2-0` were appended and independently asserted before README had any diff. A future one-shot retrospective Tier 2 or 3 entry would still falsify broader convergence.
+2. **The public-front-door staleness class remains open.** README metadata lagged live repo state for the second recorded time: publish prep fixed v3.0.0-era drift, then the v3.2.0 mechanism change left Status at v3.1.0. Falsified as a recurring weakness if the next version-bearing change updates and verifies both surfaces in the same run.
+3. **The repair cost stayed proportional.** The target change was one version token; all additional weight came from the operator-requested independent audit and this skill's Full-tier recurrence rule, not from a new mechanism or dependency.
+
+Watch for: version-bearing changes should assert `README.md` and `work/SKILL.md` agree before their trail outcome is closed.
+
+### Cross-model convergence log -- continued
+
+Append-only continuation of the table above.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | GitHub Copilot | findings-fixed | [sync-readme-version-after-v3-2-0](./audit-trail.md#2026-07-26----sync-readme-version-after-v3-2-0) |
+
+## Mini-orient -- 2026-07-26 (third convergence peg; recurring temporal class)
+
+1. **The contemporaneous-recording repair needed one more boundary.** v3.2.0 made decisions and predictions pre-action but did not require Tier 3 examination and challenge in that segment. v3.3.0 now aligns the two-stage rule and final self-check with Tier 3's complete shape.
+2. **The repair preserves the cost half of the destination.** Examination and challenge join the existing pre-action append, so decision-bearing runs gain no operation, dependency, or file. The mechanism adds instruction weight only.
+3. **The recurring class is now narrower and behaviorally unproven.** Instruction-level timing covers all required pre-action Tier 3 reasoning; a fresh Tier 3 run still needs to demonstrate that the complete segment exists before its target diff.
+
+Watch for: the next genuinely fresh Tier 3 entry must contain interpretation when needed, examination, challenge, decision, and prediction before action. Missing examination or challenge would falsify v3.3.0's behavioral convergence.
+
+### Cross-model convergence log -- continued
+
+Append-only continuation of the tables above.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | GitHub Copilot | findings-fixed | [make-tier3-reasoning-contemporaneous](./audit-trail.md#2026-07-26--make-tier3-reasoning-contemporaneous) |

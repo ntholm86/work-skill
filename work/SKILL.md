@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap, a self-triggered mini-Orient when the arc needs one, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.2.0"
+  version: "3.3.0"
 ---
 
 # work
@@ -82,7 +82,7 @@ If you back out of something mid-run (tried X, reverted when Y proved it wrong),
 
 ### 3. Trail — always, every run, no exceptions
 
-Record one entry in `.acm/audit-trail.md` in the target repo, using the header format `## <date> — <slug>` (create the file with a one-line header if absent: `# Audit Trail — <repo name>`, where the repo name is simply the name of the folder holding this `.acm/`). For Tier 1, append the complete entry after the mechanical action. For Tier 2 or 3, open the entry immediately after deciding and **before acting**: append its header, interpretation when needed, decision, and falsifiable prediction. After verification, append the outcome, blind spot or reflection, any next move, and cost line to that same entry. Never reconstruct the pre-action segment after seeing the result; the two appends are what make the prediction auditable rather than merely retrospective. This is the one step never skipped and never optional, however trivial the run: a run with no completed entry is a run that didn't happen, as far as anyone auditing later can tell.
+Record one entry in `.acm/audit-trail.md` in the target repo, using the header format `## <date> — <slug>` (create the file with a one-line header if absent: `# Audit Trail — <repo name>`, where the repo name is simply the name of the folder holding this `.acm/`). For Tier 1, append the complete entry after the mechanical action. For Tier 2 or 3, open the entry immediately after deciding and **before acting**: append all pre-action reasoning required by the selected tier — interpretation when needed, decision, and falsifiable prediction, plus examination and challenge for Tier 3. After verification, append the outcome, blind spot or reflection, any next move, and cost line to that same entry. Never reconstruct the pre-action segment after seeing the result; the two appends are what make the reasoning and prediction auditable rather than merely retrospective. This is the one step never skipped and never optional, however trivial the run: a run with no completed entry is a run that didn't happen, as far as anyone auditing later can tell.
 
 **Depth tiers — pick the lowest one that's honest:**
 
@@ -141,7 +141,7 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 ## Self-check before calling a run done
 
 - Did step 3 (Trail) actually happen? If not, the run isn't done, whatever else was accomplished.
-- For a Tier 2 or 3 run, was the decision-and-prediction segment appended before action, with the outcome appended only after verification?
+- For a Tier 2 or 3 run, was all pre-action reasoning required by its tier appended before action (including examination and challenge for Tier 3), with the outcome appended only after verification?
 - At append time, did you check the mini-orient's need-signals and the ~5-entry backstop (on multi-writer trails, counting only this loop's entries)? If either fired, did the mini-orient actually run *in this run*? A due-but-skipped mini-orient is a breach, not a deferral.
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
