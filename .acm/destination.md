@@ -235,3 +235,42 @@ Cost: moderate — roughly 20 tool ops across 4 files plus a GitHub API rename, 
 - The reasoning-quality depth assessment — still not yet run.
 - The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
 - **New:** whether a bare, generic word (`work`) creates any real confusion in practice (tool names, search collisions, verbal ambiguity in conversation) — not yet observed, worth a note if the operator hits it.
+
+---
+
+## Destination run — 2026-07-26 (one universal path: destination → orient-with-rubric → loop-until-silence)
+
+Operator ran the full Destination skill (not the mini version) to capture a conversation that started from a question about whether an independent-evaluator's convergence-log rules belonged in the general skill. Signal gathered: that conversation itself, this file, and the current `.acm/orientation.md` / `.acm/audit-trail.md` state. Operator's own framing: **"the overall destination remains the same but this is for accuracy"** — this is a refinement of mechanism-shape, not a redirection of "The One Question" above.
+
+### Sourced inferences
+
+1. **[Direction, confirmed this run]** There should be exactly one workflow shape, with no fork between self-targeting and external-targeting runs — the loop should look identical either way. *Source, verbatim:* "In my mind the flow is obvious. THere should be only one path - always, self targetting run or not - and it should end with silence against a certain destination."
+2. **[Mechanism, confirmed this run]** Orient must run once, immediately after destination is established, **even on a target with zero trail history** — producing a measurement rubric and a todo list as a structural output of orient-bootstrap itself, not as something gated behind an explicit "rate it" request. *Source, verbatim:* "then orient (yes even without history) - so that the measurement rubric created (not triggered on 'rate it' just as a mechanism of the mini-orient) and the todo list is created."
+3. **[Constraint, confirmed this run]** This whole bootstrap apparatus (destination.md, orientation.md-with-rubric) must be skippable for genuinely small tasks — it would be overkill to demand both files exist for a trivial ask. *Source, verbatim:* "Orientation and destination and rubric should exist before it begins - but be skippable if the task is small enough - and it would be overkill demand destination.md and orientation.md just for a small task."
+4. **[Priority, confirmed this run]** The loop must self-detect, without operator prompting, both (a) when an arc-read is due and (b) when destination itself needs redefining because progress has visibly slowed. *Source, verbatim:* "the work skill should be aware of when to trigger the orient skill - or when to redefine destination because the speed is slowing down." (Note: (b) already exists mechanically as step 0.5's third re-trigger, added in "Destination run — 2026-07-04 (self-triggered destination)" above — this run confirms that mechanism rather than introducing it.)
+5. **[Constraint / meta-stance, confirmed this run]** Corrections to how the skill should behave should route through destination-setting, not through piecemeal mechanism bolt-ons reacting to one observed rule at a time — and the fact that independent model families have already converged on the current path/workflow is itself part of the architecture's evidentiary strength, worth protecting from ad hoc bloat. *Source, verbatim:* "i dont want to add unnessecary bloat to the skill and part of the strong arguements of the skills architecture is that several models converged on the path and the workflow - which is what i am now defining when i really need to only define the destination."
+
+### Questions surfaced and operator responses
+
+All five inferences above were read back to the operator in full (this repo's `.acm/audit-trail.md`, prior turn) before this file was touched, per the destination-layer read-back rule. The operator's instruction to "run destination skill to capture this talk" — after confirming "the overall destination remains the same but this is for accuracy" — is treated as confirmation of all five.
+
+### What I now believe
+
+- **Confirmed.** The loop's mechanical shape (steps 0-4) must never special-case self-targeting vs. external targets — already true of the current text; this run makes it an explicit, checkable constraint rather than an incidental property.
+- **Confirmed.** Orient needs a first-contact mode (paired with step 0's Destination bootstrap) that fires once on encountering a target with no history, producing a rubric and a todo list unconditionally — **not yet in `work/SKILL.md`**. Today's step 4 is entirely arc-based (reads "the last ~5-10 entries," fires on need-signals or a backstop count) and structurally cannot fire on a target with zero entries. This is a real, confirmed mechanism gap, not yet closed.
+- **Confirmed.** Step 0's condensed Destination process needs a depth-escalation path that references the full `destination` skill's interview methodology (this file's own governing skill, `pea/skills/destination/SKILL.md`) when the condensed "1-3 guesses → one question" shape is too shallow for what's being decided — not yet in `work/SKILL.md`.
+- **Confirmed.** The whole bootstrap-plus-orient-bootstrap apparatus needs an explicit small-task skip clause, consistent with the existing Tier system's cost discipline — not yet in `work/SKILL.md`.
+- **Not yet ruled on by the operator — left open, not assumed:**
+  1. What an orient-bootstrap rubric rests on when a target has zero prior entries to cite as evidence (the scoring clause's own rule is "a score with no cited evidence is a guess wearing a number"). Two readings were offered — provisional/unscored axes first vs. scoring directly against live inspection of the fresh target — neither confirmed.
+  2. Whether the literal **Cross-model convergence log** table format needs to become a general SKILL.md concept every target keeps, or whether only the underlying *behavior* (independent runs eventually converging to silence) needs to generalize while the table itself stays this repo's own bookkeeping choice, the same status as a target-specific rubric or todo list.
+
+### What this changes going forward
+
+This section is a destination-level confirmation only — it does **not** yet change `work/SKILL.md`. The corresponding mechanism deltas (Orient bootstrap sub-step, unconditional rubric-and-todo generation, destination-interview depth escalation, task-size skip clause) are named above as confirmed obligations this destination now imposes on the skill text, but implementing them is a separate, explicitly deferred decision — the operator has not yet chosen between capturing this as policy-only (done, this run) versus also drafting the SKILL.md deltas for review.
+
+### What's still open
+
+- The workspace-layer-table question — still operator-deferred, unchanged.
+- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+- **New:** the two unconfirmed sub-questions above (rubric-with-zero-evidence handling; convergence-log-as-general-mechanism vs. target-specific artifact).
+- **New:** whether and how to draft the `work/SKILL.md` mechanism deltas this destination run now obligates (Orient bootstrap, rubric/todo unconditional on bootstrap, destination-interview escalation, task-size skip) — confirmed as owed, not yet scheduled.
