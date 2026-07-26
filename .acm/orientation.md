@@ -237,3 +237,11 @@ Append-only continuation of the tables above.
 3. **One open sub-question from the destination run was resolved by implementer's judgment, not operator ruling:** zero-evidence rubrics on first contact get named axes with blank/provisional scores, never a fabricated number. `destination.md` still lists this as unconfirmed -- if the operator rules differently, step 0.5's text needs a follow-up edit, not silent reinterpretation.
 
 Watch for: the next fresh target's first Tier 2/3 run should show a Bootstrap-tagged `.acm/orientation.md` section appearing without being asked, and should show whether the operator's ruling on zero-evidence rubrics matches or overturns this run's default.
+
+## Mini-orient -- 2026-07-26 (v3.4.0 first-contact branch correction)
+
+1. **The destination-vs-mechanism drift class was not closed proactively; it recurred immediately in v3.4.0.** The small-task exception accidentally said to skip `.acm/` entirely, contradicting always-on Trail, and step 0.5 let an unconfirmed destination seed orientation despite step 0.6. v3.4.1 corrects both. Falsified as controlled if the disposable branch test finds another conflict between steps 0, 0.5, and 3.
+2. **The root cause was local prose validation instead of end-to-end control-path tracing.** Every new or skipped stage must now be checked across all first-contact branches through Trail: Micro, Tier 2/3 unconfirmed, Tier 2/3 confirmed.
+3. **The model change produced a real independent reading benefit without qualifying as fresh-context convergence.** This run states its identity and context limitation in the trail and deliberately adds no convergence row.
+
+Watch for: the disposable branch test is the next evidence boundary; instruction-level assertions alone do not convert v3.4.1 behaviorally.

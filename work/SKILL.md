@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap that escalates to a deeper interview when thin, a one-time Orient bootstrap producing a rubric and todo list on first contact, a self-triggered mini-Orient when the arc later needs one, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.4.0"
+  version: "3.4.1"
 ---
 
 # work
@@ -32,7 +32,7 @@ And if a cost/quality trade-off is ever genuinely unavoidable in a run, say so i
 
 Four steps every run — **bootstrap** (step 0, first contact with a target only), **understand** (step 1), **work** (step 2), **record** (step 3) — plus an **arc-read** (step 4) whenever the work signals it needs one.
 
-**One loop, one shape.** This sequence runs identically whether the target is this skill's own repo or any external target — self-targeting is never a special case. The one exception is stakes, not target type: a genuinely small, mechanical ask (the kind that will tier as Micro in step 3) skips bootstrapping `.acm/` into existence at all. Steps 0 and 0.5 below are required before Tier 2 or 3 work begins, not before a one-line fix.
+**One loop, one shape.** This sequence runs identically whether the target is this skill's own repo or any external target — self-targeting is never a special case. The one exception is stakes, not target type: a genuinely small, mechanical ask (the kind that will tier as Micro in step 3) skips steps 0 and 0.5 — no `destination.md`, `orientation.md`, or rubric is required. Trail still happens under step 3, creating `.acm/audit-trail.md` if needed; Observable Autonomy is never the skipped cost. Steps 0 and 0.5 below are required before Tier 2 or 3 work begins, not before a one-line fix.
 
 **The skill leads this workflow, not the operator.** Assume the operator is new to this file: they should never need to remember to invoke a step. The loop decides when its own moments are due — a destination question, an arc-read, a trail entry — announces in one line what it's doing and why, and names the one decision that belongs to the operator at that moment (confirm a destination, rule on a proposal, answer a question). Hand-holding is part of the job: a workflow the operator has to drive from memory is a workflow that won't happen.
 
@@ -53,7 +53,7 @@ Before anything else, check the **target repo's** `.acm/` folder (always at the 
 
 ### 0.5 Orient bootstrap — first contact, even with no history
 
-Once `.acm/destination.md` exists (just written, or already present) and the ask is Tier 2 or 3-shaped, check `.acm/orientation.md`. If it doesn't exist yet, create it now, once, before the loop proper begins — this runs unconditionally on first contact, not gated behind an explicit "rate this" request; it carries the same standing as the Destination bootstrap above.
+Once a **confirmed** `.acm/destination.md` exists (just written, or already present) and the ask is Tier 2 or 3-shaped, check `.acm/orientation.md`. If the only destination is marked unconfirmed, stop before orientation or ordinary work and ask the operator to confirm or correct it; step 0.6 forbids letting that guess seed further committed artifacts. If `.acm/orientation.md` doesn't exist yet, create it now, once, before the loop proper begins — this runs unconditionally on first contact, not gated behind an explicit "rate this" request; it carries the same standing as the Destination bootstrap above.
 
 1. Name roughly **5-10 measurements** the destination's own text implies matter for this target — fewer than step 2's full scoring clause asks for later, since there's no trail evidence yet to weigh them against. Where there are zero prior entries, leave scores blank or provisional (name the axis, not a number) rather than inventing one with nothing to cite — a score with no cited evidence is a guess wearing a number, per step 2's own rule, and that applies on day one too.
 2. From the same read, list a short **todo** of the most obvious first candidate moves the destination implies — this seeds step 2's "candidate next moves" for the first real run instead of starting from nothing.
