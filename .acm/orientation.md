@@ -1,6 +1,6 @@
 # orientation.md — work-skill
 
-_Last updated: 2026-07-04 (run: full-orient-and-rescore-under-corrected-destination)_
+_Last updated: 2026-07-26 (run: fix-stale-orientation-header-date; body below through the 2026-07-04 scorecards was written by the full Orient run `full-orient-and-rescore-under-corrected-destination`; later dated sections are appended mini-orients and convergence logs)_
 
 > Written by a full Orient run (whole-arc read, 28 entries), not the mini-orient. Scoring included per this repo's own operator-mandated convention (SKILL.md step 2), which deliberately diverges from the full Orient skill's no-scoring stance — a settled divergence, not an oversight.
 
@@ -188,3 +188,28 @@ Append-only continuation of the tables above.
 | Date | Model / family | Verdict | Trail entry |
 |---|---|---|---|
 | 2026-07-26 | GitHub Copilot | findings-fixed | [make-tier3-reasoning-contemporaneous](./audit-trail.md#2026-07-26--make-tier3-reasoning-contemporaneous) |
+| 2026-07-26 | GPT-5.4 mini | silence | [bounded-silence-against-current-destination](./audit-trail.md#2026-07-26--bounded-silence-against-current-destination) |
+
+### Cross-model convergence log -- continued
+
+Append-only continuation of the table above.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | GitHub Copilot | silence | [bounded-silence-current-v3-3-0](./audit-trail.md#2026-07-26--bounded-silence-current-v3-3-0) |
+
+## Mini-orient -- 2026-07-26 (fourth convergence peg; recurring metadata-staleness class)
+
+1. **The state-lagging-reality class extends past the public front door into ACM self-metadata.** Three occurrences across separate runs: README at publish prep, README after v3.2.0, now orientation.md's own Last-updated header (22 days and five appended sections stale). The class is not "README hygiene" but "any surface asserting repo state must be re-verified by the run that changes that state." Falsified as still-open if the next three state-changing runs each leave every state-asserting surface (README status, orientation header) agreeing with reality.
+2. **v3.3.0's Tier 3 behavioral test converted.** This run's complete pre-action segment (interpretation, examination, challenge, decision, prediction) existed in the trail before the target line had any diff — verified by an in-run `git status` check, which also caught pre-existing uncommitted rows and correctly attributed them rather than absorbing them.
+3. **Consecutive silence verdicts were bounded too narrowly, not wrongly.** Both v3.3.0 silences tested version agreement and mechanism text; both explicitly did not test the ACM files themselves. This finding lands in exactly the surface their bounds excluded — evidence that bounded silence works as designed when the next run reads the bounds as a to-do list.
+
+Watch for: any run that appends a dated section to orientation.md must also confirm the header's Last-updated line agrees before closing its outcome.
+
+### Cross-model convergence log -- continued
+
+Append-only continuation of the tables above.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | Claude Fable 5 (GitHub Copilot) | findings-fixed | [fix-stale-orientation-header-date](./audit-trail.md#2026-07-26--fix-stale-orientation-header-date) |

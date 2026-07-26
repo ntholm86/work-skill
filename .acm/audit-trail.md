@@ -1,4 +1,4 @@
-# Audit Trail — pea-skills-lite
+# Audit Trail — work-skill
 
 ## 2026-07-03 — bootstrap-pea-lite-from-five-skills
 
@@ -874,3 +874,53 @@ Cost: moderate -- about 20 tool ops, 6 repo/workspace files read or written, no 
 
 Next: a genuinely fresh Tier 3 run should demonstrate that examination and challenge are appended before the target diff exists.
 Cost: moderate -- about 15 tool ops, 5 repo files read or written, no subagent.
+
+## 2026-07-26 — bounded-silence-against-current-destination
+**Tier: Standard. Model: GPT-5.4 mini, first session with this model.** Independent evaluator run against `work` using the repo's current destination and live state.
+
+[!DECISION] Bounded silence: the live surface is already self-consistent at v3.3.0. README and SKILL agree on version, and the current convergence log already records the two-stage recording and Tier 3 contemporaneous-reasoning fixes. I did not find a new actionable mismatch to repair.
+
+Bar tested: whether the current repo state still had an internal version/status mismatch or a remaining contemporaneous-recording gap.
+
+Untested: a fresh non-Copilot model/family session, and any external or non-self target.
+
+Cost: moderate -- 7 tool ops, 4 files read, 2 files written.
+
+## 2026-07-26 — bounded-silence-current-v3-3-0
+**Tier: Full. Model: GitHub Copilot, fresh independent session.** Independent evaluator run requested against `work` using the repo's current destination as the standard. I read `work/SKILL.md`, `.acm/destination.md`, and `.acm/orientation.md` in that order, then examined the live repository state.
+
+**Interpretation and examination.** The bar is the destination's combined target-agnostic improvement capability, proportional daily-use cost, full auditability, and stranger-pickup usability. Purpose and Inconsistency were load-bearing. I tested the current public/version surface and the mechanism's stated contemporaneous-recording boundary: `work/SKILL.md` and README both identify v3.3.0; README's UTF-8 content is valid despite PowerShell's legacy display garbling; and the Tier 2/3 rule plus final self-check require the Tier 3 examination and challenge in the pre-action segment. I found no live contradiction between these surfaces or a smaller repair that would improve the stated destination.
+
+**Challenge.** A further instruction-level timing change would duplicate the v3.3.0 repair without fresh evidence of a gap, increasing reading cost for an unproven benefit. Treating PowerShell's display-decoding artifact as repository corruption would be a false finding. The remaining uncertainty is behavioral: a future fresh Tier 3 run must demonstrate its complete pre-action record before its target diff exists.
+
+**Across-trail trigger check.** The operator requested a deep independent audit. No new recurring finding-class is evidenced by the live state; the current temporal-auditability class is explicitly watched but not retested here through a new Tier 3 target change. This run does not contradict a prior `[!REALIZATION]`. A silence declaration is imminent, so Full-tier recording applies. The recent convergence stretch remains active, but no new arc claim requires a mini-orient beyond the existing 2026-07-26 watch item.
+
+**[!DECISION] Prediction, recorded before action.** I will declare bounded silence and append this fresh-session result to the Cross-model convergence log. I expect no change to the skill, README, or destination; the convergence row will point to this entry; and append-only/order, version-consistency, link, and diff-format checks will pass.
+
+**Action and outcome.** Declared bounded silence and appended the required GitHub Copilot / silence convergence row. Focused validation confirmed the pre-action trail segment existed before the row, the row points to this entry, `work/SKILL.md` and README both state v3.3.0, and the UTF-8 README has no replacement characters. The prediction held: no change was made to the skill, README, or destination.
+
+**Reflection.** Falsifiable claim: the current instruction-level mechanism remains internally consistent until a fresh Tier 3 run exposes a missing or retrospective pre-action element. Blind spot: this evaluation inspected the live instructions and public surface but did not execute a new Tier 3 target change, so it cannot prove behavioral adoption. An expert could reasonably ask for that live conversion before treating the timing repair as fully converged.
+
+Next: a fresh Tier 3 run against any target should verify that its interpretation when needed, examination, challenge, decision, and prediction are all appended before the target diff.
+Cost: moderate -- 11 tool operations, 4 repo files read or written, no subagent.
+
+## 2026-07-26 — fix-stale-orientation-header-date
+
+**Tier: Full. Model: Claude Fable 5 (GitHub Copilot), fresh independent session.** Independent evaluator run against `work` using the repo's current destination as the standard. I read `work/SKILL.md`, `.acm/destination.md`, and `.acm/orientation.md` in that order, then examined the live repository state without relying on prior sessions' conclusions.
+
+**Interpretation and examination.** The bar is the destination's two inseparable halves — target-agnostic improvement capability and daily-use cost — under full auditability and the stranger-pickup constraint. Independently verified: README and `work/SKILL.md` agree on v3.3.0; the Tier 2/3 pre-action rule and the final self-check carry the v3.3.0 examination-and-challenge requirements; the working tree is clean. Purpose and Inconsistency were load-bearing on the one live defect found: `.acm/orientation.md`'s header still reads "Last updated: 2026-07-04" while the file demonstrably contains three mini-orients and four convergence-log sections dated 2026-07-26 — the file's own metadata contradicts its own content. This is not only cosmetic: step 4's backstop names "orientation.md's dated header" as its counting anchor, so a header 22 days and five appends stale degrades the counting basis of the one mechanism this repo's arc treats as its most behaviorally proven. Both v3.3.0 silence runs verified version agreement and mechanism text; neither tested the ACM files' own self-metadata.
+
+**Challenge.** Is rewriting the line a breach of append-only memory? No: this repo's own convention has the full Orient replace orientation.md wholesale ("replace-on-run"), step 4.5's "dating its header" expects the header to carry the update date, and the convergence-log sections' append-only pledge covers their rows, not file-level metadata. Is the header an owner's section the multi-writer rule protects? No — this orientation.md is written by this same loop's runs, and a last-updated line is metadata, not a claim. The alternative — appending a dated note saying "the header above is stale" — would preserve a falsehood at the top of the file to honor a rule that does not apply to it. Silence was considered and rejected: a memory file whose own metadata lies fails the trail-must-not-lie standard directly, however small the token.
+
+**Across-trail trigger check.** Operator requested a deep independent audit: fired. Recurring finding-class: fired — state-lagging-reality metadata, third occurrence across separate runs (README at publish-prep, README at sync-readme-version-after-v3-2-0, now orientation.md's own header), now shown to extend beyond the public front door into ACM self-metadata; this triggers a mini-orient in this run. Contradicts a prior [!REALIZATION]: no — it narrows the two silence declarations' bounds, on a surface both explicitly did not test. Silence imminent: no.
+
+**[!DECISION] Prediction, recorded before action.** I will update only orientation.md's Last-updated header line to 2026-07-26 (preserving the full-Orient provenance note), then append a need-triggered mini-orient and a findings-fixed convergence row, and change nothing in `work/SKILL.md`, README.md, or destination.md. I expect the header to agree with the file's newest dated section, `git diff --check` to pass, and this pre-action segment to exist in the trail before orientation.md has any diff — converting v3.3.0's watched Tier 3 behavioral test.
+
+**Action and outcome.** Updated the header line, appended the mini-orient and the Claude Fable 5 / findings-fixed convergence row. Verification passed on all predicted points: header agrees with the file's newest section, row anchor resolves to this entry, `git diff --check` clean, `work/SKILL.md`/README/destination untouched, both ACM files free of encoding corruption. One deviation from expectation, disclosed: the pre-action `git status` check found orientation.md *already* modified — pre-existing uncommitted convergence rows left behind by the two prior silence sessions, whose entries claimed verification passed but never committed their rows. My header line itself had no diff at pre-action time, so the trail-before-diff ordering holds for this run's own change; the inherited uncommitted state is noted rather than absorbed silently.
+
+**Reflection.** Falsifiable claim: orientation.md's header now agrees with its newest dated section, and any future run appending a dated section without re-dating the header re-opens the metadata-staleness class (third occurrence — see mini-orient). Blind spot: nothing structurally prevents recurrence; the watch line in orientation.md is procedural, and adding enforcement tooling would violate the no-tooling, cost-co-equal constraints — the same trade the README-version fix accepted. Imagined pushback: "editing a header line in an append-only memory file is a rewrite." Answered in the challenge above — the header is file metadata this repo's own conventions expect to carry the update date (step 4.5 "dating its header"; full Orient replaces the file wholesale); appending a note that the header above is false would preserve a lie to honor a rule that doesn't cover it.
+
+**Across-trail triggers, post-verification status:** deeper audit requested — fired, honored at Full tier. Recurring finding-class — fired; mini-orient ran in this run and is recorded in orientation.md. Contradicts a prior [!REALIZATION] — no. Silence imminent — no; a real finding was fixed.
+
+Next: the uncommitted ACM state (two prior sessions' rows plus this run's changes) is sitting in the working tree — committing is the operator's call, since prior convergence runs were committed by the operator, not the evaluating session.
+Cost: moderate — about 14 tool ops, 5 repo files read, 2 files written, no subagent.
