@@ -478,3 +478,58 @@ The ten dimensions can confirm that Standard must reason fully, but not that its
 This run behaviorally converted Destination-change → basis mismatch → Trail-before-Orient → fresh rubric → advisory todo → Work → completed-stretch refresh. It also rejected one falsely compliant fresh report and accepted a second exact-input report only after citation inspection. The architecture led the workflow without another operator instruction. Candidate silence is bounded to the instruction surface only; real target behavior remains open.
 
 Watch for: Standard entries whose decisions look sound individually but leave no reconstructable target model or route comparison for the next Orient. That is the first evidence that recording compression has begun to damage arc quality.
+
+## Orient — 2026-07-26 (v3.8.0 post-external-probe correction)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Scope and evidence.** The Destination is unchanged. Evidence is the completed first SupplementPlanner conversion, its compact Trail and live validation, the uncommitted second iteration, the operator's correction that SupplementPlanner was a probe for Work, the observed $15+ run cost, and the v3.8.0 contract assertions. The external evidence existed before inherited Orientation was revisited, but this resumed run had already seen the inherited rubric before formally recording this Orient trigger; the scheme below is evidence-grounded but not evaluator-blind.
+
+| # | Destination-derived measurement | /10 | Current evidence | Next evidence |
+|---|---|---:|---|---|
+| 1 | Trusted Destination compression | 8 | SupplementPlanner's thin process-only Destination was detected, interviewed, confirmed, and used successfully. | Observe another fresh interview stop on operator recognition. |
+| 2 | Intent and enclosing-mission continuity | 6 | Initial probe selection was correct; after success, bare "continue" followed the probe's local todo and displaced the Work-evaluation mission. v3.8.0 now represents evaluation target, probe target, evidence boundary, and return condition, but has no independent conversion. | Run one bounded instrumental probe that returns immediately when its registered evidence is obtained. |
+| 3 | Improve-grade decision reasoning | 8 | The first conversion mapped the unfamiliar flow, found the trust boundary, compared routes, implemented one change, and validated it live. | Preserve this quality in a lower-cost bounded probe. |
+| 4 | Risk-sized mapping and target-derived lenses | 8 | The first conversion derived verification/confidence as the useful lens without operator supply. The second iteration widened appropriately for health risk, but after the enclosing test was already satisfied. | Distinguish risk-required evidence from evidence no longer required by the enclosing mission. |
+| 5 | Structural route judgment | 8 | Work moved trust enforcement to the add boundary; the second iteration later found mutation ownership, showing real structural challenge rather than surface patching. | No immediate mechanism change owed. |
+| 6 | Advisory-todo autonomy | 7 | The first Work run retained a high-leverage local candidate correctly; the second treated the probe-local todo as the route after the enclosing return condition had fired. | Show local Orientation remaining subordinate to a registered probe boundary. |
+| 7 | Universal human legibility | 8 | The first conversion produced understandable trust states and a browser-verified acknowledgement flow. | Keep the bar while reducing validation repetition. |
+| 8 | Cost proportionality | 5 | One successful bounded conversion was followed by a second Full iteration, repeated browser retries, multiple validation passes, and two subagents; the operator reported at least $15 spent in one run. v3.8.0 adds a semantic return tripwire, not a fabricated token budget. | Compare the next instrumental run's operations with its registered missing evidence and stop when marginal evidence no longer serves the evaluation. |
+| 9 | Observable Autonomy | 9 | Both target runs were trailed, the drift and uncommitted state are visible, and this correction preserves rather than rewrites those records. | Close this Work entry with exact repository disposition and verification. |
+| 10 | Target-agnostic behavioral evidence | 9 | v3.7.0 completed a real TypeScript/React/Express product change with builds, tests, and browser checks on an unfamiliar repo. | Evidence breadth is sufficient for this plateau; do not repeat merely to raise the score. |
+
+**Plateau: 7.6/10.** This number describes the current shape and is disposable, not a standing target. The lower average despite stronger external capability is intentional: the same run exposed a severe cost and mission-continuity failure on the destination's co-equal affordability axis.
+
+### Rubric changes
+
+- **Added:** intent and enclosing-mission continuity, because the external test exposed a cross-target state the v3.7.0 rubric could not represent.
+- **Combined:** map-before-reasoning with target-derived lenses, and route comparison with structural redesign judgment, because the external run converted them together and separate scores no longer changed the decision.
+- **Reframed:** advisory-todo autonomy now includes subordination of probe-local todos to the enclosing mission.
+- **Behavioral correction:** cost proportionality drops from text-level 8 to evidence-backed 5; target-agnostic evidence rises from 8 to 9.
+
+### Current claims
+
+1. **v3.7.0's decision-quality contract converted on an unfamiliar product repo.** Falsified if the surviving target Trail cannot reconstruct the map, lens, route choice, and validation boundary.
+2. **Work lacked a return transition for instrumental targets.** v3.8.0 closes the instruction gap, not the behavioral proof. Falsified as an active defect only when a fresh bounded probe registers and honors its return condition.
+3. **Cost telemetry without a mission-relative stop can report runaway cost only after it happens.** Falsified if future cost lines alone, without the v3.8.0 return rule, demonstrably stop a comparable drift.
+
+### Highest-leverage todo
+
+On the next genuinely needed instrumental target, register evaluation target, probe target, sufficient/falsifying evidence, and return condition before entering it; after one bounded conversion, return the evidence to Work before considering any local follow-up.
+
+### Active operational rules
+
+- The enclosing mission outranks probe-local Orientation when deciding what a bare continuation continues.
+- External-probe success returns evidence to the evaluation target; it does not authorize another product iteration.
+- Reassess when effort is disproportionate to evidence still missing. Do not invent token precision or optimize a fixed cap.
+- The v3.7.0 decision-quality, risk-sized evidence, advisory-rubric, and human-legibility rules remain binding.
+
+### Tested outside-rubric concern
+
+The prior rubric could score target-agnostic capability while missing whether the external target remained instrumental. The successful product change therefore raised capability evidence while the overall run moved away from Work's destination. v3.8.0 makes that relationship explicit; a rubric score still cannot enforce the return transition.
+
+### Loop-effectiveness notes
+
+The external test did what it was meant to do: it converted the new reasoning contract and exposed a mechanism gap that self-review missed. The loop then failed to recognize that the test was complete and spent heavily on the probe. The appropriate next transition is back to Work and then bounded silence on further SupplementPlanner product work, not another attempt to perfect the probe.
+
+Watch for: an agent naming the four probe facts ceremonially, then letting a local todo or interesting finding extend the probe anyway. The return must happen in behavior, not only in Trail prose.
