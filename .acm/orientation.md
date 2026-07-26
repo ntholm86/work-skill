@@ -245,3 +245,11 @@ Watch for: the next fresh target's first Tier 2/3 run should show a Bootstrap-ta
 3. **The model change produced a real independent reading benefit without qualifying as fresh-context convergence.** This run states its identity and context limitation in the trail and deliberately adds no convergence row.
 
 Watch for: the disposable branch test is the next evidence boundary; instruction-level assertions alone do not convert v3.4.1 behaviorally.
+
+## Mini-orient -- 2026-07-26 (v3.4.1 first-contact branches converted in-session)
+
+1. **All three first-contact branches passed behavioral assertions.** Micro produced Trail without destination/orientation; unconfirmed Tier 2/3 produced Trail and stopped before orientation/action; confirmed Tier 2/3 produced a Bootstrap orientation with five blank-score axes and a todo before action, plus ordered pre-action/outcome Trail. Falsified if a fresh independent run fails to self-trigger the same path.
+2. **No further step 0 / 0.5 / 3 contradiction surfaced.** The v3.4.1 correction is behaviorally coherent in this continuous session, but fresh-context conversion remains open.
+3. **Test artifacts were fully disposable.** All fixture directories were removed before recording this claim; only the work-skill trail and orientation retain the evidence summary.
+
+Watch for: the next convergence peg should be a genuinely fresh session on a real target without orientation.md, not another authored fixture in this context.

@@ -1010,3 +1010,24 @@ Cost: heavy — about 20 tool ops, 5 repo files read or written (SKILL.md, READM
 
 Next: behaviorally exercise all three first-contact branches against a disposable target: Micro, Tier 2/3 unconfirmed, Tier 2/3 confirmed.
 Cost: moderate — about 12 tool ops, 4 repo files read or written, no subagent.
+
+## 2026-07-26 — convert-v3-4-1-first-contact-branches
+
+**Tier: Full. Model: GitHub Copilot, SOL-selected session; context remains continuous.** Continuation of the v3.4.1 correction, now testing behavior rather than instruction text.
+
+**Interpretation and examination.** The required evidence is branch-complete: (1) Micro on a target without `.acm/` must skip destination/orientation but still trail; (2) Tier 2/3 with an unconfirmed destination must trail and stop before orientation/work; (3) Tier 2/3 with a confirmed destination must create a Bootstrap orientation before target action. Purpose and Inconsistency remain load-bearing. A single happy-path run would not test the two contradictions v3.4.1 repaired.
+
+**Challenge.** Using a real repo would pollute another target with test-only ACM files; pure static assertions already passed and would add no behavioral evidence. The narrow test is three disposable target directories under this repo, each with only the minimum fixture state, followed by assertions and complete cleanup before commit. No fixture will be committed.
+
+**Across-trail trigger check.** This closes the open item from the immediately preceding mini-orient; stretch-closing fires and requires a mini-orient after verification. Recurring finding-class is under test, not yet newly fired. No prior `[!REALIZATION]` is contradicted. Silence is not imminent until all branches pass.
+
+**[!DECISION] Prediction, recorded before action.** I will execute all three branches exactly as v3.4.1 prescribes. I expect Micro to leave only README plus `.acm/audit-trail.md`; unconfirmed Tier 2/3 to leave README, destination, and trail but no orientation or target diff; confirmed Tier 2/3 to create orientation with 5-10 provisional axes and a todo before changing the fixture status, plus a completed trail. I expect assertions to pass, all fixture directories to be deleted afterward, and the work-skill repo to retain only its own trail/orientation changes.
+
+**Action and outcome.** Created three disposable fixtures under `.tmp-first-contact-test` and executed each v3.4.1 branch. Micro changed `status: pending` to `verified`, created only `.acm/audit-trail.md`, and created neither destination nor orientation. Unconfirmed Tier 2/3 retained `status: pending`, created Trail, and created no orientation. Confirmed Tier 2/3 created a Bootstrap orientation first with exactly five blank-score measurement axes and a todo, opened its Standard trail decision before changing README, changed status to verified, then appended the outcome. All branch assertions passed. The first assertion command miscounted axes because `Select-String` treated a loaded multiline string as one record; the corrected line-by-line explicit-UTF-8 assertion passed without fixture changes. All disposable directories were then deleted; repository status showed only this audit entry before the orientation update.
+
+**Reflection.** Falsifiable claim: v3.4.1's three first-contact branches are behaviorally coherent in this session, not merely textually coherent. Blind spot: context remained continuous and the fixtures were purpose-built, so this does not prove a genuinely fresh model will self-trigger step 0.5 without prompting. An expert could reject a test run by the mechanism's author-session as weak evidence; that is why this run does not enter the fresh-session convergence log and why a cold independent target remains the stronger next test.
+
+**Mini-orient.** The branch-complete test closed the exact evidence boundary opened by v3.4.0 and narrowed by v3.4.1: Micro preserves Trail without Destination/Orient overhead; unconfirmed destination cannot seed further artifacts; confirmed destination creates a provisional rubric and todo before work. No additional control-path contradiction surfaced. Cost was moderate and isolated to disposable fixtures; no mechanism prose or target repo survived the test.
+
+Next: a genuinely fresh model/session should run v3.4.1 against a real target lacking `.acm/orientation.md` and either convert step 0.5 independently or expose the next gap.
+Cost: moderate — about 14 tool ops, 8 disposable files created then removed, 2 repo files written, no subagent.
