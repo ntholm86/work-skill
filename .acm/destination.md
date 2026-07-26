@@ -323,3 +323,32 @@ Operator confirmed the intended loop in direct form: **Destination → Orient me
 ### Design consequence
 
 Orient must examine the target openly **before consulting inherited rubric scores**, re-derive candidate measurements from Destination, and compare that derivation with the inherited rubric. Anything important found outside the rubric, or any divergence in re-derivation, is a first-class finding. Only then may Orient score and produce the todo. This preserves the operator-facing visualization while preventing the inherited rubric from becoming the ceiling by construction of the reading order.
+
+---
+
+## Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)
+
+The operator identified a deeper boundary behind rubric blindness: Work cannot afford to read an entire solution on every run, so Destination must serve as **trusted compression of the human meaning**. That compression saves tokens only when the interview captures the destination accurately enough that the operator recognizes their own intent in it. Even an accurate Destination cannot prescribe every useful way of thinking; Work must retain enough reasoning capability to discover principles, structural simplifications, and target-specific lenses that the operator did not know to name.
+
+### Confirmed responsibilities
+
+1. **Destination compresses the human model.** It holds the ends, durable constraints, recurring principles, quality bars, and rejected trade-offs that later work should not have to reconstruct by reading the whole solution or replaying the conversation.
+2. **Operator recognition is the stopping bar for the interview.** Purpose, audience, quality bar, constraints, and unacceptable trade-offs are useful prompts, not a completion checklist. Destination is sufficiently accurate when the operator recognizes that it captures what matters and would let a human judge the result.
+3. **Recurring principles may be named defaults, never a closed reasoning set.** DRY, KISS, YAGNI, simplicity, clarity, transparency, and solve-by-design may remain explicit constraints because the operator repeatedly values them. Their presence does not excuse Work from independently deriving other lenses the target and domain require.
+4. **Every decision-bearing run retains Improve-grade reasoning.** Standard and Full may differ in recording depth and evidence breadth, but both must form a model of the target, derive target-specific lenses, consider competing interpretations or routes, test whether structural redesign dominates another local patch, and challenge the resulting model. Micro remains genuinely cheap.
+5. **Map before local reasoning is the default, scaled by domain risk.** Work should first establish a compact view of the target's major parts, controlling relationships, and important unknowns. The agent decides how broad that map must be from the target domain's risk and reversibility; low-risk work may stop early, while high-risk work earns broader evidence. No universal read count or token quota substitutes for judgment.
+6. **Orient's rubric and todo are advisory maps.** Every Work iteration may retain or displace the suggested top item when its current target model reveals more important work. The reason for displacement becomes evidence for the next Orient; following the list is never a substitute for examining reality.
+7. **Human legibility is universal.** Work must leave the target, the reasoning that changed it, and why the result serves Destination intelligible to the operator, with explanation depth scaled to the target and stakes. A technically functioning result that humans cannot understand or judge has not fully served the destination.
+
+### Why this refinement was needed
+
+The recent self-improvement sequence required repeated operator prompts to add DRY, KISS, YAGNI, simplicity, and flow verification before Work recognized that its growing edge-case catalogue needed one invariant. Part of that miss came from an incomplete Destination. The remaining part came from Work's compressed reasoning implementation: it copied Improve's named lenses and challenge questions but did not reliably preserve Improve's stronger operations of building a target model, inventing lenses from the domain, comparing plausible routes, ranking structural alternatives, and reflecting on where the target's real weight sits. Improving Destination alone would hide that capability gap rather than solve it.
+
+### Consequence for the next Work run
+
+The current v3.6.0 Orientation is void as current guidance because its Destination basis predates this refinement. The next non-Micro Work run must perform a fresh Orient against this exact basis before mechanism changes. That Orient should derive measurements capable of testing trusted compression, Improve-grade decision reasoning, risk-sized mapping, advisory todo behavior, and human legibility without turning those measurements into a new closed checklist.
+
+### Still open
+
+- How to encode Improve-grade reasoning compactly enough to preserve the daily-use cost goal without reducing it to another checklist.
+- What minimum evidence demonstrates a sufficient risk-sized map in different target domains; the agent owns the judgment, and the Trail must make the chosen breadth inspectable.

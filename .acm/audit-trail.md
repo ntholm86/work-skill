@@ -1131,3 +1131,44 @@ Cost: heavy — about 18 tool operations, 5 repo files read or written, 1 read-o
 
 Next: test v3.6.0 on a real target where the inherited rubric plausibly omits something, then verify the open-pass finding survives into the todo.
 Cost: heavy — about 10 tool operations, 5 repo files read or written, 1 fresh read-only subagent.
+
+## 2026-07-26 — destination-interview-trusted-compression-and-reasoning-depth
+
+**Destination run. Model: GitHub Copilot.** Operator identified the residual blind spot after v3.6.0: reading an entire solution for context is too expensive, so Destination accuracy and interviewing matter; repeated operator prompts were nevertheless required before Work applied DRY, KISS, YAGNI, simplicity, and flow verification strongly enough to find the invariant-based redesign. The operator explicitly separated two causes: inaccurate Destination and insufficient reasoning capability in the iterations, while naming the full Improve skill as capable.
+
+### Sourced inferences
+
+1. **Destination is intended as trusted compression, not merely a goal heading.** Source: "We cannot go and read an entire solution just to get a clear view - it burns too many tokens. That is also why the destination capture is so important - and the accuracy of it - the interview."
+2. **The recent correction exposed two independent defects.** Source: "some of it roots if the inacuraccy of the destination but other things in the reasoning capability of the iterations." Improving only the interview would leave the second defect intact.
+3. **The operator does not want Destination to carry every reasoning route.** Source: they had to name DRY/KISS/YAGNI manually, then selected "Mostly, with named defaults" rather than either strict separation or encoding all lenses.
+4. **Reasoning depth and recording depth must be separate controls.** Source: the existing destination prioritizes reasoning quality at real decision points; in this interview the operator selected Improve-grade reasoning for every decision-bearing run, leaving only Micro exempt.
+5. **Target reading should be risk-sized rather than governed by a universal token rule.** Source, verbatim response: "that depends on the risk of the targets domain - the AI decides. but i am leaning towards map before reasoning as default".
+6. **Human comprehension is part of correctness.** Source: the operator said the recent work "was [not] good enough for humans to understand myself included" and confirmed human legibility as a universal Work quality bar.
+
+### Questions and operator responses
+
+1. Asked whether Destination should state ends, constraints, and quality bars while Work derives needed principles and lenses. Operator chose **Mostly, with named defaults**.
+2. Asked what completes a non-Micro Destination interview. Operator chose **Operator recognition**, rejecting both a required-field checklist and agent confidence as the stopping authority.
+3. Asked where Improve-grade reasoning belongs. Operator chose **Every decision-bearing run**: Standard and Full share the reasoning operations at different recording depth; Micro remains cheap.
+4. Asked how Work should earn a model when full reading is too expensive. Operator answered that domain risk determines breadth, the AI decides, and map-before-reasoning is the preferred default.
+5. Asked whether Orient's todo is advisory. Operator confirmed **Yes**: Work may replace its top item when a fresh target model reveals higher-leverage work.
+6. Asked whether human legibility is universal. Operator confirmed **Yes**.
+7. Read back the synthesis: trusted human compression + risk-sized map + Improve-grade judgment, with rubrics, named principles, and todos supporting rather than replacing judgment. Operator confirmed: **Yes, record it**.
+
+### What I now believe
+
+Destination must reduce articulation and context-reconstruction cost without becoming a route specification. Its interview ends on operator recognition, not checklist completion. Named principles remain durable defaults, while every real Work decision independently models the target and derives whatever lenses reality requires. A compact risk-sized map precedes local reasoning by default. Orient's todo is advisory. Human legibility applies to every target.
+
+### Rejected or corrected readings
+
+- Rejected strict separation that would prohibit recurring principles from appearing in Destination.
+- Rejected treating a fixed destination-field checklist or agent confidence as proof of interview completeness.
+- Rejected reserving Improve-grade reasoning for Full runs or only escalating after the loop gets stuck.
+- Corrected a universal progressive-evidence rule: mapping is the preferred default, but breadth is an agent judgment grounded in domain risk.
+- Rejected treating the Orient todo as an execution route and human legibility as merely target-specific.
+
+### Still open and boundary
+
+The compact mechanism that preserves Improve-grade judgment without restoring full-suite cost remains a design question for the next Work run. This Destination run did not alter `work/SKILL.md` or regenerate Orientation: confirmed direction becomes input to the next run; it does not license acting on the same agent's pre-confirmation hunches. The appended Destination explicitly marks the v3.6.0 Orientation basis stale.
+
+Cost: moderate — 12 tool operations, 4 repo files read, 2 append-only files written, no subagent.
