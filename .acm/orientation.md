@@ -261,3 +261,11 @@ Watch for: the next convergence peg should be a genuinely fresh session on a rea
 3. **The recurring temporal class now covers any stage inserted before "the loop proper."** Future pre-loop stages must state their Trail timing locally; relying on step 3's later position is insufficient.
 
 Watch for: only a genuinely fresh context can now advance convergence; another authored fixture in this session would add ceremony, not evidence.
+
+## Mini-orient -- 2026-07-26 (v3.4.3 route repair and bounded silence)
+
+1. **Adding Orient step 0.5 invalidated one older route:** the plateau clause still sent destination reruns to "step 0.5." v3.4.3 correctly routes them to step 0, trigger 5.
+2. **Exhaustive explicit-reference check:** the three remaining `step 0.5` references all correctly mean Orient bootstrap (step 0 handoff, rubric reuse, arc-read distinction). No second stale route surfaced.
+3. **Bounded silence:** the complete first-contact path and explicit numbered references are internally coherent and behaviorally exercised in this context. Outside the bound: fresh-context self-triggering on a real external target and prose-only references without step numbers.
+
+Watch for: do not spend another authored fixture on this surface; the next valid evidence is a genuinely fresh real-target run.

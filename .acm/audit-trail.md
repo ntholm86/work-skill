@@ -1052,3 +1052,24 @@ Cost: moderate — about 14 tool ops, 8 disposable files created then removed, 2
 
 Next: fresh-context convergence remains the only unconverted boundary for the one-path bootstrap mechanism.
 Cost: moderate — about 12 tool ops, 4 disposable files created then removed, 4 repo files read or written, no subagent.
+
+## 2026-07-26 — repair-destination-rerun-cross-reference
+
+**Tier: Full. Model: GitHub Copilot, SOL-selected session; context remains continuous.** Final bounded-silence check against the complete v3.4.2 first-contact and plateau-routing path found one actionable stale reference.
+
+**Interpretation and examination.** Inconsistency was load-bearing. Step 2's plateau clause says an empty destination-vs-measurements coverage diff "self-triggers a destination re-run (step 0.5)." Before v3.4.0, that parenthetical informally pointed into the Destination bootstrap's trigger list; after inserting the new numbered step 0.5, it now routes agents to Orient bootstrap instead. Destination re-triggering actually lives in step 0, item 5. The mechanism remains present, but its explicit route is wrong.
+
+**Challenge.** Renumbering the new Orient stage would churn the just-published mechanism and its trail references. Removing the cross-reference would be accurate but less usable. The narrow repair is to point to "step 0, trigger 5," preserving both mechanisms and removing ambiguity.
+
+**Across-trail trigger check.** Recurring state-lagging metadata/reference class fired: a structural insertion made an older route false. This triggers mini-orient. No prior `[!REALIZATION]` is contradicted. Silence is not imminent until the route is repaired and all numbered references are checked.
+
+**[!DECISION] Prediction, recorded before action.** I will correct only the stale route, bump 3.4.2 to 3.4.3, sync README, and scan every `step 0.5` occurrence to confirm each remaining one genuinely refers to Orient bootstrap. I expect exactly the plateau clause to change semantically, version agreement and `git diff --check` to pass, and no loop behavior or dependency to change.
+
+**Action and outcome.** Repointed the plateau clause from "destination re-run (step 0.5)" to "destination re-run (step 0, trigger 5)," bumped and synchronized v3.4.3, then enumerated all remaining `step 0.5` occurrences. Exactly three remain and all correctly refer to Orient bootstrap: the step 0 handoff, the step 2 bootstrap-rubric reuse, and step 4's distinction between bootstrap and arc-read modes. Version agreement and `git diff --check` passed. Prediction held; no behavior, dependency, or loop shape changed.
+
+**Reflection.** Falsifiable claim: every numbered route affected by inserting Orient step 0.5 now lands on its intended mechanism. Blind spot: the scan covered explicit `step 0.5` references, not every prose-only conceptual reference in the file. An expert could argue for eliminating numeric references entirely; the three retained references are local navigational aids with clear semantic targets, and removing them would reduce usability without evidence of another failure.
+
+**Mini-orient and bounded silence.** The state-lagging class reached a new form: structural insertion invalidated an old cross-reference without changing the underlying mechanism. The repair and exhaustive `step 0.5` scan found no second stale route. Bounded silence is declared against the complete first-contact control path and its explicit numbered references at v3.4.3: Micro, unconfirmed, confirmed, Trail-before-Orient timing, plateau-trigger routing, and version/public status are internally coherent and behaviorally exercised in this context. Untested and outside this silence bound: genuinely fresh-context self-triggering on a real external target, and prose-only references that do not name a step number.
+
+Next: only a genuinely fresh session on a real target can advance the named evidence boundary; further authored fixture runs here would manufacture ceremony.
+Cost: moderate — about 8 tool ops, 4 repo files read or written, no subagent.
