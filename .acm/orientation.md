@@ -1,6 +1,6 @@
 # orientation.md — work-skill
 
-_Last updated: 2026-07-26 (run: unify-orient-and-rating-by-construction; historical sections are preserved below, followed by dated Orient results and convergence logs)_
+_Last updated: 2026-07-26 (run: mitigate-rubric-blindness-and-collapse-state; historical sections are preserved below, followed by dated Orient results and convergence logs)_
 
 > The 2026-07-04 body began as a whole-arc Orient result. As of v3.5.0, ratings are intrinsic to Work's one Orient operation. Older headings retain the former terminology as historical evidence, not current architecture.
 
@@ -311,3 +311,59 @@ Watch for: do not spend another authored fixture on this surface; the next valid
 The latest six-entry stretch found real control-path bugs, but it optimized numbered routes before testing conceptual unity. The operator's correction exposed that blind spot. Cost remained stakes-matched; no evidence of routine ceremony creep appeared. Silence is not declared for v3.5.0 behavior. Instruction-level unity is verified; fresh-context execution remains untested.
 
 Watch for: a future agent using "first-contact mode" as permission to invent a second Orient procedure. It changes evidence breadth only, never semantics.
+
+## Orient — 2026-07-26 (v3.6.0 open-world rubric baseline)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (rubrics visualize progress but must not become the field of vision)`
+
+**Evidence order and independence.** The authoring session had already seen the inherited v3.5.0 scorecard, so it could not honestly validate open-pass ordering. A fresh read-only context therefore read Destination, inspected the target and current diff, independently derived its scheme, and only then read this file. Its scheme diverged materially: it added rubric autonomy, reframed destination coverage as a readiness invariant, and separated first-contact conversion from general target capability. That divergence is evidence the inherited map did not dictate the read. This remains same-model-family evidence, not convergence proof.
+
+The Destination refinement changes the measurement philosophy, so v3.5.0's baseline is void rather than delta-comparable.
+
+| # | Destination-derived measurement | /10 | Evidence | One bounded candidate move |
+|---|---|---:|---|---|
+| 1 | Target-agnostic improvement capability | 8 | Prior external editorial runs and the test-verified Python source change remain valid evidence; v3.6.0 itself has not run on a fresh external target. | Run v3.6.0 on one fresh target whose existing rubric is plausibly incomplete. |
+| 2 | Destination fidelity | 8 | This correction came directly from operator pushback and was captured as a destination refinement before mechanism work; the flow now states the operator's exact Destination → Orient → iterate → silence model. | Test the next destination change as one incomplete-until-Oriented transition. |
+| 3 | Rubric autonomy | 7 | The open-pass ordering and independent re-derivation are explicit, and the fresh read produced a divergent scheme instead of copying v3.5.0. The mechanism remains instruction-enforced. | On a real target, preserve one useful outside-rubric finding through scoring and into the todo. |
+| 4 | Destination–Orientation state integrity | 8 | One readiness invariant replaces first-contact and destination-change branches; Orientation must name an exact Destination basis and mismatches force fresh Orient. Markdown cannot enforce the comparison mechanically. | Exercise a real destination change and verify no old delta survives into the replacement rubric. |
+| 5 | Measurement integrity | 8 | Ratings require cited evidence, incomparable reframes lose deltas, unobservable axes say `not evidenced`, and every Orient challenges one concern its own rubric would miss. | Observe whether repeated Orient runs genuinely change dimensions when evidence demands it. |
+| 6 | Observable autonomy | 9 | Destination and pre-action redesign were appended before edits; focused validation followed immediately; the fresh pass's sequence and scheme divergence are recorded. | Preserve the same order under a fresh external run with independent capture if available. |
+| 7 | Convergence integrity | 8 | Scores are explicitly telemetry; candidate silence requires an outside-map check; independent evaluators, not score stability, determine convergence. | Require the next silence evaluator to re-derive the scheme before seeing this one. |
+| 8 | Simplicity and cost proportionality | 8 | Eight named trigger branches collapsed to four conditions and one readiness invariant; no files, dependencies, or executable machinery were added. Orient gained an open pass but reuses the same inspection needed for ratings. | Compare operation cost on the next two real Orient runs against v3.5.0-era runs. |
+| 9 | Stranger operability | 8 | README now states the open-world order and invalidation rule; live guidance uses one Orient and one state invariant. v3.6.0 has not had a zero-context usability read. | Run one cold read focused only on whether a stranger can predict the next transition. |
+
+**Plateau baseline: 8.0/10.** This is a visualization of the current destination-shaped plateau, not a convergence claim or a standing target.
+
+### Rubric changes and reasons
+
+- **Added:** rubric autonomy — newly explicit in Destination and independently derived by the fresh pass.
+- **Reframed:** destination coverage → Destination–Orientation state integrity — matching the basis is the simpler operational invariant; coverage alone did not mitigate anchoring.
+- **Retained:** capability, destination fidelity, measurement integrity, auditability, convergence, cost/simplicity, and stranger operability because current Destination still requires them.
+- **No old delta carried forward:** the destination refinement changed what measurement itself means.
+
+### Current claims
+
+1. **Inherited-rubric anchoring is now mitigated by reading order, not warning prose.** Falsified if an Orient reads prior dimensions before fixing its open-pass findings and independently derived scheme.
+2. **Destination change has one downstream consequence:** Orientation becomes invalid until fresh Orient records the new basis, rubric, ratings, and todo. Falsified if a non-Micro run proceeds with a mismatched basis.
+3. **The remaining blind spot is evaluator-native attention.** Avoiding the inherited rubric does not make the open pass omniscient; diverse fresh evaluators remain necessary. Falsified only by evidence that one model's open pass reliably spans all materially different external findings, which does not exist.
+
+### What the next runs should test
+
+1. A real destination change: fresh Orient must replace, not adapt, the old rubric and carry no invalid delta.
+2. A target where the open pass finds something outside the inherited rubric: that finding must survive into the todo.
+3. A fresh independent silence run: re-derive measurements before reading this baseline.
+
+### Active operational rules
+
+- Never read inherited rubric content before the open pass and independent measurement derivation are fixed.
+- Treat rubric divergence and outside-rubric findings as evidence, not nonconformance.
+- A Destination change and replacement Orient are one incomplete-until-finished transition.
+- Scores visualize progress; independent silence determines completion.
+
+### Loop-effectiveness notes
+
+The rubric was useful enough to expose earlier destination drift, but v3.5.0 still let the inherited scheme define the examination surface. v3.6.0 keeps the visualization while separating discovery from scoring. Trigger complexity decreased rather than increased. Cost impact is unmeasured in real use and remains a named test, not an assumed win.
+
+**Tested outside-rubric concern:** the open pass itself can still reflect one evaluator family's native salience bias. Reading order cannot solve that; fresh diverse evaluators and re-derivation at convergence are the structural counterweight.
+
+Watch for: an Orient that proudly reports rising deltas while its independently re-derived scheme never changes. Stable dimensions can mean a good map, or habituated blindness.

@@ -305,3 +305,21 @@ Operator corrected the v3.4.3 design after asking how Mini-Orient worked: "The o
 ### Still open
 
 - No destination question remains open for this redesign. Behavioral conversion on a genuinely fresh target remains an evidence task after the mechanism is changed, not a destination ambiguity.
+
+---
+
+## Destination refinement — 2026-07-26 (rubrics visualize progress but must not become the field of vision)
+
+Operator confirmed the intended loop in direct form: **Destination → Orient measures and creates the todo list → iterate until silence; when Destination changes, Orient creates a fresh rubric.** The measurements are retained because their visible deltas are satisfying and useful to the operator, despite the autonomy cost that caused the full PEA suite to abandon rubric-led improvement.
+
+### Confirmed tradeoff and constraints
+
+1. **Rubrics are an operator-facing visualization, not the agent's search space.** They show a useful projection of progress; they do not define everything worth seeing. *Source:* operator: measurements were dropped by the PEA suite because they limited autonomy, but the visualization tradeoff is worth retaining in Work.
+2. **The skill must actively mitigate rubric blindness.** Merely saying scores are temporary addresses Goodhart persistence but not attentional anchoring during the current plateau. The agent must look beyond inherited measurements before using them.
+3. **Destination is the sole rubric source.** Orient derives measurements from the current confirmed destination. A materially changed destination invalidates the entire prior rubric, ratings, deltas, and todo; the next non-Micro operation is a fresh Orient.
+4. **The flow should be expressed as invariants, not an expanding edge-case catalogue.** Apply KISS, YAGNI, DRY, Simplicity, Clarity, Transparency, and Solve by Design. Prefer one state rule that absorbs many cases over another branch explaining one symptom.
+5. **Scores do not determine convergence.** The visible delta is progress telemetry. Silence across independent destination-reading evaluators remains the stopping condition.
+
+### Design consequence
+
+Orient must examine the target openly **before consulting inherited rubric scores**, re-derive candidate measurements from Destination, and compare that derivation with the inherited rubric. Anything important found outside the rubric, or any divergence in re-derivation, is a first-class finding. Only then may Orient score and produce the todo. This preserves the operator-facing visualization while preventing the inherited rubric from becoming the ceiling by construction of the reading order.
