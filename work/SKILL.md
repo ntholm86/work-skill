@@ -1,9 +1,9 @@
 ---
 name: work
-description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: Destination, an open-world Orient that re-derives and rates destination-grounded measurements without letting an inherited rubric become its field of vision, Intent, Improve, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
+description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: trusted Destination capture, open-world Orient, risk-sized target mapping, Improve-grade decision reasoning, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.6.0"
+  version: "3.7.0"
 ---
 
 # work
@@ -24,7 +24,7 @@ The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` �
 2. **Observable Autonomy** — every material decision is recorded before action and its outcome afterward; an observer must be able to reconstruct what you did and why from the trail alone.
 3. **Convergence Is Silence** — finding nothing actionable is a valid outcome. Never manufacture ceremony to look thorough.
 
-**The one rule that makes the trade honest: match reasoning depth to the stakes of the moment, not to a fixed template.** A typo fix and a redesign decision are not the same event and must not cost the same number of tokens to record. Spend full ceremony only on moments that are genuinely hard to reverse or genuinely uncertain; log everything else in one honest line. The depth tiers in step 3 are the mechanism for this — not a suggestion.
+**The one rule that makes the trade honest: preserve decision quality; scale evidence and recording to the stakes.** Micro is cheap because it contains no real choice. Every Standard or Full run uses the same decision operations; domain risk and reversibility determine how much target evidence earns a sufficient map, while the Trail tier determines how much reasoning becomes durable prose. A typo fix and a redesign decision must not cost the same, but a concise record must never hide shallower judgment.
 
 And if a cost/quality trade-off is ever genuinely unavoidable in a run, say so in the trail entry. A silent trade-off is exactly the invisible reasoning Observable Autonomy exists to prevent.
 
@@ -32,11 +32,11 @@ And if a cost/quality trade-off is ever genuinely unavoidable in a run, say so i
 
 Four ordinary stages run in sequence — **Destination** (step 0, first contact or a real direction trigger), **understand** (step 1), **work** (step 2), and **Trail** (step 3). **Orient** (step 4) is one operation called from that sequence on first contact and whenever later evidence signals that the target needs re-orientation.
 
-Before the first action, classify the run using step 3's depth tiers: Micro only when the ask is mechanical and contains no real choice; otherwise Standard or Full. If unsure, classify it as decision-bearing. This one early classification controls both the bootstrap cost and when Trail opens.
+Before the first action, classify the run using step 3's depth tiers: Micro only when the ask is mechanical and contains no real choice; otherwise Standard or Full. If unsure, classify it as decision-bearing. This one early classification controls bootstrap cost, when Trail opens, and durable recording depth — never whether a real choice receives the decision operations in step 2.
 
 **One loop, one shape.** This sequence runs identically whether the target is this skill's own repo or any external target — self-targeting is never a special case. The one exception is stakes, not target type: a genuinely small, mechanical ask (the kind that will tier as Micro in step 3) does not create a missing `destination.md` or `orientation.md`. Trail still happens under step 3, creating `.acm/audit-trail.md` if needed; Observable Autonomy is never the skipped cost. Destination and first-contact Orient are required before Tier 2 or 3 work begins, not before a one-line fix.
 
-**Design constraints.** Apply DRY, KISS, and YAGNI to this workflow and to the target: one authoritative definition of each operation, the simplest structure that preserves the destination, and no mechanism without present evidence of need. Prefer designs that make invalid states impossible over reminders that ask agents to avoid them. This file cannot mechanically enforce its own write ordering, so where it can only prescribe an invariant — especially Trail-before-action — it says so rather than claiming a structural guarantee.
+**Design constraints.** Apply DRY, KISS, and YAGNI to this workflow and to the target: one authoritative definition of each operation, the simplest structure that preserves the destination, and no mechanism without present evidence of need. Prefer designs that make invalid states impossible over reminders that ask agents to avoid them. Human legibility is part of correctness: the operator must be able to understand the resulting target, the reasoning that changed it, and why it serves Destination, with explanation depth scaled to the stakes. This file cannot mechanically enforce its own write ordering, so where it can only prescribe an invariant — especially Trail-before-action — it says so rather than claiming a structural guarantee.
 
 **Rubrics are maps, not territory.** Measurements visualize progress for the operator; they necessarily hide everything they do not name. Preserve that useful tradeoff without surrendering autonomy: Orient examines the target openly and re-derives measurements from Destination before it may read inherited rubric content. A finding outside the rubric, or disagreement with the inherited measurement scheme, is evidence that the map is incomplete — never a reason to discard the finding.
 
@@ -56,6 +56,8 @@ Before anything else, check the **target repo's** `.acm/` folder (always at the 
   5. Once `.acm/destination.md` exists, re-run this step only on a real trigger — never merely because time passed or a session is new. Three triggers are legitimate: explicit invocation; the operator's own signal that the destination is stale or thin; or **the loop's own evidence** that the destination is exhausted or wrong — a plateaued scorecard whose coverage diff (step 4) came back empty, or observed reality contradicting what `destination.md` claims. A self-triggered run may ask and propose, never settle: its output enters `destination.md` as an appended, dated proposal marked unconfirmed until the operator rules, and step 1's pre-commit read-back applies in full — the skill owns detecting that the destination needs revisiting; the operator owns what it becomes.
   6. **Do not build other committed files around an unconfirmed guess in the same pass.** A guess labeled `unconfirmed` in `destination.md` does not license writing the rest of the target's files as though it were settled — ask before producing those artifacts too.
 
+Before marking any Destination confirmed, read back its compact meaning and ask whether it captures what matters well enough that the operator could judge the result. **Operator recognition is the completion bar.** Purpose, audience, quality bars, constraints, and rejected trade-offs are useful interview prompts, never a required-field checklist and never a substitute for recognition.
+
 **Readiness invariant:** before any Tier 2 or 3 Work, a confirmed Destination exists and Orientation names that current Destination as its basis. A confirmed Destination change and its fresh Orient are one transition: the old rubric, ratings, deltas, and todo become void immediately, and the destination-changing run is incomplete until Orient derives their replacement. This single invariant covers first contact, missing orientation, and destination change without separate behavior branches.
 
 **Scoped memory.** Before trusting the target repo's own destination, walk parent directories upward looking for a higher-scope `.acm/destination.md`. Stop at a `.acm-root` marker file (an empty file an operator drops at the top of a workspace to say "don't look higher"), the filesystem root, or after 4 levels. Higher scope wins on coordination matters. When the difference matters to a decision, label which scope you're reading from ("workspace mandate" vs. "repo mandate").
@@ -73,13 +75,17 @@ One class of edit always gets its interpretation read back to the operator **bef
 
 This step replaces a standalone Intent invocation. It is never optional — only its narration length varies.
 
-### 2. Work — examine, challenge, decide, act
+### 2. Work — map, model, challenge, decide, act
 
-Do the work, scaling the rigor of examination to the stakes. Four lenses are available as thinking tools, not a checklist: **Purpose** (does the target achieve what it's for, against `.acm/destination.md`?), **Inconsistency** (does it contradict itself or its own stated rules?), **Overburden** (does it ask more of its users or maintainers than it's worth?), **Waste** (does everything here still earn its place?) — plus whatever the target itself invites (security, performance, correctness...). Name the lenses that were actually load-bearing; don't narrate the ones that weren't. When the examination is a fidelity audit — checking a derivative against its source (a consolidation against its suite, a summary against its document, a port against its original) — compare against the source directly; self-review of the derivative alone reliably misses what was dropped.
+For every decision-bearing run, use the same reasoning core. First build a **risk-sized map** before local reasoning: identify the target's major relevant parts, controlling relationships, important unknowns, and the evidence actually inspected. The agent owns the breadth decision. Low-risk, reversible work can stop at a compact map after a cheap disconfirming check; high-risk or unfamiliar domains require wider evidence. Never read an entire solution by reflex, and never treat a narrow read as sufficient merely because it is cheaper.
+
+From that map, state a provisional, falsifiable model of where the target's real weight, risk, or failure sits. Derive the lenses the target requires. **Purpose**, **Inconsistency**, **Overburden**, and **Waste** remain useful defaults, not a closed set; add security, performance, correctness, accessibility, domain practice, or a lens not named here when the model warrants it. Name only what changed the judgment. When the work is a fidelity audit — checking a derivative against its source — compare against the source directly; self-review of the derivative alone reliably misses what was dropped.
+
+Compare the plausible routes before choosing. Include no change and structural redesign when they are credible; when only one route remains, name the evidence that ruled alternatives out. This is one connected act of judgment, not a set of prose slots to fill. Standard may record it compactly and Full may expose it deeply, but neither may skip it.
 
 The rubric and ratings belong exclusively to Orient (step 4), not to a second scoring path here. Treat them as temporary diagnostics of the current plateau — void when the destination or focus shifts, never standing targets to optimize toward. An explicit "rate this" request triggers Orient; it does not create a separate measurement procedure. A metric that outlives its plateau starts prescribing a route.
 
-For anything beyond a mechanical fix, pause on this before deciding: *What am I not seeing? Am I anchored on the most obvious finding and missing a subtler, more important one?* Then the redesign question: *is the target's structure itself wrong, so that no incremental fix will help?* If the structure itself is wrong, don't patch — argue for redesign: sketch the alternative, weigh redesign cost against the cost of continuing to patch, and stop for the operator's decision.
+For anything beyond a mechanical fix, challenge the model before deciding: *What am I not seeing? What evidence would disconfirm this model? Am I anchored on the most obvious finding and missing a subtler, more important one? Is the target's structure itself wrong, so that no incremental fix will help?* If structure is wrong, don't patch — argue for redesign: sketch the alternative, weigh redesign cost against continued patching, and stop for the operator's decision.
 
 Then pick exactly one outcome:
 
@@ -88,6 +94,8 @@ Then pick exactly one outcome:
 - **Silence.** Nothing actionable — a valid outcome, but bound it: name the bar this was tested against and what remains untested. Unbounded silence is not a valid form.
 
 If you back out of something mid-run (tried X, reverted when Y proved it wrong), mark it `[!REVERSAL]`. Within-run reversals are as much evidence of honest reasoning as cross-run ones; hiding them inflates the trail's apparent success rate.
+
+After action or bounded silence, test human legibility: can the operator understand the resulting target, the load-bearing reasoning, and why the outcome serves Destination without reconstructing this session? Explain only what the stakes require, but treat a result that cannot be humanly judged as incomplete.
 
 ### 3. Trail — always, every run, no exceptions
 
@@ -105,7 +113,7 @@ Before closing the entry, evaluate every Orient trigger in step 4. If one fired,
   Cost: light — 2 tool ops, 1 file.
   ```
 
-- **Tier 2 — Standard** (a real choice existed between plausible alternatives, or the work could plausibly be second-guessed later). Compact: interpretation in one line (only if it wasn't obvious), decision plus a one-line prediction, outcome vs. prediction, one line naming the blind spot (or the nothing-found), and one line naming the most obvious next-step candidate if one stands out — skip it if none does; silence is valid here too. Skip the full reflection ceremony unless one of the escalation triggers below fires.
+- **Tier 2 — Standard** (a real choice existed between plausible alternatives, or the work could plausibly be second-guessed later). Use step 2's complete decision reasoning, recorded compactly: interpretation in one line (only if it wasn't obvious), decision plus a one-line prediction, outcome vs. prediction, one line naming the blind spot (or the nothing-found), and one line naming the most obvious next-step candidate if one stands out — skip it if none does; silence is valid here too. Skip the full reflection ceremony unless one of the escalation triggers below fires.
 
   ```
   ## 2026-07-03 — split-config-loader
@@ -151,7 +159,7 @@ Run Orient when one of four conditions holds:
 3. **Rate and visualize.** Rate every current measurement on a consistent scale such as `/10`, cite the supporting target observation, file, test, or Trail entry, and give one destination-compatible candidate move. Show deltas only for genuinely comparable retained measurements; never manufacture continuity across a reframe. If an axis is unobservable, use `not evidenced`, name the missing evidence, and make obtaining it a candidate move.
 4. **Challenge the map.** Name at least one plausible concern the current rubric would not detect, then test it against the target. Check destination coverage, outside-rubric findings from the open pass, reversals, missed predictions, recurring findings, suspiciously clean history, ignored next moves, and cost drift. Flat ratings under an unchanged destination trigger a choice: the target is approaching silence, or the map is too coarse. An empty coverage diff never proves completeness by itself.
 5. **Write one coherent orientation.** Update `.acm/orientation.md` with `Destination basis: <exact current confirmed heading or quoted mandate>`, the dated rubric and ratings, rubric changes and their reasons, **1-3 falsifiable Current claims**, the highest-leverage todo, active operational rules, the tested outside-rubric concern, a **Watch for** line, and loop-effectiveness notes when warranted. Scores are temporary plateau telemetry and become void when Destination or focus changes.
-6. **Choose the next transition.** Findings and the todo feed Work. If the target appears served and the open pass found nothing outside the map, record bounded candidate silence; independent evaluators still determine convergence. If the rubric fully covers Destination but reality suggests the destination itself is exhausted or wrong, trigger Destination (step 0, trigger 5). Never change the artifact merely to increase a score.
+6. **Choose the next transition.** Findings and the todo feed Work as advisory candidates, never as an execution route. Each Work run builds its current target model, then explicitly retains the top item or displaces it with higher-leverage evidence; displacement becomes evidence for the next Orient. If the target appears served and the open pass found nothing outside the map, record bounded candidate silence; independent evaluators still determine convergence. If the rubric fully covers Destination but reality suggests the destination itself is exhausted or wrong, trigger Destination (step 0, trigger 5). Never change the artifact merely to increase a score.
 
 No freshness guard (the full suite's staleness check, flagging when a derived artifact like `history.md` no longer matches the trail it was built from), no `record.py`, no `learning.md` extraction — exactly the heavy tooling this cut removes. If you separately have the full `orient` skill and the target needs whole-arc derived-artifact discipline, invoke that instead. The operation above remains Work's single Orient contract.
 
@@ -161,5 +169,7 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 - For a Tier 2 or 3 run, was all pre-action reasoning required by its tier appended before action (including examination and challenge for Tier 3), with the outcome appended only after verification?
 - Before Tier 2 or 3 Work, did Orientation's `Destination basis` match the current confirmed Destination? When Orient ran, did the open pass and independent rubric derivation happen before inherited scores were read? A stale basis, inherited-rubric-first read, due-but-skipped Orient, or separately improvised scorer is a breach.
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
+- For every Standard or Full run, did step 2 produce a risk-sized map, a falsifiable target model, target-derived lenses, a real route comparison, a structural challenge, and a human-legibility check? The Trail may summarize these compactly; the judgment may not omit them.
+- If Work followed an Orient todo item, did the fresh target model retain it — or was the list silently treated as the route?
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
 - If this run built more than one new committed file around an inference from step 0 or step 1, did you ask before building the rest — or only label the first one unconfirmed and proceed as if that were enough?

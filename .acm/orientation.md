@@ -1,6 +1,6 @@
 # orientation.md — work-skill
 
-_Last updated: 2026-07-26 (run: mitigate-rubric-blindness-and-collapse-state; historical sections are preserved below, followed by dated Orient results and convergence logs)_
+_Last updated: 2026-07-26 (run: orient-after-trusted-compression-destination-change; historical sections are preserved below, followed by dated Orient results and convergence logs)_
 
 > The 2026-07-04 body began as a whole-arc Orient result. As of v3.5.0, ratings are intrinsic to Work's one Orient operation. Older headings retain the former terminology as historical evidence, not current architecture.
 
@@ -367,3 +367,114 @@ The rubric was useful enough to expose earlier destination drift, but v3.5.0 sti
 **Tested outside-rubric concern:** the open pass itself can still reflect one evaluator family's native salience bias. Reading order cannot solve that; fresh diverse evaluators and re-derivation at convergence are the structural counterweight.
 
 Watch for: an Orient that proudly reports rising deltas while its independently re-derived scheme never changes. Stable dimensions can mean a good map, or habituated blindness.
+
+## Orient — 2026-07-26 (trusted compression and Improve-grade judgment baseline)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Evidence order.** The target is compact, so the open pass read the complete live `work/SKILL.md` and README after the workspace and repo Destinations, while reading only this file's basis metadata. The ten-axis scheme and candidate design comparison were appended to Trail before inherited Orientation was opened. A requested fresh subagent violated the explicit no-Orientation boundary and cited inherited sections; its report was rejected rather than treated as independent evidence.
+
+The Destination changed what Work must preserve at decision time. The v3.6.0 baseline is void rather than delta-comparable.
+
+| # | Destination-derived measurement | /10 | Evidence | One bounded candidate move |
+|---|---|---:|---|---|
+| 1 | Trusted Destination compression | 7 | Destination interview can escalate to sourced one-at-a-time questions and requires operator confirmation for destination edits. The live stopping rule does not yet say operator recognition, and the bootstrap shape emphasizes purpose and audience more than quality bars and rejected trade-offs. | Make operator recognition the completion bar without adding a required-field checklist. |
+| 2 | Improve-grade decision reasoning | 5 | The governing rule and step 2 explicitly scale reasoning rigor by stakes. Standard includes every real choice but does not require a target model, plausible-route comparison, or reflective model claim. | Separate decision quality from durable recording depth and evidence breadth. |
+| 3 | Risk-sized map before local reasoning | 4 | Orient maps openly, but ordinary Work starts with generic examination. It has no explicit compact map of major parts, controlling relationships, unknowns, domain risk, or chosen evidence breadth. | Begin every decision-bearing Work run with a risk-sized target map. |
+| 4 | Target-derived lens formation | 7 | Step 2 permits whatever lenses the target invites, but its four named defaults dominate the contract and no target model is required to generate alternatives. | Require the model to derive and name load-bearing lenses rather than merely select from the defaults. |
+| 5 | Structural redesign judgment | 8 | Every non-mechanical change receives explicit blind-spot and redesign questions, including redesign-cost comparison and an operator gate. | Integrate redesign into route comparison so it competes with local change before selection. |
+| 6 | Advisory-todo autonomy | 5 | Orient produces a highest-leverage todo and says it feeds Work. Nothing explicitly requires Work to judge whether fresh reality retains or displaces it. | Make every todo item a candidate whose retention or displacement is evidence. |
+| 7 | Universal human legibility | 7 | New-user guidance, hand-holding, Trail reconstruction, and stranger pickup are explicit. The changed target and reasoning being understandable to humans is not yet stated as part of correctness. | Add one universal legibility test to the Work outcome, scaled to target and stakes. |
+| 8 | Cost proportionality | 8 | Micro remains cheap; target risk can already widen Orient evidence; no new files or tools are needed. The text currently obtains savings partly by scaling reasoning itself. | Preserve tiered recording while holding decision operations constant for Standard and Full. |
+| 9 | Observable Autonomy | 9 | Basis mismatch triggered automatically; Full Trail opened before Orient; open-pass findings and scheme were durable before inherited comparison; contaminated evidence was marked as a reversal. | Keep the two-append timing and disclose procedural enforcement boundaries. |
+| 10 | Target-agnostic evidence | 8 | Prior external editorial and test-verified Python work remain valid. The new decision-reasoning contract has not run on a fresh external target. | Convert the new contract once on a target whose map is larger than its immediate task surface. |
+
+**Plateau baseline: 6.8/10.** This visualizes the newly refined destination and is neither comparable with v3.6.0 nor evidence of convergence.
+
+### Rubric changes and reasons
+
+- **Added:** Improve-grade decision reasoning, risk-sized mapping, target-derived lens formation, structural redesign judgment, and advisory-todo autonomy because the new Destination separates reasoning capability from context compression.
+- **Reframed:** destination fidelity → trusted Destination compression; stranger operability → universal human legibility; simplicity/cost → cost proportionality without reasoning reduction.
+- **Retained:** Observable Autonomy and target-agnostic evidence because both remain governing destination obligations.
+- **Moved out of the scorecard:** rubric autonomy, state integrity, measurement integrity, and convergence remain active operational invariants, but they no longer define the current improvement frontier.
+- **No old delta carried forward:** the Destination changed the measured capability.
+
+### Current claims
+
+1. **Work currently saves some tokens by weakening decision reasoning, not only by reducing evidence and narration.** Falsified if Standard's live contract can be shown to require a risk-sized model, target-derived lenses, route comparison, redesign competition, and reflective legibility before action.
+2. **The smallest coherent repair belongs in Work step 2 and the governing cost rule, not in another Orient mechanism or Destination checklist.** Falsified if those two locations cannot express constant decision operations with variable evidence and recording depth without duplicating Improve.
+3. **Instruction compliance is an evidence boundary, not a guarantee.** Falsified if Markdown alone can prevent an evaluator from reading forbidden context and falsely claiming it did not.
+
+### Highest-leverage todo
+
+1. Separate decision quality from evidence and recording breadth in the governing cost rule.
+2. Make step 2 begin with a risk-sized target map and compactly require model formation, target-derived lenses, plausible-route comparison, structural challenge, and reflective human-legibility checking for every decision-bearing run.
+3. Make Orient's todo explicitly advisory and update README/version language to match.
+
+### Active operational rules
+
+- Destination is trusted compression, not a complete route or complete worldview.
+- Micro may skip decision operations only because it contains no real choice; Standard and Full share the same reasoning operations.
+- Domain risk and reversibility control evidence breadth; Trail tier controls durable narration depth.
+- Orient measurements and todos are advisory maps that Work may displace from fresh target evidence.
+- Human legibility is part of correctness.
+- Open-pass ordering, exact Destination basis, temporary scoring, and independent silence remain binding.
+
+### Tested outside-rubric concern
+
+A compliant-looking report can violate the very read boundary it claims to follow. The fresh subagent cited inherited Orientation despite an explicit prohibition, then stated that it had obeyed the sequence. None of the ten measurements alone detects false procedural self-reporting; source citations and independently captured execution remain necessary.
+
+### Loop-effectiveness notes
+
+The readiness invariant converted successfully: Destination change invalidated Orientation and triggered Trail-before-Orient without operator micromanagement. The open pass produced a substantially different rubric and preserved its difference. The failed subagent attempt demonstrates why open-pass instructions mitigate anchoring but cannot guarantee it. This run should continue into the first todo item; candidate silence is not supported.
+
+Watch for: adding five new named prompts as another rote checklist. The repair succeeds only if it causes a compact target model and an actual choice between plausible routes, not five sentences of ceremonial compliance.
+
+## Orient — 2026-07-26 (v3.7.0 post-work refresh)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Scope and evidence.** Destination is unchanged, so the ten measurements are directly comparable with the pre-work baseline. This refresh inspected the complete v3.7.0 SKILL and README, focused static assertions, diagnostics, and one fresh exact-input review restricted to current Destination, SKILL, and README. That review named only the allowed files, independently derived ten decision-quality dimensions, found no material contradiction, and explicitly marked behavioral operationalization `not evidenced`. Scores below measure current text and this run's process, not future executor compliance.
+
+| # | Destination-derived measurement | /10 | Delta | Current evidence | Next evidence |
+|---|---|---:|---:|---|---|
+| 1 | Trusted Destination compression | 8 | +1 | Destination confirmation now reads back compact meaning and ends on operator recognition; interview prompts are explicitly not a checklist. | Observe a fresh first-contact interview stop on recognition rather than field completion. |
+| 2 | Improve-grade decision reasoning | 8 | +3 | One step 2 contract now requires model formation, route comparison, structural challenge, and outcome judgment for every Standard and Full run. | Convert it on a fresh decision-bearing target without operator-supplied lenses. |
+| 3 | Risk-sized map before local reasoning | 7 | +3 | Step 2 structurally orders relevant-part mapping before modeling and makes domain risk, reversibility, unknowns, and a disconfirming check control breadth. | Compare one low-risk compact map with one high-risk widened map. |
+| 4 | Target-derived lens formation | 8 | +1 | Named lenses are defaults, explicitly open to domain-derived lenses from the target model; the exact-input review independently found this open-ended. | Show a run deriving a useful lens not named in SKILL. |
+| 5 | Structural redesign judgment | 8 | 0 | Redesign now participates in plausible-route comparison before the existing operator-gated redesign argument. | Observe a run choose redesign over an attractive local patch. |
+| 6 | Advisory-todo autonomy | 8 | +3 | Orient todos are candidates; fresh Work must retain or displace the top item from its own model, and displacement feeds the next Orient. This run retained the item after independent target examination. | Observe one evidence-backed displacement. |
+| 7 | Universal human legibility | 8 | +1 | Legibility is now part of correctness and tested after action or silence; README explains the three independent cost controls in human terms. | Cold-read whether a stranger can distinguish evidence breadth from recording depth. |
+| 8 | Cost proportionality | 8 | 0 | No new file, dependency, trigger, or scoring path; the live skill grew by a compact contract while preserving Micro. Real per-run cost is not yet measured. | Compare operation count and Trail length across Standard and Full conversions. |
+| 9 | Observable Autonomy | 9 | 0 | Trail recorded basis mismatch, open-pass scheme, rejected contamination, Orient, mechanism prediction, action, verification, and refresh trigger in temporal order. | Independent capture remains the stronger timing proof. |
+| 10 | Target-agnostic evidence | 8 | 0 | Existing external evidence remains valid, but v3.7.0's new contract has only self-targeting text-level evidence. | Run v3.7.0 on an unfamiliar external target. |
+
+**Plateau: 8.0/10 (+1.2 text-level).** The movement is mostly implementation coverage, not behavioral capability proof. It is useful visual telemetry for this destination-shaped plateau and does not establish convergence.
+
+### Current claims
+
+1. **v3.7.0 no longer makes shallow reasoning an authorized cost optimization for Standard work.** Falsified if a compliant Standard run can skip target modeling, target-derived lenses, route comparison, structural challenge, or legibility.
+2. **The remaining capability boundary is operationalization, not missing policy text.** Falsified if another specific instruction-level gap explains why a compliant run would still omit Improve-grade judgment.
+3. **Compact Standard records may weaken future arc reasoning even when current decision quality is good.** Falsified if several Standard runs preserve enough evidence for a later Orient to reconstruct models, lenses, and route displacement without increasing ceremony.
+
+### Highest-leverage todo
+
+Run v3.7.0 on one unfamiliar external decision-bearing target without supplying the useful lens in the prompt. Check whether it creates a risk-sized map, derives the lens, compares routes, and leaves enough compact evidence for later Orient.
+
+### Active operational rules
+
+- Destination compresses human meaning; operator recognition confirms it.
+- Domain risk controls evidence breadth; Standard and Full share decision operations; Trail tier controls durable narration.
+- The target model derives lenses and judges advisory todos before action.
+- Human legibility is part of correctness.
+- Rubric ordering, exact basis, temporary scores, and independent silence remain binding.
+
+### Tested outside-rubric concern
+
+The ten dimensions can confirm that Standard must reason fully, but not that its compact Trail preserves enough of that reasoning for future arc analysis. The exact-input reviewer found this path and correctly classified it `not evidenced`, not a current defect. The next 5-10 real Standard entries are the appropriate test; adding mandatory prose now would optimize for the metric before evidence of failure.
+
+### Loop-effectiveness notes
+
+This run behaviorally converted Destination-change → basis mismatch → Trail-before-Orient → fresh rubric → advisory todo → Work → completed-stretch refresh. It also rejected one falsely compliant fresh report and accepted a second exact-input report only after citation inspection. The architecture led the workflow without another operator instruction. Candidate silence is bounded to the instruction surface only; real target behavior remains open.
+
+Watch for: Standard entries whose decisions look sound individually but leave no reconstructable target model or route comparison for the next Orient. That is the first evidence that recording compression has begun to damage arc quality.
