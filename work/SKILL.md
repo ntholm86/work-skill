@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: trusted Destination capture, open-world Orient, risk-sized target mapping, Improve-grade decision reasoning, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.8.0"
+  version: "3.8.1"
 ---
 
 # work
@@ -66,7 +66,7 @@ Before marking any Destination confirmed, read back its compact meaning and ask 
 
 Before touching the target, run one fast check: *what does the operator actually want, and is there a plausible alternative reading?* Three cases, three narration costs:
 
-**Preserve the enclosing mission across targets.** When one target is selected instrumentally to test, evaluate, or improve another, record four things before entering it: the **evaluation target**, the **probe target**, the evidence that would satisfy or falsify the probe, and the condition for returning. The probe target's Destination and Orientation govern safe work inside that boundary; they cannot replace why the probe was opened. Once the evidence boundary is met, return the findings to the evaluation target before taking another probe-local todo. Reassess and return sooner when effort becomes disproportionate to the evidence still missing. This rule does not create a second mission for ordinary single-target work; it applies only when the cross-target purpose is explicit in the request, conversation, or Trail.
+**Preserve the enclosing mission across targets.** When one target is selected instrumentally to test, evaluate, or improve another, open the evaluation target's Trail entry before crossing repositories and record four things: the **evaluation target**, the **probe target**, the evidence that would satisfy or falsify the probe, and the condition for returning. Begin the probe target's own pre-action Trail entry by restating those four facts, so its local Destination and Orientation govern safe work inside a boundary they cannot replace. Once the evidence boundary is met, return before taking another probe-local todo and append the evidence plus the return decision to the still-open evaluation entry. Reassess and return sooner when effort becomes disproportionate to the evidence still missing. This rule does not create a second mission for ordinary single-target work; it applies only when the cross-target purpose is explicit in the request, conversation, or Trail.
 
 - **Unambiguous and mechanical** (a named file, a one-line fix, a direct yes/no): don't narrate at length — one clause inside the trail entry's own description is enough. A paragraph explaining that "fix the typo on line 12" means fixing the typo on line 12 is waste, and waste is what this skill exists to cut.
 - **Minor interpretive gap** (clear enough to act, but you're making a judgment call on scope, format, or approach): proceed, and flag the specific choice in one sentence in the trail entry, so a wrong call is cheap to correct.

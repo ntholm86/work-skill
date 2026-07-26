@@ -1236,3 +1236,33 @@ Cost: heavy — about 25 tool operations, 6 repo files read, 4 repo files writte
 
 Next: on the next genuinely needed instrumental probe, register the evidence boundary and demonstrate return in behavior. Do not reopen SupplementPlanner merely to exercise the rule.
 Cost: moderate — about 14 tool operations, 4 Work files read or written, no subagent; no additional product validation after the operator correction.
+
+## 2026-07-26 — make-probe-mission-handoff-durable
+
+**Tier: Full. Model: GitHub Copilot.** Operator asked to continue on Work. The v3.8.0 follow-up is bounded to Work's own mechanism; no external product target is being reopened merely to exercise the rule.
+
+**Interpretation and map.** The latest Orientation's behavioral todo requires a genuinely needed future probe, so manufacturing one now would violate cost proportionality. A cheaper instruction-level check asked whether v3.8.0 makes the enclosing mission survive the repository transition that previously erased it. The controlling surfaces are Intent's new rule and Trail's repository-local ownership. Exact search found the four facts only in the Intent paragraph and no rule naming which Trail owns registration, what the probe reads, or how return is recorded.
+
+**Examination and challenge.** Inconsistency and Observable Autonomy are load-bearing: v3.8.0 requires durable facts without assigning them to a durable ledger, while step 3 writes only to the current target repo. Conversation memory is not a structural handoff. A central cross-repo registry would add a new artifact and coordination system for an uncommon case. Writing only in the evaluation repo leaves the facts outside the probe's local ACM; writing only in the probe loses the pre-entry decision and weakens return evidence. The smallest coherent route is dual visibility through existing Trail semantics: open the evaluation target entry before crossing repositories, restate the boundary in the probe's pre-action entry, then append the probe result and return decision to the still-open evaluation entry.
+
+**Across-trail triggers.** Operator explicitly asked to continue: fired. Recurring mission-continuity class: fired one run after v3.8.0. Prior `[!REALIZATION]` contradicted: partially — v3.8.0 made drift visibly invalid but did not make its record locally available on both sides of the transition. Silence is not imminent until ownership is explicit and validated.
+
+**[!DECISION] Prediction, recorded before action.** I will tighten the existing enclosing-mission paragraph rather than add a workflow stage: assign registration and return to the evaluation target's open Trail entry, require the probe's pre-action Trail entry to restate the four facts, bump to v3.8.1, and synchronize README. I expect exact assertions to prove both ledger responsibilities, ordinary single-target behavior to remain exempt, no new file/tool/dependency, and `git diff --check` to pass.
+
+### Candidate Next Moves
+
+1. Convert the handoff on the next genuinely needed instrumental probe, because only behavior can prove a fresh session reads and honors both records.
+2. Declare bounded instruction-layer silence if the ownership assertions pass, because another authored fixture or product probe would add cost without independent evidence.
+
+**Orient trigger and prediction, recorded before updating Orientation.** Evidence challenge fired: the recurring mission-continuity gap narrows v3.8.0's claim that its instruction gap was closed. I will retain the current ten-axis scheme because Destination did not change, credit only the new durable ownership at the text level, and leave behavioral conversion open. I expect intent continuity and cost proportionality to improve by at most one point each, with all converted decision-quality and target-evidence measurements unchanged. This run read inherited Orientation before discovering the gap, so the refresh is comparative rather than evaluator-blind; no extra evaluator will be commissioned merely to erase that disclosed bound.
+
+**Action and verification.** Implemented v3.8.1 in the existing Intent paragraph. The evaluation target opens and retains the enclosing entry; the probe's own pre-action entry restates the four-fact boundary; return appends evidence and the return decision to the evaluation entry. README states the same two-ledger contract. Seven focused assertions passed: version agreement, evaluation-first registration, probe-local restatement, return closure, bounded local governance, ordinary-run exemption, and absence of a new registry/file mechanism. `git diff --check` passed.
+
+**Orient outcome.** The ten-axis scheme remained stable. Intent continuity and cost proportionality each gained one instruction-level point; every behavior-dependent score remained unchanged. The 7.8 plateau is temporary telemetry, not a target. The todo explicitly forbids manufacturing a probe for score movement.
+
+**Reflection.** [!REALIZATION] A cross-target invariant is not durable merely because one skill paragraph can state it; each repository-local memory boundary must carry enough of the contract to operate independently. Falsifiable claim: v3.8.1 is sufficient for a fresh executor to reconstruct registration, local boundary, and return without conversation history or a new global registry. Blind spot: no real cross-session handoff has exercised the still-open evaluation entry. An expert could object that dual recording is duplication; the duplicated unit is four compact facts, while all target-specific reasoning remains in its owning Trail, which is smaller than reconstructing a lost mission.
+
+**Across-trail triggers after verification.** Operator request: handled on Work itself. Recurring mission-continuity class: repaired at the ownership layer. Prior realization: refined from visible invalidity to durable local availability. Silence: FIRED and bounded to v3.8.1's instruction-layer handoff; untested bars are fresh-session compliance, temporal ordering across repositories, and behavior under a genuinely needed probe.
+
+No further authored fixture or external product iteration is justified in this run. Candidate move 2 is selected: bounded instruction-layer silence until independent evidence arrives.
+Cost: moderate — about 10 tool operations, 4 Work files read or written, no subagent, no external probe.

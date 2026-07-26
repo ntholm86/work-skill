@@ -533,3 +533,55 @@ The prior rubric could score target-agnostic capability while missing whether th
 The external test did what it was meant to do: it converted the new reasoning contract and exposed a mechanism gap that self-review missed. The loop then failed to recognize that the test was complete and spent heavily on the probe. The appropriate next transition is back to Work and then bounded silence on further SupplementPlanner product work, not another attempt to perfect the probe.
 
 Watch for: an agent naming the four probe facts ceremonially, then letting a local todo or interesting finding extend the probe anyway. The return must happen in behavior, not only in Trail prose.
+
+## Orient — 2026-07-26 (v3.8.1 durable probe handoff)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Scope and evidence.** Destination and the ten-axis map are unchanged. This refresh inspected v3.8.1's exact ownership assertions and the preceding v3.8.0 failure evidence. Inherited Orientation was already read before the ownership gap surfaced, so this is an openly comparative refresh rather than an evaluator-blind derivation.
+
+| # | Destination-derived measurement | /10 | Delta | Current evidence | Next evidence |
+|---|---|---:|---:|---|---|
+| 1 | Trusted Destination compression | 8 | 0 | The successful SupplementPlanner interview evidence is unchanged. | Another fresh recognition-based interview. |
+| 2 | Intent and enclosing-mission continuity | 7 | +1 | v3.8.1 assigns registration and return to the evaluation Trail and restates the boundary in the probe's pre-action Trail. Behavior remains unconverted. | A genuinely needed probe honoring both records. |
+| 3 | Improve-grade decision reasoning | 8 | 0 | External conversion evidence is unchanged. | Preserve quality in a bounded probe. |
+| 4 | Risk-sized mapping and target-derived lenses | 8 | 0 | External conversion evidence is unchanged. | Separate risk-required evidence from mission-irrelevant continuation. |
+| 5 | Structural route judgment | 8 | 0 | No new route evidence this run. | No immediate mechanism change owed. |
+| 6 | Advisory-todo autonomy | 7 | 0 | Probe-local todos are now durably bounded, but no behavior proves subordination yet. | Observe return before a second local todo. |
+| 7 | Universal human legibility | 8 | 0 | README now states the two-ledger handoff compactly. | Cold-read the handoff in a real run. |
+| 8 | Cost proportionality | 6 | +1 | The ownership repair used existing Trail files, no probe, fixture, registry, subagent, or new artifact. The prior $15+ behavioral failure still dominates. | Demonstrate low marginal cost in the next needed probe. |
+| 9 | Observable Autonomy | 9 | 0 | Both sides of a future repository transition now have named durable records. | Verify their temporal order independently. |
+| 10 | Target-agnostic behavioral evidence | 9 | 0 | Existing TypeScript/React/Express conversion evidence is sufficient for this plateau. | Do not repeat merely to move the score. |
+
+**Plateau: 7.8/10 (+0.2 instruction-level).** This temporary diagnostic describes the repaired ownership shape; it does not erase the behavioral cost failure or establish convergence.
+
+### Rubric changes
+
+No dimensions changed. Intent continuity gains one point because the handoff now has durable ownership; cost gains one because the repair reused existing Trail semantics and declined a manufactured probe. All behavior-dependent dimensions remain bounded.
+
+### Current claims
+
+1. **v3.8.1 makes an instrumental run reconstructable from both repositories without a new registry.** Falsified if a compliant probe can begin without its local entry carrying the evidence boundary, or return without closing the evaluation entry.
+2. **The instruction surface is now sufficient for an independent behavioral test.** Falsified if another specific textual ambiguity prevents a fresh executor from locating registration, handoff, or return.
+3. **Behavioral mission continuity remains unproven.** Falsified positively by the next genuinely needed probe returning before unrelated local continuation.
+
+### Highest-leverage todo
+
+Convert the two-ledger handoff on the next genuinely needed instrumental probe. Do not create a probe solely to satisfy this measurement.
+
+### Active operational rules
+
+- Evaluation Trail owns pre-entry registration and post-probe return evidence.
+- Probe Trail restates the four-fact boundary before local action.
+- Probe-local Destination and Orientation govern safety inside, never purpose above, that boundary.
+- The v3.7 decision-quality and v3.8 mission-relative cost rules remain binding.
+
+### Tested outside-rubric concern
+
+Dual visibility could become duplicate narration. The live rule requires only the same four compact facts in the probe entry and uses the evaluation entry for return evidence; no third artifact or repeated full reasoning is authorized.
+
+### Loop-effectiveness notes
+
+Continuing on Work rather than its former probe exposed a real instruction gap at low cost. The correct next transition is bounded instruction-layer silence until independent behavior exists; another authored fixture would test compliance by the author, not handoff across context.
+
+Watch for: the evaluation entry being closed before the probe runs, or the probe entry merely linking back without restating the boundary. Either would recreate dependence on unavailable context.
