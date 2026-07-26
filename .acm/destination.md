@@ -274,3 +274,34 @@ This section is a destination-level confirmation only — it does **not** yet ch
 - The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
 - **New:** the two unconfirmed sub-questions above (rubric-with-zero-evidence handling; convergence-log-as-general-mechanism vs. target-specific artifact).
 - **New:** whether and how to draft the `work/SKILL.md` mechanism deltas this destination run now obligates (Orient bootstrap, rubric/todo unconditional on bootstrap, destination-interview escalation, task-size skip) — confirmed as owed, not yet scheduled.
+
+---
+
+## Destination run — 2026-07-26 (one Orient, destination-derived ratings, correctness by construction)
+
+Operator corrected the v3.4.3 design after asking how Mini-Orient worked: "The orient bootstrap should be the same as the mini-orient (but it should be just be called Orient - no 'mini' anywhere)" and "we already had some kind of rubric measurement rating mechanism - i thought it was tied to the orient/mini-orient." This is a correction to the mechanism interpretation captured in the preceding 2026-07-26 run, not a change to the repo's overall destination.
+
+### Sourced inferences
+
+1. **[Architecture, confirmed]** There is one Orient operation, invoked both on first contact and later need-signals. Bootstrap and later arc-read are call conditions, not separate implementations or names. *Source:* operator's quoted correction above; the live v3.4.3 file instead has separate step 0.5 "Orient bootstrap" and step 4 "Mini-Orient" procedures.
+2. **[Mechanism, confirmed by question]** Every Orient creates or refreshes a destination-derived rubric and evidence-backed ratings. First contact uses current target evidence; later Orient runs combine current target state with Trail evidence. Rating is not a separate operator-triggered Work feature. *Source:* operator's statement that the existing rubric/measurement/rating mechanism was expected to be tied to Orient. Asked directly: "Should every Orient produce or refresh evidence-backed ratings for its destination-derived rubric, including first contact using live target evidence?" Operator selected "Yes, every Orient rates."
+3. **[Constraints, explicit]** DRY, KISS, and YAGNI govern the design: one definition of Orient, the smallest flow that expresses the invariant, and no speculative branches or machinery. *Source:* operator: "We need to apply simple principles to the destination: DRY, KISS, YAGNI."
+4. **[Quality bar, confirmed by question]** Prefer constructions in which invalid paths cannot be represented; where a Markdown skill can only prescribe behavior, disclose that enforcement boundary instead of claiming a structural guarantee. *Source:* operator: "I believe that the best design is one that makes bugs impossible." Asked directly whether Work should prefer one construction that makes invalid paths unrepresentable and disclose procedural-only boundaries; operator selected "Yes, construction first."
+5. **[Usability, explicit]** The complete flow, including ordinary cases and edge cases, must be describable and visualizable as one coherent system. *Source:* operator asked for the "entire skillset flow with all cases and edge-cases," reinforcing the existing stranger-pickup and skill-leads-workflow bars.
+
+### What I now believe
+
+- **Orient owns measurement.** It derives the rubric from the confirmed destination, rates each axis from cited evidence, forms falsifiable current claims, identifies the next candidate moves, checks cost/loop effectiveness where evidence exists, and bounds silence.
+- **Invocation changes evidence breadth, not procedure identity.** On first contact there may be no Trail history, so Orient rates from direct inspection of the target and marks unavailable historical evidence explicitly. On later triggers it reads recent Trail evidence as well. The same output contract applies in both cases.
+- **The current split is a design defect.** v3.4.3 duplicates Orient across steps 0.5 and 4 while keeping ratings in step 2 behind "when the operator asks." That violates DRY, permits the two paths to drift, and caused the operator's correction.
+- **Correctness by construction outranks reminder text.** The live skill should define Orient once and make both first-contact and later triggers route to it. Trail-before-action remains a procedural guarantee because a Markdown instruction cannot mechanically enforce write ordering; that bound must remain honest.
+
+### Rejected or superseded
+
+- Superseded: bootstrap Orient may leave ratings blank when no Trail exists. Direct target inspection is evidence; every Orient rates, while honestly marking axes whose evidence is unavailable.
+- Superseded: rating is a distinct Work behavior triggered only by "rate this." An explicit rating request triggers Orient; it does not invoke a separate scoring implementation.
+- Superseded terminology in live guidance: "mini-Destination" and "Mini-Orient." Historical quotations and dated records retain the words as evidence of what the design used to call them; they are not current architecture.
+
+### Still open
+
+- No destination question remains open for this redesign. Behavioral conversion on a genuinely fresh target remains an evidence task after the mechanism is changed, not a destination ambiguity.

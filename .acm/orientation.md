@@ -1,8 +1,8 @@
 # orientation.md — work-skill
 
-_Last updated: 2026-07-26 (run: fix-trail-format-contract; body below through the 2026-07-04 scorecards was written by the full Orient run `full-orient-and-rescore-under-corrected-destination`; later dated sections are appended mini-orients and convergence logs)_
+_Last updated: 2026-07-26 (run: unify-orient-and-rating-by-construction; historical sections are preserved below, followed by dated Orient results and convergence logs)_
 
-> Written by a full Orient run (whole-arc read, 28 entries), not the mini-orient. Scoring included per this repo's own operator-mandated convention (SKILL.md step 2), which deliberately diverges from the full Orient skill's no-scoring stance — a settled divergence, not an oversight.
+> The 2026-07-04 body began as a whole-arc Orient result. As of v3.5.0, ratings are intrinsic to Work's one Orient operation. Older headings retain the former terminology as historical evidence, not current architecture.
 
 ## Scorecard — 2026-07-04, under the corrected destination (capability × cost)
 
@@ -269,3 +269,45 @@ Watch for: only a genuinely fresh context can now advance convergence; another a
 3. **Bounded silence:** the complete first-contact path and explicit numbered references are internally coherent and behaviorally exercised in this context. Outside the bound: fresh-context self-triggering on a real external target and prose-only references without step numbers.
 
 Watch for: do not spend another authored fixture on this surface; the next valid evidence is a genuinely fresh real-target run.
+
+## Orient — 2026-07-26 (v3.5.0 unified operation; destination-shift baseline)
+
+**Scope and evidence.** Destination changed this run, so every prior plateau score is void rather than comparable. This Orient inspected the current target, the new destination section `one Orient, destination-derived ratings, correctness by construction`, the latest six completed Trail entries, the v3.5.0 structural assertions and route matrix, and an independent read-only flow review. The implementation and this rating share an authoring session; scores are a current baseline, not independent proof.
+
+| # | Destination-derived measurement | /10 | Evidence | One bounded candidate move |
+|---|---|---:|---|---|
+| 1 | Target-agnostic improvement capability | 8 | Historical external evidence remains valid: editorial targets and an external Python source change with tests are recorded in the 2026-07-04 scorecards. No v3.5.0 fresh-target run yet. | Run v3.5.0 once in genuinely fresh context on a real target lacking `orientation.md`. |
+| 2 | Intent and destination fidelity | 7 | The operator had to correct v3.4.3's split between bootstrap, later arc-read, and scoring after that surface had reached bounded silence; this run then used the full Destination question sequence before editing. | Have the next destination correction explicitly test whether one concept has acquired multiple implementations before accepting silence. |
+| 3 | Orient unity and correctness by construction | 8 | Static assertions find exactly one Orient procedure, no separate scorer, and no live legacy terminology; all call sites route to step 4. The invariant is textually represented once, but Markdown cannot enforce execution. | Convert the single-operation path in a fresh real-target run and reject any separately improvised scorer. |
+| 4 | Measurement integrity | 8 | Every Orient now derives 5-10 measurements from destination, cites target or Trail evidence, reports deltas only on comparable plateaus, handles unavailable evidence explicitly, and voids ratings on destination shift. | Test an initially unobservable axis and verify it becomes `not evidenced` rather than a fabricated number. |
+| 5 | Observable autonomy | 9 | The destination questions and Full-tier prediction were durably recorded before mechanism edits; every substantive edit was followed by a focused executable assertion. The file explicitly discloses that Markdown cannot prove timing. | Preserve the Trail-before-Orient ordering on the next fresh first-contact run. |
+| 6 | Convergence and bounded silence | 8 | v3.4.3 silence named prose-only conceptual references as outside its bound; this correction landed exactly there, so the bound worked but the audit focus missed the operator's intended conceptual unity. | Require Orient to test conceptual duplication, not only numbered-route consistency, before the next silence declaration. |
+| 7 | Cost and ceremony proportionality | 8 | Recent entries track stakes: heavy mechanism implementation, then moderate branch/timing conversion and route repair. v3.5.0 removes duplicate conceptual paths but adds one larger Orient contract; no dependency or executable machinery was added. | Measure the next real run's operation count and compare it with the v3.4.x first-contact fixtures. |
+| 8 | Stranger operability and edge-case completeness | 8 | README describes one operation; route assertions cover Micro, unconfirmed destination, first contact, destination change, explicit rating, later triggers, and plateau escalation. Independent review found Micro reclassification and precedence ambiguities, both repaired. | Run a fresh zero-context reader on the final v3.5.0 text and act only on a concrete confusion point. |
+
+**Plateau baseline: 8.0/10.** This number describes the current destination-shaped plateau and is disposable when destination or focus changes. It is not a standing target.
+
+### Current claims
+
+1. **The prior three-path Orient design is closed at the instruction level.** First contact, later signals, and rating requests now call one procedure with one output contract. Falsified by any future run that creates ratings outside step 4 or runs a first-contact variant with different semantics.
+2. **The remaining guarantee boundary is execution, not definition.** Markdown can make duplicate definitions absent but cannot make Trail timing or call-site compliance mechanically unavoidable. Falsified if a stronger no-tooling construction is demonstrated.
+3. **The next useful evidence must be fresh and external.** More authored fixtures in this context would mainly retest prose the author already knows. Falsified if an in-context check exposes a new branch contradiction not covered by the route matrix.
+
+### What the next runs should test
+
+1. Fresh target without `orientation.md`: one Orient must inspect the live target, produce evidence-backed ratings and claims, then ordinary work proceeds.
+2. Existing target with a later need-signal: the same procedure must refresh the same destination-derived rubric using target plus recent Trail evidence.
+3. Explicit "rate this": the run must invoke Orient directly and make no unrelated target change.
+
+### Active operational rules
+
+- One concept gets one implementation; call sites route to it.
+- Prefer invalid-state prevention; disclose every boundary that remains discipline-dependent.
+- Apply DRY, KISS, and YAGNI before adding branches or machinery.
+- Ratings are destination-derived, evidence-cited, plateau-local, and owned only by Orient.
+
+### Loop-effectiveness notes
+
+The latest six-entry stretch found real control-path bugs, but it optimized numbered routes before testing conceptual unity. The operator's correction exposed that blind spot. Cost remained stakes-matched; no evidence of routine ceremony creep appeared. Silence is not declared for v3.5.0 behavior. Instruction-level unity is verified; fresh-context execution remains untested.
+
+Watch for: a future agent using "first-contact mode" as permission to invent a second Orient procedure. It changes evidence breadth only, never semantics.
