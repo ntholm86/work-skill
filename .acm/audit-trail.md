@@ -1031,3 +1031,24 @@ Cost: moderate — about 12 tool ops, 4 repo files read or written, no subagent.
 
 Next: a genuinely fresh model/session should run v3.4.1 against a real target lacking `.acm/orientation.md` and either convert step 0.5 independently or expose the next gap.
 Cost: moderate — about 14 tool ops, 8 disposable files created then removed, 2 repo files written, no subagent.
+
+## 2026-07-26 — trail-orient-bootstrap-before-writing
+
+**Tier: Full. Model: GitHub Copilot, SOL-selected session; context remains continuous.** Continued adversarial read after the v3.4.1 branch fixture passed its registered assertions.
+
+**Interpretation and examination.** Purpose and Inconsistency exposed an untested ordering edge: the confirmed branch created `orientation.md` first and only then opened its Tier 2/3 trail decision. Step 0.5 tells the agent to create the rubric/todo before the loop proper, while step 3 requires all Tier 2/3 pre-action reasoning to be durably recorded before action. Choosing measurement axes and candidate work, then writing orientation, is itself material reasoning and action. The fixture's assertion checked Trail before README action, not Trail before Orient action, so its "all branches passed" claim was bounded too loosely.
+
+**Challenge.** Moving Orient after ordinary work would violate the operator's confirmed destination. Creating a separate bootstrap run would add ceremony and split one first-contact flow into two. The narrow repair is to apply step 3 timing inside step 0.5: open the current Tier 2/3 trail entry with the proposed axes/todo and prediction before writing orientation, then complete that same entry after ordinary work and verification.
+
+**Across-trail trigger check.** A recent prediction was falsified in territory treated as converted; arc-contradiction and recurring temporal-auditability classes both fire. Mini-orient is required. No prior `[!REALIZATION]` is contradicted; this repeats and extends the v3.2/v3.3 timing class. Silence is not imminent.
+
+**[!DECISION] Prediction, recorded before action.** I will add one compact timing paragraph to step 0.5 requiring the current Tier 2/3 trail entry to open before orientation is written, bump 3.4.1 to 3.4.2, sync README, and rerun the confirmed branch with filesystem timestamps plus content ordering proving Trail pre-action record precedes orientation creation and target action. I expect no change to Micro or unconfirmed behavior, no new file type/dependency, version agreement, and clean diff formatting.
+
+**Action and outcome.** Added the compact Trail-timing paragraph to step 0.5, requiring the current Tier 2/3 entry to record sourced axes/todo plus prediction before `orientation.md` is written, then complete that same entry after ordinary work and verification. Bumped and synchronized v3.4.2. Static checks passed. A disposable confirmed-target rerun then produced timestamp evidence in the required order: Trail creation `15:53:49.6594362` < Orient creation `15:53:52.9089304` < README action `15:53:56.5228187`; content checks confirmed decision before outcome, exactly five blank-score axes plus todo, and verified target status. Fixture removed before closing the run. Prediction held: no effect on Micro/unconfirmed branches, dependency, file type, or loop shape.
+
+**Reflection.** Falsifiable claim: first-contact Orient is now part of the same contemporaneously recorded Tier 2/3 run, never an action outside Trail. Blind spot: filesystem timestamps prove this authored fixture's sequence, not that a fresh model will honor it. An expert could ask whether destination bootstrap itself also happens before Trail; yes, by design — destination interviewing is operator alignment and its own run is recorded after the conversation under Destination's convention, while the prohibition at issue is acting on confirmed destination through new committed orientation/work artifacts before a decision record exists.
+
+**Mini-orient.** The temporal-auditability class recurred for the third mechanism generation: v3.2 protected decision/prediction, v3.3 added examination/challenge, v3.4.2 extends the boundary earlier to Orient bootstrap action. The repeated lesson is structural: any stage inserted before "the loop proper" can accidentally sit outside Trail unless timing is specified at that stage. v3.4.2 now has both static and timestamp-backed behavioral evidence in this session.
+
+Next: fresh-context convergence remains the only unconverted boundary for the one-path bootstrap mechanism.
+Cost: moderate — about 12 tool ops, 4 disposable files created then removed, 4 repo files read or written, no subagent.

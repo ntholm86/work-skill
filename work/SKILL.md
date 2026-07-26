@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: Intent, Improve, a mini-Destination bootstrap that escalates to a deeper interview when thin, a one-time Orient bootstrap producing a rubric and todo list on first contact, a self-triggered mini-Orient when the arc later needs one, and always-on Trail logging. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.4.1"
+  version: "3.4.2"
 ---
 
 # work
@@ -54,6 +54,8 @@ Before anything else, check the **target repo's** `.acm/` folder (always at the 
 ### 0.5 Orient bootstrap — first contact, even with no history
 
 Once a **confirmed** `.acm/destination.md` exists (just written, or already present) and the ask is Tier 2 or 3-shaped, check `.acm/orientation.md`. If the only destination is marked unconfirmed, stop before orientation or ordinary work and ask the operator to confirm or correct it; step 0.6 forbids letting that guess seed further committed artifacts. If `.acm/orientation.md` doesn't exist yet, create it now, once, before the loop proper begins — this runs unconditionally on first contact, not gated behind an explicit "rate this" request; it carries the same standing as the Destination bootstrap above.
+
+**Trail timing applies here too.** Before writing `orientation.md`, open the current Tier 2 or 3 entry under step 3 and record the sourced measurement axes/todo decision plus a falsifiable prediction. Write orientation next, continue through ordinary work, then append outcome and verification to that same entry. Orient bootstrap is part of the run's auditable action, not a pre-trail exception.
 
 1. Name roughly **5-10 measurements** the destination's own text implies matter for this target — fewer than step 2's full scoring clause asks for later, since there's no trail evidence yet to weigh them against. Where there are zero prior entries, leave scores blank or provisional (name the axis, not a number) rather than inventing one with nothing to cite — a score with no cited evidence is a guess wearing a number, per step 2's own rule, and that applies on day one too.
 2. From the same read, list a short **todo** of the most obvious first candidate moves the destination implies — this seeds step 2's "candidate next moves" for the first real run instead of starting from nothing.

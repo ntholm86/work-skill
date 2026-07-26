@@ -253,3 +253,11 @@ Watch for: the disposable branch test is the next evidence boundary; instruction
 3. **Test artifacts were fully disposable.** All fixture directories were removed before recording this claim; only the work-skill trail and orientation retain the evidence summary.
 
 Watch for: the next convergence peg should be a genuinely fresh session on a real target without orientation.md, not another authored fixture in this context.
+
+## Mini-orient -- 2026-07-26 (v3.4.2 Trail-before-Orient conversion)
+
+1. **The v3.4.1 branch test passed too weak a timing bar.** It proved Trail before ordinary target action but allowed Orient bootstrap itself to occur before Trail. v3.4.2 specifies and behaviorally demonstrates Trail pre-action record before Orient before target action.
+2. **Timestamp-backed fixture evidence:** Trail creation `15:53:49.6594362` < Orient creation `15:53:52.9089304` < README action `15:53:56.5228187`, with ordered decision/outcome content and five provisional axes plus todo.
+3. **The recurring temporal class now covers any stage inserted before "the loop proper."** Future pre-loop stages must state their Trail timing locally; relying on step 3's later position is insufficient.
+
+Watch for: only a genuinely fresh context can now advance convergence; another authored fixture in this session would add ceremony, not evidence.
