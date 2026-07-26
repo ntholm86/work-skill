@@ -136,3 +136,23 @@ Watch for: the remaining metric-4 gap is now precisely "code change under tests,
 3. **The untested surface is now exactly three items:** a non-software artifact (letter/plan — the destination's own examples), a second multi-writer trail hit fresh (the only test of the v2.8.0 rule), and the destination read-back rule (zero occasions to date). Falsified item-by-item as each fires.
 
 Watch for: score plateau discipline — with the conditional converted, a future rating that moves without one of the three named evidence classes is suspect on its face.
+
+## Mini-orient -- 2026-07-26 (first convergence peg; need-signal fired)
+
+1. **The prior bounded silence on mechanism-layer correctness is falsified.** The first independent convergence run found a temporal contradiction: v3.1.0 required prediction before action but created the durable trail entry only after action. v3.2.0 now opens Tier 2 and 3 entries before action and completes them after verification; Tier 1 remains cheap and post-action.
+2. **The fix converts procedurally, with a hard evidence bound.** This run used the two-stage sequence itself, so it is behavior rather than text-only. Plain Markdown still cannot cryptographically prove wall-clock timing; it makes retrospective reconstruction a rule breach and visible process failure, not technically impossible tampering.
+3. **Cost still tracks stakes.** The preceding completed entries ranged from light publishing/setup operations to a moderate README correction and a heavy repo rename. This Full independent audit added one write only to decision-bearing runs and left Micro cost unchanged; no routine ceremony creep is visible.
+
+Watch for: whether the next genuinely fresh Tier 2 or 3 run opens its trail entry before the target diff exists. A one-shot retrospective entry would falsify behavioral convergence of v3.2.0.
+
+## Cross-model convergence log
+
+Tracks independent model/family runs of `work` pointed at this repo (self-targeting), evaluated against the current `.acm/destination.md` — the same evidentiary practice `pea/skills` already uses publicly (README: "three independent evaluators from distinct model families... found nothing left to change"), sized down to a log instead of the full pegged `CONVERGENCE_SCOPE_PROTOCOL.md` machinery, per this repo's own cost-co-equal mandate.
+
+A row is added only for a **genuinely fresh session** (not the session that authored this log) that reads `work/SKILL.md` plus this repo's own `.acm/`, runs the loop against the current destination, and either fixes something real (trail entry linked) or declares bounded silence.
+
+| Date | Model / family | Verdict | Trail entry |
+|---|---|---|---|
+| 2026-07-26 | GitHub Copilot | findings-fixed | [make-predictions-contemporaneous](./audit-trail.md#2026-07-26----make-predictions-contemporaneous) |
+
+Next: run the same independent evaluation in another fresh model/family session and test whether v3.2.0's pre-action append rule converts without prompting.

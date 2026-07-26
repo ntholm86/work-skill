@@ -800,3 +800,36 @@ Cost: moderate -- roughly 20 tool ops across 4 files plus a GitHub API rename, n
 
 **Tier: Micro.** Follow-up to the rename above: the live GitHub repo description still opened with "Auditable autonomy in one file" (stale post-rename). Updated via `gh repo edit --description` to open with "Real work, fully auditable, in one file", matching the new README tagline; the rest of the description and all topics were left unchanged (no other stale-name content found in them). No code or trail-structure changes.
 Cost: light -- 1 tool op, 1 remote field, no file changed.
+
+## 2026-07-26 -- establish-cross-model-convergence-log
+
+**Tier: Standard.** Operator wants newest models (naming SOL) to independently run `work` against this repo's own current destination, to build an evidence list of models that agree with the architecture -- mirroring `pea/skills`' public convergence-chain claim (distinct model families, silence-or-fix outcome), but sized to this repo's cost-co-equal mandate rather than porting the full `CONVERGENCE_SCOPE_PROTOCOL.md` machinery. [!DECISION] Used `work` itself to do this task, not a bare `improve` invocation, per the operator's own confirmed daily-usage mandate -- this task is a self-targeting run of `work`, and `improve` alone would have skipped this repo's own destination-check and Trail discipline, the exact thing under test.
+
+Added a "Cross-model convergence log" table to `.acm/orientation.md`: date / model-family / verdict / trail-entry-link, populated only by genuinely fresh sessions. [!DECISION] Ruled this session does NOT count as a peg -- same non-independence logic `pea/skills` applies to same-session self-derivation: I designed the mechanism, so I can't also be its first independent evaluator.
+
+Drafted the cold-session prompt for the next mover (given to the operator directly in chat, not committed to a file -- same convention as this repo's prior `cold-session-prompt-drafted-for-*` entries): deliberately withholds this session's own findings, states only the skill path, this repo's `.acm/` maturity, and the bar (fresh session, distinct model family, real finding-or-silence, add itself as a log row).
+
+Blind spot: the log has zero real entries yet -- it is text until a fresh SOL run actually produces one, same conversion lag every prior mechanism in this repo has gone through before becoming real.
+Next: run the cold prompt in a fresh SOL session; convert the first log row.
+Cost: light -- 2 tool ops, 1 file written, no subagent.
+
+## 2026-07-26 -- make-predictions-contemporaneous
+
+**Tier: Full. Model: GitHub Copilot, first session with this model identity in the convergence log.** Independent self-evaluation requested against the repo's current destination. I read only `work/SKILL.md`, `.acm/destination.md`, `.acm/orientation.md`, and the live repo state before deciding.
+
+**Interpretation and examination.** The bar is the destination's combination of target-agnostic reasoning, full auditability, and daily-use cost. Purpose and Inconsistency were load-bearing: `work` promises that every reasoning step is recorded "as it happens" and that the trail alone can reconstruct the run, while step 3 creates one entry only after step 2 has already required the agent to predict, act, and verify. The durable record therefore cannot establish that a prediction preceded its outcome; it permits an entirely post-hoc narrative while claiming contemporaneous evidence.
+
+**Challenge.** Lowering "as it happens" to "afterward" would make the prose accurate but weaken Observable Autonomy at the exact point where a prediction is supposed to constrain rationalization. Requiring incremental writes for every Micro run would repair the timing claim by violating the co-equal cost mandate. The narrower structural fix is two-stage recording only for Standard and Full runs: open the entry with decision and prediction before action, then append outcome and reflection after verification.
+
+**Across-trail trigger check.** The operator explicitly requested a deep independent audit. No recurring finding-class or contradiction of a prior `[!REALIZATION]` was assumed from earlier trail history. A silence declaration is not imminent because this run found an actionable defect.
+
+**[!DECISION] Prediction, recorded before action.** I will add the two-stage rule to step 3, adjust its opening so Micro remains end-only, bump the mechanism version from 3.1.0 to 3.2.0, and make the README's auditability claim precise. I expect the resulting instructions to require one additional append operation only on decision-bearing runs; I expect no new file or tooling dependency and no change to the four-step loop.
+
+**Action and outcome.** Updated `work/SKILL.md` so Tier 2 and 3 entries are opened with the decision and prediction before action, then completed after verification; Tier 1 remains a single post-action append. Narrowed the unimplementable "every reasoning step" claim to material decisions and outcomes in both the skill and README, added the timing check to the final self-check, and bumped 3.1.0 to 3.2.0. Focused assertions confirmed the version, pre-action rule, removal of the stale universal claim, and clean diff formatting. The prediction held: +1 net line in SKILL.md, no dependency or new file, no loop-stage change, and one extra append only for decision-bearing runs.
+
+**Reflection.** Falsifiable claim: a future Tier 2 or 3 run following v3.2.0 will have its pre-action segment present before the target diff appears; a one-shot retrospective entry falsifies behavioral conversion. Blind spot: a plain append-only Markdown file preserves declared sequence but does not cryptographically prove wall-clock timing; stronger proof would require external tooling or commits and would conflict with the no-tooling and daily-cost constraints. An expert could therefore reject "full auditability" as too strong if it means tamper-evident proof rather than reconstructable accountable process. This fix closes the internal timing contradiction at the instruction level without claiming that stronger property.
+
+**Mini-orient.** The first real convergence peg closed the setup stretch, so the need-signal fired before the counter. The arc's prior bounded silence on mechanism-layer correctness is falsified by this timing gap. Cost over the preceding completed entries remained stakes-matched (light setup/publish operations, moderate README work, heavy rename); this independent Full audit is heavier because it included a live two-stage conversion and arc read, not because routine ceremony drifted. Added the material claim and watch item to `orientation.md` and populated the convergence row.
+
+Next: test whether a genuinely fresh model follows the new pre-action append rule without being prompted about this finding.
+Cost: moderate -- about 20 tool ops, 5 repo files read or written, no subagent.
