@@ -2,44 +2,45 @@
 
 ## Work current orientation
 
-**Last updated:** 2026-07-26 (`separate-destination-hunching-from-universal-route`, v3.11.0 verified)
+**Last updated:** 2026-07-26 (`canonical-authorship-and-portable-attribution`, v3.11.1 verified)
 
-**Destination basis:** `Destination refinement - 2026-07-26 (latent human direction, hunching, and autonomous convergence)`
+**Destination basis:** `Destination refinement - 2026-07-26 (canonical authorship and portable attribution)`
 
 ### Current rubric
 
 | # | Destination-derived measurement | /10 | Current evidence |
 | --- | --- | ---: | --- |
-| 1 | Human-Destination gap awareness | 9 | Destination and SKILL now model written direction as potentially lagging operator learning before contradiction or plateau. |
-| 2 | Evidence-triggered hunch quality | 7 | Live guidance ties 1-3 guesses to meaningful signals, surfaces one route-changing question, requires provenance, and permits silence; behavior is unconverted. |
-| 3 | Route neutrality and target agnosticism | 9 | Universal named doctrines were removed; constraints and lenses now derive from Destination, target, and domain evidence. |
-| 4 | Self-targeting reasoning clarity | 9 | SKILL and README state that reasoning improves here because reasoning architecture is this repo's selected target. |
-| 5 | Improve-grade decision reasoning | 8 | Standard and Full retain mapping, modeling, target-derived lenses, route comparison, challenge, and human-legibility checks. |
-| 6 | Convergence validity | 9 | README now bounds multi-model silence to the current confirmed Destination rather than claiming latent human completeness. |
-| 7 | Cross-run reasoning memory | 5 | Current-block architecture is implemented but not yet freshly converted. |
-| 8 | Cost proportionality | 9 | One compact current Orientation and evidence-triggered rather than continuous hunching preserve daily-use cost. |
-| 9 | Observable Autonomy | 9 | Operator correction, inferred boundary, unavailable response, delegated decision, and proposed change are durably distinguished. |
-| 10 | Target-agnostic behavioral evidence | 9 | Existing external evidence remains valid; the new hunch path and route-neutral correction are unconverted. |
+| 1 | Human-Destination gap awareness | 9 | The operator's new attribution emphasis triggered a sourced hunch before contradiction and produced a confirmed refinement. |
+| 2 | Evidence-triggered hunch quality | 8 | Work inferred that attribution must survive copying from the explicit request, surfaced the inference, and did not manufacture extra questions. |
+| 3 | Route neutrality and target agnosticism | 9 | Solution doctrine remains target-derived; authorship is a confirmed constraint of this target. |
+| 4 | Canonical and portable authorship | 10 | SKILL metadata, README, and MIT notice all use `Nils W. Holmager`; attribution survives copying `work/SKILL.md`. |
+| 5 | Self-targeting reasoning clarity | 9 | Work distinguishes this repo's reasoning target from universal mechanism. |
+| 6 | Improve-grade decision reasoning | 8 | The evaluator's evidence and remedy were challenged separately; its own read order falsified its proposed current defect. |
+| 7 | Convergence validity | 9 | Silence remains relative to the confirmed Destination, which the new authorship signal legitimately reopened. |
+| 8 | Cross-run reasoning memory | 7 | A fresh executor loaded current Orientation before Trail, converting top-block retrieval; its historical expansion was broader than warranted. |
+| 9 | Cost proportionality | 9 | The selected attribution route reuses three existing public surfaces and adds no file or runtime mechanism. |
+| 10 | Observable Autonomy | 9 | Retrieval outcome, rejected remedy, hunch source, authorship boundary, and prediction are recorded before public edits. |
 
-**Plateau: 8.3/10.** This disposable post-work diagnostic credits verified instruction changes but withholds behavioral credit for hunching and top-block memory retrieval.
+**Plateau: 8.7/10.** This disposable post-work diagnostic credits verified public attribution and fresh retrieval behavior; historical escalation precision remains bounded at 7.
 
 ### Rubric changes
 
-The new Destination adds human-gap awareness, evidence-triggered hunch quality, route neutrality, self-targeting clarity, and convergence validity as explicit dimensions. Prior storage-oriented dimensions return to operational rules or remain represented by memory/cost. Scores are independently shaped to the new basis and are not comparable with v3.10.0's prior rubric.
+Canonical and portable authorship is added because the operator made it an explicit Destination constraint. Cross-run memory is retained because this same run produced fresh behavioral evidence. Other dimensions are re-derived around the new basis; no score delta is claimed across the Destination change.
 
 ### Current claims
 
-1. **Work now supports self-improving reasoning without universalizing that target.** The live skill names self-targeting as the reason and keeps arbitrary targets route-neutral.
-2. **Hunching now has an earlier but bounded trigger.** Meaningful sourced signals can produce one question; elapsed time and imaginable alternatives cannot.
-3. **Operator authority remains explicit.** Agent hunches can initiate a Destination proposal but cannot settle or drive work as confirmed direction.
+1. **Current public attribution is complete and portable.** The canonical author appears in the standalone skill, repository front door, and license notice.
+2. **Top-block retrieval converted.** The fresh evaluator read current Orientation before historical Trail without being prompted about retrieval architecture.
+3. **The evaluator's proposed README reminder is unsupported.** Its own successful sequence falsified the claimed current retrieval defect.
 
 ### Highest-leverage todo
 
-On a genuine future run where changed operator emphasis or a new connection appears before contradiction, observe whether Work surfaces one sourced route-changing question without acting on it or manufacturing further ceremony.
+On a future risk-triggered historical lookup, observe whether Work reads only relevant realization/reversal context rather than expanding the full Trail after a broad concern.
 
 ### Active operational rules
 
 - Keep Destination authority with the operator; agent hunches remain sourced questions until confirmed.
+- Credit Nils W. Holmager as Work's canonical author on current public and distributable surfaces; model identities are execution provenance.
 - Distinguish universal reasoning operations from target-specific solution principles and constraints.
 - Treat self-targeting reasoning improvement as destination-relative: reasoning is improved here because reasoning architecture is this repo's target.
 - Read this top Work current-orientation block before Standard or Full reasoning; consult Trail history only on an explicit escalation trigger.
@@ -49,10 +50,10 @@ On a genuine future run where changed operator emphasis or a new connection appe
 
 ### Tested outside-rubric concern
 
-An agent may project its own preferred future into a "hunch" and subtly author the Destination. Evidence citation, one-question surfacing, explicit unconfirmed status, and operator settlement are the control boundary; no prompt can eliminate model bias entirely.
+Authorship correction could overreach into claiming third-party work or erase model execution provenance. Limit the change to Work's author/current copyright identity and preserve linked-project ownership plus historical Trail records.
 
 ### Loop-effectiveness notes
 
-The operator supplied a destination-level distinction that several self-improvement runs had missed: principles useful for designing Work had migrated into Work's universal route. The correction produced a compact mechanism change without a new stage or artifact. Focused assertions caught a stale duplicate Orient step, and diagnostics caught README patch text inserted above its H1; both were repaired before this state was credited.
+The first genuine post-v3.11 signal triggered the hunch faculty correctly: the explicit authorship request supported one extrapolation about copy-portable attribution, and no unnecessary interview followed. Attribution was completed through existing surfaces with no duplicate file. The fresh evaluator converted current-block retrieval but over-read Trail and proposed a remedy contradicted by its own sequence; Work retained the evidence and rejected the remedy.
 
-Watch for: hunching becoming continuous ceremony, unconfirmed guesses being acted on, or target-specific doctrines re-entering universal guidance under generic names.
+Watch for: inconsistent author spellings, attribution that disappears when `work/` is copied, or language that turns model provenance into co-authorship.

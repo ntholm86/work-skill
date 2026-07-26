@@ -399,3 +399,17 @@ The gap between the operator's mind and the written Destination is irreducible b
 ### Boundary chosen under delegated judgment
 
 The operator was unavailable to answer whether hunching should run continuously or only at existing late triggers and instructed the agent to work autonomously. The selected boundary is evidence-triggered hunching: earlier than contradiction or plateau, but only when a sourced signal indicates that the written Destination may lag the operator. Continuous hunch questions would add daily ceremony and manufacture uncertainty; retaining only late triggers would miss the moving-target gap the operator explicitly identified.
+
+---
+
+## Destination refinement - 2026-07-26 (canonical authorship and portable attribution)
+
+The operator explicitly confirmed the canonical author credit for Work and this body of work:
+
+> **Nils W. Holmager**
+
+This is the name public and distributable artifacts should use. Attribution must survive copying the standalone `work/` folder; repository ownership and Git history alone are insufficient. The skill metadata, README, and existing license notice should agree on the canonical name.
+
+Model names in Trail remain execution provenance for particular runs, evaluations, and edits. They do not replace or dilute Nils W. Holmager's authorship of Work, its architecture, or the accumulated project direction. Earlier references to `Nils Holmager` remain historical records and are superseded for current attribution by this confirmed ruling.
+
+This ruling corrects attribution only. It does not broaden the MIT license, claim authorship of linked third-party projects, or require repeated bylines throughout operational memory files.

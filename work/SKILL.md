@@ -3,7 +3,8 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: trusted Destination capture, open-world Orient, risk-sized target mapping, Improve-grade decision reasoning, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.11.0"
+  version: "3.11.1"
+  author: "Nils W. Holmager"
 ---
 
 # work
