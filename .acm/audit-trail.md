@@ -1266,3 +1266,41 @@ Cost: moderate — about 14 tool operations, 4 Work files read or written, no su
 
 No further authored fixture or external product iteration is justified in this run. Candidate move 2 is selected: bounded instruction-layer silence until independent evidence arrives.
 Cost: moderate — about 10 tool operations, 4 Work files read or written, no subagent, no external probe.
+
+## 2026-07-26 — independently-evaluate-v3-8-1-handoff
+
+**Tier: Full. Model: GitHub Copilot.** Operator again asked to continue on Work. Read as continuing convergence against v3.8.1 itself, not reopening SupplementPlanner or manufacturing an instrumental probe. The current Orientation explicitly says the next product probe must be genuinely needed.
+
+**Map and examination.** The evaluation target is Work. Relevant surfaces are the confirmed trusted-compression/cost-co-equal Destination, the live `work/SKILL.md`, README's public contract, and v3.8.1's registered ownership assertions. Purpose, Inconsistency, Observable Autonomy, and Waste are load-bearing. The cheapest evidence that is new relative to the author-session is one stateless read-only evaluator; another authored fixture would only prove that the author can follow its own wording.
+
+**Challenge.** A reviewer prompted only to inspect the two-ledger handoff could echo the recent design. A broad repo review could spend heavily on settled historical surfaces. The bounded middle route is an independent evaluation of the current live mechanism against Destination, requiring either one concrete failure path with exact evidence or silence bounded to instruction-level coherence and operability. It must not inspect or modify SupplementPlanner.
+
+**Across-trail triggers.** Operator explicitly asked: fired. Recurring mission-continuity class: under independent test, not assumed closed. Prior `[!REALIZATION]`: no contradiction yet. Silence declaration: possible, so fired and requires an explicit bound.
+
+**[!DECISION] Prediction, recorded before action.** I will dispatch exactly one fresh read-only evaluator with no conversation context and no permission to edit. I expect either (a) one actionable ambiguity that allows registration, probe-local handoff, or return to fail while appearing compliant, or (b) bounded silence on v3.8.1's instruction surface. I expect no external target changes, no second evaluator, and no Work edit unless the report provides a concrete falsifiable defect.
+
+### Candidate Next Moves
+
+1. Repair one concrete handoff defect if the evaluator demonstrates a compliant failure path, because that would falsify v3.8.1's sufficiency claim.
+2. Record bounded silence and stop if no such path is found, because behavioral conversion requires a genuinely needed future probe rather than more self-authored ceremony.
+
+**Independent result and discriminating check.** The evaluator reported a first-contact Orient bypass, citing an older Destination section whose then-current status said the mechanism was "not yet in `work/SKILL.md`." The proposed failure path is not compliant with v3.8.1: the live skill says first-contact Orient is required before Tier 2/3 work, routes absent Orientation to step 4 before step 1, and repeats the requirement as a readiness invariant and final self-check. The latest confirmed Destination sections also supersede the older architecture. Exact live-text checks therefore reject the reported defect while preserving the report as evidence.
+
+**[!REALIZATION] Root finding.** The false positive exposes a different general defect: Work tells agents to read append-only Destination but does not explicitly separate durable mandate from historical implementation-state claims. A fresh evaluator can obey the read order yet let an accurate old "not yet" statement override later confirmed decisions and current target reality. That weakens Destination as trusted compression and can manufacture already-closed work.
+
+**Route comparison and challenge.** Adding another first-contact Orient branch would duplicate three existing guards and reward the misread. Rewriting the historical Destination line would violate append-only memory and erase truthful history. Adding a global status registry would violate KISS. The narrow route is one temporal-resolution rule in the Destination gate: later confirmed sections supersede earlier status claims, durable intent remains distinct from implementation state, and live target evidence must be checked before treating historical "not yet" language as current.
+
+**[!DECISION] Revised prediction, recorded before action.** I will add that single rule, bump Work to v3.8.2, and synchronize README. I expect a focused assertion to show that an old implementation-state note cannot authorize work contradicted by later confirmed Destination or live state, while append-only history remains untouched. No first-contact branch, external target, new file, or second evaluator will be added; version agreement and `git diff --check` should pass.
+
+**Orient trigger and prediction, recorded before updating Orientation.** Evidence challenge fired: an independent evaluator misread truthful historical status as a current obligation, directly testing trusted Destination compression. I will retain the ten-axis scheme and expect no score movement: v3.8.2 closes the instruction gap, but the same report is behavioral evidence that temporal resolution previously failed. The next evidence boundary should be a fresh evaluator correctly resolving an old status claim without prompting; no second evaluator will be dispatched in this run.
+
+**Action and verification.** Implemented v3.8.2 with one Destination-gate rule separating durable intent from historical implementation state. Later confirmed sections supersede earlier status claims, live target evidence determines whether an old gap remains, and old text stays untouched. README carries the public contract. Seven focused assertions passed for version agreement, one temporal rule, intent/state separation, later-confirmation precedence, live-state checking, history preservation, and retention of all first-contact Orient guards. `git diff --check` passed.
+
+**Orient outcome.** The ten-axis scheme and 7.8 plateau remained unchanged. Trusted compression did not gain a point because the independent failure is behavioral evidence against automatic conversion of the same-run repair. The next test is a genuinely fresh reader resolving an older status claim correctly without prompting.
+
+**Reflection.** [!REALIZATION] Append-only memory preserves truth over time but can present several incompatible present tenses at once; trusted compression therefore requires temporal resolution, not merely preservation. Falsifiable claim: v3.8.2 prevents an old "not yet" statement from becoming current work when later confirmed Destination or live target state disproves it. Blind spot: the fresh evaluator was explicitly asked to focus on the latest basis and still drifted; a future unprompted reader is a harder test. Expert pushback: this rule could license agents to dismiss inconvenient old obligations as stale. The live-evidence requirement prevents that: later confirmation or observed implementation must disprove the status, not preference.
+
+**Across-trail triggers after verification.** Operator request: handled on Work. Recurring mission/temporal-memory class: fired and repaired at the reading invariant. Prior realization: extended from cross-repo local availability to within-file temporal availability. Silence: FIRED and bounded to current instruction-layer coherence across first-contact Orient, two-ledger probe handoff, and append-only status resolution. Untested bars are fresh-reader temporal conversion and genuine cross-repository behavior.
+
+Candidate move 1 was adapted rather than followed literally: the evaluator's proposed defect was rejected, while its concrete failure evidence led to the deeper repair. No second evaluator or external target is justified this run.
+Cost: moderate — about 11 tool operations, 4 Work files read or written, 1 read-only subagent, no external probe.

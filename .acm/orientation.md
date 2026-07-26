@@ -585,3 +585,54 @@ Dual visibility could become duplicate narration. The live rule requires only th
 Continuing on Work rather than its former probe exposed a real instruction gap at low cost. The correct next transition is bounded instruction-layer silence until independent behavior exists; another authored fixture would test compliance by the author, not handoff across context.
 
 Watch for: the evaluation entry being closed before the probe runs, or the probe entry merely linking back without restating the boundary. Either would recreate dependence on unavailable context.
+
+## Orient — 2026-07-26 (v3.8.2 temporal Destination resolution)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Scope and evidence.** One fresh read-only evaluator inspected Destination, SKILL, and README without Trail context. It proposed adding first-contact Orient because an older truthful Destination section said that mechanism was "not yet" implemented. Live v3.8.1 already required it in three places, so the proposed defect was rejected; the independent misread exposed the temporal-resolution gap repaired in v3.8.2.
+
+| # | Destination-derived measurement | /10 | Delta | Current evidence |
+|---|---|---:|---:|---|
+| 1 | Trusted Destination compression | 8 | 0 | Historical status overrode later decisions for one fresh evaluator; v3.8.2 now defines temporal resolution, but behavior is unconverted. |
+| 2 | Intent and enclosing-mission continuity | 7 | 0 | Two-ledger handoff is unchanged and still awaits genuine use. |
+| 3 | Improve-grade decision reasoning | 8 | 0 | The report was challenged against live evidence rather than accepted because it was independent. |
+| 4 | Risk-sized mapping and target-derived lenses | 8 | 0 | Exact checks of Destination and the live control path were sufficient; no external repo was reopened. |
+| 5 | Structural route judgment | 8 | 0 | Redundant branch, destructive history edit, and registry were rejected in favor of one reading invariant. |
+| 6 | Advisory-todo autonomy | 7 | 0 | The current behavioral probe todo was displaced by concrete independent evidence, then remains open after repair. |
+| 7 | Universal human legibility | 8 | 0 | README states later confirmed decisions plus live state resolve append-only history. |
+| 8 | Cost proportionality | 6 | 0 | One bounded evaluator and one local correction replaced another product probe; no claim of improvement from same-run cost. |
+| 9 | Observable Autonomy | 9 | 0 | The rejected report, discriminating evidence, revised decision, and score restraint are durably recorded. |
+| 10 | Target-agnostic behavioral evidence | 9 | 0 | Existing external conversion evidence remains sufficient for this plateau. |
+
+**Plateau: 7.8/10 (no change).** The stable score is deliberate: same-run instruction repair does not erase the observed evaluator failure.
+
+### Rubric changes
+
+No dimensions or scores changed. Temporal Destination resolution is evidence within trusted compression, not a new standing metric.
+
+### Current claims
+
+1. **A truthful append-only Destination can misdirect fresh work when historical status is read as current.** v3.8.2 closes the policy gap; a future fresh read must test conversion.
+2. **The first-contact Orient path was already internally guarded.** Falsified if a compliant path can bypass all three live requirements rather than merely ignore them.
+3. **Independent findings require target-evidence challenge, not automatic acceptance.** This run rejected the proposed patch while retaining the deeper evidence.
+
+### Highest-leverage todo
+
+On the next genuinely fresh evaluation, test whether later confirmed Destination and live target state correctly supersede an older implementation-status note without prompting. Do not commission another evaluator in this run.
+
+### Active operational rules
+
+- Separate durable Destination intent from historical implementation state.
+- Later confirmed sections and live target evidence resolve old status without rewriting history.
+- The v3.8.1 two-ledger handoff and prior decision-quality rules remain binding.
+
+### Tested outside-rubric concern
+
+Independent review can create false confidence in either direction. Requiring a fresh evaluator improves independence, but its report remains evidence to test, not authority that outranks the target.
+
+### Loop-effectiveness notes
+
+The independent run found no valid handoff defect, but it still advanced Work by exposing a general temporal-memory failure. One evaluator was enough. Another same-run review would test adaptation to the answer rather than fresh operability.
+
+Watch for: old "open," "owed," or "not yet" language being promoted into current work without checking later confirmed sections and live target state.
