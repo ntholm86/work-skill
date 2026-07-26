@@ -636,3 +636,55 @@ Independent review can create false confidence in either direction. Requiring a 
 The independent run found no valid handoff defect, but it still advanced Work by exposing a general temporal-memory failure. One evaluator was enough. Another same-run review would test adaptation to the answer rather than fresh operability.
 
 Watch for: old "open," "owed," or "not yet" language being promoted into current work without checking later confirmed sections and live target state.
+
+## Orient — 2026-07-26 (v3.8.3 temporal conversion and Trail honesty)
+
+**Destination basis:** `Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)`
+
+**Scope and evidence.** One new stateless evaluator read full Destination, SKILL, and README without Orientation or Trail and without being told about historical-status resolution. It did not promote any closed "not yet" obligation, explicitly checked first-contact Orient against live state, and found a separate Trail-timing overclaim. v3.8.3 narrows that claim without adding timing machinery.
+
+| # | Destination-derived measurement | /10 | Delta | Current evidence |
+|---|---|---:|---:|---|
+| 1 | Trusted Destination compression | 9 | +1 | Fresh unprompted reader resolved historical status against later Destination and live implementation. |
+| 2 | Intent and enclosing-mission continuity | 7 | 0 | Two-ledger handoff remains instruction-complete and behaviorally untested. |
+| 3 | Improve-grade decision reasoning | 8 | 0 | Independent advice was decomposed into rejected machinery and accepted root wording defect. |
+| 4 | Risk-sized mapping and target-derived lenses | 8 | 0 | One bounded evaluator plus exact local reads answered the question without an external probe. |
+| 5 | Structural route judgment | 8 | 0 | Commit-per-append, timestamps, and no-change were compared; one honesty correction won. |
+| 6 | Advisory-todo autonomy | 7 | 0 | The registered temporal test was selected and completed; cross-repo conversion remains advisory. |
+| 7 | Universal human legibility | 8 | 0 | README now distinguishes reconstructable reasoning from unprovable wall-clock order. |
+| 8 | Cost proportionality | 6 | 0 | One evaluator and no new operation were proportionate; no efficiency gain is claimed. |
+| 9 | Observable Autonomy | 9 | 0 | Two-stage recording remains mandatory and its enforcement boundary is now locally honest. Stronger proof still requires independent capture. |
+| 10 | Target-agnostic behavioral evidence | 9 | 0 | Existing external conversion evidence remains sufficient for this plateau. |
+
+**Plateau: 7.9/10 (+0.1).** This disposable diagnostic credits one independently converted behavior; it does not convert cross-repository mission return or cryptographic timing.
+
+### Rubric changes
+
+No dimensions changed. Trusted compression gains one point from a fresh unprompted conversion. Observable Autonomy does not move because clearer disclosure is not stronger timing evidence.
+
+### Current claims
+
+1. **v3.8.2's temporal-resolution rule converted in one fresh reader.** Falsified if later readers repeatedly revive closed historical status despite checking live state.
+2. **Work's Trail is procedurally contemporaneous, not cryptographically timed.** The final artifact reconstructs reasoning and outcome; independent capture is required to prove order.
+3. **Independent review is most useful when its proposed fix is challenged separately from its evidence.** This run rejected costly machinery while retaining the valid overclaim finding.
+
+### Highest-leverage todo
+
+Wait for a genuinely needed cross-repository instrumental task to convert v3.8.1's two-ledger return. Do not manufacture one or commission another same-surface evaluator.
+
+### Active operational rules
+
+- Resolve append-only status through later confirmation plus live state.
+- Require two-stage Trail recording; never claim final Markdown proves wall-clock ordering.
+- Use independent capture only where stronger timing assurance justifies its cost.
+- The enclosing-mission handoff and Improve-grade decision rules remain binding.
+
+### Tested outside-rubric concern
+
+An evaluator can identify a real evidentiary weakness while proposing the wrong remedy. Treating recommendations atomically would either add unjustified ceremony or discard useful evidence; Work must challenge mechanism and finding separately.
+
+### Loop-effectiveness notes
+
+The registered fresh-reader test converted in the next run without contaminating the prompt. One adjacent wording defect was repaired at no runtime-operation cost. Further self-review of this surface now has lower evidentiary value than genuine cross-repository behavior.
+
+Watch for: future prose drifting from "required contemporaneous process" back into claims that the final Trail proves its own write order.

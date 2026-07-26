@@ -1304,3 +1304,39 @@ Cost: moderate — about 10 tool operations, 4 Work files read or written, no su
 
 Candidate move 1 was adapted rather than followed literally: the evaluator's proposed defect was rejected, while its concrete failure evidence led to the deeper repair. No second evaluator or external target is justified this run.
 Cost: moderate — about 11 tool operations, 4 Work files read or written, 1 read-only subagent, no external probe.
+
+## 2026-07-26 — convert-temporal-destination-resolution
+
+**Tier: Full. Model: GitHub Copilot.** Operator asked to continue on Work in a new run. The current Orientation's highest-leverage todo is a fresh-reader conversion of v3.8.2's temporal Destination rule. No external product probe is needed or authorized by this evidence boundary.
+
+**Interpretation and map.** The evaluation target is Work. The test surface is intentionally limited to append-only Destination, live SKILL, and README. The evaluator must independently decide which Destination statements are durable mandate, which are historical status, and whether live state has already closed an old obligation. Orientation and Trail are excluded because they name the expected answer.
+
+**Examination and challenge.** Purpose, temporal consistency, trusted compression, and cost proportionality are load-bearing. Prompting the evaluator to look for stale "not yet" language would test instruction following rather than Work's own operability. A broad external run would confound this narrow test and spend more. One stateless read-only evaluator can discriminate: promoting a closed historical status into current work falsifies conversion; resolving current obligations from later confirmed decisions plus live state supports it. Any different actionable defect must still show an exact compliant failure path.
+
+**Across-trail triggers.** Operator explicitly asked: fired. Recurring temporal-memory class: under conversion test. Prior `[!REALIZATION]`: directly tested, not presumed true. Silence declaration: possible and therefore requires a named bound.
+
+**[!DECISION] Prediction, recorded before action.** I will dispatch exactly one fresh read-only evaluator with no mention of v3.8.2's temporal rule, no Orientation/Trail access, and no edit permission. I expect it not to propose already-implemented first-contact Orient, Destination escalation, or Micro skip obligations from historical sections. It will either identify a different concrete live defect or declare silence bounded to current instruction-level coherence. No second evaluator, external target, or mechanism edit will follow unless the report demonstrates a falsifiable live failure.
+
+### Candidate Next Moves
+
+1. Repair one independently demonstrated live defect if it clears the change bar.
+2. Record behavioral conversion and bounded silence if the reader resolves historical status correctly and finds no actionable current gap.
+
+**Independent result.** The evaluator read the full append-only Destination, SKILL, and README, did not revive the historical first-contact Orient, Destination-escalation, or Micro-skip obligations, and explicitly challenged first-contact flow against the live artifact. v3.8.2's temporal-resolution rule therefore converted in one fresh read. The evaluator instead reported Trail timing: final Markdown cannot prove that the pre-action append preceded action.
+
+**Discriminating check and challenge.** The report's proposed per-append git commits or self-authored timestamps would add heavy universal ceremony, fail on non-git targets, and still not prove that action did not occur before the commit/timestamp. Work already discloses in Design constraints and Orient's Trail timing that Markdown cannot mechanically enforce or prove ordering; writer-splitting/independent capture is explicitly cut for cost. The concrete residual is narrower: step 3 says the two appends "make" reasoning auditable rather than retrospective, which overclaims the final artifact and conflicts with those honest bounds.
+
+**[!DECISION] Revised prediction, recorded before action.** I will change only that local claim to say the two-stage process makes retrospective reconstruction a visible rule breach while final Markdown alone cannot prove timing, expose the same bound in README's Observable Autonomy summary, bump to v3.8.3, and leave the two-append requirement intact. I expect no commit-per-append rule, timestamp format, file, dependency, or added operation; focused consistency assertions and `git diff --check` should pass.
+
+**Orient trigger and prediction, recorded before updating Orientation.** Two evidence challenges fired: v3.8.2's fresh-reader temporal test completed successfully, and independent review exposed a local auditability overclaim. I will retain the ten-axis scheme, raise trusted Destination compression by one for behavioral conversion, keep Observable Autonomy at 9 because final Markdown still cannot prove timing, and leave cost unchanged because one bounded evaluator was proportionate but not a new efficiency capability. I expect a 7.9 temporary plateau and no new todo beyond genuinely independent cross-repository behavior.
+
+**Action and verification.** Implemented v3.8.3 by replacing one overclaim: the required two-stage Trail process now makes retrospective reconstruction a visible rule breach while explicitly admitting final Markdown cannot prove wall-clock order. README exposes the same bound. The pre-action and post-verification append requirements remain unchanged. Seven focused assertions passed for version agreement, retained two-stage recording, removal of the overclaim, visible-breach wording, proof-bound agreement, absence of commit/timestamp ceremony, and retained independent-capture guidance. `git diff --check` passed.
+
+**Orient outcome.** Trusted Destination compression rose from 8 to 9 because a new unprompted evaluator resolved the old status correctly. The other nine dimensions stayed fixed; Observable Autonomy remained 9 because disclosure is not stronger proof. The resulting 7.9 plateau is temporary and does not establish cross-repository conversion.
+
+**Reflection.** [!REALIZATION] Independent review can carry valid evidence inside an invalid remedy; Work must challenge the proposed mechanism separately from the observed failure. Falsifiable claim: v3.8.3 consistently describes Trail timing as a required contemporaneous process whose final artifact cannot prove its own wall-clock order. Blind spot: this run did not use independent capture, so it cannot improve the assurance level it describes. Expert pushback: "fully auditable" may still sound stronger than procedural timing warrants. The target's meaning is reconstruction of decisions, evidence, and outcomes with the enforcement bound visible, not cryptographic attestation; stronger assurance was consciously cut for daily-use cost.
+
+**Across-trail triggers after verification.** Operator request: handled on Work. Recurring temporal-memory class: behaviorally converted once. Prior realization: confirmed and extended to independent-remedy challenge. Silence: FIRED and bounded to current instruction-level Destination resolution and Trail-timing honesty. Untested bars are genuine two-ledger cross-repository return and stronger independently captured timing.
+
+Candidate move 1 produced a real adjacent wording correction; candidate move 2 now applies. No second evaluator or external probe is justified this run.
+Cost: moderate — about 10 tool operations, 4 Work files read or written, 1 read-only subagent, no external target.
