@@ -448,3 +448,13 @@ Work should know the canonical companion repository and distinguish two assuranc
 Work may detect whether a compatible harness is installed and whether a newer release is available when harness-backed assurance is relevant. It must not silently install, update, start, or route traffic through the proxy. Installation and updates require operator consent. Version checking must not add network cost to every ordinary run; use first setup, explicit assurance requests, incompatibility, or a stale/unknown installed version as triggers.
 
 Future Work and proxy design should provide a cheap way to correlate a material Trail entry with the relevant session identifier and harness/protocol version without duplicating raw events into the Trail. Never claim harness-backed assurance merely because `.acm/sessions/` exists; verify session evidence for the run.
+
+---
+
+## Destination refinement - 2026-07-27 (todo sourced from Destination directly; rubric never dominant)
+
+The operator confirmed, across two rounds of clarification, a correction to Orient's own mechanism: when Orient produces the highest-leverage todo, it must derive that todo primarily from direct examination of Destination and the target's current reality — the open pass and the challenge — not primarily or dominantly from the destination-derived measurement rubric.
+
+The rubric's core purpose is a satisfying, honest visualization of current standing for the operator. It is a diagnostic snapshot, not the mechanism that decides what to do next. A rated measurement does not require a matching candidate move, and a candidate move does not require a matching measurement. Requiring every rubric row to spawn a move — or worse, spawning a move whose only purpose is to fix the rubric's own blind spot — inverts the relationship and can make the loop blind to real next steps that have no metric behind them.
+
+This matters most for generative work: building something genuinely new has no current score to report by definition. Forcing an artificial measurement into existence merely to justify an otherwise-obvious next step is exactly the metric-blindness this correction removes. Focusing on metrics can leave the reasoning blind to other things; the measurements exist for the operator's legibility, not as the route.
