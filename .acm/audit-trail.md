@@ -1697,3 +1697,27 @@ Cost: moderate -- 6 tool operations, 3 files (SKILL, README, this Trail entry), 
 **Outcome vs. Orient prediction.** Held. Rows 1-10 unchanged, one new row added, and the chosen todo item is sourced from direct examination (this run's own Reflection) rather than from any measurement -- the fix is now shown working inside the very artifact it governs, not just described in the skill file.
 
 Cost: heavy -- 12 tool operations across destination, SKILL, README, orientation, and this Trail entry; no subagent; includes a mandatory fresh Orient.
+
+## 2026-07-27 -- sweep-remaining-quiet-numeric-constraints
+
+**Tier: Full. Model: GitHub Copilot.** The operator's request was bare -- "Please continue" plus "understand my intent." Per step 1's bare-ask handling, I formed the sourced hunch from the just-completed Orient's own highest-leverage todo (the one deliberately carrying no rubric-row citation): sweep step 2's "5-10 measurements" phrasing, and by extension step 4 generally, for the same quiet-constraint pattern fixed twice already in this arc.
+
+**Interpretation.** No Destination change is implied; this continues an already-confirmed direction rather than opening a new one, so no Destination-gate re-run or fresh Orient is required by this entry alone.
+
+**Examination.** Grep-confirmed exactly two remaining instances of a numeric instruction with no evidence-overrides-the-count escape clause: step 2's "roughly 5-10 measurements" and step 5's "1-3 falsifiable Current claims." Two nearby numeric instructions were checked and found already safe: the backstop's "about 5 completed entries" self-labels as "not a cadence target," and step 1's "roughly 5-10 relevant entries" already carries "expand ... only when the stakes require it." *Inconsistency* lens: the two unsafe instances share the same shape as the two already-fixed defects this arc (step 0's duplicate gate, step 3's per-row move mandate) -- a plausible-sounding number stated as if it were a rule, with no explicit escape valve for when reality doesn't fit it.
+
+**Challenge.** Considered removing the numbers entirely (rejected -- they are useful defaults/expectations for a fresh evaluator, per the file's own "typical, not a cap" pattern already used elsewhere); considered leaving them since "roughly" already softens step 2's number (rejected -- "roughly" only signals imprecision around the number, not permission to land meaningfully outside 5-10, and step 5's "1-3" has no softening word at all).
+
+**[!DECISION] Prediction, recorded before action.** Add an explicit "typical range, not a cap/quota" clause to both instructions, permitting fewer or more when evidence genuinely warrants it, matching the wording pattern already established for the Trail-evidence-expansion clause. Bump to v3.12.3, sync README. Expect a small diff (2 files, single-digit line changes), no new file, no Destination change, clean diagnostics.
+
+**Action and verification.** Made exactly the two edits and the version/README sync. Diff footprint: `README.md` (+1/-1), `work/SKILL.md` (+3/-3) -- 2 files, 4 insertions, 4 deletions. Diagnostics clean on both files; `git diff --check` clean.
+
+**Outcome against prediction.** Held exactly.
+
+**Reflection.** [!REALIZATION] The recurring class named across the last two entries -- "a correct principle stated in prose, quietly contradicted by one literal instruction elsewhere" -- generalizes further than "duplication" or "rubric dominance" specifically: its most common concrete form in this file is a bare cardinal number presented as guidance with no stated escape valve. Falsifiable claim: any future numeric instruction added to this file (a count, a range, a cadence) should be checked at the moment it is written for whether it carries an explicit "override when evidence warrants" clause, not audited for this after the fact. Blind spot: this sweep covered only step 4 (Orient) and the adjacent backstop trigger in step 4's preamble; I did not re-check step 3's Trail depth-tier thresholds or step 0's "1-3 sourced guesses" / "2-5 sourced inferences" language in the Destination gate for the same pattern -- those were out of scope for this specific todo and are named here rather than silently assumed clean.
+
+**Across-trail triggers, explicitly evaluated.** Operator's bare "continue": fired, answered by picking up the previously-recorded todo rather than inventing a new concern. Recurring finding-class: fired -- third instance in three consecutive entries of the same "principle vs. quiet contradicting instruction" shape; now generalized to a named sub-pattern (bare cardinal numbers) rather than re-described as a fresh finding. Contradicts a prior `[!REALIZATION]`: no -- extends and sharpens it. Silence declaration: not applicable -- a real, bounded fix was made.
+
+**Candidate next moves.** 1. Check step 0's "1-3 sourced guesses" and "2-5 sourced inferences" Destination-gate language, and step 3's Tier depth-tier boundaries, for the same bare-cardinal-number pattern -- named as a blind spot above, not yet done. 2. Once external dogfooding includes a genuine "build something new" task, verify the todo it produces cites no forced rubric row, closing the still-open behavioral test from the previous entry. 3. No further sweep of this specific class is owed beyond the two items above; do not manufacture a fourth pass merely because the class has a name now.
+
+Cost: light -- 5 tool operations, 2 files, no subagent, no Orient required.
