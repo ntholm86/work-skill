@@ -2,9 +2,9 @@
 
 ## Work current orientation
 
-**Last updated:** 2026-07-27 (`decouple-orient-todo-from-rubric-dominance`, v3.12.2)
+**Last updated:** 2026-07-27 (`make-first-contact-orient-optional-not-mandatory`, v3.13.0)
 
-**Destination basis:** `Destination refinement - 2026-07-27 (todo sourced from Destination directly; rubric never dominant)`
+**Destination basis:** `Destination refinement - 2026-07-27 (first-contact Orient is optional, not mandatory)`
 
 ### Current rubric
 
@@ -18,30 +18,32 @@
 | 6 | Selective evidence cost | 9 | Unchanged this run. |
 | 7 | Operator consent and privacy | 9 | Unchanged this run. |
 | 8 | Route neutrality and standalone portability | 9 | Unchanged this run. |
-| 9 | Improve-grade decision reasoning | 9 | This run separated principle from contradicting mechanical instruction twice in a row and named it as a class rather than a one-off. |
+| 9 | Improve-grade decision reasoning | 9 | This run scoped the fix precisely to first contact and explicitly declined to loosen the separate destination-change refresh rule, rather than over-generalizing for symmetry. |
 | 10 | Observable Autonomy | 8 | Unchanged this run. |
-| 11 | Todo sourced from Destination, not rubric-dominated | 7 | Step 3's per-row and per-unobservable-axis mandatory candidate-move language is removed; step 6 and a new self-check bullet now state the todo must not be rubric-dominant. Instruction-complete; not yet exercised on a real external "build something new" task. |
+| 11 | Todo sourced from Destination, not rubric-dominated | 7 | Unchanged; this run's fix is adjacent (whether Orient runs at all on first contact) but distinct from what its todo cites, and adds no new evidence toward this row. |
+| 12 | First-contact Orient is optional, not mandatory | 7 | The readiness invariant, Destination gate, Orient's own trigger list, and one self-check bullet now explicitly distinguish "never created" (optional, default) from "exists but stale" (still void until refreshed). Instruction-complete; no run has yet actually chosen to skip Orient on a fresh project and verified the loop still reasoned soundly without it. |
 
-**Plateau: 8.7/10.** Rows 1-10 carry over unchanged from the last Orient (that Destination scope did not change); row 11 is new and instruction-only. This is a disposable diagnostic, not a standing target.
+**Plateau: 8.7/10.** Rows 1-10 carry over unchanged; row 11 is unchanged from the prior Orient; row 12 is new and instruction-only. No regression, one new instruction-only row.
 
 ### Rubric changes
 
-Added row 11 because the operator's confirmed correction makes it an independently observable dimension: whether Orient's todo is generated from a direct read of Destination and the target, or from enumerating rubric rows. All other rows are retained without re-derivation because this Destination refinement narrowly targets Orient's own mechanism and did not touch the harness/context-continuity scope those rows measure — re-scoring them without new evidence would manufacture false precision.
+Added row 12 because the operator's confirmed correction makes it an independently observable dimension distinct from row 11: row 11 is about what generates the todo's *content*; row 12 is about whether Orient runs at *all* on a fresh target. Both are now instruction-complete and behaviorally unexercised — that is itself worth tracking as a pair, not collapsing into one row, since they could in principle diverge (Orient could become mandatory again while todo-generation stays decoupled, or vice versa).
 
 ### Current claims
 
-1. **The rubric is now diagnostic-only in the governing text, matching what it already claimed to be philosophically.** Step 3 no longer requires a candidate move per rated row; step 6 states the todo comes from the open pass and challenge, not the rubric.
-2. **A todo item needs no rubric row, and this orientation now demonstrates that rather than merely asserting it** — see the highest-leverage todo below, which cites no measurement.
-3. **The same defect class has now appeared twice in a row:** a stated principle in this file's prose, quietly contradicted by one literal mechanical sentence elsewhere. Worth watching as a class, not just fixing instance by instance.
+1. **Work's mandatory-sounding language has now been checked against its own stated principles four times in three sessions, always finding the same shape.** A correct principle in prose, quietly overridden by one literal instruction elsewhere — first the duplicated gate step, then rubric-dominance, then bare numeric caps, now the first-contact requirement itself.
+2. **Two genuinely different rows (11 and 12) are both instruction-complete and both behaviorally unverified.** Neither has been exercised because every fix so far has come from self-directed textual audit, not from running Work against a real, unfamiliar, build-something-new external target.
+3. **The self-referential sweep is reaching diminishing returns as a discovery method.** It found four real instances, but continuing to re-read the same file for a fifth instance of the same class is lower leverage now than actually testing rows 11 and 12 against real external use.
 
 ### Highest-leverage todo
 
-Sweep step 2's "roughly 5-10 measurements" phrasing and any other quantity- or procedure-shaped instruction in step 4 for the same quiet-constraint pattern just fixed in step 3 — a count target can just as easily crowd out an eleventh genuinely load-bearing dimension as a per-row move mandate crowded out non-metric todos. This item deliberately has **no corresponding rubric row above**: it is sourced directly from this run's own Reflection, not from any measurement's citation, which is itself the fix being verified.
+Stop sweeping `work/SKILL.md`'s own text for further instances of this pattern for now. The next real leverage is external behavioral verification: run Work against a genuine, unfamiliar, build-something-new target and confirm in that target's own Trail that (a) Orient was run or skipped by actual judgment rather than habit, and (b) any resulting todo cites no rubric row where none is warranted. This item deliberately has **no corresponding rubric row above**: it is a judgment about the discovery method itself, not a measurement of the target.
 
 ### Active operational rules
 
 - The highest-leverage todo is judged by a direct read of Destination and the target's current reality, never by which rubric row is lowest or lacks a candidate move. A todo item with no matching measurement is normal, not a gap.
 - Rating a measurement is diagnostic only, for the operator's legibility; it never itself mandates a corresponding candidate move, and an unobservable axis is not an automatic license to invent one.
+- First-contact Orient is optional and default-recommended, not mandatory; a confirmed Destination change still voids stale rubric/ratings/todo until a fresh Orient replaces them — these are two distinct rules, never conflate them for symmetry.
 - Judge success against the operator's actual purpose, provenance needs, and consequences; literal prompt completion is insufficient when it defeats that purpose.
 - Describe context preservation at the workflow level: externalize, reload, detect drift, and recover. Never imply perfect access to or control of hidden model cognition.
 - Treat `.acm/sessions/` as optional, independently authored evidence memory. Query relevant sessions only on risk, contradiction, provenance, audit, or challenged self-report; never load all traffic by default.
@@ -57,10 +59,10 @@ Sweep step 2's "roughly 5-10 measurements" phrasing and any other quantity- or p
 
 ### Tested outside-rubric concern
 
-Removing the per-row move mandate could make Orient too permissive about a genuinely thin todo ("nothing traces to anything, so anything goes"). The guard against that is unchanged: Convergence Is Silence still requires a bounded silence declaration naming the tested bar when nothing actionable is found, and the open pass still must record candidate findings without forcing or discarding them.
+Repeatedly self-auditing this same file for the same recurring class risks becoming its own ceremony — confidence built entirely from internal re-reading rather than external use. The guard is the highest-leverage todo above: shift to external verification rather than a fifth internal sweep.
 
 ### Loop-effectiveness notes
 
-Two consecutive entries now show the same shape: a correct principle already stated in this file's prose, undermined by one unreviewed imperative sentence elsewhere. The previous entry named the duplicated Destination-gate step 5; this entry named the rubric-dominance sentence in step 3. Neither was found by re-reading the philosophy paragraphs — both were found by testing a specific operator concern against the literal procedural text. This suggests future self-audits should deliberately re-check imperative "do X" sentences against nearby stated principles, not just check principles for internal consistency with each other.
+Three consecutive sessions have now found the same underlying shape four times: a correct principle in this file's prose, quietly overridden by one literal instruction elsewhere. Each was found by testing a specific operator concern against literal procedural text, never by re-reading the philosophy paragraphs alone. That method has now paid off four times and is showing diminishing returns as a discovery mechanism; the honest next step is external evidence, not another internal pass.
 
-Watch for: the same quiet-constraint pattern recurring in step 2's measurement-count language or elsewhere in step 4 (already named as the open todo above); a future run treating "no rubric row" as license for an unbounded or unjustified todo instead of a legitimately sourced one.
+Watch for: a fifth self-sweep being run out of habit rather than a genuine new signal; rows 11 and 12 staying instruction-only for too long without ever being tested against a real fresh external target; a future run treating "no rubric row" as license for an unbounded or unjustified todo instead of a legitimately sourced one.

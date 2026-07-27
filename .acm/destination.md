@@ -458,3 +458,13 @@ The operator confirmed, across two rounds of clarification, a correction to Orie
 The rubric's core purpose is a satisfying, honest visualization of current standing for the operator. It is a diagnostic snapshot, not the mechanism that decides what to do next. A rated measurement does not require a matching candidate move, and a candidate move does not require a matching measurement. Requiring every rubric row to spawn a move — or worse, spawning a move whose only purpose is to fix the rubric's own blind spot — inverts the relationship and can make the loop blind to real next steps that have no metric behind them.
 
 This matters most for generative work: building something genuinely new has no current score to report by definition. Forcing an artificial measurement into existence merely to justify an otherwise-obvious next step is exactly the metric-blindness this correction removes. Focusing on metrics can leave the reasoning blind to other things; the measurements exist for the operator's legibility, not as the route.
+
+---
+
+## Destination refinement - 2026-07-27 (first-contact Orient is optional, not mandatory)
+
+The operator corrected a subtler point beneath the todo/rubric-dominance fix: the reasoning loop itself is capable of running without ever consulting Orient or producing a todo list — Destination plus direct target examination is sufficient to reason and act. Historically, in the original full suite, `orient` was not invoked on first contact at all; it ran only after a few plain iterations had accumulated evidence, as a periodic macro-reflection, not a gate.
+
+Work's current mechanism had drifted from that: it stated first-contact Orient as *required* before any Tier 2 or 3 work, treating an absent Orientation the same as a stale one. The operator confirmed the correct framing: on first contact, running Orient is the default, recommended action — it gives a fresh target immediate structure and a visible starting point, a genuine benefit — but it is optional, not a hard gate. A confirmed Destination remains required before Tier 2 or 3 work; Orient does not.
+
+This does not loosen the separate, already-established rule that a confirmed Destination change voids the old rubric, ratings, and todo until a fresh Orient replaces them. That rule concerns a block that exists and is now stale, which risks being misread as current — a different situation from one that has simply never been created, which is honest absence, not a misleading state. The operator's correction was scoped specifically to first contact; the destination-change refresh rule is unchanged.
