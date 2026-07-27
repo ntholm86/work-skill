@@ -468,3 +468,23 @@ The operator corrected a subtler point beneath the todo/rubric-dominance fix: th
 Work's current mechanism had drifted from that: it stated first-contact Orient as *required* before any Tier 2 or 3 work, treating an absent Orientation the same as a stale one. The operator confirmed the correct framing: on first contact, running Orient is the default, recommended action — it gives a fresh target immediate structure and a visible starting point, a genuine benefit — but it is optional, not a hard gate. A confirmed Destination remains required before Tier 2 or 3 work; Orient does not.
 
 This does not loosen the separate, already-established rule that a confirmed Destination change voids the old rubric, ratings, and todo until a fresh Orient replaces them. That rule concerns a block that exists and is now stale, which risks being misread as current — a different situation from one that has simply never been created, which is honest absence, not a misleading state. The operator's correction was scoped specifically to first contact; the destination-change refresh rule is unchanged.
+
+---
+
+## Destination refinement - 2026-07-27 (session synthesis — current articulation)
+
+This section synthesizes, in one place, what today's scattered dated refinements jointly establish, so a fresh reader isn't required to reconstruct it from history. Not new direction — a current-accurate restatement of confirmed direction.
+
+Work exists to prevent practical context loss and cognitive drift in delegated work, and specifically to catch literal prompt compliance that defeats the operator's actual purpose — the central failure this skill exists to make visible and prevent. Destination (operator-held purpose), Orientation (current compressed state), and Trail (agent-authored semantic reasoning) deliver this standalone, with no external dependency.
+
+An optional companion, `llm-harness-proxy`, can add independently captured session evidence under `.acm/sessions/` when stronger assurance is warranted. Work remains complete without it, never claims that mode is active without verifying real session evidence for the current run, and never installs, updates, or routes traffic without operator consent.
+
+The rubric Orient produces is a diagnostic visualization for the operator's legibility — never the mechanism that generates the todo. The highest-leverage next move is judged directly from Destination and the target; it needs no matching rubric row, and inventing one merely to justify an otherwise-obvious step — especially for genuinely new, unscored work — is the exact metric-blindness this rule exists to prevent.
+
+Orient is not a mandatory first-contact gate. A confirmed Destination is required before Tier 2 or 3 work; Orient's first run is the default, recommended path to a clear starting point, but the loop can reason and act directly from Destination and target examination alone when that is genuinely sufficient.
+
+Convergence toward a confirmed Destination is a cross-model claim, not a single-model one. A single model's repeated bounded-silence declarations are evidence of *that model's* plateau, never proof of convergence. When Trail shows several consecutive bounded-silence entries from the same model with no new evidence, Work should name that plateau explicitly and ask the operator to run the next evaluation under a different model before treating the target as converged — it must not silently keep declaring silence under one model and call that "done."
+
+Self-editing discipline is now demonstrated, not just claimed: this session found and closed the same recurring defect class — a stated principle quietly overridden by one contradicting literal instruction elsewhere — six times, then honestly reported that a further internal pass reached a near-flat, ~0.2% reduction once genuine duplication was exhausted. The file's length is close to its honest floor given the no-capability-loss constraint.
+
+Open by evidence, not by design: rubric rows 11 and 12 (todo/rubric decoupling, first-contact-Orient optionality) are instruction-complete but behaviorally unexercised — no run has yet actually skipped Orient on a fresh, unfamiliar, build-something-new target and verified the loop still reasoned soundly without a todo list.

@@ -2,45 +2,47 @@
 
 ## Work current orientation
 
-**Last updated:** 2026-07-27 (`make-first-contact-orient-optional-not-mandatory`, v3.13.0)
+**Last updated:** 2026-07-27 (`session-synthesis-and-cross-model-convergence`, v3.14.0)
 
-**Destination basis:** `Destination refinement - 2026-07-27 (first-contact Orient is optional, not mandatory)`
+**Destination basis:** `Destination refinement - 2026-07-27 (session synthesis — current articulation)`
 
 ### Current rubric
 
 | # | Destination-derived measurement | /10 | Current evidence |
 | --- | --- | ---: | --- |
-| 1 | Intent fidelity over literal compliance | 9 | Unchanged this run; still instruction-complete, behavior untested. |
-| 2 | Practical context continuity | 9 | Unchanged this run. |
-| 3 | Temporal and provenance-separated memory | 9 | Unchanged this run. |
-| 4 | Optional harness integration | 8 | Unchanged this run; no real `.acm/sessions/` evidence exists yet. |
-| 5 | Assurance honesty | 9 | Unchanged this run. |
-| 6 | Selective evidence cost | 9 | Unchanged this run. |
-| 7 | Operator consent and privacy | 9 | Unchanged this run. |
-| 8 | Route neutrality and standalone portability | 9 | Unchanged this run. |
-| 9 | Improve-grade decision reasoning | 9 | This run scoped the fix precisely to first contact and explicitly declined to loosen the separate destination-change refresh rule, rather than over-generalizing for symmetry. |
-| 10 | Observable Autonomy | 8 | Unchanged this run. |
-| 11 | Todo sourced from Destination, not rubric-dominated | 7 | Unchanged; this run's fix is adjacent (whether Orient runs at all on first contact) but distinct from what its todo cites, and adds no new evidence toward this row. |
-| 12 | First-contact Orient is optional, not mandatory | 7 | The readiness invariant, Destination gate, Orient's own trigger list, and one self-check bullet now explicitly distinguish "never created" (optional, default) from "exists but stale" (still void until refreshed). Instruction-complete; no run has yet actually chosen to skip Orient on a fresh project and verified the loop still reasoned soundly without it. |
+| 1 | Intent fidelity over literal compliance | 9 | Unchanged; the synthesis restates this without new mechanism. |
+| 2 | Practical context continuity | 9 | Unchanged. |
+| 3 | Temporal and provenance-separated memory | 9 | Unchanged. |
+| 4 | Optional harness integration | 8 | Unchanged; no real `.acm/sessions/` evidence exists yet. |
+| 5 | Assurance honesty | 9 | Unchanged. |
+| 6 | Selective evidence cost | 9 | Unchanged. |
+| 7 | Operator consent and privacy | 9 | Unchanged. |
+| 8 | Route neutrality and standalone portability | 9 | Unchanged. |
+| 9 | Improve-grade decision reasoning | 9 | Unchanged. |
+| 10 | Observable Autonomy | 8 | Unchanged. |
+| 11 | Todo sourced from Destination, not rubric-dominated | 7 | Unchanged; still instruction-complete, still unexercised. |
+| 12 | First-contact Orient is optional, not mandatory | 7 | Unchanged; still instruction-complete, still unexercised. |
+| 13 | Cross-model convergence awareness | 6 | New. The principle already existed in Destination and README; this run operationalized it into the mechanism (Orient trigger 3, step 6's actual Model-field check and switch-request behavior). Lower-rated than rows 11-12 because it depends on reading Trail history for a pattern across several entries — a more complex behavior to execute correctly than a single-run check, and entirely unexercised: no run has yet actually detected a same-model plateau and asked for a switch. |
 
-**Plateau: 8.7/10.** Rows 1-10 carry over unchanged; row 11 is unchanged from the prior Orient; row 12 is new and instruction-only. No regression, one new instruction-only row.
+**Plateau: 8.5/10.** Rows 1-12 carry over unchanged from the prior Orient (this synthesis restates confirmed direction rather than opening new mechanism scope, except for convergence awareness). Row 13 is new and rated lower than 11/12 given its higher execution complexity. The average moves down slightly (8.7 -> 8.5) purely from adding one harder, less-proven row — not a regression in anything previously working.
 
 ### Rubric changes
 
-Added row 12 because the operator's confirmed correction makes it an independently observable dimension distinct from row 11: row 11 is about what generates the todo's *content*; row 12 is about whether Orient runs at *all* on a fresh target. Both are now instruction-complete and behaviorally unexercised — that is itself worth tracking as a pair, not collapsing into one row, since they could in principle diverge (Orient could become mandatory again while todo-generation stays decoupled, or vice versa).
+Added row 13 because the operator's confirmed correction makes cross-model convergence an independently observable dimension distinct from anything already tracked: rows 11-12 are about a single run's own reasoning; row 13 is about the mechanism recognizing a *pattern across multiple runs and models* and acting on it (requesting a switch), which is a qualitatively different and harder capability. All other rows are retained without re-derivation: the session synthesis explicitly restates existing confirmed direction rather than introducing new scope for them.
 
 ### Current claims
 
-1. **Work's mandatory-sounding language has now been checked against its own stated principles four times in three sessions, always finding the same shape.** A correct principle in prose, quietly overridden by one literal instruction elsewhere — first the duplicated gate step, then rubric-dominance, then bare numeric caps, now the first-contact requirement itself.
-2. **Two genuinely different rows (11 and 12) are both instruction-complete and both behaviorally unverified.** Neither has been exercised because every fix so far has come from self-directed textual audit, not from running Work against a real, unfamiliar, build-something-new external target.
-3. **The self-referential sweep is reaching diminishing returns as a discovery method.** It found four real instances, but continuing to re-read the same file for a fifth instance of the same class is lower leverage now than actually testing rows 11 and 12 against real external use.
+1. **The synthesis closes a real legibility gap without changing direction.** A fresh reader no longer needs to reconstruct "what Work is for" from three separate dated Destination sections; one current-articulation section now states it directly.
+2. **Cross-model convergence was a principle without a mechanism until this run.** Destination and README already said "independent models converging... is strong evidence," but `work/SKILL.md` had no behavior that read Trail's `Model:` field or acted on a same-model plateau. That gap is now closed at the instruction level.
+3. **Three rubric rows (11, 12, 13) now share the same status: instruction-complete, behaviorally unverified.** This is becoming the dominant open theme of this repo's current state — the mechanism text has outpaced its own external exercise across three consecutive sessions of fixes.
 
 ### Highest-leverage todo
 
-Stop sweeping `work/SKILL.md`'s own text for further instances of this pattern for now. The next real leverage is external behavioral verification: run Work against a genuine, unfamiliar, build-something-new target and confirm in that target's own Trail that (a) Orient was run or skipped by actual judgment rather than habit, and (b) any resulting todo cites no rubric row where none is warranted. This item deliberately has **no corresponding rubric row above**: it is a judgment about the discovery method itself, not a measurement of the target.
+Unchanged from the prior Orient, and now reinforced by a third unexercised row rather than displaced: stop auditing `work/SKILL.md`'s own text. The next real leverage is external, behavioral verification — run Work against a genuine, unfamiliar target (ideally one that also produces enough Trail history to test the row-13 same-model-plateau detection directly), and confirm whether Orient's first-contact optionality, rubric-decoupled todo generation, and cross-model plateau detection all hold up outside self-editing. This item has no rubric row of its own by design: it is about the discovery method, not the target.
 
 ### Active operational rules
 
+- Convergence toward a confirmed Destination is a cross-model claim. Before treating repeated bounded silence as convergence, check recent Trail entries' `Model:` field; if several consecutive silence declarations share one model, name the plateau explicitly and ask the operator to run the next evaluation under a different model.
 - The highest-leverage todo is judged by a direct read of Destination and the target's current reality, never by which rubric row is lowest or lacks a candidate move. A todo item with no matching measurement is normal, not a gap.
 - Rating a measurement is diagnostic only, for the operator's legibility; it never itself mandates a corresponding candidate move, and an unobservable axis is not an automatic license to invent one.
 - First-contact Orient is optional and default-recommended, not mandatory; a confirmed Destination change still voids stale rubric/ratings/todo until a fresh Orient replaces them — these are two distinct rules, never conflate them for symmetry.
@@ -59,10 +61,10 @@ Stop sweeping `work/SKILL.md`'s own text for further instances of this pattern f
 
 ### Tested outside-rubric concern
 
-Repeatedly self-auditing this same file for the same recurring class risks becoming its own ceremony — confidence built entirely from internal re-reading rather than external use. The guard is the highest-leverage todo above: shift to external verification rather than a fifth internal sweep.
+A mechanical Model-field-scanning behavior could become its own quiet numeric constraint (e.g., "always check the last N entries") if implemented carelessly — exactly the bare-cardinal-number pattern fixed twice already in this arc. The instruction as written avoids a hard count ("several consecutive... same model"), deliberately, to not reintroduce that class while operationalizing this one.
 
 ### Loop-effectiveness notes
 
-Three consecutive sessions have now found the same underlying shape four times: a correct principle in this file's prose, quietly overridden by one literal instruction elsewhere. Each was found by testing a specific operator concern against literal procedural text, never by re-reading the philosophy paragraphs alone. That method has now paid off four times and is showing diminishing returns as a discovery mechanism; the honest next step is external evidence, not another internal pass.
+This Orient differs from recent ones: it responds to a session-synthesis Destination change (consolidating existing direction) plus one genuinely new mechanism (row 13), rather than another self-audited text defect. The rubric is intentionally not re-derived from scratch for rows 1-12, since the synthesis explicitly claims to restate rather than redirect — re-scoring them without new evidence would manufacture false precision, the same discipline applied in the prior Orient.
 
-Watch for: a fifth self-sweep being run out of habit rather than a genuine new signal; rows 11 and 12 staying instruction-only for too long without ever being tested against a real fresh external target; a future run treating "no rubric row" as license for an unbounded or unjustified todo instead of a legitimately sourced one.
+Watch for: row 13 being exercised the first time a real multi-entry, same-model silence pattern appears in any target's Trail — that is the actual test of whether this instruction converts to behavior; a future run treating the session-synthesis section as license to skip reading the three earlier dated sections it summarizes, when their specific evidence still matters; and the three-row unexercised cluster (11, 12, 13) growing to four or more before any external verification happens.
