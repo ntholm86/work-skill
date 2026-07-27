@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: trusted Destination capture, open-world Orient, risk-sized target mapping, Improve-grade decision reasoning, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.11.1"
+  version: "3.12.0"
   author: "Nils W. Holmager"
 ---
 
@@ -11,11 +11,15 @@ metadata:
 
 *Auditable autonomy: reason about anything, improve anything, show the decisions — cheap enough to use every day, without losing the quality.*
 
-**If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. "Subagent" means a separate helper agent dispatched with its own fresh context; if your tooling has none, every mention of them is skippable. `.acm/` is short for Agent Context Memory — a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three files — `destination.md` (what this target is for), `orientation.md` (the current compressed state and active lessons), and `audit-trail.md` (what happened and why, one entry per run). This file reads and writes those three files and needs nothing else: no tooling, no install step, no sibling files. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
+**If you're new to this:** "operator" means whoever directs the work — you, if you're the one using this file. "Subagent" means a separate helper agent dispatched with its own fresh context; if your tooling has none, every mention of them is skippable. `.acm/` is short for Agent Context Memory — a small convention: a folder at the root of whatever repo is being worked on, holding plain-text memory in three core files — `destination.md` (what this target is for), `orientation.md` (the current compressed state and active lessons), and `audit-trail.md` (what happened and why, one entry per run). An optional `sessions/` directory can hold independently captured model-protocol evidence. This file reads and writes the three core files; it may selectively read sessions but never authors or rewrites them. Work needs no tooling, install step, sibling file, or harness to operate. A few passages below mention a larger "full suite" of separate skills; they exist for people who also have that suite and are safe to skip if you don't.
 
 ## Why this exists, and what it trades away
 
-`work` is a standalone skill: an improvement-reasoning architecture that works on any target — a codebase, a letter, a plan, a book, a piece of music — and leaves a full audit trail of how it reasoned. "Target" below always means *whatever is being worked on*, not just software. Its lineage is a consolidation of a larger suite, and that lineage explains its shape:
+`work` is a standalone skill: an improvement-reasoning architecture that works on any target — a codebase, a letter, a plan, a book, a piece of music — and leaves a full audit trail of how it reasoned. "Target" below always means *whatever is being worked on*, not just software.
+
+The problem it solves is practical context loss and cognitive drift in delegated work. A model can complete the literal prompt while defeating the operator's actual purpose — for example, fabricated supporting comments satisfy a request for comments while destroying a journalist's need for authentic evidence. Work externalizes purpose, reloads current state, preserves decisions and reversals, and tests routes against intent so this failure is easier to prevent, detect, and recover from across sessions. That is a workflow-level claim, not a promise of perfect access to or control over hidden model cognition.
+
+Its lineage is a consolidation of a larger suite, and that lineage explains its shape:
 
 The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` — a sixth skill, contamination/pattern-matching detection, deliberately not folded into this fork) was built when token cost wasn't the binding constraint. It costs tokens on two axes: **loading** (five instruction files instead of one) and **ceremony** (a full interpretation + four-lens examination + reflection essay on every run, even a one-line fix).
 
@@ -28,6 +32,19 @@ The full suite (`intent`, `improve`, `destination`, `orient`, `trail`, `probe` �
 **The one rule that makes the trade honest: preserve decision quality; scale evidence and recording to the stakes.** Micro is cheap because it contains no real choice. Every Standard or Full run uses the same decision operations; domain risk and reversibility determine how much target evidence earns a sufficient map, while the Trail tier determines how much reasoning becomes durable prose. A typo fix and a redesign decision must not cost the same, but a concise record must never hide shallower judgment.
 
 And if a cost/quality trade-off is ever genuinely unavoidable in a run, say so in the trail entry. A silent trade-off is exactly the invisible reasoning Observable Autonomy exists to prevent.
+
+### Optional harness companion
+
+Work has two honest assurance modes:
+
+1. **Standalone Work** uses operator-held Destination, replaceable Orientation, and the agent-authored semantic Trail. It is the default and has no external dependency; Markdown prescribes but cannot prove write timing or complete self-reporting.
+2. **Harness-backed Work** adds relevant session evidence independently captured by [`llm-harness-proxy`](https://github.com/ntholm86/llm-harness-proxy). Claim this mode only after verifying that the current run has corresponding session evidence — directory presence alone is insufficient.
+
+The companion's intended target-local path is `.acm/sessions/`. The proxy currently uses `.harness/sessions/`; migration is companion-side work, so never describe `.acm/sessions/` capture as implemented until the installed proxy proves it. The proxy alone authors session JSONL. Work may read relevant evidence and correlate it with Trail, but never edit it or silently reconcile a disagreement: the Trail records declared intent and rationale; the session records what crossed the captured protocol boundary.
+
+Harness evidence has ceilings. Providers may expose no reasoning payload, only counts, or provider-specific generated reasoning that is not proof of internal causality. Buffered mode can persist before releasing a response; streaming may release chunks before final persistence. The harness does not itself understand operator intent, grant authorization, or prove reasoning correctness. State which evidence was actually available.
+
+When harness-backed assurance is relevant, Work may check whether the companion is absent, incompatible, stale, or of unknown version and offer installation or update from the canonical repository. Do not pay that network/version cost on every ordinary run; trigger it on setup, explicit assurance requests, incompatibility, or stale/unknown state. Never silently install, update, start, or route traffic through the proxy — obtain operator consent first.
 
 ## The loop
 
@@ -68,7 +85,7 @@ Before marking any Destination confirmed, read back its compact meaning and ask 
 
 ### 1. Understand the ask (Intent, fused)
 
-Before touching the target, run one fast check: *what does the operator actually want, and is there a plausible alternative reading?* Three cases, three narration costs:
+Before touching the target, run one fast check: *what does the operator actually want, and is there a plausible alternative reading?* Recover not only the requested output but why it matters, what provenance or authenticity constraints make it useful, and what consequence would make literal completion a failure. Three cases, three narration costs:
 
 **Preserve the enclosing mission across targets.** When one target is selected instrumentally to test, evaluate, or improve another, open the evaluation target's Trail entry before crossing repositories and record four things: the **evaluation target**, the **probe target**, the evidence that would satisfy or falsify the probe, and the condition for returning. Begin the probe target's own pre-action Trail entry by restating those four facts, so its local Destination and Orientation govern safe work inside a boundary they cannot replace. Once the evidence boundary is met, return before taking another probe-local todo and append the evidence plus the return decision to the still-open evaluation entry. Reassess and return sooner when effort becomes disproportionate to the evidence still missing. This rule does not create a second mission for ordinary single-target work; it applies only when the cross-target purpose is explicit in the request, conversation, or Trail.
 
@@ -86,6 +103,8 @@ This step replaces a standalone Intent invocation. It is never optional — only
 For every decision-bearing run, use the same reasoning core. First build a **risk-sized map** before local reasoning: identify the target's major relevant parts, controlling relationships, important unknowns, and the evidence actually inspected. The agent owns the breadth decision. Low-risk, reversible work can stop at a compact map after a cheap disconfirming check; high-risk or unfamiliar domains require wider evidence. Never read an entire solution by reflex, and never treat a narrow read as sufficient merely because it is cheaper.
 
 Treat Orientation's active rules as current reasoning memory, not as unquestionable doctrine. Escalate to historical learning when the domain is high-risk or unfamiliar, an active rule or claim appears contradicted, something surprising changes the target model, or the area is known to contain a prior reversal: search the full Trail for relevant `[!REALIZATION]` and `[!REVERSAL]` markers and read the surrounding entries needed to test provenance and current applicability. Do not read the full chronology by default. Superseded lessons remain evidence, not current instructions.
+
+If `.acm/sessions/` exists, treat it as optional proxy-authored evidence memory, never ordinary hot-path context. Inspect only relevant sessions when risk, contradiction, provenance, an audit request, or a challenged self-report warrants independent evidence. Locate candidates by available session identifiers, timestamps, provider metadata, or the narrowest content search; do not load all traffic by default. Never modify session evidence. If it disagrees with Trail, preserve and surface the disagreement. Verify current-run correlation before claiming harness-backed assurance, and state when provider reasoning or final-persistence evidence is absent. Legacy proxy versions may still write `.harness/sessions/`; that is migration evidence, not permission to claim the intended ACM integration is active.
 
 From that map, state a provisional, falsifiable model of where the target's real weight, risk, or failure sits. Derive the lenses the target requires. **Purpose**, **Inconsistency**, **Overburden**, and **Waste** remain useful defaults, not a closed set; add security, performance, correctness, accessibility, domain practice, or a lens not named here when the model warrants it. Name only what changed the judgment. When the work is a fidelity audit — checking a derivative against its source — compare against the source directly; self-review of the derivative alone reliably misses what was dropped.
 
@@ -180,6 +199,8 @@ No freshness guard (the full suite's staleness check, flagging when a derived ar
 - Did you pick the lowest honest tier — or default to Tier 3 out of habit? Habitual Tier 3 defeats the entire point of this skill.
 - For every Standard or Full run, did step 2 produce a risk-sized map, a falsifiable target model, target-derived lenses, a real route comparison, a structural challenge, and a human-legibility check? The Trail may summarize these compactly; the judgment may not omit them.
 - If Work followed an Orient todo item, did the fresh target model retain it — or was the list silently treated as the route?
+- If a Destination hunch fired, was it tied to a real observed signal and surfaced as a question — or did an agent-authored guess become operative before the operator confirmed, corrected, or rejected it?
+- If harness-backed assurance was claimed, was relevant current-run session evidence actually verified, were provider and streaming ceilings stated, and did Work leave proxy-authored evidence untouched? If install, update, startup, or routing was proposed, did the operator consent before the environment changed?
 - If this target was an instrument for evaluating another, is the probe still missing registered evidence — or did local work continue after the return condition or disproportionate-cost tripwire fired?
 - If you cut a corner for cost anywhere in this run, is the cut visible in the trail entry — or did it happen silently?
 - If this run built more than one new committed file around an inference from step 0 or step 1, did you ask before building the rest — or only label the first one unconfirmed and proceed as if that were enough?

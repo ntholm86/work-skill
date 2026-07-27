@@ -413,3 +413,38 @@ This is the name public and distributable artifacts should use. Attribution must
 Model names in Trail remain execution provenance for particular runs, evaluations, and edits. They do not replace or dilute Nils W. Holmager's authorship of Work, its architecture, or the accumulated project direction. Earlier references to `Nils Holmager` remain historical records and are superseded for current attribution by this confirmed ruling.
 
 This ruling corrects attribution only. It does not broaden the MIT license, claim authorship of linked third-party projects, or require repeated bylines throughout operational memory files.
+
+---
+
+## Destination refinement - 2026-07-27 (the problem Work solves and optional harness memory)
+
+The operator clarified the problem Work exists to solve and its intended relationship with `llm-harness-proxy`.
+
+### The problem
+
+Work exists to prevent operational context loss and cognitive drift when humans delegate consequential work to fallible language models. A model can satisfy the literal wording of a prompt while defeating the human purpose behind it. The governing failure is therefore not merely unauthorized action or forgotten text; it is action taken without a sufficiently accurate model of what the operator is actually trying to achieve.
+
+The operator's examples establish the distinction. A model asked to supply comments for a journalistic article can generate comments that support the article while destroying its credibility because the comments are not from real people. It solved the surface request and violated the actual intent: the journalist needed authentic evidence. Likewise, sandboxing alone cannot supply purpose-awareness; a capable model may route around a boundary it does not understand. Work addresses this reasoning-quality problem by reconstructing intent, preserving the destination across time and targets, challenging literal-but-purpose-defeating routes, and making material decisions reviewable.
+
+Work may accurately claim that it prevents context loss and cognitive drift at the workflow level when its protocol is followed: Destination externalizes operator-held purpose, Orientation reloads current state and lessons, Trail preserves decisions and reversals, and evidence-triggered hunching reduces the gap as the operator learns. It must not turn that into a guarantee about hidden model cognition or perfect compliance.
+
+### The optional harness companion
+
+[`llm-harness-proxy`](https://github.com/ntholm86/llm-harness-proxy) is Work's optional higher-assurance companion, not a mandatory dependency. Standalone Work remains legitimate where the operator declines the surveillance cost or the domain does not warrant it.
+
+When used together, Work writes the semantic account - intent, prediction, decision, outcome, realization, and reversal - while the harness independently captures the model-protocol traffic available from the provider. The records are complementary. Harness evidence can challenge an agent-authored Trail but does not replace the Trail's semantic reasoning, and provider reasoning fields may be absent, provider-specific, incomplete, or not causally faithful.
+
+The intended target-local storage is `.acm/sessions/`, replacing the proxy's current `.harness/sessions/` convention. This makes captured sessions part of the same Agent Context Memory surface that Work and the full skills suite already inspect. Sessions are evidence memory, not ordinary hot-path context: read them selectively when risk, contradiction, provenance, audit, or a challenged self-report warrants it. Do not load all traffic by default.
+
+Raw sessions may contain prompts, tool payloads, source material, or secrets. They should remain private/local by default unless the operator deliberately chooses a retention and publication policy. Moving them under `.acm/` does not imply committing them.
+
+### Companion awareness
+
+Work should know the canonical companion repository and distinguish two assurance modes:
+
+1. **Standalone:** semantic, agent-authored Work Trail with explicitly procedural timing/compliance limits.
+2. **Harness-backed:** the same semantic Trail plus independently captured session evidence.
+
+Work may detect whether a compatible harness is installed and whether a newer release is available when harness-backed assurance is relevant. It must not silently install, update, start, or route traffic through the proxy. Installation and updates require operator consent. Version checking must not add network cost to every ordinary run; use first setup, explicit assurance requests, incompatibility, or a stale/unknown installed version as triggers.
+
+Future Work and proxy design should provide a cheap way to correlate a material Trail entry with the relevant session identifier and harness/protocol version without duplicating raw events into the Trail. Never claim harness-backed assurance merely because `.acm/sessions/` exists; verify session evidence for the run.
