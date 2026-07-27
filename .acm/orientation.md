@@ -2,9 +2,9 @@
 
 ## Work current orientation
 
-**Last updated:** 2026-07-27 (`session-synthesis-and-cross-model-convergence`, v3.14.0)
+**Last updated:** 2026-07-27 (`restore-pea-principles-in-destination-synthesis`, v3.14.1)
 
-**Destination basis:** `Destination refinement - 2026-07-27 (session synthesis — current articulation)`
+**Destination basis:** `Destination correction - 2026-07-27 (session synthesis omitted PEA principles and The One Question — restored)`
 
 ### Current rubric
 
@@ -24,6 +24,8 @@
 | 12 | First-contact Orient is optional, not mandatory | 7 | Unchanged; still instruction-complete, still unexercised. |
 | 13 | Cross-model convergence awareness | 6 | New. The principle already existed in Destination and README; this run operationalized it into the mechanism (Orient trigger 3, step 6's actual Model-field check and switch-request behavior). Lower-rated than rows 11-12 because it depends on reading Trail history for a pattern across several entries — a more complex behavior to execute correctly than a single-run check, and entirely unexercised: no run has yet actually detected a same-model plateau and asked for a switch. |
 
+**PEA-principle mapping, made explicit by this correction:** row 1 (Intent fidelity) measures Operator's Intent; row 10 (Observable Autonomy) measures Observable Autonomy directly; row 13 (Cross-model convergence) measures Convergence Is Silence. All three PEA principles were already being measured; only the prose synthesis had failed to name this lineage.
+
 **Plateau: 8.5/10.** Rows 1-12 carry over unchanged from the prior Orient (this synthesis restates confirmed direction rather than opening new mechanism scope, except for convergence awareness). Row 13 is new and rated lower than 11/12 given its higher execution complexity. The average moves down slightly (8.7 -> 8.5) purely from adding one harder, less-proven row — not a regression in anything previously working.
 
 ### Rubric changes
@@ -32,8 +34,8 @@ Added row 13 because the operator's confirmed correction makes cross-model conve
 
 ### Current claims
 
-1. **The synthesis closes a real legibility gap without changing direction.** A fresh reader no longer needs to reconstruct "what Work is for" from three separate dated Destination sections; one current-articulation section now states it directly.
-2. **Cross-model convergence was a principle without a mechanism until this run.** Destination and README already said "independent models converging... is strong evidence," but `work/SKILL.md` had no behavior that read Trail's `Model:` field or acted on a same-model plateau. That gap is now closed at the instruction level.
+1. **The prior synthesis closed a real legibility gap but was itself incomplete.** It consolidated three scattered Destination sections without a full top-to-bottom read, so it omitted the three PEA principles and The One Question. The correction restores that lineage explicitly; the rubric's substance never actually drifted (see PEA-principle mapping above), only the prose did.
+2. **Cross-model convergence was a principle without a mechanism until this session.** Destination and README already said "independent models converging... is strong evidence," but `work/SKILL.md` had no behavior that read Trail's `Model:` field or acted on a same-model plateau. That gap is now closed at the instruction level.
 3. **Three rubric rows (11, 12, 13) now share the same status: instruction-complete, behaviorally unverified.** This is becoming the dominant open theme of this repo's current state — the mechanism text has outpaced its own external exercise across three consecutive sessions of fixes.
 
 ### Highest-leverage todo
@@ -65,6 +67,6 @@ A mechanical Model-field-scanning behavior could become its own quiet numeric co
 
 ### Loop-effectiveness notes
 
-This Orient differs from recent ones: it responds to a session-synthesis Destination change (consolidating existing direction) plus one genuinely new mechanism (row 13), rather than another self-audited text defect. The rubric is intentionally not re-derived from scratch for rows 1-12, since the synthesis explicitly claims to restate rather than redirect — re-scoring them without new evidence would manufacture false precision, the same discipline applied in the prior Orient.
+This Orient responds to a correction, not a new mechanism: the prior session-synthesis claimed to restate "the current Destination" but was actually grounded in session working memory, not a full top-to-bottom read, and silently omitted the three PEA principles and The One Question. Notably, the *previous* Orient's own "Watch for" line had already named an adjacent risk ("a future run treating the session-synthesis section as license to skip reading the three earlier dated sections it summarizes") without catching the more basic problem: the synthesis itself was never grounded in a full read when it was written. The operator caught it directly; self-audit did not. Rows 1-13 are retained without re-derivation since the rubric's substance was never wrong, only the prose lineage was unstated.
 
-Watch for: row 13 being exercised the first time a real multi-entry, same-model silence pattern appears in any target's Trail — that is the actual test of whether this instruction converts to behavior; a future run treating the session-synthesis section as license to skip reading the three earlier dated sections it summarizes, when their specific evidence still matters; and the three-row unexercised cluster (11, 12, 13) growing to four or more before any external verification happens.
+Watch for: row 13 still being exercised for the first time when a real multi-entry, same-model silence pattern appears in any target's Trail; the three-row unexercised cluster (11, 12, 13) growing further before any external verification happens; and any future claim of "synthesizing" or "restating" Destination in full that is not preceded by an actual complete read of `destination.md` in that same turn.

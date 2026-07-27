@@ -3,7 +3,7 @@ name: work
 description: 'A standalone, target-agnostic improvement-reasoning skill with full auditability: it can examine and improve anything the model can reason about — code, documents, plans, music, letters, anything — while recording material decisions and their outcomes in an auditable trail. One consolidated loop: trusted Destination capture, open-world Orient, risk-sized target mapping, Improve-grade decision reasoning, and always-on Trail. USE WHEN: you want disciplined, auditable improvement reasoning on any target at a single skill-load, especially in long or frequent sessions where token budget is a real constraint.'
 argument-hint: 'The target (repo, file, system) and the request itself'
 metadata:
-  version: "3.14.0"
+  version: "3.14.1"
   author: "Nils W. Holmager"
 ---
 
@@ -64,7 +64,7 @@ Before the first action, classify the run using step 3's depth tiers: Micro only
 
 Before anything else, check the **target repo's** `.acm/` folder (always at the root of the repo being worked on — never the skills install directory).
 
-**Resolve append-only history before treating it as current state.** Destination may preserve dated decisions and implementation-status notes that were true when written. Separate durable operator intent from historical target state: later confirmed sections supersede earlier status claims, and live target evidence decides whether an old "not yet," open item, or implementation gap still exists. Preserve the old text as history; never turn a superseded status line into present work merely because append-only memory still contains it.
+**Resolve append-only history before treating it as current state.** Destination may preserve dated decisions and implementation-status notes that were true when written. Separate durable operator intent from historical target state: later confirmed sections supersede earlier status claims, and live target evidence decides whether an old "not yet," open item, or implementation gap still exists. Preserve the old text as history; never turn a superseded status line into present work merely because append-only memory still contains it. A claim to synthesize or restate "the current Destination" in full carries its own, stricter bar: ground it in an actual top-to-bottom read of `destination.md` at the time the claim is made, not in working memory of recent conversation or a read of only the most recent sections — a partial synthesis presented as complete is itself misleading append-only history.
 
 - If the ask is genuinely Micro, skip this gate and Orient; proceed to step 1 and still complete Trail. Do not create missing destination or orientation files for the Micro run. This exemption also applies when an existing destination is unconfirmed: perform only the mechanical ask, without treating that destination as guidance for broader work.
 - If `.acm/destination.md` exists (or the legacy name `.acm/vision.md`): read it. If the destination is marked unconfirmed, complete a Trail entry for this attempt and stop before Orient or ordinary work; ask the operator to confirm or correct it. For Tier 2 or 3 work, open `orientation.md` at the top and inspect only the `Destination basis` in its first `## Work current orientation` block before Orient — not its rubric or scores. Apply the Readiness invariant below to decide whether Orient runs before step 1: optional on first contact, mandatory to refresh if the basis is stale. Otherwise continue to step 1.
