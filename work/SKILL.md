@@ -3,7 +3,7 @@ name: work
 description: 'Target-agnostic improvement reasoning with full auditability in one skill: recover the operator''s real intent on every prompt, reason at full decision grade over any target — code, documents, plans, systems, anything — record material decisions before acting, and stop honestly when nothing actionable remains. USE WHEN: any real task where reasoning quality and an inspectable record matter, at daily-use token cost.'
 argument-hint: 'The target (repo, file, artifact, system) and the request itself'
 metadata:
-  version: "4.1.0"
+  version: "4.2.0"
   author: "Nils W. Holmager"
 ---
 
@@ -68,10 +68,10 @@ Escalate into historical memory only on trigger — high risk, contradiction, su
 
 ### 4. Trail — always, no exceptions
 
-Every run appends one entry to `.acm/audit-trail.md` (create it with a `# Audit Trail — <target>` header if absent).
+Every run appends one entry to `.acm/audit-trail.md` (create it with a `# Audit Trail — <target>` header if absent). A conversation that produces a decision is a run — there is no "just conversation" once something was decided in it.
 
 - **Micro**: after the act, 1–2 lines — ask, what was done, cost.
-- **Standard/Full**: open the entry **before acting** with the interpretation (where not obvious), the decision, and the falsifiable prediction — plus examination and challenge summaries for Full. After verification, append: outcome versus prediction; a named blind spot (or an honest "none, because…"); **a falsifiable claim about the target itself** that a future run can read and say "still true" or "here is what changed my mind" — this claim, not the summary of what was done, is what carries understanding across sessions; and **one evidence-bearing line recording the history-trigger check** (recurring finding-class · imminent silence · contradicted `[!REALIZATION]` · operator request) — recording the check makes "did not notice" distinguishable from "checked, not fired". Full adds: what a reader who knows this target better than you would push back on, and **1–3 ranked candidate next moves**, one sentence each — the operator may pick, redirect, or ignore them, and a later Orient audits how selections diverged from rankings. Never reconstruct the pre-action half after seeing results: the two-stage shape makes retrospection a visible breach, though plain Markdown cannot prove wall-clock order.
+- **Standard/Full**: open the entry **before acting** with the interpretation (where not obvious) — quoting the operator's load-bearing words verbatim, because paraphrase is where interpretation drift hides — the decision, and the falsifiable prediction — plus examination and challenge summaries for Full. After verification, append: outcome versus prediction; a named blind spot (or an honest "none, because…"); **a falsifiable claim about the target itself** that a future run can read and say "still true" or "here is what changed my mind" — this claim, not the summary of what was done, is what carries understanding across sessions; and **one evidence-bearing line recording the history-trigger check** (recurring finding-class · imminent silence · contradicted `[!REALIZATION]` · operator request) — recording the check makes "did not notice" distinguishable from "checked, not fired". Full adds: what a reader who knows this target better than you would push back on, and **1–3 ranked candidate next moves**, one sentence each — the operator may pick, redirect, or ignore them, and a later Orient audits how selections diverged from rankings. Close the entry with a **one-line digest** (outcome plus what changed) a reader can triage in seconds; throughout, prefer literal quotes of the operator's words, tool output, and diffs over paraphrase — paraphrase drifts toward flattery of the run. Never reconstruct the pre-action half after seeing results: the two-stage shape makes retrospection a visible breach, though plain Markdown cannot prove wall-clock order.
 - **Markers**, never cut for cost: `[!DECISION]`, `[!REALIZATION]`, `[!REVERSAL]`.
 - **Cost line, every entry**: a bucket (light / moderate / heavy) plus rough counts — tool operations, files touched, subagents. Never invent token numbers. Cost is telemetry, never a target.
 - A Micro that reveals a real choice mid-run: stop, reclassify, open the decision-bearing entry (disclosing the mechanical part already done) before acting on the choice.
@@ -89,11 +89,12 @@ Orient answers one question: where is the target relative to its confirmed desti
 One procedure regardless of trigger:
 
 1. **Open pass first**: read the destination and inspect the target *before* reading any inherited rubric. Scan trail markers for still-current lessons.
-2. **Re-derive** ~5–10 measurements from the destination and the evidence; only then read the inherited rubric. Every retained, added, or dropped axis needs a stated reason — divergence is a finding about the old map, not an error.
-3. **Rate** with cited evidence. Deltas only across genuinely comparable retained axes; `not evidenced` is an honest rating.
-4. **Challenge the map**: name one concern the rubric cannot detect, and test it.
-5. **Append a complete new snapshot** — never edit an old one: date + trail slug, destination basis verbatim, rubric, changes with reasons, 1–3 falsifiable claims, the highest-leverage todo, active operational rules, the outside-rubric concern, and a watch-for line. Preserve all earlier content byte-for-byte.
-6. The todo derives from the open pass and the destination, never dominantly from the rubric — a next move with no matching axis is normal. Scores are disposable plateau telemetry: void when the destination shifts, never standing targets.
+2. **Audit the trail before trusting it**: did past predictions actually hold over subsequent runs, or do outcomes conveniently ignore parts of them? Is reversal density plausible — an unbroken all-green trail in complex work indicates post-hoc rationalization, not excellence? Do the actual diffs support the claims made about them? Which corners has the loop never examined, and did operator selections keep diverging from the recorded next-move rankings? Findings here are arc-evidence about the target and go in the snapshot.
+3. **Re-derive** ~5–10 measurements from the destination and the evidence; only then read the inherited rubric. Every retained, added, or dropped axis needs a stated reason — divergence is a finding about the old map, not an error.
+4. **Rate** with cited evidence. Deltas only across genuinely comparable retained axes; `not evidenced` is an honest rating.
+5. **Challenge the map**: name one concern the rubric cannot detect, and test it.
+6. **Append a complete new snapshot** — never edit an old one: date + trail slug, destination basis verbatim, rubric, changes with reasons, 1–3 falsifiable claims, the highest-leverage todo, active operational rules, the outside-rubric concern, and a watch-for line. Preserve all earlier content byte-for-byte.
+7. The todo derives from the open pass and the destination, never dominantly from the rubric — a next move with no matching axis is normal. Scores are disposable plateau telemetry: void when the destination shifts, never standing targets.
 
 Trail timing: record the trigger and a prediction in the trail before writing the snapshot.
 
