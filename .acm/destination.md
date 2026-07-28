@@ -238,6 +238,16 @@ Cost: moderate — roughly 20 tool ops across 4 files plus a GitHub API rename, 
 
 ---
 
+## Destination Correction - 2026-07-28 (context before compression)
+
+The Furesø Water Ledger probe exposed a failure in the daily-use skill's first-contact reasoning: it treated the operator's latest route statement (understand pollution history and present state) as the project destination, despite earlier conversation naming the desired real-world outcome (a cleaner Furesø with more life and fish). This correction confirms that Work's lower-cost Destination form may compress the interview, but it must not compress away the evidence intake that makes hunching trustworthy.
+
+Before forming or updating a Destination, Work must use relevant available context - especially the current conversation, higher-scope Destination, and target-local ACM records where they exist - to distinguish the operator's desired outcome, the responsible route toward it, and any mechanisms deliberately left open. The written `destination.md` remains a necessary but lossy articulation of the operator's moving model. Context-sensitive hunching is one of the mechanisms that narrows that gap; it is not optional decoration.
+
+This does not require reading every historical artifact or running the full Destination interview on every target. Evidence selection remains proportional to stakes. The capability bar is shared with the full Destination skill: hunches are sourced from relevant context, surfaced for operator recognition, and never settled by the agent alone.
+
+---
+
 ## Destination run — 2026-07-26 (one universal path: destination → orient-with-rubric → loop-until-silence)
 
 Operator ran the full Destination skill (not the mini version) to capture a conversation that started from a question about whether an independent-evaluator's convergence-log rules belonged in the general skill. Signal gathered: that conversation itself, this file, and the current `.acm/orientation.md` / `.acm/audit-trail.md` state. Operator's own framing: **"the overall destination remains the same but this is for accuracy"** — this is a refinement of mechanism-shape, not a redirection of "The One Question" above.
