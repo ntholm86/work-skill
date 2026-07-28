@@ -217,3 +217,58 @@ The rewrite was authored and graded by the same model in the same session — th
 The full arc — Intent repair, append-only Orientation, measured cost falsification, redesign argument held for confirmation, operator correction of the design bar, then implementation under the corrected bar — worked as designed: the loop refused to implement on its own authority, and the operator's correction materially changed what was built (a fresh derivation rather than a compression). The no-overwrite boundary recorded in the assessment entry was honored and then explicitly released.
 
 **Watch for:** the first external-task run under v4; independent-model reading of the new contract; whether the Escalations section actually stays cold in ordinary runs or gets read every time (which would erase the economy win); and any capability regression traceable to cut v3 prose — each such find is a `[!REALIZATION]` for the trail.
+
+## Work current orientation
+
+**Snapshot:** 2026-07-28 (`orient-run-operator-requested`)
+
+**Destination basis:** unchanged since the prior snapshot — "Work must be a token-efficient consolidation of the full PEA reasoning architecture, not a lighter approximation of it... It must preserve the full interpretive force of Operator's Intent and the full Improve-grade reasoning process for every meaningful prompt," plus the confirmed refinement that the Opus-era suite is the floor, not the ceiling, and the honest cost comparator is Intent plus Improve at 28,886 characters. No new confirmed direction since the last snapshot; three trail entries have landed against this same basis (v4.0.1, v4.1.0, v4.2.0).
+
+### Current rubric
+
+| # | Destination-derived measurement | /10 | Current evidence |
+| --- | --- | ---: | --- |
+| 1 | Always-on recovery of operator intent | 7 | Unchanged. No new external behavioral evidence since the last snapshot — step 2's text is untouched by the three restoration entries. |
+| 2 | Purpose and legitimacy constrain candidate routes | 7 | Unchanged, same reason as axis 1. |
+| 3 | Improve-grade target reasoning on meaningful work | 8 | Unchanged. The two restored classes (arc-evaluation recording, anti-confabulation audit) live in step 4/5, not step 3's map-model-challenge core. |
+| 4 | Four-principle integration | 8.5 | Rises modestly: the restored anti-confabulation audit duty (distrust the record, check reversal density, diff-vs-claim) is a direct, explicit reinforcement of Observable Autonomy that v4.0.0 had thinned to an unenforced writing-side honesty norm. Contract-level only. |
+| 5 | Observable autonomy and correction capacity | 9 | Unchanged at the ceiling set by the last snapshot; the 4.2.0 restoration reinforces rather than newly earns this axis. |
+| 6 | Daily-use efficiency without cognitive reduction | 8 | Measured: 16,783 characters, 0.58x the 28,886 baseline (was 0.51x at v4.0.0). Cost rose as capability was restored but remains well under the confirmed ceiling. Held at 8 rather than raised, because the ratio moved the wrong direction even though it stayed within bounds — efficiency is not improving further, it is spending its margin. |
+| 7 | Standalone, target-agnostic usability | 9 | Unchanged. |
+| 8 | Independent evidence and convergence boundaries | 8 | Rises from 7: this is the first axis with an actual independent-model data point correlating with a specific restoration — the operator's external Google rating moved 7.5 to 8.5 across the two restoration commits. Still weak (one rater, no methodology disclosed, self-selected re-checks) but no longer `not evidenced`. |
+| 9 | Self-audit honesty under repeated self-targeting *(new axis)* | 6 | Added because this snapshot is the first time v4's own new "audit the trail before trusting it" duty has been exercised on itself. Finding: three consecutive prior entries each narrate "found and closed exactly one more restorable gap," which is the specific shape v4.2.0's own reversal-density rule flags as suspect. Diff-vs-claim check (re-measuring characters, re-reading the restored text) confirms the entries are not fabricated, but reversal density stayed thin (one `[!REVERSAL]`, a process collision rather than a reasoning reversal) across four "successful" entries in a self-audited rewrite of itself. Rated moderate, not high, until an externally-sourced check (a different model, or a genuinely independent task) breaks the pattern. |
+
+**Plateau: 7.8/10.** Effectively flat against the prior 7.9, not a decline in what v4 does but a correction in how much credit self-graded contract changes should draw. The gains on axes 4, 6-context, and 8 are offset by introducing axis 9 at a deliberately moderate rating — exercising the newly restored self-audit duty on this very arc, honestly, rather than letting three clean-looking restoration entries in a row read as accumulating proof of quality.
+
+### Rubric changes
+
+Axis 9 added: the prior rubric could not detect the self-referential-evidence risk this arc has been accumulating, because no prior snapshot had yet exercised v4's own new distrust-the-record duty against this session's own trail. Axes 1, 2, 3, 5, 7 held flat: no new evidence landed on their specific bars since the last snapshot — the three restoration entries changed step 4/5 text and one external rating, not step 2/3 behavior. Axis 6's rating held rather than raised despite passing every bound, because the honest read of "spending down the compression margin while restoring capability" is not further improvement.
+
+### Current claims
+
+1. **The two restored classes (arc-evaluation recording, anti-confabulation audit) are real and hold under re-measurement — this is not the risk.** The risk is procedural: a model auditing its own rewrite in the same session, across consecutive turns, produces a trail shape (dense findings, thin reversals) that its own rules now name as suspect evidence of post-hoc rationalization even when the underlying claims check out.
+2. **Independent evidence has started arriving but is still thin.** One external rater, two data points (7.5, then 8.5), no disclosed methodology. It correlates with restoration but cannot yet carry the weight "independent-model evidence" is meant to bear in the destination's testability clause.
+3. **Daily-use cost is now a budget being spent, not a number that keeps improving.** 0.58x baseline with two real capability classes restored is a good trade, but the trend line (0.51x to 0.58x across three commits) means a third undiscovered class would need to be evaluated against a shrinking margin, not an unlimited one.
+
+### Highest-leverage todo
+
+Break the self-referential pattern named in axis 9 before doing a fourth restoration pass on this same repo. Concretely: either (a) run the blind head-to-head external task (still the top-ranked candidate next move from the last two trail entries and now the most load-bearing one), or (b) have an independent model read v4.2.0 cold and report findings before any further self-diff against Intent/Destination. Continuing to self-diff v4 against suite skills without external grounding would itself become the ceremony this rubric now watches for.
+
+### Active operational rules
+
+- Treat every meaningful prompt as vocabulary-limited evidence of a richer operator outcome. Recover the outcome and valid-success conditions before selecting a route, and reject a route that defeats them.
+- Keep map, model, challenge, route comparison, prediction, verification, and legibility for every decision-bearing run. Scale evidence breadth and record length, not the reasoning operations.
+- Preserve Destination, Trail, and Orientation append-only. The last complete Orientation snapshot supplies current state; earlier snapshots are evidence, not active rules.
+- Withhold behavioral credit from self-graded contract changes. Only external-task and independent-model evidence can raise the capability axes — and now weigh even that evidence by its methodology, not just its direction.
+- Treat the Opus-era suite as floor and evidence: departures from its converged operations must be earned, stated, and testable.
+- When a self-targeting arc produces several consecutive "found one more restorable gap" entries, name the pattern explicitly (per axis 9) rather than let clean-looking entries accumulate as proof of quality.
+
+### Tested outside-rubric concern
+
+The rubric as inherited could not detect a self-referential-evidence risk building silently across several successful-looking entries in a single self-targeting arc. Tested by adding axis 9 and applying v4's own new audit duty against this session's own trail rather than only against the target file's prose. The result held up on the diff-vs-claim check but confirmed the reversal-density concern is real. Residual, still untested: whether an actual independent model reading v4.2.0 cold would find the same two classes already restored, a third class, or nothing — no run of any kind has yet supplied that evidence.
+
+### Loop-effectiveness notes
+
+The arc since the last snapshot (v4.0.1 through v4.2.0) shows real self-correction — the convergence-wiring gap and the anti-confabulation audit class were both genuine, verifiable capability restorations, not cosmetic churn. But the loop has now audited the target four times without once stepping outside its own session to get grounding, and this snapshot is the first point where the loop's own newly-restored rules were pointed at that fact rather than only at the file. That is the arc's most important finding: v4.2.0's anti-confabulation duty works — it just took until the fifth entry in this arc to actually apply it to the arc itself instead of only to the target.
+
+**Watch for:** the outcome of the blind head-to-head or an independent model's cold read — whichever happens first is the evidence this rubric has been withholding credit pending; a fourth self-diff (Intent/Destination) run before either of those lands should be treated as a yellow flag, not a routine next step; and whether the daily-use cost ratio keeps climbing if further restorations are found.
