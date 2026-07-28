@@ -3,7 +3,7 @@ name: work
 description: 'Target-agnostic improvement reasoning with full auditability in one skill: recover the operator''s real intent on every prompt, reason at full decision grade over any target — code, documents, plans, systems, anything — record material decisions before acting, and stop honestly when nothing actionable remains. USE WHEN: any real task where reasoning quality and an inspectable record matter, at daily-use token cost.'
 argument-hint: 'The target (repo, file, artifact, system) and the request itself'
 metadata:
-  version: "4.0.1"
+  version: "4.1.0"
   author: "Nils W. Holmager"
 ---
 
@@ -57,7 +57,7 @@ Anything that edits `.acm/destination.md` or the target's own statement of purpo
 Every decision-bearing run gets one connected act of judgment — compact for Standard, deep for Full, skipped never:
 
 - **Map** the target at risk-sized breadth: the relevant parts, the relationships that control the outcome, the unknowns, and what you actually inspected versus assumed. Low-risk reversible work stops at a cheap disconfirming check; high-risk or unfamiliar territory earns wider evidence.
-- **Model**: a falsifiable statement of where the real weight, risk, or failure sits. Derive the analytical lenses the target actually warrants — purpose-fit, inconsistency, overburden, and waste are defaults, not a cage.
+- **Model**: a falsifiable statement of where the real weight, risk, or failure sits. Derive the analytical lenses the target actually warrants — purpose-fit, inconsistency, overburden, and waste are defaults, not a cage — and name in the trail which lenses you applied and what each revealed, including "nothing actionable".
 - **Challenge** your own model: what am I not seeing? What evidence would disconfirm this? Is the structure itself wrong, so that no incremental fix helps? When structure is wrong, argue for redesign — sketch it, weigh it against incremental repair, and stop for the operator. Don't patch a broken shape.
 - **Compare routes**, always including "no change", and redesign when credible. If only one route remains, name what eliminated the others.
 - **Decide one outcome**: a change (with a prediction — "I will do X; I expect Y; I expect Z *not* to happen"), a redesign argument (surface it, don't act on it), or bounded silence (name the bar the target passed and the bars you did not test — unbounded silence is invalid; if this model has declared silence here before, apply the Convergence escalation).
@@ -71,7 +71,7 @@ Escalate into historical memory only on trigger — high risk, contradiction, su
 Every run appends one entry to `.acm/audit-trail.md` (create it with a `# Audit Trail — <target>` header if absent).
 
 - **Micro**: after the act, 1–2 lines — ask, what was done, cost.
-- **Standard/Full**: open the entry **before acting** with the interpretation (where not obvious), the decision, and the falsifiable prediction — plus examination and challenge summaries for Full. After verification, append outcome versus prediction and a named blind spot (or an honest "none, because…"); Full adds reflection and a next-move candidate. Never reconstruct the pre-action half after seeing results: the two-stage shape makes retrospection a visible breach, though plain Markdown cannot prove wall-clock order.
+- **Standard/Full**: open the entry **before acting** with the interpretation (where not obvious), the decision, and the falsifiable prediction — plus examination and challenge summaries for Full. After verification, append: outcome versus prediction; a named blind spot (or an honest "none, because…"); **a falsifiable claim about the target itself** that a future run can read and say "still true" or "here is what changed my mind" — this claim, not the summary of what was done, is what carries understanding across sessions; and **one evidence-bearing line recording the history-trigger check** (recurring finding-class · imminent silence · contradicted `[!REALIZATION]` · operator request) — recording the check makes "did not notice" distinguishable from "checked, not fired". Full adds: what a reader who knows this target better than you would push back on, and **1–3 ranked candidate next moves**, one sentence each — the operator may pick, redirect, or ignore them, and a later Orient audits how selections diverged from rankings. Never reconstruct the pre-action half after seeing results: the two-stage shape makes retrospection a visible breach, though plain Markdown cannot prove wall-clock order.
 - **Markers**, never cut for cost: `[!DECISION]`, `[!REALIZATION]`, `[!REVERSAL]`.
 - **Cost line, every entry**: a bucket (light / moderate / heavy) plus rough counts — tool operations, files touched, subagents. Never invent token numbers. Cost is telemetry, never a target.
 - A Micro that reveals a real choice mid-run: stop, reclassify, open the decision-bearing entry (disclosing the mechanical part already done) before acting on the choice.
