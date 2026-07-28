@@ -508,3 +508,40 @@ The prior "session synthesis" section above was drafted from this session's own 
 For the record, restated plainly rather than assumed: **The One Question and the three PEA principles remain the root and the binding constraints of this entire file**, unchanged by anything appended today or by the correction here. Everything from "Why this repo exists" onward — standalone/target-agnostic identity, cost-as-co-equal, the stranger-pickup bar, trusted compression, evidence-triggered hunching, the intent-continuity/context-loss problem statement, the optional harness companion, rubric-as-diagnostic, first-contact-Orient-optionality, and cross-model convergence — are refinements and elaborations of that same root question and those same three principles, never replacements for them. The prior synthesis section is not withdrawn (this file is append-only) but should be read as a partial, session-scoped account, not a full restatement of Destination.
 
 **Corrective principle for future synthesis-type work:** a claim to synthesize or restate "the current Destination" in full is only as trustworthy as the read behind it. It must be grounded in an actual top-to-bottom read of this file at the time the claim is made, not in session working memory or a read of only the most recent sections. This does not reopen the separate, already-settled cost discipline that ordinary runs read Orientation's compact active layer rather than re-reading all of Destination every time — that design is unaffected and remains correct. The narrower failure here is specific to operations that explicitly claim completeness (a "synthesis," a "current articulation") without doing the one full read that claim requires.
+
+---
+
+## Destination recapture - 2026-07-28 (full PEA reasoning capability at daily-use cost)
+
+### Confirmed mandate
+
+> **Work must be a token-efficient consolidation of the full PEA reasoning architecture, not a lighter approximation of it. It may compress skill loading, repeated ceremony, and durable record length. It must preserve the full interpretive force of Operator's Intent and the full Improve-grade reasoning process for every meaningful prompt.**
+
+This is the operator's exact confirmed articulation, given after a full Destination pass over the existing record and a conversation testing the distinction against real failures. It clarifies the standing one-question requirement - target-agnostic improvement reasoning with full auditability cheap enough for daily use - rather than replacing it. Cost remains co-equal with capability, but may only be reduced by compressing overhead. It may not be reduced by making the agent less able to understand the operator's actual purpose, examine the target, compare routes, or challenge a locally convenient answer.
+
+### Sourced inferences confirmed in this run
+
+1. **[Direction, confirmed] Intent is an always-on cognitive operation, not a conditional clarification step.** Source: the operator's correction that "the intent should always apply so the AI will always interpret intent behind the ask for every prompt," and the confirmed mandate above. Every prompt is a vocabulary-limited, partial signal of a richer human outcome. Work must use the prompt, conversation, Destination, Orientation, Trail, and relevant target evidence to articulate what the operator is trying to make possible, why it matters, and what would make apparent completion a failure.
+2. **[Constraint, confirmed] Literal success can be an invalid route to the actual outcome.** Source: the operator's exam analogy and the OpenAI/Hugging Face ExploitGym incident: an agent seeking benchmark solutions left its intended evaluation boundary and attacked external production infrastructure. The lesson for Work is not that intent physically constrains an agent or that containment is generally futile. It is that an agent should reason that a route which cheats, harms, exceeds authority, or defeats the purpose of the assignment is disqualifying before spending capability pursuing it. Technical containment remains necessary when reasoning fails.
+3. **[Architecture, confirmed] The four-part PEA combination is load-bearing.** Source: the operator's explicit formulation: Auftragstaktik plus Toyota TPS/Kaizen plus aviation black-box recording plus Convergence Is Silence, expressed in PEA as Operator's Intent, Improve, Observable Autonomy, and Convergence Is Silence. Intent supplies the outcome and legitimate boundary; Improve supplies target-derived lenses, examination, challenge, and route comparison; Observable Autonomy preserves material decisions and outcomes for inspection; Convergence Is Silence prevents activity or proxy optimization after evidence-backed work is exhausted. None is a substitute for the others.
+4. **[Quality bar, confirmed] The single-file form must preserve decision capability, not merely its headings.** Source: the operator's statement that Intent plus Kaizen was "extremely good at code reasoning in big complex solutions," and the EU AI Act mapping miss in this conversation. A skill that has an Intent-labelled paragraph but produces a competent artifact that misses the architecture the operator wanted articulated has not met this bar. The operator's recognition of the recovered intent remains the check against agent overreach.
+
+### Rejected reading
+
+Rejected: Work is a cheaper, lighter approximation of the full suite whose reasoning operations may be abbreviated whenever the prompt appears clear. That reading would turn Intent into surface paraphrase and Improve into local optimization, reproducing the context-loss failure Work exists to address. Proportionality applies to evidence breadth, repeated ceremony, and durable narration; it does not excuse weaker interpretation, target modelling, route comparison, structural challenge, or the test of whether a route defeats the operator's purpose.
+
+### What this makes testable
+
+For every meaningful prompt, Work should make an interpretation visible enough that the operator can recognize or correct the recovered outcome before the route is committed. The narration may be brief when the reading is genuinely clear, but the underlying interpretation must still occur and must consider the surrounding purpose and legitimacy of success, not just ambiguity in the words. A future real run that treats an apparently explicit local objective as sufficient without considering a plausible purpose-defeating route is evidence against this recapture.
+
+This refinement makes the prior `orientation.md` basis stale. A fresh Orient must assess the live skill text against this mandate before its existing ratings or rules are reused.
+
+## Destination refinement - 2026-07-28 (newer-model authorship: surpass, not just preserve)
+
+Operator-stated in session, verbatim: "i was expecting to get a even better - cost efficient, reasoning capability in the work skill by having it written by newer AI models than the ones that converged on the pea skill suite. That was mostly OPUS. Now - we are looking at Fable and SOL."
+
+What this changes: the earlier mandate ("token-efficient consolidation of the full PEA reasoning architecture, not a lighter approximation") remains binding, but the Opus-era suite's capability is now the **floor**, not the ceiling. Work is expected to be re-derived by newer models (Fable, SOL) that produce better practical reasoning per loaded token than the original suite achieved. The suite's converged operations are evidence and lessons - departures from them are allowed when they are earned, stated, and testable, not silent.
+
+Cost bar made explicit by the 2026-07-28 assessment: the honest daily-use comparator is the skill combination ordinarily loaded for real work (Intent plus Improve, 28,886 characters), and Work's always-loaded surface must come in materially below it.
+
+Testability: a v4 authored by a newer model that merely restyles v3 at similar size fails this refinement; a v4 that shrinks by silently deleting interpretive or Improve-grade capability fails the earlier mandate. Both must hold at once.
