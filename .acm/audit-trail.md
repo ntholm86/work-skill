@@ -2195,3 +2195,7 @@ Micro. Model: Claude Fable 5 (GitHub Copilot). Operator authorized commit and pu
 **Candidate next moves, ranked.** 1. Operation-diff v4 against `orient/SKILL.md` and `trail/SKILL.md` under the same Improve governance - the blind spot above, cheapest next evidence. 2. The blind head-to-head external task (v4.1.0 vs Intent plus Improve) - the decisive acceptance evidence, now fairer since the known cut class is restored. 3. Re-run the external Google AI rating on v4.1.0 - weak evidence, but a free check of whether the restored operations move perceived score.
 
 Cost: moderate - 9 tool operations, 2 files written, 1 external skill read end-to-end, 0 subagents.
+
+## 2026-07-28 - external-rating-recheck-after-v4-1-0
+
+Micro. Model: Claude Fable 5 (GitHub Copilot). The operator re-ran the external Google AI rating on v4.1.0 (candidate next move 3 from the previous entry): 8.5, up from 7.5 on v4.0.x, still below v3's 9.5. Directionally consistent with the previous entry's falsifiable claim - restoring the cut evaluation-recording class moved an independent rater's perception without returning to v3's mass. The remaining 1.0 gap is unattributed: either the not-yet-diffed Orient/Trail operation classes, or pure length/coverage bias in the rater. The score stays telemetry, not a target - the decisive evidence remains the blind head-to-head. Cost: light - 1 file written.
