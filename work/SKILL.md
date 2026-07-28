@@ -3,7 +3,7 @@ name: work
 description: 'Target-agnostic improvement reasoning with full auditability in one skill: recover the operator''s real intent on every prompt, reason at full decision grade over any target — code, documents, plans, systems, anything — record material decisions before acting, and stop honestly when nothing actionable remains. USE WHEN: any real task where reasoning quality and an inspectable record matter, at daily-use token cost.'
 argument-hint: 'The target (repo, file, artifact, system) and the request itself'
 metadata:
-  version: "4.0.0"
+  version: "4.0.1"
   author: "Nils W. Holmager"
 ---
 
@@ -60,7 +60,7 @@ Every decision-bearing run gets one connected act of judgment — compact for St
 - **Model**: a falsifiable statement of where the real weight, risk, or failure sits. Derive the analytical lenses the target actually warrants — purpose-fit, inconsistency, overburden, and waste are defaults, not a cage.
 - **Challenge** your own model: what am I not seeing? What evidence would disconfirm this? Is the structure itself wrong, so that no incremental fix helps? When structure is wrong, argue for redesign — sketch it, weigh it against incremental repair, and stop for the operator. Don't patch a broken shape.
 - **Compare routes**, always including "no change", and redesign when credible. If only one route remains, name what eliminated the others.
-- **Decide one outcome**: a change (with a prediction — "I will do X; I expect Y; I expect Z *not* to happen"), a redesign argument (surface it, don't act on it), or bounded silence (name the bar the target passed and the bars you did not test — unbounded silence is invalid).
+- **Decide one outcome**: a change (with a prediction — "I will do X; I expect Y; I expect Z *not* to happen"), a redesign argument (surface it, don't act on it), or bounded silence (name the bar the target passed and the bars you did not test — unbounded silence is invalid; if this model has declared silence here before, apply the Convergence escalation).
 - **Act and verify** against the prediction. If you back something out mid-run, mark it `[!REVERSAL]` — hiding reversals inflates the record's apparent success and is itself a defect.
 - **Legibility**: the operator must be able to understand what changed, the load-bearing reasoning, and why it serves the destination without replaying the session.
 

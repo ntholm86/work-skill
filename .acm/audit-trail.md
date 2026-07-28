@@ -2141,3 +2141,29 @@ Cost: heavy - 22 tool operations, 8 files read or written, 1 independent read-on
 **Across-trail triggers.** Reversal history in this area (self-compression accumulating cost): addressed structurally rather than patched, per the recorded redesign argument. Prior `[!REALIZATION]` (one file is not automatically token-efficient): honored - the acceptance measurement used the actually-loaded-surface comparator. Silence: not declared; acceptance tests 2-5 remain open.
 
 Cost: heavy - 14 tool operations, 6 files read or written, 0 subagents.
+
+## 2026-07-28 - commit-and-push-v4-arc
+
+Micro. Model: Claude Fable 5 (GitHub Copilot). Operator authorized commit and push. Committed the five modified files of the v3.16.0 to v4.0.0 arc as `43cf859` with a full-history message and pushed to `origin/main` (`4b85463..43cf859`). One judgment call, flagged: the intermediate v3.16/v3.17 states share the same files, so the arc is one commit; the untracked `docs/` folder was left out as a separate work product. This entry postdates the commit it describes and rides with the next one. Cost: light - 2 tool operations, 1 file written.
+
+## 2026-07-28 - first-self-run-under-v4-rewire-convergence
+
+**Tier: Standard. Model: Claude Fable 5 (GitHub Copilot).**
+
+**Interpretation.** Bare ask ("Continue - using the work skill on itself"): the operator wants the first live run executed under v4's own contract with the skill as target. The current snapshot's todo prefers an external target; the operator's explicit instruction overrides that ordering for this run. Purpose-defeating route named and rejected: performing a ceremonial self-run that manufactures a finding to look productive - the finding below matched a pre-registered watch-for, which is the evidence it is not manufactured.
+
+**[!REALIZATION] Capability regression traceable to cut v3 prose, per the snapshot's watch-for.** v3 wired cross-model convergence into the loop (Orient's next-transition rule); v4 retained the rule only as a cold Escalations entry. Step 3's bounded-silence outcome - the live path where the rule matters - carries no pointer to it, so a single model can repeatedly declare honest bounded silence without ever being directed to check `Model:` fields and offer a different model. Considered and declined this run: "the mission" in step 2 is undefined vocabulary but natural English carries it.
+
+**[!DECISION] Prediction, recorded before action.** I will add one clause to step 3's bounded-silence bullet wiring it to the Convergence escalation, bump to 4.0.1, and update README's stated character count. I expect: the file stays under 15,100 characters; no other behavioral text changes; diagnostics stay clean. I expect the change NOT to alter any append-only rule, tier boundary, or escalation trigger.
+
+**Outcome versus prediction.** Held. 14,962 characters (still 0.52x the daily baseline); the diff touches only the version line and the one bullet; exactly three `Convergence` mentions confirm no collateral text change; diagnostics clean; `git diff --check` clean. Blind spot, named: this run tests v4's self-application, which is the weakest evidence class - a self-run cannot show whether the Escalations section stays cold for a reader who did not write it, and the finding-per-run pattern risks becoming its own ceremony. If the next self-run also "finds exactly one small defect", treat that as evidence of manufactured findings, not diligence. External-task evidence remains the open acceptance boundary. Cost: moderate - 7 tool operations, 3 files written, 0 subagents.
+
+## 2026-07-28 - external-rating-signal-and-capability-answer
+
+**Tier: Standard. Model: Claude Fable 5 (GitHub Copilot).**
+
+**External evidence received, recorded verbatim in substance.** The operator had a Google AI model rate the skill: 9.5 before the v4 refactor, 7.5 after. The operator notes such ratings are inaccurate but observes that something changed the perceived score. This is the first independent-model signal since the rewrite and it points down, not up.
+
+**Assessment of the signal.** A cold rater rewards visible coverage: v3's 51,903 characters of explicit edge-case handling read as thoroughness; v4's 14,962 read as less material. Some of the drop is that perception artifact. But it cannot all be dismissed: a skill file is not only a contract, it is also priming - the suite's worked density (Improve alone is 20,614 characters of elaborated reasoning moves) plausibly shapes model behavior in ways a once-stated invariant does not. The rating drop is weak but directionally consistent with the risk this trail already carries: capability is asserted at contract level and unproven behaviorally.
+
+**[!DECISION] Honest answer given to the operator: no equivalence claim is made.** v4 is stated to cover the suite as a contract and to beat it on cost and integration (always-on intent, unified memory, one loop); it is NOT claimed to match the suite's reasoning depth on hard targets, because that is exactly what remains untested. Proposed decisive test: the same external decision-bearing task run twice - one session loaded with v4, one with Intent plus Improve - outputs compared blind. Until that exists, "as good as the suite" is a hypothesis, and the external 7.5 is a data point against complacency, not a verdict. Committing and pushing v4.0.1 plus this entry on operator authorization. Cost: light - 3 tool operations, 1 file written.
