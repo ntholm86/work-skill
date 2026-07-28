@@ -2258,6 +2258,32 @@ Cost: moderate - 12 tool operations, 3 files written, 2 external skills read end
 
 Cost: heavy - 11 tool operations, 2 files written, 0 subagents.
 
+## 2026-07-28 - improve-run-direct-on-target-no-comparison
+
+**Tier: Standard. Model: Claude Fable 5 (GitHub Copilot). Governing process: the full Opus-era `improve/SKILL.md` again, but this run examines v4.2.0 directly - no comparison source file - per operator instruction "now use the improve skill on the work skill."**
+
+**Interpretation and named tension.** Operator's words, verbatim: "now use the improve skill on the work skill." This directly follows the just-recorded Orient todo escalating external grounding *before* further self-diffing against suite skills - naming that tension rather than silently proceeding. Read as a distinct, legitimate action from the deprioritized "diff vs Intent/Destination" move: this is Improve's full loop applied to v4.2.0 on its own merits, not another suite comparison. Treated explicitly as a test of the axis-9 self-audit-honesty concern: if this finds "one more restorable gap" of the same shape as the last three entries, that confirms the risk; if it finds something structurally different, or nothing, that is real (if still self-sourced) signal either way.
+
+**Lenses (named).** *Purpose:* v4.2.0 still serves the confirmed destination; no purpose-fit defect found. *Inconsistency* (found, actionable): the Self-check section at the file's end has not changed since v4.0.0, but the Trail section it is meant to gate has grown two duties since - the falsifiable target-claim and history-trigger-check line (v4.1.0), and reader-pushback, ranked next moves, digest, and verbatim-quote preference (v4.2.0). A run following only the Self-check list could skip all four newer duties and still believe itself compliant. *Overburden:* step 3's bullet list is dense but proportional to Full-tier stakes; nothing actionable. *Waste:* nothing actionable beyond the inconsistency above.
+
+**Challenge.** Considered whether the Self-check section itself is the wrong shape (redundant with Trail's own requirements) rather than merely stale - rejected: Self-check is a distinct compact pre-flight gate, not a duplicate of Trail's authoring instructions, and collapsing it would remove the one place a rushed run can verify compliance in six lines instead of re-reading the whole Trail section.
+
+**[!DECISION] One incremental change, with prediction.** Add one compact Self-check bullet closing the gap: trail entries close with a falsifiable target-claim, an evidence-bearing history-trigger line, and (Full) reader pushback plus ranked next moves - nothing left for the reader to infer. Version 4.3.0. Prediction: file stays under 17,300 characters (still under 0.6x baseline); the only edit is this one bullet plus the version line; diagnostics and `git diff --check` clean. I expect this finding to be structurally different from the prior three (drift between two internal sections, not a suite-comparison gap) - which is itself the falsifiable claim under test for axis 9, not an assumption.
+
+**Outcome versus prediction.** Held. 17,029 characters (0.59x baseline); single bullet plus version line, nothing else touched; diagnostics and `git diff --check` clean.
+
+**Falsifiable claim about the target.** This finding differs structurally from the prior three: it was self-inflicted drift between two sections of v4 itself (Trail grew duties, Self-check didn't track them), found by reading the file whole rather than diffing against another text. That is real signal against pure ceremony - it is not "found one more suite-shaped gap" again. But it does not resolve the deeper axis-9 concern: the same model still authored the finding, the fix, and this claim about its own significance. A future run that finds a fourth internal-drift defect of this same shape should be read as evidence the file is still actively decaying under its own edits, not as further proof of diligence.
+
+**Blind spot.** This pass read the file end-to-end once and stopped at the first structurally-real finding; it did not exhaustively cross-check every section against every other section for similar drift (e.g., whether the Escalations section's promises match what steps 1-5 actually invoke it for). A slower, adversarial full cross-reference was not performed.
+
+**Reader who knows this target better would push back.** "A missing self-check bullet is a minor finding for a Standard-tier entry with this much ceremony around it - you built an elaborate justification for running Improve on yourself again and the yield was one checklist line." Fair. Recorded plainly rather than inflated: this is a small, real, structurally-honest finding, not evidence that the self-referential-evidence problem named at Orient has been solved.
+
+**History-trigger check.** Recurring finding-class: FIRED - restoration/drift findings across five consecutive entries remains the pattern, though this one's shape differs (internal drift, not suite-comparison). Imminent silence: not fired - a change was made. Contradicted `[!REALIZATION]`: not fired. Operator request: FIRED - direct instruction to run Improve on the work skill.
+
+**Digest: found and fixed a real but minor internal-consistency gap (Self-check didn't track two duties Trail gained in v4.1.0/v4.2.0); 17,029 chars (0.59x baseline); the Orient-escalated need for external grounding remains open and unaddressed by this run.**
+
+Cost: light - 6 tool operations, 2 files written, 0 subagents.
+
 ## 2026-07-28 - improve-governed-diff-against-orient-and-trail
 
 **Tier: Full. Model: Claude Fable 5 (GitHub Copilot). Governing process: `improve/SKILL.md` v3.10.0, same as the previous experiment. Operator selected ranked candidate 1 ("ok lets do that").**

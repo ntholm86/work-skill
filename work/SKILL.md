@@ -3,7 +3,7 @@ name: work
 description: 'Target-agnostic improvement reasoning with full auditability in one skill: recover the operator''s real intent on every prompt, reason at full decision grade over any target — code, documents, plans, systems, anything — record material decisions before acting, and stop honestly when nothing actionable remains. USE WHEN: any real task where reasoning quality and an inspectable record matter, at daily-use token cost.'
 argument-hint: 'The target (repo, file, artifact, system) and the request itself'
 metadata:
-  version: "4.2.0"
+  version: "4.3.0"
   author: "Nils W. Holmager"
 ---
 
@@ -120,3 +120,4 @@ Trail timing: record the trigger and a prediction in the trail before writing th
 - Current state came from the last complete orientation snapshot; older snapshots and full trail history were touched only on genuine trigger.
 - Destination authority stayed with the operator: hunches were sourced and surfaced as questions; destination edits were read back first.
 - Silence, if declared, was bounded. Cost trades, if any, were visible.
+- The trail entry closes with a falsifiable claim about the target and an evidence-bearing history-trigger line (never a bare "N/A"); at Full tier, reader pushback and ranked next moves are present too. Nothing was left for the reader to infer.
