@@ -331,3 +331,32 @@ Prediction: the remote history through `688bfd1` will remain reachable; the new 
 - Existing remote tags: none.
 
 The authorized Git actions have not yet run. Their observed outcomes will be appended to this entry rather than predicted after the fact.
+
+### Publication outcome, reflection, and remaining release step
+
+The architecture commit `9f252daf9db354c4b42e9e2e07b5ccc9cbc15e98` was created with parent `688bfd16253be89120a6a71ca755519504a2f2ad`. Its complete tree contains exactly `.acm-root`, `.acm/audit-trail.md`, `.acm/destination.md`, `README.md`, and `improve/SKILL.md`; no legacy implementation file remains.
+
+A normal `git push -u origin main` fast-forwarded canonical `main` from `688bfd1` to `9f252da` without force. The first independent `ls-remote origin` check ran from the workspace root and failed to resolve the repository-local remote. [!REVERSAL] I rejected that malformed validation result, reran the same check with `git -C C:\git\pea\work-skill`, and confirmed local HEAD, upstream, and remote `main` all equal `9f252daf9db354c4b42e9e2e07b5ccc9cbc15e98`.
+
+Prediction comparison: HELD through architecture publication. Public ancestry remains reachable, the cold tree replaced the legacy surfaces, and no force update occurred. The protected Destination hash remained unchanged before commit. This appended outcome will now be committed as release evidence; annotated tag `v5.0.0-alpha.1` will point to that evidence-complete commit and be pushed with final remote verification.
+
+[!REALIZATION] A cold reconstruction and continuous public provenance are compatible when the architecture is derived before historical attachment and the old remote tip becomes the publication parent rather than reasoning input. This claim is falsifiable if the resulting commit tree or Trail shows old implementation content influenced construction, or if public ancestry is no longer reachable.
+
+Blind spot: this release validates repository publication and package structure, not clean-host activation, external-target usefulness, or cross-model fidelity. A maintainer may object that alpha publication precedes those tests; the prerelease tag makes that uncertainty explicit instead of presenting it as stable evidence.
+
+Destination change: not needed. The release implements the confirmed architecture without altering operator-held direction. Orientation refresh: not needed; six Trail entries remain directly intelligible and the publication does not change the architecture's governing model.
+
+Across-trail trigger evaluation:
+
+- *Recurring finding-class:* not fired - publication is a new evidence class, not another packaging repair.
+- *About to declare silence:* not fired - this iteration publishes a material release.
+- *Contradicts prior realization:* not fired - the release preserves the repository/artifact identity distinction established by the correction run.
+- *Operator explicitly asked:* fired - the operator explicitly requested commit, push, tags, and Improve governance.
+
+[!REALIZATION] Across the cold-build arc, the architecture moved from derivation to one bounded behavioral observation, survived a visible packaging reversal, and now enters public testing without erasing either its failed route or the legacy lineage it supersedes.
+
+### Candidate next moves
+
+1. Install `improve/` into a clean supported host and verify discovery plus activation because structural packaging is now public but runtime adoption remains untested.
+2. Run an unassisted first Improve on a small unfamiliar public target because usefulness outside self-targeting is the largest open product claim.
+3. Ask distinct frontier model families to challenge the tagged artifact after external behavior exists because one model family cannot establish convergence.
