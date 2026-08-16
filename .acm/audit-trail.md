@@ -360,3 +360,59 @@ Across-trail trigger evaluation:
 1. Install `improve/` into a clean supported host and verify discovery plus activation because structural packaging is now public but runtime adoption remains untested.
 2. Run an unassisted first Improve on a small unfamiliar public target because usefulness outside self-targeting is the largest open product claim.
 3. Ask distinct frontier model families to challenge the tagged artifact after external behavior exists because one model family cannot establish convergence.
+
+---
+
+## 2026-08-16 - distinguish-trace-from-independent-evidence
+
+- target: `C:\git\pea\work-skill`
+- operator: Nils Holmager
+- agent: GitHub Copilot
+- skill: repository-local `improve\SKILL.md`
+- outcome: added explicit ACM evidence-tier semantics without making independent capture mandatory
+
+### Interpretation and authority
+
+I interpreted the external 9.2 score as a shallow observer probe, not a metric to optimize. The useful question was whether its "native state-diff" criticism exposed a missing truthfulness capability, and whether `llm-harness-proxy` plus ACM supplied the principled answer. I rejected adding mandatory `git diff --stat` output merely to raise the perceived score, because output selected by the acting agent remains self-report unless an independent observer captures it.
+
+The operator confirmed this interpretation and authorized the proposed compact skill and README change through Improve's Proceed gate.
+
+### Examination
+
+ACM defines the Trail as medium-trust agent-authored Trace and independently captured sessions as Evidence. Evidence overrides Trace only for facts inside its capture boundary; evidence of action outside Intent is a governance finding rather than a conflict to hide.
+
+The current skill mentioned independently captured transcripts but did not operationalize source classification, selective correlation, conflict preservation, or capture boundaries. That omission could let a reader treat agent-invoked machine output as independent or infer that captured tool calls prove resulting state.
+
+The Rust proxy passed 43 tests. It hash-chains LLM-layer requests and responses, captures exposed reasoning fields and emitted tool calls, and persists buffered output before release. It does not establish reasoning correctness, actual tool execution, or final repository state. Streaming mode releases chunks before the final ledger write. The proxy still defaults to `.harness/sessions`; its own confirmed direction says `.acm/sessions`, Trail correlation metadata, selective retrieval, privacy defaults, and companion discovery remain future integration work.
+
+### Decision and prediction
+
+[!DECISION] Add one generic evidence-boundary contract to Improve and matching optional-companion documentation. Keep the proxy optional, require operator consent before rerouting, classify the Trail as self-report, correlate independent records selectively, preserve disagreement, and constrain every evidence claim to what its observer captured.
+
+Bundling or requiring the proxy ranked lower because its ACM integration is unfinished and mandatory capture would weaken portability and consent. Requiring Git diff statistics ranked lower because Improve already requires executable validation and an agent-selected diff is not capture-author separation. Silence ranked lower because the current sentence recognized independent capture but left its runtime trust semantics ambiguous.
+
+Prediction: a cold reader will conclude that Improve remains usable with no harness; an agent-run diff remains Trace; proxy capture verifies an emitted tool call but not execution or final state; independent executor-state evidence governs a contradicted final-state fact while preserving disagreement; and evidence of action outside Intent is classified as a governance finding. The skill will gain no mandatory dependency or routine all-session read.
+
+### Action and validation
+
+Added `Separate trace from evidence` to `improve/SKILL.md` and `Optional independent evidence` to README. The latter names `llm-harness-proxy`, its current `.harness/sessions` default, and the unimplemented ACM integration honestly.
+
+The first proxy test invocation ran Cargo from `C:\git` and failed because no manifest existed there. [!REVERSAL] I corrected the validation command to use the proxy's explicit Cargo manifest; all 43 tests passed.
+
+A focused nine-property contract check passed, `git diff --check` passed, and diagnostics for both edited files are clean. A cold evaluator passed the intended semantics across all five scenarios and found no mandatory proxy dependency or implementation overclaim. The prediction held.
+
+### Reflection
+
+[!REALIZATION] Machine-generated output is not automatically independent evidence. Trust depends on capture authorship and boundary, not data format: an agent-invoked Git diff strengthens Trace, a proxy can attest emitted LLM events, and only an observer of executor state can attest resulting state.
+
+Blind spot: the run establishes the contract and validates the proxy's unit-tested capture layer, but it does not exercise a real Work session through the proxy or an executor-side state witness. A security reviewer may object that optional evidence leaves ordinary runs dependent on self-report; that is true and is now explicit rather than hidden, while full assurance remains an opt-in architecture requiring further integration.
+
+Destination change: not needed. The confirmed Destination already requires trustworthy evidence, portability, proportional cost, and upstream recognition of ACM findings. Orientation refresh: not needed; the current Destination and Trail directly explain this single evidence-boundary addition.
+
+The operator explicitly requested this examination, so across-run reflection fires. The cold rebuild had compressed independent evidence to one sentence; this run shows that conceptual compression crossed a behavioral boundary by preserving the existence of evidence without preserving enough semantics for agents and readers to classify it correctly. The repair adds the missing distinction without restoring the old orchestration.
+
+### Candidate next moves
+
+1. Complete `.acm/sessions` migration and Trail-session correlation in `llm-harness-proxy`, because the skill now states a contract the current companion cannot yet satisfy end to end.
+2. Run Improve through the proxy on a real external target and deliberately compare Trail claims with captured LLM events.
+3. Investigate an executor-side state witness only if final-state attestation remains a required assurance level, because the LLM proxy cannot observe that boundary.

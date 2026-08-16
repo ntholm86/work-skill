@@ -72,6 +72,14 @@ Compare the observed outcome with the prediction. State:
 
 Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation only when the current synthesis no longer explains the Destination and material trail. Neither service runs by cadence or file absence alone.
 
+## Separate trace from evidence
+
+The Trail is the agent's append-only self-report, not independent evidence. Machine-generated checks strengthen it, but output selected or invoked by the agent remains part of the trace unless an architecturally separate observer captured it.
+
+When independent host, harness, or executor evidence is available, correlate the relevant record without copying raw traffic into the Trail. Inspect it when risk, provenance, contradiction, audit, or a challenged self-report makes it material. Evidence governs facts inside its capture boundary; the Trail governs the agent's declared interpretation and rationale. Preserve disagreements instead of reconciling them silently, and treat evidence of action outside Intent as a governance finding. Never imply that captured LLM traffic proves tool execution, final state, reasoning correctness, or causality unless the observer actually captured that property.
+
+Independent capture is optional for ordinary use. Do not install, start, update, or reroute through an observer without operator consent, and do not load all captured sessions by default.
+
 ## Append the trail
 
 For every iteration that produces a decision, finding, change, reversal, or bounded silence, append one entry to `<target>/.acm/audit-trail.md` before beginning another iteration. Create the file with this header if absent:
@@ -97,7 +105,7 @@ Never rewrite, reorder, clean up, or silently correct existing entries. Append a
 - whether durable Destination or refreshed Orientation is now needed;
 - a short ranked list of next moves already visible from this iteration.
 
-The trail is the source of truth. Derived summaries may be generated when trail size makes them earn their maintenance cost, but never replace or outrank it. Full-fidelity transcripts count as independent evidence only when captured by the host or another observer, not reconstructed by the acting agent.
+The Trail is authoritative for the agent's decision history. Derived summaries may be generated when trail size makes them earn their maintenance cost, but never replace or outrank it.
 
 ## Report
 

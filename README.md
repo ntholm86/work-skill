@@ -60,3 +60,11 @@ Destination remains operator-owned. Improve may identify a question that needs y
 ## What to inspect
 
 After a run, the final result line tells you what changed and whether validation passed. The target's `.acm/audit-trail.md` explains why the route was chosen, what evidence could falsify it, what was rejected, what was learned, and what remains uncertain. That separation keeps routine use short without hiding autonomous reasoning.
+
+## Optional independent evidence
+
+The Trail is an agent-authored semantic record. An independent capture mechanism can add a separate evidence tier that the agent cannot author or silently reconcile away. When the two disagree, captured evidence governs only what its observer actually recorded; the disagreement remains visible.
+
+[llm-harness-proxy](https://github.com/ntholm86/llm-harness-proxy) is one optional companion. It writes tamper-evident records of LLM-layer traffic before releasing buffered responses. It can attest what the model received and emitted, including tool calls exposed by the provider, but it does not by itself prove that an executor ran those calls or that the repository reached a claimed final state. Its current default storage is `.harness/sessions/`; target-local `.acm/sessions/` discovery and Trail correlation remain integration work rather than a capability claimed by this skill.
+
+Improve remains fully usable without a harness. It never installs, starts, updates, or routes traffic through one without operator consent, and it reads captured sessions selectively rather than treating surveillance cost as a default.
