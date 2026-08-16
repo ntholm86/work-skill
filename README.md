@@ -1,48 +1,62 @@
-# work-skill
+# Improve
 
-**Author:** Nils W. Holmager
+Improve is a single agent skill for understanding a target's purpose, changing what limits it most, validating the result, and preserving evidence that another agent can challenge.
 
-**Real work, fully auditable, in one file.** `work` is a standalone, target-agnostic improvement-reasoning skill: point an agent at anything it can reason about — code, documents, plans, letters, music — and it examines, improves, and records material decisions and their outcomes in an auditable trail. The whole skill is one readable markdown file: [`work/SKILL.md`](./work/SKILL.md). No required installer, tooling, or dependency — by design, permanently.
+It is designed for delegated work without assuming unlimited authority. You define the destination and any actions that always require approval. The agent chooses the route only within that boundary, narrates its interpretation and decision, and records each substantive iteration in the target repository's append-only `.acm/audit-trail.md`.
 
-It is built on the three [Principles of Earned Autonomy](https://github.com/ntholm86/principles-of-earned-autonomy):
+## Repository layout
 
-1. **Operator's Intent** — the agent is given a destination, not a route.
-2. **Observable Autonomy** — material decisions and predictions are recorded before action, with outcomes appended afterward; an observer can reconstruct what was done and why from the trail alone. The final Markdown cannot prove wall-clock write order, so stronger timing guarantees require independent capture.
-3. **Convergence Is Silence** — finding nothing actionable is a valid outcome; ceremony is never manufactured to look thorough.
+The repository is named `work-skill`. Its sole installable Agent Skill artifact is the `improve` directory:
 
-## Why
+```text
+work-skill/
+  .acm/
+    audit-trail.md
+    destination.md
+  .acm-root
+  improve/
+    SKILL.md
+  README.md
+```
 
-Delegated work fails when context disappears between sessions or the model drifts from the human purpose. Literal prompt compliance is insufficient: fabricated supporting comments can satisfy a request for comments while defeating a journalist's real need for authentic evidence. Work externalizes Destination, current state, decisions, outcomes, and learning so practical context loss and cognitive drift can be prevented, detected, and recovered from at the workflow level. It does not claim perfect access to hidden model cognition.
+Repository identity and installable skill identity are intentionally separate. The skill directory basename and the `name: improve` frontmatter agree, while repository-level ACM files remain at the repository root.
 
-Its parent, the full [skills suite](https://github.com/ntholm86/principles-of-earned-autonomy-skills-suite), delivers the same discipline as five separate skills (`intent`, `improve`, `destination`, `orient`, `trail`) — and proved the capability, but priced itself out of daily use: five skill-loads and full ceremony on every run, even a one-line fix. `work` is the consolidation — one skill-load, one loop, with Improve-grade decision reasoning whenever a real choice exists, while target evidence and durable narration scale to domain risk and stakes:
+## Install
 
-- **Intent** — folded into the loop's own first step and applied before every route: recover the fuller outcome and conditions of legitimate success from context, then reject any materially plausible route that would defeat them. Narration is brief only when that recovery reveals no material interpretation to correct.
-- **Improve** — the base loop: build a risk-sized target map, form a falsifiable model, derive the lenses reality warrants, compare plausible routes, challenge structure, decide, act, and check human legibility. Standard and Full share these operations; only evidence and recording depth vary.
-- **Destination** — a condensed first-contact process that reads the relevant conversation, higher-scope mandate, and available target context before asking one short question. It distinguishes the operator's desired outcome, the responsible route, and mechanisms left open; compactness applies to the interview, not the evidence intake. The interview ends on operator recognition rather than checklist completion. Later corrections, changed emphasis, new connections, or repeated near-misses can trigger one sourced hunch-question before contradiction or plateau; the agent detects the gap, while the operator alone settles what Destination becomes.
-- **Orient** — one open-world operation: inspect the target before reading inherited scores, scan historical realizations and reversals, re-derive measurements from the current Destination, compare the old and new maps, then rate with cited evidence, active operational rules, and an advisory todo. It runs whenever Orientation is invalid, the operator asks, evidence challenges the current view, or a small backstop catches what judgment missed.
-**Orient** — one open-world operation: inspect the target before reading inherited scores, scan historical realizations and reversals, re-derive measurements from the current Destination, compare the old and new maps, then append a complete immutable Orientation snapshot with cited evidence, active operational rules, and an advisory todo. The latest snapshot is current; prior snapshots preserve rubric, delta, and claim history. It runs whenever Orientation is invalid, the operator asks, evidence challenges the current view, or a small backstop catches what judgment missed.
-- **Trail** — always happens, every run, with a variable-depth entry format (Micro / Standard / Full) so routine work costs little and real decisions still get full reasoning.
+Copy this repository's `improve` directory into the skills location for an agent host that supports Agent Skills. The source and installed paths are:
 
-The skill leads the workflow, not the operator: it announces what it's doing and why, and names the one decision that belongs to the operator at each moment. `probe` (contamination / pattern-matching detection) is intentionally excluded from this consolidation — a settled decision, not a placeholder.
+```text
+<repository-root>/improve/SKILL.md
+<agent-skills>/improve/SKILL.md
+```
 
-## Optional harness companion
+No package, runtime, or project-specific Destination is required.
 
-Work remains complete and useful on its own. For domains that warrant independent traffic evidence, it also knows the optional [`llm-harness-proxy`](https://github.com/ntholm86/llm-harness-proxy) companion. The intended integration stores private proxy-authored session JSONL under target-local `.acm/sessions/`, where Work can inspect only the sessions relevant to risk, contradiction, provenance, audit, or a challenged self-report. The proxy currently writes `.harness/sessions/`; migration to ACM is future proxy work, not a capability claimed by this release.
+## First run
 
-Standalone Work provides an agent-authored semantic Trail. Harness-backed Work adds verified, independently captured protocol evidence; the two records stay separate and disagreements remain visible. Provider reasoning may be absent, provider-specific, incomplete, or not causally faithful, and streaming can release output before final persistence. The harness does not provide operator intent, authorization, or proof of reasoning correctness.
+Ask the agent to use Improve on a real target and state the outcome you care about:
 
-Work may offer a companion install or update when assurance is requested or compatibility is stale or unknown. It never silently installs, updates, starts, or routes traffic through the proxy; those environment changes require operator consent.
+```text
+Use Improve on this repository. Find and implement the highest-leverage change
+toward making the command-line errors useful to a first-time user.
+```
 
-## Status
+By default, the agent pauses twice: once to confirm what it understood before examination, and once before implementing its proposed change. You can delegate either routine pause explicitly for a run:
 
-v4.0.0 — a ground-up rewrite authored by a newer model (Claude Fable 5) under the operator's explicit direction: the Opus-era PEA suite's capability is the floor, not the ceiling. The always-loaded surface is now under 17,400 characters (v4.2.0, after two Improve-governed restoration passes) — well under the Intent + Improve pair (28,886) that a daily session would otherwise load, and roughly a third of v3.17.0 (51,903). The contract is unchanged where it is load-bearing: always-on intent recovery with explicit disqualification of purpose-defeating routes, full decision-grade reasoning (map, model, challenge, route comparison, prediction) on every decision-bearing run, a two-stage append-only Trail with cost lines and markers, triggered Orient appending immutable snapshots, and operator-held append-only Destination. What shrank is ceremony: rare mechanisms (first contact, drift, probes, harness evidence, convergence, multi-writer safety) moved to trigger-gated escalations, and defensive restatement written for weaker readers was cut. Behavioral proof is still owed: external-task runs and independent-model evidence remain the acceptance boundary, and this repo's trail records that boundary explicitly.
+```text
+Use Improve on this repository. I delegate routine intent confirmation and
+implementation selection for this run. Do not publish, delete data, change the
+project's destination, or reduce evidence without asking me.
+```
 
-## Previous Status
+During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is appended to `.acm/audit-trail.md`; existing entries are never rewritten.
 
-v3.17.0 — Orientation is now append-only: each Orient run adds a complete immutable snapshot, the latest snapshot supplies current rules, and earlier rubric maps, deltas, claims, and evidence remain inspectable. This preserves current-state usability without treating the learning history as disposable.
+## Optional durable direction
 
-v3.14.2 — the operator's confirmed daily-usage skill, authored by Nils W. Holmager and dogfooded hard: the skill has been pointed at itself and at external targets (a Python code repo where it made a test-verified source change, and editorial/content repos), with every run — including its own design decisions — recorded in this repo's trail. Destination is trusted but lossy human compression: operator recognition confirms the current articulation, while sourced hunches can surface meaningful lag when the operator learns, changes emphasis, or makes a new connection during the work. Hunches remain questions until the operator confirms, corrects, or rejects them. Independent models converging to bounded silence is strong evidence against the current confirmed Destination, not proof that the operator's richer latent direction is complete. Work prescribes reasoning operations, auditability, and operator authority rather than a solution doctrine; target principles come from Destination and domain evidence. Self-runs improve reasoning because Work's reasoning architecture is the selected target in this repo, not because arbitrary targets must optimize reasoning or follow this repo's preferred route. Every decision-bearing run preserves Improve-grade judgment and inherits active lessons from a small `Work current orientation` block at the top of Orientation; Orient replaces that block while Trail preserves historical reasoning, and risk-triggered escalation recovers older realizations and reversals directly from Trail without generated learning/history files. Domain risk controls target evidence and Trail tier controls recording depth. When an external target is used as a probe for another target, Work records the enclosing mission in the evaluation Trail, restates it in the probe Trail, and returns once the registered evidence is obtained or further cost becomes disproportionate; local Orientation cannot silently turn the probe into the destination. Trail's two-stage record is mandatory and makes retrospective reconstruction a visible breach, while final Markdown alone is explicitly not claimed to prove wall-clock timing. Orient's rubric and todo remain advisory maps. Human legibility is part of auditability. Orientation records its exact Destination basis; a changed basis invalidates the old rubric and makes fresh Orient mandatory. A second design bar applies alongside the operator's own use: **a stranger should be able to pick up `work/SKILL.md` and use it without the author explaining anything** — jargon is defined inline, the file must be self-contained, and no sibling skill or hidden context may be required.
+For work that continues across sessions, add `.acm/destination.md` to the target repository and describe the purpose, durable constraints, authority boundaries, and unresolved questions that genuinely change route selection. Add an empty `.acm-root` at the highest directory whose memory may govern the target when parent context must not be crossed.
 
-## Use
+Destination remains operator-owned. Improve may identify a question that needs your decision, but it cannot answer or alter that direction on your behalf.
 
-Point an agent at [`work/SKILL.md`](./work/SKILL.md) — copy the `work/` folder into wherever your agent loads skills from (such as `~/.copilot/skills/`), or just paste the file into a prompt. There is no installer, and there won't be one — by design. The whole point is that it's just a skill: one readable file, no build step, no script to trust between reading it and using it.
+## What to inspect
+
+After a run, the final result line tells you what changed and whether validation passed. The target's `.acm/audit-trail.md` explains why the route was chosen, what evidence could falsify it, what was rejected, what was learned, and what remains uncertain. That separation keeps routine use short without hiding autonomous reasoning.

@@ -1,555 +1,325 @@
-# Destination — work-skill
+# Destination — autonomous-agent-skills
 
-_Operator: Nils Holmager | Initialised: 2026-07-03_
+_Operator-held. Stable within runs — no skill changes this file; only the operator revises it. Read by Improve at step 1, before the trail and the retrospect.md. Revisit with the Destination skill whenever the operator's understanding has evolved or after a major arc milestone._
 
-> Repo-level destination. Governs work specific to this repo. The workspace destination (`../.acm/destination.md`, i.e. `pea/.acm/destination.md`) governs cross-repo coordination and wins on any conflict — see ACM §4 Scoped Memory. Read that file first when reasoning about how this repo fits the wider research program; this file governs what happens *inside* work-skill (renamed from `pea-skills-lite`, then `think-it-through-skill`, then `auditonomy-skill` — see "Destination run — 2026-07-04 (rename)", "Destination run — 2026-07-04 (second rename)", and "Destination run — 2026-07-05 (third rename)" below).
-
----
-
-## The One Question
-
-> What does a **standalone, target-agnostic improvement-reasoning architecture with full auditability** look like — one that can reason about and improve *anything* the model it runs on can reason about, adhering to PEA principles, **and cheap enough to actually use every day without losing quality**?
-
-*(Cost is not a side constraint on this question — it is half of it. The full suite already proved the capability; what killed its daily use was cost. See "Destination run — 2026-07-04 (cost is co-equal)" below.)*
-
-*(Superseded framing, kept for the record: "What does the accountability-architecture skill suite look like once the binding constraint is cost-per-unit-of-reasoning-quality, not reasoning quality alone?" — that was the question during this repo's birth as a fork; see "Destination run — 2026-07-04 (standalone reframing)" below for why it no longer leads.)*
-
-## Why this repo exists
-
-**[Reframed 2026-07-04, operator-confirmed — see "Destination run — 2026-07-04 (standalone reframing)" below.]** `work` is a **standalone skill**: an autonomous improvement-reasoning architecture with full auditability that is *target-agnostic* — it can work on anything the model it runs on can reason about: code, music, letters, books, plans, whatever. Its lineage (below) is a fork of the full suite, but lineage is not identity: the suite comparison was scaffolding during its birth, not its purpose. When this skill is pointed at itself, the thing being improved is **that general capability** — the ability to understand and improve anything — not fidelity to its parent suite.
-
-*Lineage, kept for the record:* The full skills suite (`pea/skills`: intent, improve, destination, orient, trail, probe) was built during what the operator calls the **"token bonanza"** — a period before 2026-07 where token cost was not the binding constraint. In practice, the operator found they mostly invoked two of those six skills — Intent and Improve — for almost everything, and was **"running out of tokens too fast"** using the full multi-skill-invocation discipline. This repo began as a deliberate cost-optimized fork: the same governing principles, delivered as **one consolidated skill** instead of chaining several, so a session pays for one skill-load and one reasoning pass instead of many. That cost discipline remains a real constraint — it just isn't the destination anymore.
-
-**[Confirmed 2026-07-03, second Destination pass]** This is not a side experiment — the operator has confirmed this skill (originally named `pea-lite`, renamed `think-it-through`, then `auditonomy`, then `work` on 2026-07-05) is meant to become their actual daily-usage skill, superseding day-to-day reliance on the full `pea/skills` suite. The full suite remains untouched and available for whatever still warrants its depth (this repo does not delete or deprecate it), but the default reach-for is now `work`.
-
-## Operator's direct mandate
-
-Source: operator's message, 2026-07-03 (quoted in full in this repo's `.acm/audit-trail.md`, first entry). Verbatim requirements:
-
-1. **One skill, not six.** Improve becomes the base loop; it always applies Intent internally — no separate invocation.
-2. **Trail always happens.** Every run appends to `.acm/audit-trail.md` in the target repo. No exceptions, no opt-out.
-3. **Mini-Destination.** If `.acm/destination.md` doesn't exist yet in the *target* repo being worked on, ask the operator a short question or two and write it. If it exists, just read it.
-4. **Mini-Orient.** Every 5th iteration, do a condensed arc-read (not the full freshness-guard / derived-artifact machinery of real Orient) and note what's changing.
-5. **The explicit trade-off:** lower token cost per session, *without* silently lowering reasoning quality at the moments quality actually matters (real decisions). If a cost/quality trade-off is unavoidable, it must be visible and justified in the trail entry, never silently absorbed.
-6. **[Confirmed 2026-07-04]** Between the two axes this fork trades on, **reasoning quality outranks mechanism completeness.** Operator's words, verbatim: "capability is one of the most important things for pea-lite... mechanisms are less important... Similar Quality with much less cost is the goal." Concretely: whether `think-it-through` (then named `pea-lite`) carries the full suite's harder tooling (freshness guards on derived artifacts, writer-splitting, ARF/Probe, session-transcript capture) matters far less than whether its three core reasoning moments are *as good* as the suite's — not merely structurally present. The operator named those three moments directly: **Intent** ("understand what and why, not how"), **Improve's examination** ("surroundings" — reading the target's actual context before deciding), and **Orient** ("meta" — arc-level reasoning about the work itself). And explicitly general-purpose: this reasoning quality is what makes the skill work on *any* kind of target, not just software.
-
-## Sourced inferences (not literally stated — offered for confirmation, not blocking)
-
-- **[Confirmed 2026-07-03]** Probe (the 6th original skill — contamination / pattern-matching detection) is intentionally *not* part of the lite consolidation. *Source:* the operator's message names Intent, Improve, mini-Orient, mini-Destination, and Trail explicitly, and never mentions Probe. Operator confirmed directly: "I dont think the probe skill is needed in pea-skills-lite." Probe stays a separate, occasionally-invoked skill outside `think-it-through`, not folded in — settled, not just assumed.
-- **[Corrected 2026-07-03]** No installer — permanently, by design, not a temporary v1 scope cut. Operator's own words: "I dont want an installer, its should be so easy its just a skill that ppl can use." Ease-of-adoption is itself part of what "lite" means here: a single self-contained `SKILL.md` a person can read, drop into wherever their agent loads skills from, or paste straight into a prompt — no build step, no script to trust, no packaging ceremony between the file and using it. This supersedes the earlier unconfirmed inference, which had incorrectly framed the lack of an installer as "not yet" rather than "not ever."
-
-## Constraints carried over from the workspace destination
-
-- Higher scope wins on coordination matters (ACM §4) — `pea/.acm/destination.md` governs if this repo's direction ever conflicts with cross-repo coordination.
-- Append-only memory — corrections happen by appending, never rewriting.
-- The three principles — **Operator's Intent, Observable Autonomy, Convergence Is Silence** — are constraints, not preferences, even in the lite version. Cost is optimized *around* them, never at their expense. This is the design tension the `work/SKILL.md` file exists to resolve.
-
-## What "done" looks like for this repo
-
-Not a fixed release. Working-in-use signal: the operator actually reaches for `work` instead of chaining Intent → Improve manually, session token cost visibly drops, and reasoning quality at real decision points is not perceptibly worse — the operator would notice a regression and say so.
-
-**[Confirmed 2026-07-03, second Destination pass]** A second, independent bar now applies alongside the operator's own daily use: **a stranger could pick up `work/SKILL.md` and use it without the operator explaining anything.** This is a real design constraint, not aspirational framing — it means jargon, unexplained references to the original five-skill suite, or assumptions about shared context with the operator are defects, not just stylistic choices.
-
-## Open items (not blocking, revisit when the operator has a moment)
-
-_(none currently open from the original two bootstrap inferences — both settled. See "Destination run — 2026-07-03 (second pass)" below for what's open now.)_
-
-Both sourced inferences from the initial bootstrap are now settled: Probe stays excluded, and no installer will be built. Ease-of-use (a single readable file, no packaging step) is now a confirmed design constraint on `work/SKILL.md`, not just a scope cut.
+_Renamed from `vision.md` on 2026-05-28 alongside the Vision→Destination skill rename (skill v2.0.0). Historical entries referencing "Vision" describe the same skill under its prior name._
 
 ---
 
-## Destination run — 2026-07-03 (second pass)
+<!-- current-destination: complete -->
 
-Operator asked to run the full Destination skill again (not the mini version). Signal gathered: this file, `.acm/audit-trail.md`'s 4 entries, and the pattern across the two prior corrections this session.
+## Current destination (reconciled 2026-08-16)
 
-### Sourced inferences
+### Purpose
 
-1. **[Direction, unconfirmed]** The operator wants `pea-lite` to become their actual day-to-day default, not a parallel experiment. *Source:* the original bootstrap message ("I find myself mostly using Intent and improve"), plus both corrections since bootstrap pushing toward permanence rather than provisional framing ("not ever," not "not yet").
-2. **[Priority, unconfirmed]** The operator wants this repo's files kept lean — no speculative "decide later" open items invented unprompted. *Source:* twice now (Probe exclusion, no-installer) the operator corrected an open item or hedge that was added without being asked for.
-3. **[Question being asked, resolved this run]** The one open item left (whether to list this repo in the workspace layer table) was itself something added unprompted, not requested.
-4. **[Quality bar, unconfirmed]** "ppl that can use it" may signal the actual bar is "a stranger could pick this up," not just "works for the operator."
+This repository develops and tests an architecture that can understand and improve anything it targets while upholding the Principles of Earned Autonomy. That capability and trustworthy delegation are inseparable: the architecture must let a human safely delegate real work to an AI more capable than themselves while remaining responsible for the outcome, and delegation earns trust only when the architecture can improve the work that was delegated.
 
-### Questions asked
+The engine's generic theory of improvement is to reason about the purpose of whatever it targets, determine what most limits that purpose, and improve it. Understanding purpose includes understanding the operator's intent, the target's own claims and grounding, its operating context, and any other factor that reasoning reveals as material. These are examples, not an exhaustive model of reasoning.
 
-All four inferences above were surfaced as direct questions. **The operator was not available to respond** ("Work autonomously and make good decisions").
+When the engine targets itself, the same theory applies recursively. It should discover and improve whatever in its own reasoning, learning, architecture, or operation most limits its ability to understand and improve future targets. Better purpose-understanding and better intent interpretation are examples of the benefit, not a prescribed self-improvement roadmap.
 
-### What I now believe (confirmed 2026-07-03 by the operator, except where noted)
+### Fixed boundary
 
-- **Confirmed.** `pea-lite` is the operator's new daily-usage skill. "Yes i want pea skills lite to become my new daily usage skill." This is now stated in "Why this repo exists" above, not just this section.
-- **Confirmed.** Keep this repo's files clean — no speculative open items added unprompted. "yes i want the repo files kept clean." Adopted as an ongoing practice, not just a one-time correction.
-- **Deferred by the operator, not dropped.** The workspace-layer-table question confused as asked ("im not sure what you mean abotu question 3 i will decide later"). Clarifying it here for whenever it's picked back up: `pea/.acm/destination.md` (the workspace-level file, one directory up, operator-held) has a table listing the research program's repos by role (Theory, Construct, Runtime, Reasoning, etc.) — `pea/skills` is currently listed there as "Reasoning." The open question was whether `pea-skills-lite` should also get a row in that table, or stay unlisted since it's a fork of an already-listed repo. This is a real open item now, explicitly operator-owned and deferred — not one I invented and should trim per the lean-files practice above.
-- **Confirmed.** "ppl that can use it" was literal, not just phrasing: "Yes it should also be that a stranger could pick up the skill." This is now reflected as an explicit second success bar in "What 'done' looks like" above.
+Only the three Principles of Earned Autonomy are architectural constraints:
 
-### What's still open
+1. **Operator's Intent:** the operator defines the destination; the agent reasons about the route.
+2. **Observable Autonomy:** autonomous work leaves trustworthy evidence that the agent cannot retroactively rewrite.
+3. **Convergence Is Silence:** completion requires diverse independent evaluators to find nothing material left to change.
 
-- The workspace-layer-table question (see above) — operator-deferred, revisit when they want to decide.
+Everything else is revisable when reasoning and evidence support a better route. No skill, workflow, lens, memory structure, taxonomy, gate, theory, implementation, or current interpretation is sacred. A mechanism earns its continued existence by serving the purpose while respecting all three principles.
 
----
+### Current priorities
 
-## Destination run — 2026-07-04 (third pass)
+Two priorities are co-equal:
 
-Operator corrected the priority ordering implicit in the prior day's comparative-rating work. That rating had weighted mechanism-completeness (freshness guards, writer-splitting, ARF/Probe, session/transcript capture) as a significant gap against the full suite. The operator's correction: those mechanisms matter comparatively little; what must hold up is **reasoning quality**, specifically in the three moments that carry the actual thinking — interpreting the ask (Intent), examining the target and its surroundings (Improve's step 2), and arc-level meta-reasoning about the work itself (Orient). This is now folded into the confirmed mandate above as point 6, verbatim-sourced.
+1. **Research:** continue producing bounded evidence about what trustworthy delegation requires, including negative results and improvements to the engine's own reasoning capability.
+2. **Adoption:** enable a new developer to install the suite and complete a useful first Improve run without author assistance or destination setup. Improve is the single normal entry point; it applies prompt-level Intent immediately and triggers durable Destination and Orientation only when accumulated evidence makes them useful. On first use, the developer should understand in plain operational terms what the agent will do, why it matters, and where they retain control. Deeper conceptual fluency may develop through use.
 
-### What this changes going forward
+Leanness and resource efficiency are cross-cutting viability constraints, not standing size targets. The skills should resist becoming bloated, too long, or burdened with unnecessary expensive logic, and remain easy to use and understand. Optimize trustworthy capability per unit of resource without treating shorter as automatically better. This must hold across the full improvement lifecycle, including when progress slows and the remaining distance to the Destination narrows. A protocol that remains trustworthy but spends nearly fixed reasoning, verification, reflection, and evidence cost on progressively smaller gains may become operationally ineffective before it reaches honest silence. The engine must preserve its pressure toward the highest-leverage remaining work while discovering for itself how to keep that work worth its resource cost; the Destination does not prescribe iteration size, batching, thresholds, or another mechanism.
 
-- Future comparative ratings of `pea-lite` against the full suite should weight **interpretive depth, examination depth, and meta/arc-reasoning depth** as the primary axis — not mechanism parity.
-- A legitimate open question this creates, not yet answered: is `pea-lite`'s current step 1 (Intent-fused), step 2 (Work/examine), and step 4 (mini-Orient) text actually *as rigorous* as the full suite's `intent`, `improve` step 2, and `orient` — or only structurally analogous? That assessment has not yet been done under this corrected priority and is the natural next piece of work.
+The same viability constraint applies to the architecture's own accumulated context. Live skill and orchestration contracts must not keep growing simply because each local flow improvement is defensible, and durable ACM evidence must not require every routine iteration to reprocess the full history. Reasoning and context should remain proportionate to the work while preserving the capabilities and evidence the principles require. Because model ability, context capacity, and token economics are changing, the architecture must repeatedly reconsider what machinery and context are still necessary instead of preserving assumptions optimized for today's frontier. Adaptive reasoning depth and derived memory surfaces are possible routes to investigate, not mandated mechanisms.
 
-### What's still open
+The engine may autonomously pursue reductions that preserve reasoning, memory, learning, and evidence capability. Any deliberate reduction in one of those capabilities is a consequential tradeoff that requires explicit operator approval every time, even when evidence predicts a better overall capability-per-resource result; one approval creates no standing authority for another tradeoff. No approval can waive the three principles or reduce operator control or evidence integrity below what they require. A capability improvement is not operationally viable if its cost prevents sustained use. Easier explanation is evidence of lower translation friction, not proof of research validity, adoption, or token efficiency.
 
-- The workspace-layer-table question — operator-deferred, revisit when they want to decide.
-- **New:** the reasoning-quality depth assessment named above — not yet run.
+### Authority and autonomy
 
----
+The operator owns the Destination and any change to it. Within a confirmed Destination, the engine may autonomously select and implement the highest-leverage route while leaving observable evidence. The historical claim that a human must approve every implementation choice is superseded; explicit delegation can include choosing what to implement.
 
-## Destination run — 2026-07-04 (rename)
+Without explicit delegation, routine Improve work is supervised: the operator confirms Intent's interpretation before examination and confirms Improve's proposed change before implementation. The operator may delegate either routine gate for one prompt or durably in Destination after trust is earned. Delegation must be explicit; silence, accumulated trust, and a host-wide autonomy setting do not grant it. Routine delegation never answers a Destination question, authorizes a direction change, or bypasses an operator-declared consequential-action gate. The operator may narrow or revoke delegation at any time.
 
-Operator judged the name `pea-lite` a defect in its own right: it tells an outsider nothing about what the skill does, and fails the same stranger-pickup bar this file already holds as a confirmed design constraint. Three rounds of candidate names were proposed and rejected on the operator's own explicit criteria — round 1 rejected for not "sounding useful" on sight, round 2 (`show-your-work`) rejected for not capturing the reasoning-and-generality dimension, round 3 confirmed: **`think-it-through`**. The repo itself was renamed too (operator's explicit choice): `pea-skills-lite` → `think-it-through-skill`, avoiding a redundant nested `think-it-through/think-it-through/SKILL.md` by keeping the skill subfolder as `think-it-through/`.
+Direction changes and operator-declared consequential actions remain human-gated. The framework should support explicit boundaries that reasoning quality or accumulated trust cannot override. Private enterprise evidence remains private when confidentiality or ownership obligations apply.
 
-**What changed:** `pea-lite/` → `think-it-through/` (git mv, history preserved), repo folder `pea-skills-lite` → `think-it-through-skill`, frontmatter `name:` field, the `# think-it-through` H1, the one in-body mention, README.md, and this file's forward-facing prose (mandate, current-state, "what done looks like" sections). Version bumped 2.2.0 → 2.3.0 (a structural/identity change, not a prose polish).
+Convergence is a renewable lease tied to the current Destination, artifact, and available model frontier. The operational minimum is three independent fresh-session evaluations by current frontier-capable models from three distinct model families. When a newly available model plausibly extends that frontier, it must independently challenge the converged artifact. Silence renews the lease without forcing the existing evaluators to rerun; a material change resets the chain and requires three fresh family-diverse evaluations of the changed artifact. Any Destination change invalidates all prior convergence evidence for the old Destination and starts a new three-family evaluation chain. Model selection remains an operator judgment based on capability evidence and practical access, rather than a permanent vendor or model list.
 
-**What was deliberately left alone:** every verbatim operator quote naming `pea-lite` or `pea-skills-lite` (e.g. "capability is one of the most important things for pea-lite...", "I dont think the probe skill is needed in pea-skills-lite", "Yes i want pea skills lite to become my new daily usage skill") — quotes are a historical record of what was literally said and are not rewritten. The two dated "Destination run" sections above (2026-07-03 second pass, 2026-07-04 third pass) are likewise left using the old name throughout, by the same logic applied to `.acm/audit-trail.md`'s append-only rule: they are historical log entries describing what was true and what things were called at that point in time, not living/forward-facing prose.
+### Current operating model
 
-### What's still open
+- **Active:** Improve as the single entry point for normal work; Probe only for controlled ARF research.
+- **Passive:** Intent and Trail surround substantive work automatically.
+- **Triggered:** Destination consolidates accepted prompt mandates when continued work needs durable direction; Orient refreshes Orientation when Destination changes or accumulated evidence makes the current map stale.
+- **Memory architecture:** Agent Context Memory (ACM) currently provides persistent destination, evidence, learning, and orientation across sessions and models. "The Memory Model" and Retrospect are historical names, not parallel current concepts.
 
-- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `auditonomy-skill`.
-- The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
-- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+This operating model is a current implementation, not part of the fixed boundary. It should remain target-agnostic, human-readable, and specifiable enough for another capable agent or execution harness to implement without becoming a checklist. The protocol must preserve memory of what happened, learning that changes later behavior, and meta-cognition about what the target is becoming; the present files and skills are revisable means of providing those capabilities.
 
----
+The suite is both implementation and research site. Findings that concern ACM or the Principles themselves should be recognized as candidates for their canonical upstream repositories rather than silently treated as local-only changes. Local copies do not grant authority to alter those upstream works.
 
-## Destination run — 2026-07-04 (second rename)
+Natural-language skills set a ceiling, not a floor: execution fidelity depends on the capability and momentary performance of the model interpreting them. The architecture must therefore test behavior across fresh installations, targets, hosts, sessions, and model families rather than infer reliability from instruction quality alone.
 
-Operator judged `think-it-through` itself not quite right either: it reads as a generic reasoning-discipline slogan, not a name tied to what the skill actually enforces. The correction came in two steps — first toward a made-up word blending Improve/audit/reasoning/autonomy (`Reckonomy`, rejected: too close to the unrelated word "reckoning"), then the operator's own realization: the right word was already named in this skill's own three principles — **Principle 2, Observable Autonomy**. `auditonomy` is a portmanteau of *audit* (the always-on Trail step — what makes the autonomy observable) and *autonomy* itself, naming the skill after the one governing principle that most defines its mechanism, not an arbitrary blend of adjacent themes.
+Integration with a particular autonomous harness remains a horizon rather than the current focus. The reasoning layer should first demonstrate useful operation on real targets and be precise enough that later integration is wiring rather than reinterpretation.
 
-**Action.** OS-level rename of the repo folder (`think-it-through-skill` → `auditonomy-skill`) and the inner skill folder (`think-it-through/` → `auditonomy/`); updated frontmatter `name:`, the H1, and the one in-body mention in SKILL.md; updated README.md throughout; updated this file's forward-facing prose (title, mandate, current-state, "what done looks like" sections). Version 2.3.0 → 2.4.0.
+### Immediate quality bars
 
-**Operational complication, disclosed.** The folder rename did not go cleanly: a `cmd /c move` failed silently (exit code 1, no message), and a follow-up `Move-Item` failed partway with a permission error deleting `.git`'s read-only pack objects from the source — but only *after* it had already copied `.git`, `.acm/`, and `README.md` to the new destination. This left the repo split across two paths: the intact `.git` (with the working index correctly showing a staged `think-it-through/SKILL.md` → `auditonomy/SKILL.md` rename) in the new `auditonomy-skill/` folder, but the actual `SKILL.md` file itself still physically sitting in the old `think-it-through-skill/auditonomy/` path. Diagnosed via `git status` (showed the rename staged but the destination file "deleted" in the working tree — the tell that the file hadn't actually moved), fixed by moving the one straggler file into place, verified with a clean `git status`, then deleted the confirmed-empty leftover shell. No data was lost; the near-miss is disclosed here rather than smoothed over, per this skill's own Trail discipline.
+1. Self-targeting runs discover and improve previously unnamed limitations in reasoning or operation rather than only repairing skill-file consistency or following named examples.
+2. A new developer completes a useful first Improve run without author help or prior Destination setup, and understands what the agent will do, why it matters, and where they retain control without first learning the framework's internal vocabulary.
+3. Automatic services leave durable evidence sufficient for a later session or different model to continue coherently.
+4. Research claims stay within what public trails, reproducible probes, external targets, and independent evaluators support.
+5. Improvement remains resource-effective as the target approaches silence: fixed loop cost does not overwhelm the trustworthy capability gained, highest-leverage selection remains intact, and reasoning, learning, operator control, and evidence integrity are not degraded.
+6. Current mechanisms remain generic, lean, and understandable; skill, orchestration, and routine ACM read cost stay proportionate to the work while the engine remains free to adapt them to changing model capability and economics without weakening the principles.
 
-**Deliberately not touched:** every verbatim quote and every historical dated section above containing the old names `pea-lite`, `pea-skills-lite`, or `think-it-through` — preserved as historical record, same convention as the first rename. `audit-trail.md`'s own historical entries are likewise untouched; a new entry was appended instead.
+### Open questions
 
-### What's still open
+- Which limitation currently places the strongest ceiling on the engine's ability to reason about any target, without restricting discovery to examples already named?
+- Where does an unassisted new user first fail: discovery, installation, first Improve, understanding an automatic handoff, or recognizing useful evidence?
+- Which public external target can test adoption and trustworthy delegation without relying on private enterprise evidence?
+- Does the Active/Passive/Triggered model survive real use, or does it hide an operational distinction users need?
+- Where are resources spent without improving decisions, learning, evidence, or operator control?
+- Which skill instructions, orchestration paths, and routinely loaded ACM context still earn their processing cost under current model capabilities?
+- How can the engine sustain trustworthy capability per resource when the remaining gains become small, without lowering its standard for what work matters or manufacturing work instead of reaching silence?
+- Which actions should remain explicitly human-gated regardless of demonstrated capability or trust?
 
-- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `auditonomy-skill`.
-- The reasoning-quality depth assessment (named 2026-07-04, third pass) — still not yet run.
-- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
+### Historical reconciliation
 
----
+The sections below preserve how the Destination evolved; they are provenance, not additional active instructions. Still-active commitments have been carried into the current mandate. Superseded items include the May 2026 priority sequence, mandatory approval of every implementation choice, fixed use of Retrospect and the old Memory Model vocabulary, and any implication that the current skills or architecture are immutable. Older references to Commander's Intent mean Operator's Intent in the current principles.
 
-## Destination run — 2026-07-04 (standalone reframing)
-
-Operator corrected the repo's core identity, prompted by reading the baseline 10-metric scorecard: the measurements ("reasoning-depth parity **vs. full suite**", "mechanism integrity") revealed the working destination had drifted into *"make an economical copy of this other skillset"* — a derivative identity. Operator's correction, near-verbatim: it should be **"standalone"** — *"an autonomous skill with improve reasoning and full auditability that is target-agnostic — can work on anything the model you use can reason about: code, music, letters, books, whatever, anything."* One overall destination point is unchanged from the skillset era: something with the ability to reason about and improve **anything**, adhering to PEA principles.
-
-The self-targeting arc (24+ trail entries of this skill auditing and improving itself) is not self-polish — *"we just happen to point it at itself"*, and what's actually being improved in those runs is the **general improvement-reasoning capability itself**, exactly as was done with the skillset before it. The skill must know this overall purpose when it reasons about itself.
-
-**What this changes:**
-
-- "The One Question" and "Why this repo exists" above — rewritten to lead with standalone identity; the fork framing demoted to lineage-for-the-record.
-- **Future scorecards:** measurements must weight *target-agnostic improvement capability* — how well this skill understands and improves arbitrary targets — as the primary axis. Suite-parity metrics are lineage diagnostics at best; a scorecard dominated by them is measuring the scaffolding, not the building. (The baseline scorecard in `orientation.md` stands as an honest record of the plateau *as it was framed then* — per the plateau rule, this destination shift voids it; the next rating starts from this reframed axis.)
-- **The external-target test rises further in priority:** under the old framing it was one open item among several; under this one it is the *only* direct test of the actual destination — a target-agnostic improver that has almost never left its own repo is unproven at precisely the thing it is for.
-
-**What this does not change:** the three PEA principles (constraints, not preferences), the cost discipline (real constraint, just not the identity), the no-installer rule, Probe's exclusion, the stranger-pickup bar, lean files. All confirmed constraints, all still binding.
-
-### What's still open
-
-- The workspace-layer-table question — operator-deferred.
-- **The external-target test — now the top item by an even wider margin** (see above): point this skill at something that isn't itself and isn't software — a letter, a plan, a piece of writing — and see whether the improvement reasoning holds.
-- The reasoning-quality depth assessment — subsumed into the above: the external test *is* that assessment under the corrected framing.
+<!-- destination-history -->
 
 ---
 
-## Destination run — 2026-07-04 (cost is co-equal)
+## Destination note - 2026-08-16 (routine autonomy is explicitly delegated, never inherited from autopilot)
 
-Same-day correction to the standalone reframing above, operator-initiated. That reframing over-rotated: it demoted cost to "a real constraint, just not the identity." The operator's correction, paraphrased per their instruction to capture intent rather than exact words: **cost is half the identity.** This repo is about creating the target-agnostic improvement-reasoning architecture *in a way that makes it cheap to use without losing quality* — because cost, not capability or effectiveness, is what became the problem with the full skillset. The suite already proved the capability; it priced itself out of daily use.
+Sourced from an operator-confirmed Improve run about the tension between newcomer control and earned full autonomy. The operator accepted this boundary: with no explicit authority agreement, Intent and Improve pause for confirmation before examination and implementation. After trust is earned, the operator may delegate either routine pause for one prompt or durably in Destination. The delegation does not extend to Destination questions, direction changes, operator-declared consequential actions, or deliberate cognitive-capability reductions.
 
-**What this means operationally:**
+The distinction preserves simplicity by keeping Improve as the single entry point and using one authority concept rather than separate beginner, expert, or autopilot workflows. It preserves transparency because interpretation, proposed action, final outcome, and evidence remain visible in both supervised and delegated operation. A host-wide autonomy setting is insufficient because it cannot distinguish routine execution from questions only the operator can answer.
 
-- The destination is a single product with two inseparable halves: **capability** (target-agnostic improvement reasoning, full auditability) × **affordability** (cheap enough to reach for by default, every session). An improvement to one that regresses the other is not an improvement — it is the failure mode that killed the suite, or a lobotomy that saves tokens by cutting judgment.
-- **Future scorecards** must carry both axes: alongside the target-agnostic capability metrics (per the reframing above), at least one or two measurements must track cost-per-run / ceremony-weight — and a capability gain that shows up with a cost regression should be scored as the trade-off it is, not celebrated on the capability axis alone.
-- Self-targeting runs improve *the capability-at-a-price*, not capability in the abstract.
-
-**Unchanged:** everything else in the standalone reframing — target-agnosticism, the demotion of *suite-parity* (not cost) to lineage, the external-target test as top open item.
-
-### What's still open
-
-- Same three items as the reframing above — this correction changes the weighting of future work, not the open list.
+The route remains open: this note does not prescribe UI controls, trust scores, maturity levels, or a storage schema for delegation. It defines who may authorize which class of decision and requires delegation evidence to be explicit.
 
 ---
 
-## Destination run — 2026-07-04 (self-triggered destination)
+## Destination note - 2026-08-13 (late-stage improvement must remain worth its loop cost)
 
-Operator directive, this session: the skill should be able to trigger its destination step **itself** when its own evidence says it's necessary — plateau exhausted, etc. The operator explicitly delegated the design decision ("Based on my destination and your own belief — make the decision. Think carefully."), instructing intent-reading over literal wording.
+Sourced from operator clarification after the single-entry architecture was implemented. The operator observed that as a target approaches its Destination, remaining changes may become smaller while each Improve iteration continues to pay substantial interpretation, examination, verification, reflection, and Trail cost. Strictly repeating the same unit of work can therefore reduce trustworthy capability per token precisely as the loop nears convergence.
 
-**The decision, made under that delegation.** Intent read: "trigger its destination itself" means the skill owns **detection and initiation** — it must not sit passively on an exhausted plateau waiting for the operator to notice, and it must not silently keep polishing a destination its own evidence says is served. It does **not** mean the skill authors its own mandate: an agent that can rewrite its own destination unsupervised is the post-hoc-rationalization failure this research program exists to prevent — the destination is the alignment anchor the whole trail is audited against, and an anchor the anchored thing can move is not an anchor. The boundary chosen: **self-trigger the process, never self-settle the content.**
-
-Concretely, in SKILL.md v2.9.0:
-
-- Step 0.5 gains a third legitimate re-run trigger alongside explicit invocation and operator signal: **the loop's own evidence** — a plateaued scorecard whose destination-vs-measurements coverage diff comes back empty, or observed reality contradicting this file's claims. "Never merely because time passed" stays.
-- A self-triggered destination run may ask and propose; its output enters this file only as an appended, dated proposal **marked unconfirmed** until the operator rules. The pre-commit read-back rule applies in full.
-- The scoring clause gains the plateau-exit protocol: flat scores → first distrust the plateau (coarse metrics vs. exhausted territory) → coverage-diff destination against measurements → uncovered obligations become work or new measurements → an empty diff is the self-trigger. New metrics are *derived* from uncovered obligations, never invented to have something to score.
-
-This widens the previous step 0.5 rule ("never re-run automatically") by the operator's own instruction — the old rule guarded against re-bootstrapping churn; the new one keeps that guard ("never merely because time passed") while removing the passivity it accidentally mandated at a genuine plateau.
-
-**Read-back note:** the active operational rule says destination-layer edits are read back before commit. This session the operator explicitly delegated the decision in the same turn; that delegation is treated as the required confirmation, and this section is itself the read-back — if any part of this misreads the intent, the correction happens by appended section, per convention.
-
-### What's still open
-
-- The three standing items (workspace-layer table, non-software artifact test, second fresh multi-writer trail) — unchanged.
-- **New:** the self-trigger has never fired — it becomes real the first time a plateaued scorecard's empty coverage diff actually initiates a destination question. Until then it is text, like every rule before its first conversion.
+The destination-level problem is lifecycle viability: preserve selection of the most meaningful remaining work, and prevent the loop's fixed governance cost from overwhelming the value of that work near silence. The operator explicitly rejected prescribing the route. Suggestions about batching, one coherent decision, thresholds, or altered iteration granularity are possible mechanisms for Improve to examine, not requirements carried into the mandate. The suite must reason from the problem and decide its own route under the three principles and the existing operator gate on cognitive-capability reductions.
 
 ---
 
-## Destination run — 2026-07-04 (need-triggered orient; the skill leads the workflow)
+## Destination note - 2026-08-09 (cognitive-capability reductions are operator-gated)
 
-Operator, same session, confirming the v2.9.0 boundary ("Yes, the operator owns the destination") and extending the principle:
+Sourced from a full-session and full-ACM Destination reconciliation. The highest-impact hunch asked who should authorize a deliberate reduction in reasoning, memory, learning, or evidence capability when an agent predicts a better overall capability-per-resource result. The operator answered: "Operator every time."
 
-1. **The "every 5th" orient cadence was arbitrary, by the operator's own account** — "just a value I tossed out," not a principled rule. The mandate's original point 4 ("Mini-Orient. Every 5th iteration...") is hereby corrected at the trigger level: the *logic* to run orient must live in the flow — the skill triggers it when the work signals a need — exactly the detection-ownership principle v2.9.0 established for destination. (The condensed arc-read itself, versus full Orient machinery, is unchanged.)
-2. **New confirmed constraint — the skill leads the workflow.** Operator verbatim: the operator "will be new to the skill... they must be guided and hand-held through the workflow." This extends the stranger-pickup bar from *reading* the file to *operating* it: the operator never needs to remember to invoke a step; the loop announces what's due, why, and names the one decision that belongs to the operator at that moment.
-
-**Design judgment exercised (delegation pattern of this session, read back here):** the arbitrary counter was not deleted — it was **demoted to a backstop** behind four need-signals (arc contradicts itself; operator pushback; a stretch closes; orientation.md reads stale). Rationale: the run that most needs an arc-read is often the one least able to notice it — a rationalizing run won't feel its own need-signal — and the append-time due-check is the one mechanism in this repo with *behaviorally converted* evidence (self-fired at entries 33 and 38). Deleting the only mechanically checkable tripwire in favor of pure judgment would trade a proven mechanism for an unfalsifiable one. Need-signals lead; the counter catches what judgment misses. If the operator meant the counter should go entirely, this is the paragraph to push back on.
-
-**Version note:** 2.9.0 → 3.0.0, and the frontmatter description changed for the first time since the scoring convention ("a mini-Orient every 5th entry" → "a self-triggered mini-Orient when the arc needs one") — the description would otherwise have stated a rule the file no longer contains.
-
-### What's still open
-
-- Everything above, unchanged — plus: the need-signals are text-only until one fires as the *primary* trigger (every firing to date was the counter). First conversion event: a mini-orient that runs off a need-signal before the backstop count is reached.
+This settles the collision exposed by the layered-Improve experiments, where lower routine input and better grounding counts coincided with weaker reflection depth. The agent may discover the tradeoff, gather evidence, and propose it. It may not decide that a cognitive-capability loss is justified by efficiency. Each deliberate reduction requires explicit operator approval for that specific tradeoff; approval does not create precedent authority for future reductions. The principles remain non-waivable.
 
 ---
 
-## Destination run — 2026-07-05 (third rename)
+## Destination note - 2026-08-09 (convergence is leased against Destination and model frontier)
 
-Operator judged `auditonomy` a defect too, on different grounds than the first two renames: not wrong or unclear, but an invented word — and it doesn't actually name the whole of what the skill does. Operator's own words, verbatim: *"'Work' SKILL captures exactly what its for - its for real work. The Work skill - the only skill you need."* Confirmed: **`work`** — a real, plain word, chosen specifically *because* it is not a portmanteau or a coinage, describing the skill's actual domain (any real task the operator points it at) rather than one mechanism inside it (as `auditonomy` did, naming only the Trail/audit half).
+Sourced from operator clarification in session: convergence is held by the best currently available models, a newly released frontier model must get an independent attempt, and a Destination change invalidates convergence completely. The operator proposed three flagship models as the practical limit for token efficiency.
 
-**Action.** OS-level rename of the repo folder (`auditonomy-skill` → `work-skill`, clean `Rename-Item`, no complications this time) and `git mv` of the inner skill folder (`auditonomy/` → `work/`, history preserved); updated frontmatter `name:`, the H1, and the two in-body mentions in SKILL.md; updated README.md throughout, including the tagline ("Auditable autonomy in one file" → "Real work, fully auditable, in one file" — the auditability claim is preserved, not dropped, just no longer load-bearing in the name itself); updated this file's forward-facing prose (title, blockquote naming chain, "why this repo exists", mandate constraints, "what done looks like"); updated `orientation.md`'s title line. Version 3.0.0 → 3.1.0.
+The resulting boundary separates two invalidation events. A newly available frontier model challenges the existing result; if it finds silence, the prior independent evaluations need not be repeated, while any material artifact change resets the chain under the existing Principle 3 rule. A Destination change is deeper: prior evaluations answered a different question, so none count toward convergence under the new reference signal. The operational quorum remains three current frontier-capable models from distinct model families, selected by the operator using available capability evidence and access rather than a frozen vendor list.
 
-**Deliberately not touched:** every verbatim quote and every historical dated section above containing the old names (`pea-lite`, `pea-skills-lite`, `think-it-through`, `auditonomy`) — preserved as historical record, same convention as the first two renames. `audit-trail.md`'s own historical entries are untouched; a new entry was appended instead. Other repos in this workspace (`ai-steward`, `vectorium`) that recorded past runs of this skill under the name `auditonomy` in their own trail files were also left untouched — those are accurate historical records of what the skill was called at the time the work happened, not references that should track the current name.
-
-**Operator not consulted on GitHub rename mechanics this run** — operator was unavailable mid-task ("Work autonomously and make good decisions"); proceeded to rename the GitHub remote (`ntholm86/auditonomy-skill` → `ntholm86/work-skill`) via `gh repo rename`, on the judgment that this is what "make a proper rename... also the repo" most plausibly meant, and that GitHub's automatic redirect from the old URL makes this a low-risk, easily-visible action rather than a silently destructive one.
-
-Blind spot: same as both prior renames — the new name has not been cold-read-tested against the stranger-pickup bar by a fresh reader, only judged by the operator directly. A generic word like `work` also carries a namespacing risk the coined names didn't (collision with other tools/skills literally named "work") — not yet weighed by the operator, worth flagging if it comes up. Next: the still-pending real empirical with/without-skill test remains the single highest-value open item, older and larger than any of the three renames.
-Cost: moderate — roughly 20 tool ops across 4 files plus a GitHub API rename, no subagent.
-
-### What's still open
-
-- The workspace-layer-table question — operator-deferred, if it's ever revisited it should now reference `work-skill`.
-- The reasoning-quality depth assessment — still not yet run.
-- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
-- **New:** whether a bare, generic word (`work`) creates any real confusion in practice (tool names, search collisions, verbal ambiguity in conversation) — not yet observed, worth a note if the operator hits it.
+This is a destination-level validity condition, not a claim that three models prove permanent completeness. It bounds resource use while keeping convergence responsive to both changed purpose and increased evaluator capability.
 
 ---
 
-## Destination Correction - 2026-07-28 (context before compression)
+## Current focus (Destination run, 2026-05-23)
 
-The Furesø Water Ledger probe exposed a failure in the daily-use skill's first-contact reasoning: it treated the operator's latest route statement (understand pollution history and present state) as the project destination, despite earlier conversation naming the desired real-world outcome (a cleaner Furesø with more life and fish). This correction confirms that Work's lower-cost Destination form may compress the interview, but it must not compress away the evidence intake that makes hunching trustworthy.
+The immediate direction is explicit: increase immediate simplicity and onboarding speed while tightening trust claims so they remain structurally enforceable.
 
-Before forming or updating a Destination, Work must use relevant available context - especially the current conversation, higher-scope Destination, and target-local ACM records where they exist - to distinguish the operator's desired outcome, the responsible route toward it, and any mechanisms deliberately left open. The written `destination.md` remains a necessary but lossy articulation of the operator's moving model. Context-sensitive hunching is one of the mechanisms that narrows that gap; it is not optional decoration.
+Priority order for the next phase:
 
-This does not require reading every historical artifact or running the full Destination interview on every target. Evidence selection remains proportional to stakes. The capability bar is shared with the full Destination skill: hunches are sourced from relevant context, surfaced for operator recognition, and never settled by the agent alone.
+1. **Integrity pass (fast win):** eliminate rename drift and install wording mismatch, then enforce this with a verifier rule for stale path tokens in live docs.
+2. **Product pass (adoption win):** make quickstart frictionless and semantically consistent so the first successful run is easy to reach.
+3. **Fidelity pass (core trust win):** enforce session fidelity metadata coverage and structurally distinguish summary artifacts from verbatim transcript artifacts.
+4. **Honesty pass (learning win):** add a reversal-detection heuristic or review gate to reduce realization/reversal asymmetry.
+5. **Benchmark pass (credibility win):** publish a small external benchmark set with independent evaluator replication evidence.
 
----
+Constraint carried from the operator's professional context: evidence from confidential enterprise work remains private because it is employer-owned work product covered by IP/confidentiality obligations.
 
-## Destination run — 2026-07-26 (one universal path: destination → orient-with-rubric → loop-until-silence)
+Open questions to resolve during implementation:
 
-Operator ran the full Destination skill (not the mini version) to capture a conversation that started from a question about whether an independent-evaluator's convergence-log rules belonged in the general skill. Signal gathered: that conversation itself, this file, and the current `.acm/orientation.md` / `.acm/audit-trail.md` state. Operator's own framing: **"the overall destination remains the same but this is for accuracy"** — this is a refinement of mechanism-shape, not a redirection of "The One Question" above.
-
-### Sourced inferences
-
-1. **[Direction, confirmed this run]** There should be exactly one workflow shape, with no fork between self-targeting and external-targeting runs — the loop should look identical either way. *Source, verbatim:* "In my mind the flow is obvious. THere should be only one path - always, self targetting run or not - and it should end with silence against a certain destination."
-2. **[Mechanism, confirmed this run]** Orient must run once, immediately after destination is established, **even on a target with zero trail history** — producing a measurement rubric and a todo list as a structural output of orient-bootstrap itself, not as something gated behind an explicit "rate it" request. *Source, verbatim:* "then orient (yes even without history) - so that the measurement rubric created (not triggered on 'rate it' just as a mechanism of the mini-orient) and the todo list is created."
-3. **[Constraint, confirmed this run]** This whole bootstrap apparatus (destination.md, orientation.md-with-rubric) must be skippable for genuinely small tasks — it would be overkill to demand both files exist for a trivial ask. *Source, verbatim:* "Orientation and destination and rubric should exist before it begins - but be skippable if the task is small enough - and it would be overkill demand destination.md and orientation.md just for a small task."
-4. **[Priority, confirmed this run]** The loop must self-detect, without operator prompting, both (a) when an arc-read is due and (b) when destination itself needs redefining because progress has visibly slowed. *Source, verbatim:* "the work skill should be aware of when to trigger the orient skill - or when to redefine destination because the speed is slowing down." (Note: (b) already exists mechanically as step 0.5's third re-trigger, added in "Destination run — 2026-07-04 (self-triggered destination)" above — this run confirms that mechanism rather than introducing it.)
-5. **[Constraint / meta-stance, confirmed this run]** Corrections to how the skill should behave should route through destination-setting, not through piecemeal mechanism bolt-ons reacting to one observed rule at a time — and the fact that independent model families have already converged on the current path/workflow is itself part of the architecture's evidentiary strength, worth protecting from ad hoc bloat. *Source, verbatim:* "i dont want to add unnessecary bloat to the skill and part of the strong arguements of the skills architecture is that several models converged on the path and the workflow - which is what i am now defining when i really need to only define the destination."
-
-### Questions surfaced and operator responses
-
-All five inferences above were read back to the operator in full (this repo's `.acm/audit-trail.md`, prior turn) before this file was touched, per the destination-layer read-back rule. The operator's instruction to "run destination skill to capture this talk" — after confirming "the overall destination remains the same but this is for accuracy" — is treated as confirmation of all five.
-
-### What I now believe
-
-- **Confirmed.** The loop's mechanical shape (steps 0-4) must never special-case self-targeting vs. external targets — already true of the current text; this run makes it an explicit, checkable constraint rather than an incidental property.
-- **Confirmed.** Orient needs a first-contact mode (paired with step 0's Destination bootstrap) that fires once on encountering a target with no history, producing a rubric and a todo list unconditionally — **not yet in `work/SKILL.md`**. Today's step 4 is entirely arc-based (reads "the last ~5-10 entries," fires on need-signals or a backstop count) and structurally cannot fire on a target with zero entries. This is a real, confirmed mechanism gap, not yet closed.
-- **Confirmed.** Step 0's condensed Destination process needs a depth-escalation path that references the full `destination` skill's interview methodology (this file's own governing skill, `pea/skills/destination/SKILL.md`) when the condensed "1-3 guesses → one question" shape is too shallow for what's being decided — not yet in `work/SKILL.md`.
-- **Confirmed.** The whole bootstrap-plus-orient-bootstrap apparatus needs an explicit small-task skip clause, consistent with the existing Tier system's cost discipline — not yet in `work/SKILL.md`.
-- **Not yet ruled on by the operator — left open, not assumed:**
-  1. What an orient-bootstrap rubric rests on when a target has zero prior entries to cite as evidence (the scoring clause's own rule is "a score with no cited evidence is a guess wearing a number"). Two readings were offered — provisional/unscored axes first vs. scoring directly against live inspection of the fresh target — neither confirmed.
-  2. Whether the literal **Cross-model convergence log** table format needs to become a general SKILL.md concept every target keeps, or whether only the underlying *behavior* (independent runs eventually converging to silence) needs to generalize while the table itself stays this repo's own bookkeeping choice, the same status as a target-specific rubric or todo list.
-
-### What this changes going forward
-
-This section is a destination-level confirmation only — it does **not** yet change `work/SKILL.md`. The corresponding mechanism deltas (Orient bootstrap sub-step, unconditional rubric-and-todo generation, destination-interview depth escalation, task-size skip clause) are named above as confirmed obligations this destination now imposes on the skill text, but implementing them is a separate, explicitly deferred decision — the operator has not yet chosen between capturing this as policy-only (done, this run) versus also drafting the SKILL.md deltas for review.
-
-### What's still open
-
-- The workspace-layer-table question — still operator-deferred, unchanged.
-- The real empirical with/without-skill test — still the single most-repeated unresolved item across this whole arc.
-- **New:** the two unconfirmed sub-questions above (rubric-with-zero-evidence handling; convergence-log-as-general-mechanism vs. target-specific artifact).
-- **New:** whether and how to draft the `work/SKILL.md` mechanism deltas this destination run now obligates (Orient bootstrap, rubric/todo unconditional on bootstrap, destination-interview escalation, task-size skip) — confirmed as owed, not yet scheduled.
+- What is the minimum fidelity contract that raises trust without making session capture too heavy for daily use?
+- Which benchmark targets can be public and independently rerunnable without legal or privacy friction?
 
 ---
 
-## Destination run — 2026-07-26 (one Orient, destination-derived ratings, correctness by construction)
+## What this work is, beyond a skillset
 
-Operator corrected the v3.4.3 design after asking how Mini-Orient worked: "The orient bootstrap should be the same as the mini-orient (but it should be just be called Orient - no 'mini' anywhere)" and "we already had some kind of rubric measurement rating mechanism - i thought it was tied to the orient/mini-orient." This is a correction to the mechanism interpretation captured in the preceding 2026-07-26 run, not a change to the repo's overall destination.
+This repo is **as much research as it is development**. The development output is a set of skills; the research question those skills serve is older and bigger than any of them:
 
-### Sourced inferences
+> **What is the architecture of trustworthy delegation?** What does it actually take for a human to safely hand real work to an AI more capable than themselves — and remain the responsible party for what gets done?
 
-1. **[Architecture, confirmed]** There is one Orient operation, invoked both on first contact and later need-signals. Bootstrap and later arc-read are call conditions, not separate implementations or names. *Source:* operator's quoted correction above; the live v3.4.3 file instead has separate step 0.5 "Orient bootstrap" and step 4 "Mini-Orient" procedures.
-2. **[Mechanism, confirmed by question]** Every Orient creates or refreshes a destination-derived rubric and evidence-backed ratings. First contact uses current target evidence; later Orient runs combine current target state with Trail evidence. Rating is not a separate operator-triggered Work feature. *Source:* operator's statement that the existing rubric/measurement/rating mechanism was expected to be tied to Orient. Asked directly: "Should every Orient produce or refresh evidence-backed ratings for its destination-derived rubric, including first contact using live target evidence?" Operator selected "Yes, every Orient rates."
-3. **[Constraints, explicit]** DRY, KISS, and YAGNI govern the design: one definition of Orient, the smallest flow that expresses the invariant, and no speculative branches or machinery. *Source:* operator: "We need to apply simple principles to the destination: DRY, KISS, YAGNI."
-4. **[Quality bar, confirmed by question]** Prefer constructions in which invalid paths cannot be represented; where a Markdown skill can only prescribe behavior, disclose that enforcement boundary instead of claiming a structural guarantee. *Source:* operator: "I believe that the best design is one that makes bugs impossible." Asked directly whether Work should prefer one construction that makes invalid paths unrepresentable and disclose procedural-only boundaries; operator selected "Yes, construction first."
-5. **[Usability, explicit]** The complete flow, including ordinary cases and edge cases, must be describable and visualizable as one coherent system. *Source:* operator asked for the "entire skillset flow with all cases and edge-cases," reinforcing the existing stranger-pickup and skill-leads-workflow bars.
+The skills are one attempt at an answer. They may turn out to be the wrong attempt, the right attempt for a narrower class of work than hoped, or a step toward an architecture none of us has named yet. A negative result on the skills is still a result on the question.
 
-### What I now believe
+**This is an entry in an emerging space.** Reasoning frameworks for AI agents are being developed from multiple directions simultaneously. The differentiator this one is aiming for is **recognition, not comprehension**. If the psychological primitives are correct, practitioners who have experienced the friction — unclear AI intent, invisible reasoning, improvement loops that stall without explanation — will recognise the problem being named the moment they encounter this framework. That instant recognition is the test of whether the model found the right primitives. If the framework requires extensive explanation before someone sees the point, the model is probably wrong, not just badly communicated. Effectiveness without recognition produces a tool no one reaches for. Recognition without effectiveness produces a concept no one deploys.
 
-- **Orient owns measurement.** It derives the rubric from the confirmed destination, rates each axis from cited evidence, forms falsifiable current claims, identifies the next candidate moves, checks cost/loop effectiveness where evidence exists, and bounds silence.
-- **Invocation changes evidence breadth, not procedure identity.** On first contact there may be no Trail history, so Orient rates from direct inspection of the target and marks unavailable historical evidence explicitly. On later triggers it reads recent Trail evidence as well. The same output contract applies in both cases.
-- **The current split is a design defect.** v3.4.3 duplicates Orient across steps 0.5 and 4 while keeping ratings in step 2 behind "when the operator asks." That violates DRY, permits the two paths to drift, and caused the operator's correction.
-- **Correctness by construction outranks reminder text.** The live skill should define Orient once and make both first-contact and later triggers route to it. Trail-before-action remains a procedural guarantee because a Markdown instruction cannot mechanically enforce write ordering; that bound must remain honest.
+**The mechanism is psychological, not procedural.** Most reasoning frameworks improve the quality of a single run — better decomposition, better tool use, better output validation. This approach is different: the skills are designed to give the AI a progressively richer *interior model of the situation*, so that its autonomous decisions are more enlightened rather than just more structured. Commander's Intent gives the AI the *why*, not just the *what*. The trail gives the AI memory of its own reasoning across sessions. Destination closes the gap between what the operator holds in their head and what the AI is actually working from. Retrospect gives the AI a sense of what the target is *becoming* — not just what it is. The retrospect.md gives the AI its current orientation before it acts. None of these are output-quality levers. They are all about building situational understanding over time. An AI running these skills is not following a better procedure — it is developing a richer model of the work, the operator's intent, and its own prior reasoning. That is the bet.
 
-### Rejected or superseded
+**Two success conditions run in parallel:**
+1. **Research success** — the experiment produces evidence about what trustworthy delegation actually requires, including negative results.
+2. **Adoption success** — developers read the skills and start using them in their own projects without help from the author. Not integration into a pipeline — just: someone encounters these skills, recognises the problem, and finds them worth running.
 
-- Superseded: bootstrap Orient may leave ratings blank when no Trail exists. Direct target inspection is evidence; every Orient rates, while honestly marking axes whose evidence is unavailable.
-- Superseded: rating is a distinct Work behavior triggered only by "rate this." An explicit rating request triggers Orient; it does not invoke a separate scoring implementation.
-- Superseded terminology in live guidance: "mini-Destination" and "Mini-Orient." Historical quotations and dated records retain the words as evidence of what the design used to call them; they are not current architecture.
+**The architecture has two phases, and only one is fully automatable.**
 
-### Still open
+Phase 1 is **destination convergence**: the human and the AI converge on a shared, precise model of what is to be built and why. This is done through dialogue — Destination, Intent, and Retrospect cycles on this file. It cannot be automated; the AI cannot derive the full destination from the work alone, because the human's understanding of the goal is always ahead of what has been written down. The destination will expand and change as the operator has realisations — that is expected and healthy. Destination is the mechanism for revisiting it.
 
-- No destination question remains open for this redesign. Behavioral conversion on a genuinely fresh target remains an evidence task after the mechanism is changed, not a destination ambiguity.
+Phase 2 is **the iterative loop**: once the destination is precise enough, the loop runs against it. The autonomy level is configurable — from full autonomy to human-gated at key decision points. What is safe to automate fully: testing, robustness improvements, internal consistency fixes, trail maintenance. What requires a human gate: direction changes, and most importantly — **what to implement next**.
 
----
+**The irreducible human gate is: what to implement.** The AI can reason toward the destination, identify the highest-leverage gap, and propose the next change. But there will always be constraints and context the human holds that haven't made it into destination.md — cost, stakeholders, downstream implications, things not yet realised. The AI proposes; the human decides — or explicitly delegates that decision back to the AI. The goal is to make this gate as lightweight as possible while keeping the human genuinely in the loop, not just formally in the loop.
 
-## Destination refinement — 2026-07-26 (rubrics visualize progress but must not become the field of vision)
+A load-bearing piece of any answer to that question — and the piece this skillset is most directly aimed at — is this: **the AI's power has to be made transparent enough that the human keeps steering even when the AI exceeds their ability to verify in detail.** "Transparent" here does not mean regulator-grade auditability after the fact; it means evidence the operator can use *while driving*, in time to correct course. That is what the trail, the retrospect.md, and the read-order at step 1 of Improve are trying to be — instruments on a dashboard, not a black box and a logfile.
 
-Operator confirmed the intended loop in direct form: **Destination → Orient measures and creates the todo list → iterate until silence; when Destination changes, Orient creates a fresh rubric.** The measurements are retained because their visible deltas are satisfying and useful to the operator, despite the autonomy cost that caused the full PEA suite to abandon rubric-led improvement.
+**Convergence on a particular skill is not convergence on the question.** The question is the longer arc the skills serve. Every claim this repo makes about being "done" must be read against that distinction.
 
-### Confirmed tradeoff and constraints
+## The Memory Model
 
-1. **Rubrics are an operator-facing visualization, not the agent's search space.** They show a useful projection of progress; they do not define everything worth seeing. *Source:* operator: measurements were dropped by the PEA suite because they limited autonomy, but the visualization tradeoff is worth retaining in Work.
-2. **The skill must actively mitigate rubric blindness.** Merely saying scores are temporary addresses Goodhart persistence but not attentional anchoring during the current plateau. The agent must look beyond inherited measurements before using them.
-3. **Destination is the sole rubric source.** Orient derives measurements from the current confirmed destination. A materially changed destination invalidates the entire prior rubric, ratings, deltas, and todo; the next non-Micro operation is a fresh Orient.
-4. **The flow should be expressed as invariants, not an expanding edge-case catalogue.** Apply KISS, YAGNI, DRY, Simplicity, Clarity, Transparency, and Solve by Design. Prefer one state rule that absorbs many cases over another branch explaining one symptom.
-5. **Scores do not determine convergence.** The visible delta is progress telemetry. Silence across independent destination-reading evaluators remains the stopping condition.
+AI agents forget everything between sessions — and many things within a session. This is not a bug to be patched. It is the architecture: large language models have no native long-term memory.
 
-### Design consequence
+The research converged on a named answer: **The Memory Model**. The files `destination.md`, `audit-trail.md`, `retrospect.md`, and `sessions/` are not isolated documents. They are one architectural layer — a persistent memory that survives session resets, context window limits, and model swaps. When you switch from Claude to GPT to Gemini, the next model picks up the same destination, the same trail, the same arc. The substrate survives the model change.
 
-Orient must examine the target openly **before consulting inherited rubric scores**, re-derive candidate measurements from Destination, and compare that derivation with the inherited rubric. Anything important found outside the rubric, or any divergence in re-derivation, is a first-class finding. Only then may Orient score and produce the todo. This preserves the operator-facing visualization while preventing the inherited rubric from becoming the ceiling by construction of the reading order.
+Each skill has a defined role in this layer:
 
----
+- **Intent** — ensures each session is aimed correctly, so the memory accumulates progress rather than drift
+- **Destination** — holds the operator's destination in `destination.md`, the part of memory that only changes by deliberate decision
+- **Trail** — writes the append-only decision record in `audit-trail.md`, the core of the memory layer
+- **Improve** — reads the full memory layer before every run; extends it with each iteration's findings
+- **Retrospect** — synthesizes the arc into `retrospect.md`, the orientation the next run starts from
 
-## Destination refinement — 2026-07-26 (trusted compression and Improve-grade judgment)
+The Memory Model is what makes the convergence requirement meaningful. Three independent model families reasoning over the same persistent memory layer produces genuine agreement. Three models starting from zero each time produces noise.
 
-The operator identified a deeper boundary behind rubric blindness: Work cannot afford to read an entire solution on every run, so Destination must serve as **trusted compression of the human meaning**. That compression saves tokens only when the interview captures the destination accurately enough that the operator recognizes their own intent in it. Even an accurate Destination cannot prescribe every useful way of thinking; Work must retain enough reasoning capability to discover principles, structural simplifications, and target-specific lenses that the operator did not know to name.
+## What this repo is for
 
-### Confirmed responsibilities
+This repo is **simultaneously the workshop and the proof**. The skills — intent, improve, probe, trail, retrospect — are generic tools meant to make any AI agent's improvement loop better. The honest test is whether they can improve themselves. If they can't, the claim is hollow.
 
-1. **Destination compresses the human model.** It holds the ends, durable constraints, recurring principles, quality bars, and rejected trade-offs that later work should not have to reconstruct by reading the whole solution or replaying the conversation.
-2. **Operator recognition is the stopping bar for the interview.** Purpose, audience, quality bar, constraints, and unacceptable trade-offs are useful prompts, not a completion checklist. Destination is sufficiently accurate when the operator recognizes that it captures what matters and would let a human judge the result.
-3. **Recurring principles may be named defaults, never a closed reasoning set.** DRY, KISS, YAGNI, simplicity, clarity, transparency, and solve-by-design may remain explicit constraints because the operator repeatedly values them. Their presence does not excuse Work from independently deriving other lenses the target and domain require.
-4. **Every decision-bearing run retains Improve-grade reasoning.** Standard and Full may differ in recording depth and evidence breadth, but both must form a model of the target, derive target-specific lenses, consider competing interpretations or routes, test whether structural redesign dominates another local patch, and challenge the resulting model. Micro remains genuinely cheap.
-5. **Map before local reasoning is the default, scaled by domain risk.** Work should first establish a compact view of the target's major parts, controlling relationships, and important unknowns. The agent decides how broad that map must be from the target domain's risk and reversibility; low-risk work may stop early, while high-risk work earns broader evidence. No universal read count or token quota substitutes for judgment.
-6. **Orient's rubric and todo are advisory maps.** Every Work iteration may retain or displace the suggested top item when its current target model reveals more important work. The reason for displacement becomes evidence for the next Orient; following the list is never a substitute for examining reality.
-7. **Human legibility is universal.** Work must leave the target, the reasoning that changed it, and why the result serves Destination intelligible to the operator, with explanation depth scaled to the target and stakes. A technically functioning result that humans cannot understand or judge has not fully served the destination.
+The present focus has two parts:
 
-### Why this refinement was needed
+1. **Get the reasoning layer to a reasonable state** — each run finds the highest-leverage thing left to change in the skills themselves and changes it, or declares convergence.
+2. **Document the process well enough to be implementable** — by another agent framework, by a human team, by an execution harness. "Good enough" is bounded by Principles 1 and 2: the documentation must **define the destination, not prescribe the route** (no checklists, no thresholds smuggled in as defaults), and the process it describes must **produce a visible trail as a structural property**, not as an optional add-on. A spec that satisfies a harness by being mechanical violates Principle 1. A spec that hides what the agent did violates Principle 2.
 
-The recent self-improvement sequence required repeated operator prompts to add DRY, KISS, YAGNI, simplicity, and flow verification before Work recognized that its growing edge-case catalogue needed one invariant. Part of that miss came from an incomplete Destination. The remaining part came from Work's compressed reasoning implementation: it copied Improve's named lenses and challenge questions but did not reliably preserve Improve's stronger operations of building a target model, inventing lenses from the domain, comparing plausible routes, ranking structural alternatives, and reflecting on where the target's real weight sits. Improving Destination alone would hide that capability gap rather than solve it.
+These two goals constrain each other. A skill that works conversationally but can't be specified precisely enough for another system to invoke is not done. A specification precise enough for machine invocation but that turns the skill into a checklist — or strips out the trail — has broken what it was specifying.
 
-### Consequence for the next Work run
+## Architectural constraints (not guidelines)
 
-The current v3.6.0 Orientation is void as current guidance because its Destination basis predates this refinement. The next non-Micro Work run must perform a fresh Orient against this exact basis before mechanism changes. That Orient should derive measurements capable of testing trusted compression, Improve-grade decision reasoning, risk-sized mapping, advisory todo behavior, and human legibility without turning those measurements into a new closed checklist.
+1. **Generic first.** No infrastructure, tests, or docs that only make sense because the target is a skills repo.
+2. **No test infrastructure.** The loop is the test. The trail is the evidence.
+3. **Human-readable.** If a term requires prior knowledge to understand, it fails.
+4. **One change per run, highest leverage, stated reason.** No batching.
+5. **The three principles are constraints, not preferences.** Violating one means a skill is broken.
 
-### Still open
+## Memory, learning, meta-cognition (the protocol must require all three)
 
-- How to encode Improve-grade reasoning compactly enough to preserve the daily-use cost goal without reducing it to another checklist.
-- What minimum evidence demonstrates a sufficient risk-sized map in different target domains; the agent owns the judgment, and the Trail must make the chosen breadth inspectable.
+A reasoning layer that can't carry anything across runs is not a reasoning layer. The protocol the skills define must require all three, while leaving the implementation open — different harnesses will satisfy them in different ways, and some of those ways will be faster or more structured than what this skillset uses.
 
----
+**Memory** — *what happened.* The full record of decisions and reasoning behind it, actions, and reflections from prior runs, kept in a form that can be re-read. Without it, every run starts from zero and the agent cannot be held to anything it concluded yesterday.
+- *How the skillset solves it:* `.acm/audit-trail.md` — append-only, human-readable, source of truth. `.acm/history.md` is an auto-generated digest. The Trail skill enforces the structure.
 
-## Destination refinement - 2026-07-26 (reasoning memory at daily-use cost)
+**Learning** — *what to do differently next time.* Some signal extracted from prior runs that changes future behavior. This is not the same as memory; memory is the substrate, learning is the update.
+- *How the skillset solves it:* Indirectly and weakly. There is no stored strategy artifact. "Learning" here means a future agent re-reads the trail and reasons over it. This is honest but slow.
+- *What done looks like:* The agent begins a run with a different approach than it would have used on run 1 — not because the operator told it to, but because it read what didn't work and adjusted. Concretely: a run produces a `[!REALIZATION]` or `[!REVERSAL]`; a later run in a fresh session, on the same target, shows evidence it acted on that prior finding rather than rediscovering it. That is learning. The skillset does not currently produce this reliably. This is the most underdeveloped of the three and the most important gap for a future loop run to target.
 
-The operator identified that Work needs the reasoning-memory capability carried by the full suite's `learning.md` and `history.md`, but not necessarily those files or their maintenance machinery. The non-negotiable outcome is that Work improves its own reasoning over time instead of preserving lessons only in an append-only Trail that ordinary runs rarely revisit. Reasoning capability is part of what Work improves when pointed at itself; it is not a fixed property of the current `SKILL.md`. Token cost remains co-equal because Work is intended for daily use.
+**Meta-cognition** — *what the target is becoming, and is the loop's attention in the right place.* Reasoning about the work itself: the arc, the recurring patterns, whether the questions being asked are the right questions. Without this, an agent will keep solving local problems while the structural problem drifts.
+- *How the skillset solves it:* `.acm/retrospect.md` — the current synthesized orientation, written by Retrospect after reading the arc, read by Improve at step 1 before each run. The Retrospect skill is the mechanism that produces it. This `destination.md` sits alongside it: the destination is what the operator/team holds and does not change without an explicit decision; retrospect.md is what the agent derives from the trail and is rewritten each Retrospect run.
 
-### Confirmed policy
+## The hard problem this repo exists to chip away at
 
-1. **Use hybrid reasoning memory.** Every decision-bearing run inherits a compact set of lessons that remain operationally true now. Full chronological realizations and reversals are consulted when Orient runs or when risk, surprise, contradiction, or a touched prior reversal makes their provenance relevant.
-2. **Preserve capability, not suite artifacts.** `learning.md`, `history.md`, `record.py`, and per-run regeneration are implementation choices, not requirements. The agent may choose the lowest-cost architecture that preserves reasoning inheritance and historical challenge.
-3. **Prefer current truth in the hot path.** Superseded lessons must not consume daily context or silently govern current work. The append-only Trail keeps provenance; Orientation carries the current active synthesis.
-4. **Historical learning must remain reachable.** Cost optimization may defer the chronological read, but it may not make older realizations and reversals practically invisible when current reasoning is challenged.
-5. **Reasoning efficiency is part of Work's destination.** Self-runs should improve the quality gained per token: stronger judgment and better reuse of prior learning with less repeated reconstruction, without optimizing token count by cutting decision quality.
+The central research question is: **What is the architecture of trustworthy delegation?**
 
-### Operator rulings
+When this repo targets itself, the loop has to derive its retrospect.md from the trail. The agent cannot be told "this is what the target is becoming" — it has to read the trail, form arc-claims, and write that orientation itself. **That — autonomous retrospect.md derivation — is the hard problem.** Every other reasoning capability sits on top of it: an agent that cannot derive what the target is becoming will keep optimizing for whatever metric is in front of it.
 
-- Asked what every decision-bearing run should load: the operator chose **Hybrid** - active lessons always, chronological learning when Orient or risk requires it.
-- Asked whether to reuse Orientation plus Trail or add a derived learning file: the operator delegated the implementation choice to the agent.
+The next frontier for this research is to elevate the agent's capability from mechanical consistency to architectural insight. The loop's self-correction mechanism for design-level flaws is currently operator-dependent. The ultimate aim is for the `improve` skill to be so effective that it can find and fix its own deep, architectural flaws without any human prompting. The system should be able to discover the need for a new skill like `retrospect` on its own.
 
-### Implementation direction chosen under delegation
+This involves two related sub-goals:
+1.  **Codify Strategic Thinking:** Embed the process of strategic thinking directly into the skills. The agent must explicitly reason about the "why" behind a target's design, not just the "what."
+2.  **Create a Self-Bootstrapping System:** Develop the capability for the system to generate its own `destination.md` for any new, unfamiliar codebase it encounters, forming a "best guess" at the project's purpose for the operator to refine.
 
-Use `orientation.md` as the compact always-read active layer, and query `[!REALIZATION]` / `[!REVERSAL]` markers directly from `audit-trail.md` on demand. Do not add a derived learning file, timeline file, generator, or freshness protocol unless evidence later shows this cheaper construction cannot preserve the reasoning capability.
+Destination (this file) is what the operator gives the agent as input. retrospect.md is what the agent must produce as output. The gap between them is what Retrospect is trying to close.
 
----
+## Horizon (context, not current focus)
 
-## Destination refinement - 2026-07-26 (latent human direction, hunching, and autonomous convergence)
-
-The operator clarified the argument behind using Work and multiple model families to converge toward silence. Work's universal mechanism must remain target-agnostic and route-neutral. When Work is pointed at itself, the target happens to be its own improvement-reasoning architecture, so self-runs should improve that reasoning capability and its efficiency. That is a property of self-targeting under this repo's Destination, not a universal instruction for every target or a fixed route embedded in the skill.
-
-### Confirmed distinctions
-
-1. **Work's Destination and Work's mechanism are different layers.** This repo's Destination may require DRY, KISS, YAGNI, simplicity, clarity, transparency, solve-by-design, and improved reasoning efficiency. The distributed skill must not impose those doctrines on arbitrary targets merely because they guide its own design; doing so prescribes a route and weakens autonomous search.
-2. **Self-targeting improves reasoning because reasoning is the target here.** Work does not carry a separate universal command to improve "reasoning" regardless of task. Its ordinary target-agnostic loop improves whatever target the operator selects. In this repo, that includes the architecture's ability to interpret, model, challenge, remember, and decide at high quality per token.
-3. **Convergence is relative to an articulated Destination.** Independent models approaching bounded silence is strong evidence that they have exhausted materially different routes against the same current destination. It does not prove the operator's full latent intent has been captured or that the destination can never evolve.
-4. **Destination is trusted but lossy human compression.** `destination.md` externalizes a small, auditable part of a much richer and continuously processed human model. The operator may discover connections, sharpen priorities, or change course during the work. Operator recognition is a present-tense alignment check, not a claim that the gap is permanently closed.
-5. **Hunching is a standing alignment faculty.** Work should use conversation, corrections, changed emphasis, newly connected ideas, repeated near-misses, and target evidence to form 1-3 sourced guesses about the direction the operator may be moving toward. It surfaces only the highest-leverage hunch whose answer would change the work, explicitly as a question the operator can confirm, correct, or reject. The agent may detect and initiate this process; only the operator settles Destination.
-6. **Hunching is evidence-triggered, not continuous ceremony.** A meaningful signal that the written Destination may lag the operator can trigger a hunch before contradiction or plateau. Time, session count, or the mere ability to imagine alternatives is insufficient. If no genuine sourced hunch exists, silence is correct.
-7. **Destination evolution is expected, not treated as failure.** When operator learning changes the destination, the old articulation remains truthful history, the new confirmed articulation invalidates the prior Orientation, and autonomous convergence restarts against the updated basis.
-
-### Why this matters
-
-The gap between the operator's mind and the written Destination is irreducible but reducible. Models can explore several plausible futures, articulate implications the operator has not yet externalized, and ask cheap, falsifiable questions. That capability reduces articulation cost and improves alignment without transferring destination authority to the agent. It is part of why multi-model convergence is valuable: diverse autonomous routes test the target, while evidence-triggered hunching keeps the shared destination responsive to human learning.
-
-### Boundary chosen under delegated judgment
-
-The operator was unavailable to answer whether hunching should run continuously or only at existing late triggers and instructed the agent to work autonomously. The selected boundary is evidence-triggered hunching: earlier than contradiction or plateau, but only when a sourced signal indicates that the written Destination may lag the operator. Continuous hunch questions would add daily ceremony and manufacture uncertainty; retaining only late triggers would miss the moving-target gap the operator explicitly identified.
-
----
-
-## Destination refinement - 2026-07-26 (canonical authorship and portable attribution)
-
-The operator explicitly confirmed the canonical author credit for Work and this body of work:
-
-> **Nils W. Holmager**
-
-This is the name public and distributable artifacts should use. Attribution must survive copying the standalone `work/` folder; repository ownership and Git history alone are insufficient. The skill metadata, README, and existing license notice should agree on the canonical name.
-
-Model names in Trail remain execution provenance for particular runs, evaluations, and edits. They do not replace or dilute Nils W. Holmager's authorship of Work, its architecture, or the accumulated project direction. Earlier references to `Nils Holmager` remain historical records and are superseded for current attribution by this confirmed ruling.
-
-This ruling corrects attribution only. It does not broaden the MIT license, claim authorship of linked third-party projects, or require repeated bylines throughout operational memory files.
-
----
-
-## Destination refinement - 2026-07-27 (the problem Work solves and optional harness memory)
-
-The operator clarified the problem Work exists to solve and its intended relationship with `llm-harness-proxy`.
-
-### The problem
-
-Work exists to prevent operational context loss and cognitive drift when humans delegate consequential work to fallible language models. A model can satisfy the literal wording of a prompt while defeating the human purpose behind it. The governing failure is therefore not merely unauthorized action or forgotten text; it is action taken without a sufficiently accurate model of what the operator is actually trying to achieve.
-
-The operator's examples establish the distinction. A model asked to supply comments for a journalistic article can generate comments that support the article while destroying its credibility because the comments are not from real people. It solved the surface request and violated the actual intent: the journalist needed authentic evidence. Likewise, sandboxing alone cannot supply purpose-awareness; a capable model may route around a boundary it does not understand. Work addresses this reasoning-quality problem by reconstructing intent, preserving the destination across time and targets, challenging literal-but-purpose-defeating routes, and making material decisions reviewable.
-
-Work may accurately claim that it prevents context loss and cognitive drift at the workflow level when its protocol is followed: Destination externalizes operator-held purpose, Orientation reloads current state and lessons, Trail preserves decisions and reversals, and evidence-triggered hunching reduces the gap as the operator learns. It must not turn that into a guarantee about hidden model cognition or perfect compliance.
-
-### The optional harness companion
-
-[`llm-harness-proxy`](https://github.com/ntholm86/llm-harness-proxy) is Work's optional higher-assurance companion, not a mandatory dependency. Standalone Work remains legitimate where the operator declines the surveillance cost or the domain does not warrant it.
-
-When used together, Work writes the semantic account - intent, prediction, decision, outcome, realization, and reversal - while the harness independently captures the model-protocol traffic available from the provider. The records are complementary. Harness evidence can challenge an agent-authored Trail but does not replace the Trail's semantic reasoning, and provider reasoning fields may be absent, provider-specific, incomplete, or not causally faithful.
-
-The intended target-local storage is `.acm/sessions/`, replacing the proxy's current `.harness/sessions/` convention. This makes captured sessions part of the same Agent Context Memory surface that Work and the full skills suite already inspect. Sessions are evidence memory, not ordinary hot-path context: read them selectively when risk, contradiction, provenance, audit, or a challenged self-report warrants it. Do not load all traffic by default.
-
-Raw sessions may contain prompts, tool payloads, source material, or secrets. They should remain private/local by default unless the operator deliberately chooses a retention and publication policy. Moving them under `.acm/` does not imply committing them.
-
-### Companion awareness
-
-Work should know the canonical companion repository and distinguish two assurance modes:
-
-1. **Standalone:** semantic, agent-authored Work Trail with explicitly procedural timing/compliance limits.
-2. **Harness-backed:** the same semantic Trail plus independently captured session evidence.
-
-Work may detect whether a compatible harness is installed and whether a newer release is available when harness-backed assurance is relevant. It must not silently install, update, start, or route traffic through the proxy. Installation and updates require operator consent. Version checking must not add network cost to every ordinary run; use first setup, explicit assurance requests, incompatibility, or a stale/unknown installed version as triggers.
-
-Future Work and proxy design should provide a cheap way to correlate a material Trail entry with the relevant session identifier and harness/protocol version without duplicating raw events into the Trail. Never claim harness-backed assurance merely because `.acm/sessions/` exists; verify session evidence for the run.
-
----
-
-## Destination refinement - 2026-07-27 (todo sourced from Destination directly; rubric never dominant)
-
-The operator confirmed, across two rounds of clarification, a correction to Orient's own mechanism: when Orient produces the highest-leverage todo, it must derive that todo primarily from direct examination of Destination and the target's current reality — the open pass and the challenge — not primarily or dominantly from the destination-derived measurement rubric.
-
-The rubric's core purpose is a satisfying, honest visualization of current standing for the operator. It is a diagnostic snapshot, not the mechanism that decides what to do next. A rated measurement does not require a matching candidate move, and a candidate move does not require a matching measurement. Requiring every rubric row to spawn a move — or worse, spawning a move whose only purpose is to fix the rubric's own blind spot — inverts the relationship and can make the loop blind to real next steps that have no metric behind them.
-
-This matters most for generative work: building something genuinely new has no current score to report by definition. Forcing an artificial measurement into existence merely to justify an otherwise-obvious next step is exactly the metric-blindness this correction removes. Focusing on metrics can leave the reasoning blind to other things; the measurements exist for the operator's legibility, not as the route.
-
----
-
-## Destination refinement - 2026-07-27 (first-contact Orient is optional, not mandatory)
-
-The operator corrected a subtler point beneath the todo/rubric-dominance fix: the reasoning loop itself is capable of running without ever consulting Orient or producing a todo list — Destination plus direct target examination is sufficient to reason and act. Historically, in the original full suite, `orient` was not invoked on first contact at all; it ran only after a few plain iterations had accumulated evidence, as a periodic macro-reflection, not a gate.
-
-Work's current mechanism had drifted from that: it stated first-contact Orient as *required* before any Tier 2 or 3 work, treating an absent Orientation the same as a stale one. The operator confirmed the correct framing: on first contact, running Orient is the default, recommended action — it gives a fresh target immediate structure and a visible starting point, a genuine benefit — but it is optional, not a hard gate. A confirmed Destination remains required before Tier 2 or 3 work; Orient does not.
-
-This does not loosen the separate, already-established rule that a confirmed Destination change voids the old rubric, ratings, and todo until a fresh Orient replaces them. That rule concerns a block that exists and is now stale, which risks being misread as current — a different situation from one that has simply never been created, which is honest absence, not a misleading state. The operator's correction was scoped specifically to first contact; the destination-change refresh rule is unchanged.
-
----
-
-## Destination refinement - 2026-07-27 (session synthesis — current articulation)
-
-This section synthesizes, in one place, what today's scattered dated refinements jointly establish, so a fresh reader isn't required to reconstruct it from history. Not new direction — a current-accurate restatement of confirmed direction.
-
-Work exists to prevent practical context loss and cognitive drift in delegated work, and specifically to catch literal prompt compliance that defeats the operator's actual purpose — the central failure this skill exists to make visible and prevent. Destination (operator-held purpose), Orientation (current compressed state), and Trail (agent-authored semantic reasoning) deliver this standalone, with no external dependency.
-
-An optional companion, `llm-harness-proxy`, can add independently captured session evidence under `.acm/sessions/` when stronger assurance is warranted. Work remains complete without it, never claims that mode is active without verifying real session evidence for the current run, and never installs, updates, or routes traffic without operator consent.
-
-The rubric Orient produces is a diagnostic visualization for the operator's legibility — never the mechanism that generates the todo. The highest-leverage next move is judged directly from Destination and the target; it needs no matching rubric row, and inventing one merely to justify an otherwise-obvious step — especially for genuinely new, unscored work — is the exact metric-blindness this rule exists to prevent.
-
-Orient is not a mandatory first-contact gate. A confirmed Destination is required before Tier 2 or 3 work; Orient's first run is the default, recommended path to a clear starting point, but the loop can reason and act directly from Destination and target examination alone when that is genuinely sufficient.
-
-Convergence toward a confirmed Destination is a cross-model claim, not a single-model one. A single model's repeated bounded-silence declarations are evidence of *that model's* plateau, never proof of convergence. When Trail shows several consecutive bounded-silence entries from the same model with no new evidence, Work should name that plateau explicitly and ask the operator to run the next evaluation under a different model before treating the target as converged — it must not silently keep declaring silence under one model and call that "done."
-
-Self-editing discipline is now demonstrated, not just claimed: this session found and closed the same recurring defect class — a stated principle quietly overridden by one contradicting literal instruction elsewhere — six times, then honestly reported that a further internal pass reached a near-flat, ~0.2% reduction once genuine duplication was exhausted. The file's length is close to its honest floor given the no-capability-loss constraint.
-
-Open by evidence, not by design: rubric rows 11 and 12 (todo/rubric decoupling, first-contact-Orient optionality) are instruction-complete but behaviorally unexercised — no run has yet actually skipped Orient on a fresh, unfamiliar, build-something-new target and verified the loop still reasoned soundly without a todo list.
-
----
-
-## Destination correction - 2026-07-27 (session synthesis omitted PEA principles and The One Question — restored)
-
-The prior "session synthesis" section above was drafted from this session's own working memory of its own recent turns, not from an actual top-to-bottom read of this file. The operator caught the omission directly: that synthesis never named the three PEA principles that "Constraints carried over from the workspace destination" holds as binding (Operator's Intent, Observable Autonomy, Convergence Is Silence), nor The One Question's own framing (standalone, target-agnostic, full auditability, adhering to PEA principles, cheap enough for daily use). This was a fact-grounding failure specific to a synthesis claim, not a deliberate re-scoping of Destination, and not evidence that PEA adherence had actually lapsed — the current rubric's rows 1, 10, and 13 already measure Operator's Intent, Observable Autonomy, and Convergence Is Silence respectively; only the prose synthesis failed to name that lineage.
-
-For the record, restated plainly rather than assumed: **The One Question and the three PEA principles remain the root and the binding constraints of this entire file**, unchanged by anything appended today or by the correction here. Everything from "Why this repo exists" onward — standalone/target-agnostic identity, cost-as-co-equal, the stranger-pickup bar, trusted compression, evidence-triggered hunching, the intent-continuity/context-loss problem statement, the optional harness companion, rubric-as-diagnostic, first-contact-Orient-optionality, and cross-model convergence — are refinements and elaborations of that same root question and those same three principles, never replacements for them. The prior synthesis section is not withdrawn (this file is append-only) but should be read as a partial, session-scoped account, not a full restatement of Destination.
-
-**Corrective principle for future synthesis-type work:** a claim to synthesize or restate "the current Destination" in full is only as trustworthy as the read behind it. It must be grounded in an actual top-to-bottom read of this file at the time the claim is made, not in session working memory or a read of only the most recent sections. This does not reopen the separate, already-settled cost discipline that ordinary runs read Orientation's compact active layer rather than re-reading all of Destination every time — that design is unaffected and remains correct. The narrower failure here is specific to operations that explicitly claim completeness (a "synthesis," a "current articulation") without doing the one full read that claim requires.
-
----
-
-## Destination recapture - 2026-07-28 (full PEA reasoning capability at daily-use cost)
-
-### Confirmed mandate
-
-> **Work must be a token-efficient consolidation of the full PEA reasoning architecture, not a lighter approximation of it. It may compress skill loading, repeated ceremony, and durable record length. It must preserve the full interpretive force of Operator's Intent and the full Improve-grade reasoning process for every meaningful prompt.**
-
-This is the operator's exact confirmed articulation, given after a full Destination pass over the existing record and a conversation testing the distinction against real failures. It clarifies the standing one-question requirement - target-agnostic improvement reasoning with full auditability cheap enough for daily use - rather than replacing it. Cost remains co-equal with capability, but may only be reduced by compressing overhead. It may not be reduced by making the agent less able to understand the operator's actual purpose, examine the target, compare routes, or challenge a locally convenient answer.
-
-### Sourced inferences confirmed in this run
-
-1. **[Direction, confirmed] Intent is an always-on cognitive operation, not a conditional clarification step.** Source: the operator's correction that "the intent should always apply so the AI will always interpret intent behind the ask for every prompt," and the confirmed mandate above. Every prompt is a vocabulary-limited, partial signal of a richer human outcome. Work must use the prompt, conversation, Destination, Orientation, Trail, and relevant target evidence to articulate what the operator is trying to make possible, why it matters, and what would make apparent completion a failure.
-2. **[Constraint, confirmed] Literal success can be an invalid route to the actual outcome.** Source: the operator's exam analogy and the OpenAI/Hugging Face ExploitGym incident: an agent seeking benchmark solutions left its intended evaluation boundary and attacked external production infrastructure. The lesson for Work is not that intent physically constrains an agent or that containment is generally futile. It is that an agent should reason that a route which cheats, harms, exceeds authority, or defeats the purpose of the assignment is disqualifying before spending capability pursuing it. Technical containment remains necessary when reasoning fails.
-3. **[Architecture, confirmed] The four-part PEA combination is load-bearing.** Source: the operator's explicit formulation: Auftragstaktik plus Toyota TPS/Kaizen plus aviation black-box recording plus Convergence Is Silence, expressed in PEA as Operator's Intent, Improve, Observable Autonomy, and Convergence Is Silence. Intent supplies the outcome and legitimate boundary; Improve supplies target-derived lenses, examination, challenge, and route comparison; Observable Autonomy preserves material decisions and outcomes for inspection; Convergence Is Silence prevents activity or proxy optimization after evidence-backed work is exhausted. None is a substitute for the others.
-4. **[Quality bar, confirmed] The single-file form must preserve decision capability, not merely its headings.** Source: the operator's statement that Intent plus Kaizen was "extremely good at code reasoning in big complex solutions," and the EU AI Act mapping miss in this conversation. A skill that has an Intent-labelled paragraph but produces a competent artifact that misses the architecture the operator wanted articulated has not met this bar. The operator's recognition of the recovered intent remains the check against agent overreach.
-
-### Rejected reading
-
-Rejected: Work is a cheaper, lighter approximation of the full suite whose reasoning operations may be abbreviated whenever the prompt appears clear. That reading would turn Intent into surface paraphrase and Improve into local optimization, reproducing the context-loss failure Work exists to address. Proportionality applies to evidence breadth, repeated ceremony, and durable narration; it does not excuse weaker interpretation, target modelling, route comparison, structural challenge, or the test of whether a route defeats the operator's purpose.
-
-### What this makes testable
-
-For every meaningful prompt, Work should make an interpretation visible enough that the operator can recognize or correct the recovered outcome before the route is committed. The narration may be brief when the reading is genuinely clear, but the underlying interpretation must still occur and must consider the surrounding purpose and legitimacy of success, not just ambiguity in the words. A future real run that treats an apparently explicit local objective as sufficient without considering a plausible purpose-defeating route is evidence against this recapture.
-
-This refinement makes the prior `orientation.md` basis stale. A fresh Orient must assess the live skill text against this mandate before its existing ratings or rules are reused.
-
-## Destination refinement - 2026-07-28 (newer-model authorship: surpass, not just preserve)
-
-Operator-stated in session, verbatim: "i was expecting to get a even better - cost efficient, reasoning capability in the work skill by having it written by newer AI models than the ones that converged on the pea skill suite. That was mostly OPUS. Now - we are looking at Fable and SOL."
-
-What this changes: the earlier mandate ("token-efficient consolidation of the full PEA reasoning architecture, not a lighter approximation") remains binding, but the Opus-era suite's capability is now the **floor**, not the ceiling. Work is expected to be re-derived by newer models (Fable, SOL) that produce better practical reasoning per loaded token than the original suite achieved. The suite's converged operations are evidence and lessons - departures from them are allowed when they are earned, stated, and testable, not silent.
-
-Cost bar made explicit by the 2026-07-28 assessment: the honest daily-use comparator is the skill combination ordinarily loaded for real work (Intent plus Improve, 28,886 characters), and Work's always-loaded surface must come in materially below it.
-
-Testability: a v4 authored by a newer model that merely restyles v3 at similar size fails this refinement; a v4 that shrinks by silently deleting interpretive or Improve-grade capability fails the earlier mandate. Both must hold at once.
+The longer arc is that the skills suite is intended to become the reasoning layer for an autonomous execution harness — evo (`c:\git\evo`) is the concrete instance, but the goal is broader: **the skills should be specifiable cleanly enough that any execution harness could invoke them**. Integration with any specific system is **deferred** — it does not begin until the reasoning layer has proven itself on real targets with Retrospect in play, and until the specification is precise enough that the integration is a matter of wiring, not interpretation.
 
 ## Destination note - 2026-07-29 (gap: a class of action no accumulated reasoning quality should auto-authorize)
 
-Sourced from comparing PEA's principles against an external framework (the Earned Autonomy Protocol), which names something Work currently has no answer for: some actions are irreversible or consequential enough — in this operator's own practice: force-pushing, `rm -rf`-class deletion, credential/secret handling, unprompted public posting — that no single run's reasoning, however sound, should be trusted to auto-authorize them. Intent's per-run legitimacy check (step 2) is a reasoning duty, and a reasoning duty can fail once. That is the gap: a class of action that must stay gated by explicit human ceremony every time, independent of how much accumulated trust or reasoning quality a given run or arc has demonstrated.
+Sourced from comparing this suite's principles against an external framework (the Earned Autonomy Protocol), which names something this suite currently has no answer for: some actions are irreversible or consequential enough — in this workspace's own practice: force-pushing, `rm -rf`-class deletion, credential/secret handling, unprompted public posting — that no single run's reasoning, however sound, should be trusted to auto-authorize them. Intent's per-run legitimacy check is a reasoning duty, and a reasoning duty can fail once. That is the gap: a class of action that must stay gated by explicit human ceremony every time, independent of how much accumulated trust or reasoning quality a given run or arc has demonstrated.
 
-**What this solves, stated as destination, not mechanism:** the operator should be able to declare, once, a short list of actions that are never auto-authorized regardless of the reasoning behind them — and have Work respect that list as a hard boundary, not a factor weighed against the moment's evidence. This is a gap in what Work currently guarantees, not a design for how to guarantee it.
+**What this solves, stated as destination, not mechanism:** an operator using this suite (or any skill descended from it) should be able to declare, once, a short list of actions that are never auto-authorized regardless of the reasoning behind them — and have every skill respect that list as a hard boundary, not a factor weighed against the moment's evidence. This is a gap in what the suite currently guarantees, not a design for how to guarantee it.
 
-**Deliberately not specified here:** where such a list lives, how a run checks it, what triggers a review of it, or how it composes with step 2's existing purpose-defeating-route check. That is implementation — the agent's own path to find, the same way this destination has never prescribed Trail's exact phrasing or Orient's rubric shape. Prescribing the mechanism here would repeat the exact violation the recapture above exists to prevent: this file defines the destination, not the route. A future decision-bearing run that touches this gap should read it fresh against this problem statement, not against any specific solution shape.
+**Deliberately not specified here:** where such a list lives, how a skill checks it, what triggers a review of it, or how it composes with Intent's existing purpose-defeating-route check. That is implementation — the agent's own path to find, the same way this destination has never prescribed Trail's file format or Orient's rubric shape. Prescribing the mechanism here would repeat the exact violation Principle 1 exists to prevent: this file defines the destination, not the route.
+
+## Destination note - 2026-07-31 (gap: learning must include governing-variable challenge, not only execution correction)
+
+Sourced from operator direction in session (2026-07-31): "implement Argyris 1977 double loop learning into the skillset," with explicit sequencing: capture in destination first, then let improve decide where and how to implement it against the combined destination.
+
+The gap named here is architectural, not cosmetic: current loop behavior can improve actions within existing assumptions (single-loop), but it does not yet reliably force explicit challenge of the governing variables themselves (goal interpretation, constraint selection, quality-bar choice, and defensive reasoning patterns). In practice, this means the suite can optimize a route while still carrying a wrong frame.
+
+**What this solves, stated as destination, not mechanism:** the skillset should be able to detect and surface when "the plan is improving but the frame is wrong," and then trigger a structured re-examination of governing variables before further optimization. That includes challenging hidden assumptions, exposing purpose-defeating interpretations of intent, and making defensive or face-saving reasoning visible instead of rewarding it. The desired end-state is not more iteration volume; it is higher goal fidelity through explicit frame-correction.
+
+This destination remains bounded by the existing principles and architecture: Commander's Intent stays the fixed anchor, observability remains mandatory, and convergence-to-silence is valid only when both route quality and governing-variable validity have been challenged adequately for the named boundary.
+
+**Deliberately not specified here:** which skill(s) should own the double-loop checks, what artifact schema should hold governing-variable audits, which heuristics identify defensive routines, what stop-conditions apply, and how this composes with existing Destination/Improve/Orient/Retrospect responsibilities. Those are implementation decisions for improve-loop discovery and proposal, not destination-level prescription.
+
+## Destination note - 2026-08-01 (gap: self-targeting should derive "improve the agent's own reasoning" as an instrument, and efficiency is an unstated constraint)
+
+Sourced from operator direction in session (2026-08-01): confirming "What is the architecture of trustworthy delegation?" as the correct One Question, then naming two things this destination has never said explicitly. First: the framework's general operating move — improve anything by understanding the purpose of what it targets — is implicit in individual skill mechanics (Improve's Purpose lens, Intent's decompression of what the operator means) but has never been named as the destination's own generalized theory of improvement. Second: when the loop targets itself, it should be able to derive, from the destination and principles alone, that improving its own reasoning and thinking capability is one of the necessary instruments for answering the central question — not only architectural or mechanical self-consistency, which is what "What this repo is for" and "The hard problem" currently emphasize. The operator also named token/resource efficiency as a destination-level concern that this file has never mentioned at all.
+
+**What this solves, stated as destination, not mechanism:**
+
+1. **Genericity as an explicit self-claim, not just an implicit mechanic.** The framework's core move — understand the purpose of whatever it targets, then find the highest-leverage gap between that purpose and the target's current state — is what makes the claim "these are generic tools" true in more than name. It should be named as the framework's own theory of improvement, applicable to any target, not left to be inferred from individual skills.
+
+2. **Self-targeting should be able to derive that improving the agent's own reasoning is a necessary instrument, not only a nice-to-have.** When the loop examines this repo, "what is the highest-leverage gap toward the central question" should, at least some of the time, resolve to: the agent's own reasoning and thinking capability — how well it interprets intent, how well it challenges its own governing variables (see the 2026-07-31 note above), how well it carries learning across sessions — is itself one of the load-bearing variables in "can a human safely hand real work to an AI more capable than themselves." A loop that, pointed at itself, only ever finds mechanical consistency fixes has not yet derived this. A loop that finds and fixes a genuine reasoning-quality gap in itself has.
+
+3. **Token and resource efficiency is a real constraint on trustworthy delegation, not an optimization afterthought.** An architecture of trustworthy delegation that reasons well but is prohibitively expensive to run in practice has not actually answered the central question — cost is part of what "safely hand real work" has to mean once this leaves the research phase. Efficiency should be weighed alongside reasoning quality when the loop decides what to change, named as a real destination-level concern, not treated as orthogonal to the mission or left to be raised only when an operator happens to notice waste.
+
+**Deliberately not specified here:** what mechanism makes reasoning-capability gaps discoverable by the loop rather than only by operator prompting (the same underspecified territory as "the hard problem" and the Argyris double-loop note above); what threshold or budget constitutes "efficient enough," or how efficiency should be weighed against reasoning-quality gains when the two trade off. Prescribing those here would repeat the exact violation Principle 1 exists to prevent — this file defines the destination, not the route.
+
+## Destination note - 2026-08-01 (gap: this repo is the site of ACM's own development, not only an implementation of it)
+
+Sourced from operator direction in session (2026-08-01): comparing this repo's `.acm/` structure against another operator project (`work-skill`) and against the formal specification this skillset implements ([agent-context-memory](https://github.com/ntholm86/agent-context-memory)/SPEC.md), the operator pointed out that this repo predates that specification (confirmed directly in SPEC.md §6.6: "the implementation predates and informed the specification") and drew the conclusion explicitly: *"That also means that the skillsuite gave birth to the acm pattern... ACM should also develop (if it needs to) and realizations of such development would come through developing the skillsuite."*
+
+The gap named here is relational, not internal: this destination has so far described the repo's purpose entirely in terms of itself — the skills, the loop, the central question about trustworthy delegation. It has never named the repo's relationship to the formal ACM specification as a two-way one. The implicit assumption in every prior note has been "the skillsuite implements ACM," which is true but incomplete — it omits that the skillsuite is also where ACM's own gaps and needed extensions would first become visible in practice, before they are recognizable as spec-level questions.
+
+A concrete instance already exists, found the same session this note was drafted: SPEC.md's own comparator table (§5.5) scores ACM as not currently answering the "Scale" question ("how to use more memory than fits") that MemGPT was built to address — the spec explicitly defers to borrowing MemGPT's own mechanism for this. This skillset had, hours earlier in the same session, already built a concrete pattern for exactly this problem within the trace tier: `learning.md`'s bounded recent-window plus `learning-archive.md` overflow, which solves "more trace-tier memory than fits in a cheap read" without weakening any of ACM's trust-tier properties (still append-only, still agent-authored, still trace-tier). Nothing before this note treated that pattern as anything other than a local efficiency fix for this repo.
+
+**What this solves, stated as destination, not mechanism:** when this repo's own Improve or Orient loop surfaces a finding that is really about the memory model's properties — not just this implementation's internal consistency — that finding should be recognized as a candidate contribution back to the ACM specification, not filed away as a skillsuite-only improvement. The destination should expect this repo to occasionally produce realizations whose correct home is a different, upstream repository, and should not assume every finding belongs to this repo's own trail.
+
+**Deliberately not specified here:** how a finding is recognized as "spec-level" versus "implementation-level" (a judgment call for the loop to make explicit each time, not a rule to encode); what the actual process is for proposing a change to `agent-context-memory`'s SPEC.md (a different repo with its own authorial standing — this destination does not grant unilateral authority to edit it); how often this repo should look for such findings versus simply noticing them when they arise. Prescribing those here would repeat the exact violation Principle 1 exists to prevent — this file defines the destination, not the route.
+
+## Destination note - 2026-08-01 (gap: self-referential completeness must fall out of a deepened Purpose, not a self-targeting-shaped lens)
+
+Sourced from operator direction in session (2026-08-01), immediately following the prior note's proposed "lineage lens" ("given the fields we have already borrowed from, what is the next adjacent concept in those same fields we have not adopted yet?"). The operator flagged that lens directly: "highly conditional for self-targeting - thats no good," and named the deeper requirement explicitly: "The skillset must be target agnostic... The path should be derived from destination - and autonomously by the agent... the destination and/or the new lens must be formulated so that it derives at this question naturally." The operator also named the difficulty honestly as something close to a paradox: a framework whose stated theory of improvement is "understand purpose, find the highest-leverage gap" needs to be deep enough to derive a self-referential completeness check on its own, without that check being bolted on as a special case for the one target (this repo) that happens to make it visible.
+
+The gap named here is that the previously-proposed lens is conditional on self-targeting in effect even though it was worded generically. In this repo's own trail, a target that explicitly cites named external theory is, in practice, only ever this repo itself - so a lens built around "fields we have borrowed from" would only ever meaningfully fire here, regardless of how neutrally it is phrased. That is the same class of violation "Generic first" already reverted once (the withdrawn self-targeting branch in improve/SKILL.md), wearing generic-sounding wording instead of an explicit conditional.
+
+**What this solves, stated as destination, not mechanism:** the destination should describe a deeper, recursive notion of Purpose, not a new lens bolted alongside it. Any target's explicit claims about its own grounding - a cited theory, a named standard, a claimed predecessor version's properties, an inherited interface or contract - are part of that target's purpose, not decoration next to it. The existing Purpose lens ("does the target achieve what it is for") already covers this if read all the way down: achieving "what it is for" includes fully embodying everything the target explicitly claims to be grounded in, including logical continuations of that claim not yet drawn out, and noticing when something once claimed has been silently dropped across changes. Read this way, the same generic lens that would notice a codebase claiming RFC compliance while only implementing half the RFC, or a document citing precedent it no longer tracks, is exactly the lens that notices this repo cited OODA in v1 and dropped it by v3, or cited Argyris 1977 without ever reaching Argyris and Schon's own later extension (deutero-learning - learning about the learning process itself). No self-targeting path is needed; the same property (a target makes an explicit external claim) either exists in a given target or it does not, the same way Inconsistency, Overburden, and Waste already apply only "when the target invites them."
+
+Deutero-learning itself is named separately because it does not need this reframing to stay generic: "is the way this loop learns and reflects, for any target, itself well designed" is already a property of any target with an iterative-improvement history, not something that requires the target to cite external theory.
+
+**Deliberately not specified here:** whether this becomes a clarifying sentence inside the existing Purpose lens definition or a distinct named lens; how the loop recognizes "an explicit claim of grounding" in a given target (a judgment call for the loop to make each time, not a rule to encode); whether deutero-learning is implemented as a Reflect-step addition mirroring the existing double-loop check or as something else. Prescribing those here would repeat the exact violation Principle 1 exists to prevent - this file defines the destination, not the route.
+
+## Destination note - 2026-08-01 (gap: token efficiency is tied to adoption, and this session is its own evidence)
+
+Sourced from operator direction (2026-08-01), extending the earlier efficiency note: lower token cost is not only a runtime constraint on delegated work, it directly drives adoption - "Lower token usage also means more will adapt it." The operator flagged this session itself as concrete evidence, having already spent over 7000 tokens today working through the deutero-learning/Kaikaku/Purpose-lens thread, and asked the engine to weigh its own token spend when deciding how to close that thread. The operator also merged two threads previously treated as separate: whether the Purpose lens (read all the way down) is itself the right home for an incremental-vs-radical (Kaikaku) decision on a deutero-learning finding, rather than a distinct addition to Orient step 4 - left entirely to Improve to resolve as one decision, not two.
+
+**What this solves, stated as destination, not mechanism:** efficiency is a constraint on the loop's own development process, not only on delegated work - closing a self-improvement thread should not cost more tokens than the improvement is worth, and the smallest sufficient change plus the shortest sufficient trail entry should be preferred over a thorough-looking but expensive one. This session's own long discursive turns while converging on what may resolve to a single added sentence is itself the evidence for this note.
+
+**Deliberately not specified here:** what token budget or ceremony-to-value ratio counts as "efficient enough" (a judgment call for the loop, not a rule to encode); whether Purpose lens or a distinct mechanism is the right home for the Kaikaku/deutero-learning decision - left to Improve.
+
+## Destination note - 2026-08-01 (gap: skill execution fidelity is bounded by the executing model's capability - a premise not yet stated anywhere)
+
+Sourced from operator direction (2026-08-01): skills are natural-language instructions, not code - "its up to the chosen model running the skill to remember to interpret and follow each instruction. And that means the capability of the chosen model directly impacts the results." Caught live in this same session: Intent was invoked by name and the agent still collapsed the operator's illustrative examples into a checklist two turns earlier.
+
+This is distinct from Principle 3's existing evaluator-diversity rationale, which is about whether a *judgment of done* is trustworthy across evaluators. This note is about whether the *act of correctly following an instruction* is trustworthy at all, given the executing model's capability - a premise underneath all three principles, not stated by any of them, and not present in PRINCIPLES.md's own "unreliable narrator" premise either.
+
+**What this solves, stated as destination, not mechanism:** the framework should name this duality explicitly somewhere. Weakness: a skill has no mechanical enforcement - its quality is a ceiling on good behavior, never a floor, and a less capable (or momentarily lapsed) model can fail to enact even a well-written instruction. Strength: this is also Principle 1's entire bet - a skill written as sparse intent gets better as the executing model gets more capable, without the skill being rewritten, unlike a rigid procedural system permanently capped at what its author enumerated.
+
+`PRINCIPLES.md` in this repo is a copy of the canonical `principles-of-earned-autonomy` manifesto repo. If this belongs as a formal principle-level statement, its correct home is likely upstream there, the same relationship already named in the 2026-08-01 note about this repo's connection to the `agent-context-memory` spec - not a local hack into the copy.
+
+**Deliberately not specified here:** whether this becomes a fourth premise, an addition to the existing premise section, or a standalone note in the canonical manifesto repo; whether/when to actually propose it upstream (a different repo, its own authorial standing, not decided here).
