@@ -31,10 +31,12 @@ Read available context in this order:
 1. parent-scope `.acm/destination.md` files within the boundary, broadest first;
 2. the target's `.acm/destination.md`;
 3. `.acm/orientation.md`;
-4. a compact learning surface, if one exists;
+4. a compact learning surface, if one exists — a derived `.acm/` artifact such as `.acm/learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
 5. only the trail evidence needed for the current decision.
 
 For a potentially long Destination, locate `<!-- current-destination: complete -->` and `<!-- destination-history -->` before loading its body. When both exist in that order, read the content between them as the routine current mandate; load history only when provenance, ambiguity, or contradiction makes it material.
+
+Before beginning new work, check the trail tail for an open checkpoint: a Change entry whose decision and prediction were recorded but whose completion evidence never followed. If one exists, an earlier run was interrupted after committing to a route. Complete it if its decision still holds, or append an explicit supersession stating why it no longer does; never start a new iteration on top of an unresolved one.
 
 Do not require Destination for a first run. The confirmed prompt and target evidence are enough until continued work genuinely depends on durable direction.
 
@@ -53,6 +55,12 @@ Choose one coherent iteration:
 Before action, state a falsifiable prediction: what should become observably true and what should not happen. Name at least one rejected route and why it ranks lower.
 
 Without delegated implementation authority, say what you want to change and how you will verify it, then ask the operator to proceed, stop, or specify. With explicit delegation, name its source and scope and continue.
+
+## Checkpoint the decision
+
+For a **Change** iteration, after implementation authority is established and before the first implementation mutation, append the Trail entry through its prediction. Include the accepted intent, evidence examined, decision and rationale, rejected route, authority source, and falsifiable prediction. This checkpoint makes the decision durable before its outcome is known. Do not rewrite it if later evidence changes the route; append the reversal or correction during completion. If the run is interrupted, leave the open checkpoint in place; the next run's context read is required to detect and resolve it.
+
+Redesign, Silence, and Stopped outcomes do not need a pre-action checkpoint because they perform no implementation mutation; append their complete record once the decision is final.
 
 ## Act and test the prediction
 
@@ -80,9 +88,9 @@ When independent host, harness, or executor evidence is available, correlate the
 
 Independent capture is optional for ordinary use. Do not install, start, update, or reroute through an observer without operator consent, and do not load all captured sessions by default.
 
-## Append the trail
+## Complete the trail
 
-For every iteration that produces a decision, finding, change, reversal, or bounded silence, append one entry to `<target>/.acm/audit-trail.md` before beginning another iteration. Create the file with this header if absent:
+After a Change is validated and reflected on, append its action, focused validation, prediction comparison, reversals, reflection, direction evaluations, and next moves to the open checkpoint without altering the pre-action record. For Redesign, Silence, and Stopped outcomes, append one complete entry now. Finish every iteration's record before beginning another iteration. Create `<target>/.acm/audit-trail.md` with this header if absent:
 
 ```markdown
 # Audit trail
@@ -92,7 +100,7 @@ Append-only ledger of autonomous operations on this repo. Newest entries at the 
 ---
 ```
 
-Never rewrite, reorder, clean up, or silently correct existing entries. Append a correction when history needs amendment. The entry must let a later agent reconstruct:
+Never rewrite, reorder, clean up, or silently correct existing entries. Append a correction when history needs amendment. The completed record must let a later agent reconstruct:
 
 - date, target, operator if known, agent identity, and outcome;
 - the narrated intent and authority source;

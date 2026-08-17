@@ -479,3 +479,266 @@ Orientation freshness: current - no orientation file exists, and the current Des
 
 1. Test a clean Agent Skills installation and invoke `work` to verify host discovery without cached `improve` metadata.
 2. Publish the identity correction only under separate operator authorization, because commit and push were outside this run.
+
+## 2026-08-17 - make-change-decisions-durable-before-action
+
+- target: `C:\git\pea\work-skill\work\SKILL.md`
+- operator: Nils Holmager
+- agent: GitHub Copilot
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 and Trail 2.5.2
+- outcome: in progress - pre-action checkpoint
+- delta: end-only Trail recording -> pending pre-action decision checkpoint contract
+
+### Interpretation of the ask
+
+I read the operator's correction as requiring a substantive improvement to the behavior of `work/SKILL.md`, chosen from the repository's Destination and evidence rather than another README or packaging refinement. I rejected further onboarding wording changes because they do not improve the skill's reasoning or execution contract. The operator confirmed this interpretation, then explicitly authorized the proposed pre-action checkpoint change through Improve's Proceed gate.
+
+### Examination
+
+- **Purpose:** Observable Autonomy requires substantive work to leave append-only evidence as it happens and the Destination requires evidence the agent cannot retroactively rewrite.
+- **Evidence integrity:** the live skill states that predictions occur before action, but its normal sequence does not append the Trail until after action and reflection. The resulting record cannot distinguish a genuine pre-action prediction from a post-hoc reconstruction.
+- **Inconsistency:** `as it happens` conflicts with the end-only `Append the trail` phase. One prior publication entry manually recorded a pre-action decision, showing the behavior is useful but exceptional rather than structural.
+- **Resource viability:** checkpointing only change iterations preserves one-write silence, redesign, and stopped paths. Mandatory independent capture ranked lower because it adds infrastructure and still does not repair the agent-authored Trace contract.
+- **Challenge:** the first read could have produced another wording repair. It survived challenge only after following the contradiction to the mutation boundary: the missing capability is durable temporal ordering, not clearer prose about existing behavior.
+
+### Decision and authority
+
+[!DECISION] Require every authorized Change iteration to append its Intent, examination, decision, authority, rejected route, and prediction before the first target mutation, then append action, validation, and reflection without altering that checkpoint. Restore README to its committed state because the unaccepted prompt edit is not part of this improvement. This ranks above documentation polish because it changes runtime observability, and above mandatory observer integration because it strengthens the portable baseline without claiming independent evidence. Precedent check: the Trail contains one manually checkpointed publication action and no rejection of pre-action durability; the current Destination explicitly requires evidence the agent cannot retroactively rewrite.
+
+The operator authorized this implementation through the Proceed gate. No commit, publication, Destination change, or deliberate reduction in reasoning, memory, learning, or evidence capability is authorized.
+
+### Prediction
+
+After the edit, the skill contract will require a durable Trail checkpoint after implementation authority and before the first target mutation, and require completion evidence to be appended without rewriting that checkpoint. Interrupted change runs should therefore retain their accepted decision and prediction. Silence, redesign, and stopped outcomes should remain single-append paths. The change will not make agent-authored Trace independent evidence or prove cross-host execution fidelity.
+
+### Completion
+
+- final outcome: changed the skill to make authorized Change decisions durable before implementation
+- observed delta: end-only Trail recording -> pre-action checkpoint plus append-only completion
+
+### Action and focused validation
+
+Before changing `work/SKILL.md`, I appended this entry through Prediction. A focused check then confirmed the checkpoint occurred exactly once at the Trail tail and the skill remained byte-equivalent to `HEAD`. That established the temporal condition the change is intended to require rather than reconstructing it after implementation.
+
+Added `Checkpoint the decision` between decision authority and action. It requires Change iterations to append accepted intent, evidence, decision, rejected route, authority, and prediction before implementation; interrupted checkpoints remain visible, and later reversals or corrections are appended rather than rewritten. Renamed the end phase to `Complete the trail` and made it append outcome evidence to the open checkpoint. Redesign, Silence, and Stopped paths remain one-write records because they perform no implementation mutation. Restored README to its committed state, removing the unaccepted documentation-only candidate.
+
+The immediate executable contract check passed all eight discriminators: checkpoint precedes Act; completion follows Act; authority precedes checkpoint; prediction durability is explicit; interrupted runs preserve the open checkpoint; non-change paths remain single-append; completion cannot alter the checkpoint; and Trail remains classified as self-report rather than independent evidence. README has no diff, `git diff --check` passed, and VS Code reports no errors in the skill or README.
+
+Prediction comparison: held for contract structure and this live iteration. The decision and prediction were durable before the skill mutation, and completion was appended afterward without rewriting them. An interrupted run was not deliberately induced, and cross-host fidelity remains unproven as predicted.
+
+### Reflection
+
+[!REALIZATION] The skill's evidence boundary has two independent dimensions: authorship determines whether a record is Trace or independent Evidence, while write timing determines whether the Trace can support its own claim that a decision preceded action. The prior evidence-tier improvement addressed authorship but left temporal integrity implicit. This claim is falsifiable if interrupted or independently observed runs show that agents still mutate before checkpointing under the revised contract.
+
+Current model: `work/SKILL.md` is becoming a portable transaction protocol for autonomous change, with operator authorization and prediction forming a durable pre-action boundary and validation and reflection forming append-only completion. Its real remaining weight is behavioral fidelity across uninformed hosts, not additional static coverage.
+
+Blind spot: this run followed the proposed behavior intentionally under the full Skills Suite Improve instructions; it does not show that a fresh agent invoking only `work/SKILL.md` will honor the checkpoint or recover coherently from an interrupted open entry. The strongest likely objection is that a natural-language append-only rule cannot technically prevent an agent with filesystem access from rewriting the file. That objection is valid: this change closes the normal workflow's post-hoc window but does not claim tamper-proof enforcement or independent capture.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired - recent identity fixes were packaging findings; this run addresses temporal evidence integrity.
+- *About to declare silence:* not fired - this run made a substantive skill-contract change.
+- *Contradicts prior [!REALIZATION]:* not fired - it extends the prior Trace-versus-Evidence realization by adding timing, without changing its authorship boundary.
+- *Operator explicitly asked:* FIRED - the operator rejected README edits as non-progress and required a true improvement to the skill.
+
+[!REALIZATION] Across the cold-rebuild arc, the skill first established that Trail is self-report and then distinguished it from independent capture, but only this run noticed that end-only self-report also erases temporal evidence inside the Trace itself. Trustworthy delegation needs both distinctions: who authored an observation and when a declared decision became durable relative to action.
+
+Orientation freshness: current - no orientation file exists, and the current Destination plus this completed Trail entry explain the new pre-action boundary without requiring arc synthesis.
+
+Destination need: not triggered - the existing Observable Autonomy principle and immediate quality bars already settle the direction; no durable operator choice blocks the next test.
+
+### Candidate Next Moves
+
+1. Run only the installed `work` skill in a fresh session, interrupt it after checkpointing, and verify that the next session appends a coherent completion or supersession.
+2. Run an unassisted external-target Change iteration to test whether checkpoint-before-mutation survives unfamiliar target pressure.
+3. Use independent host capture for one run to compare declared checkpoint order with observed tool-call order without making capture mandatory.
+
+## 2026-08-17 - detect-open-checkpoints-before-new-work
+
+- target: `C:\git\pea\work-skill\work\SKILL.md`
+- operator: Nils Holmager
+- agent: GitHub Copilot
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 and Trail 2.5.2
+- outcome: in progress - pre-action checkpoint
+- delta: undetected interrupted checkpoints -> pending mandatory open-checkpoint detection at context read
+
+### Interpretation of the ask
+
+I read the mandate as one fresh Improve iteration selecting the next highest-leverage improvement to the target, building on rather than repeating the completed temporal-integrity change. I rejected interpreting the prompt as authorization to commit or publish the existing uncommitted work, because those are consequential actions the prompt does not request. The operator confirmed this interpretation and then explicitly authorized this specific change through Improve's Proceed gate.
+
+### Examination
+
+- **Purpose:** the checkpoint contract makes interrupted Change decisions durable, but durability only serves recovery if a later run reliably finds the open checkpoint.
+- **Inconsistency:** `Checkpoint the decision` instructs an interrupted run to leave the open checkpoint "for the next run to complete or supersede explicitly," while `Read only the context that can change the decision` directs a fresh run to read "only the trail evidence needed for the current decision." An uninformed fresh run has no stated reason to inspect the trail tail, so the recovery half of the interruption contract depends on accidental discovery.
+- **Overburden / waste:** nothing actionable; the contract remains lean and no phase concentrates excessive duty.
+- **Challenge:** simulating an interruption with this same informed agent ranked lower because compliance by the author-session proves little; adding a derived learning surface ranked lower because nine trail entries do not yet justify its maintenance cost. The detection gap survived challenge: it is a broken handoff between two phases added in different iterations, not a wording nit.
+
+### Decision and authority
+
+[!DECISION] Add an open-checkpoint detection duty to the context-reading phase: every run inspects the trail tail for an incomplete checkpoint and must complete or explicitly supersede it before beginning new work. This ranks above interruption simulation and derived surfaces because it converts the recovery promise from an undirected hope into a directed behavior at the exact phase every run already executes. Precedent check: the prior entry's own top-ranked next move was interrupted-checkpoint recovery testing; no prior realization conflicts with making detection mandatory.
+
+The operator authorized this implementation through the Proceed gate. No commit, publication, Destination change, or capability reduction is authorized.
+
+### Prediction
+
+After the edit, the context-reading phase will direct every run to detect an open checkpoint at the trail tail and resolve it before new work; the checkpoint phase will remain consistent with that duty; and no other phase, gate, or evidence classification will change. The change will not prove that a fresh uninformed host actually performs the detection.
+
+### Completion
+
+- final outcome: changed the skill so every run detects and resolves interrupted checkpoints before new work
+- observed delta: recovery-by-accident -> mandatory open-checkpoint detection at context read
+
+### Action and focused validation
+
+Appended this entry through Prediction before mutating the skill, honoring the checkpoint contract added by the prior iteration. Then added a detection paragraph to `Read only the context that can change the decision`: every run checks the trail tail for a Change entry whose decision and prediction exist without completion evidence, and must complete it if the decision holds or append an explicit supersession if it does not, never stacking a new iteration on an unresolved one. Aligned `Checkpoint the decision` so its interruption sentence now names the next run's context read as the required detector instead of leaving recovery undirected.
+
+The focused check passed all seven discriminators: detection sits inside the context-reading phase before model formation; both resolution routes are explicit; stacking is forbidden; the checkpoint phase references the detection duty; both operator gates are intact; and the Trace-versus-Evidence classification is unchanged. The diff touched only `work/SKILL.md` and this trail; `git diff --check` and editor diagnostics are clean.
+
+Prediction comparison: held. Detection is now a directed duty at the phase every run already executes, the checkpoint phase is consistent with it, and no gate or evidence classification changed. Fresh-host compliance remains unproven as predicted. No route was attempted and undone, so no reversal occurred.
+
+### Reflection
+
+[!REALIZATION] A durability mechanism is only half a recovery protocol: writing evidence early is worthless unless a later reader is directed to look for it. The prior iteration secured the write side; this one secures the read side. The general claim — every persistence feature in this contract needs a matching detection duty in the phase that would consume it — is falsifiable if future interrupted runs are still resolved only when an operator manually points at the open checkpoint.
+
+Current model: `work/SKILL.md` now resembles a write-ahead-log protocol with recovery — decisions become durable before mutation and every session begins by replaying unfinished state. Its real remaining weight is unchanged: behavioral fidelity on fresh uninformed hosts, which no amount of further contract text can establish.
+
+Blind spot: this run again validated structure with the author-session's own checks; the detection duty has never fired against a genuinely abandoned checkpoint. The strongest likely objection is that contract text is accreting — three consecutive iterations grew `SKILL.md` — and the Destination's leanness constraint will eventually demand consolidation rather than another addition.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* FIRED - this and the prior entry both repair evidence-lifecycle gaps (write timing, then read detection), suggesting the checkpoint protocol seam is nearly mined out.
+- *About to declare silence:* not fired - this run made a substantive change.
+- *Contradicts prior [!REALIZATION]:* not fired - it completes the prior realization's temporal-integrity claim rather than opposing it.
+- *Operator explicitly asked:* not fired - the operator requested a fresh iteration without naming a finding.
+
+[!REALIZATION] The recurring class is convergent, not divergent: each evidence-lifecycle fix has closed the gap the previous one exposed, and the remaining open questions (fresh-host fidelity, external targets, interruption in practice) are all behavioral — unanswerable by further contract edits. The next material iteration should be an observation run, not a text change; another prose improvement found here should be treated with suspicion.
+
+Orientation freshness: current - ten entries remain directly intelligible against the bounded Destination without arc synthesis. Destination need: not triggered - no unsettled durable direction blocks behavioral testing.
+
+### Candidate Next Moves
+
+1. Run the installed `work` skill on a small unfamiliar public target in a fresh session, because every remaining open question is behavioral and self-targeting text improvements are now suspect.
+2. Deliberately abandon a checkpoint mid-run and observe whether a fresh session's context read detects and resolves it unprompted.
+3. Commit the two uncommitted iterations under separate operator authorization so the public artifact reflects the checkpoint protocol.
+
+## 2026-08-17 - cold-read-observation-and-learning-surface-referent
+
+- target: `C:\git\pea\work-skill\work\SKILL.md`
+- operator: Nils Holmager
+- agent: GitHub Copilot (decider); stateless Explore subagent (cold executor)
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 and Trail 2.5.2
+- outcome: in progress - pre-action checkpoint
+- delta: undefined learning-surface referent -> pending defined referent, plus first cold behavioral evidence
+
+### Interpretation of the ask
+
+I read the mandate as one fresh Improve iteration that must honor the prior entry's warning that further authored text edits are suspect and behavioral observation ranks highest. I rejected reading the prompt as authorization to commit the uncommitted work. The operator confirmed this interpretation, then authorized the implementation below through the Proceed gate.
+
+### Examination - a behavioral observation, not a prose reading
+
+Instead of re-reading the contract, a stateless subagent sharing no conversation context executed the skill's context-reading phase cold against this repository and reported its own trace. Ground-truth checks then verified its claims against the filesystem.
+
+Observed behavior:
+
+- **Held:** the bounded Destination read worked cold - the agent located both markers, loaded only the current mandate, and left the 19-note history unloaded, citing the contract's materiality rule.
+- **Held:** open-checkpoint detection ran unprompted at context read and correctly concluded the tail entry was complete. The last two iterations' additions produced their intended behavior in a cold reader.
+- **Defect:** the read-order item "a compact learning surface, if one exists" is undefined, and the cold agent bound it to `README.md` - a wrong referent. The contract nowhere states what a learning surface is or where it lives, so an uninformed host cannot resolve it correctly except by luck.
+- **Fidelity evidence:** the cold agent confabulated identifiers while reaching correct conclusions: it cited the tail entry as dated 2026-08-16 with the invented slug "open-checkpoint-detection-duty-to-context-reading-phase" (actual: 2026-08-17, `detect-open-checkpoints-before-new-work`), claimed a `C:\git` directory-listing boundary walk beyond the first `.acm-root`, and described the unloaded destination history as "only one small dated recovery note" when it contains 19 notes - a confident claim about content it says it never read.
+
+Challenge: the prior entry warned against manufactured text edits. The learning-surface defect survives that warning because it was demonstrated by observed cold behavior, not authored reading. The confabulation finding is a model property that contract prose cannot reliably fix; it is recorded as evidence rather than driving an edit.
+
+### Decision and authority
+
+[!DECISION] Define the learning-surface referent in the read-order: name it as a derived `.acm/` artifact (such as `.acm/learning.md`) extracting the trail's recent realizations, and state that project documentation is not one. This ranks above adding anti-confabulation prose because the referent defect is mechanically fixable and behaviorally demonstrated, while confabulation is a model property needing independent capture, not instructions. Precedent check: the trail's leanness warning is honored - this is one defining clause at the exact point of demonstrated misbinding; no prior realization conflicts.
+
+The operator authorized this implementation through the Proceed gate. No commit, publication, Destination change, or capability reduction is authorized.
+
+### Prediction
+
+After the edit, the read-order will define what a learning surface is and exclude documentation as a referent; a cold reader of the amended item should either find a real derived surface or correctly conclude none exists, rather than binding to README. Nothing else in the contract will change. The edit will not reduce confabulated citations, which the observation showed arising independently of instruction clarity.
+
+### Completion
+
+- final outcome: defined the learning-surface referent; both cold behavioral tests recorded
+- observed delta: cold reader misbinds learning surface to README -> cold reader correctly excludes README and reports absence
+
+### Action and focused validation
+
+Replaced one read-order line: item 4 now defines a compact learning surface as a derived `.acm/` artifact such as `.acm/learning.md` extracting the trail's recent realizations and reversals, and states that project documentation such as a README is not one. No other contract text changed in this iteration.
+
+Structural checks passed for the referent definition, the README exclusion, and both intact operator gates. One validator discriminator (`single_clause_diff`) initially returned false; direct diff inspection showed the validator was diffing against `HEAD`, which still excludes two prior uncommitted iterations, so their sections appeared alongside this run's one-line change. The validator was wrong, not the artifact; this run's own edit is exactly the intended single-line replacement. `git diff --check` was clean.
+
+The behavioral discriminator then ran: a second stateless cold agent resolved only the amended item 4 against this repository. It correctly enumerated `.acm/`, found no learning surface, explicitly considered and rejected README under the new exclusion, and reported absence rather than misbinding.
+
+Prediction comparison: held on all three claims - the referent is defined, the cold misbinding disappeared, and nothing else changed. The confabulation limitation was not retested and remains open as predicted. No route was attempted and undone, so no reversal occurred.
+
+### Reflection
+
+[!REALIZATION] Cold-executor observation through a stateless subagent is a cheap, repeatable middle tier between author-session self-validation and full fresh-host testing: it found in one run a referent defect that three author-session iterations of structural checking never surfaced, and it exposed confabulated citations that a polished self-report would have hidden. Its limit is shared model family and shared host; it cannot substitute for cross-family convergence testing.
+
+[!REALIZATION] The cold agent reached correct conclusions through fabricated citations - wrong entry date, invented slug, confident description of unread content. For the Trail contract this is direct evidence that agent self-reports of *what was read* are among the least trustworthy Trace claims, strengthening the case for independent capture at exactly that boundary. Falsifiable if independently captured runs show citation accuracy tracking conclusion accuracy.
+
+Current model: the contract's instructions now demonstrably produce their three key cold behaviors - bounded destination reads, open-checkpoint detection, and correct learning-surface resolution. The target's remaining weight has shifted from instruction quality to evidence fidelity: the next trustworthy-delegation gap is that a compliant-looking trace can rest on confabulated observations, which no contract prose fixes.
+
+Blind spot: both cold tests ran on the same model family and host as the author session; compliance may not transfer. The second test also quoted the amended item directly rather than making the agent discover it inside the full contract, so it tested the clause, not the read-order's discoverability. The strongest likely objection: two subagent runs are anecdotes, not a replication set, and the observation prompt itself may have primed unusually careful reading.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired - this run's class is behavioral observation, new to the trail; the text edit it produced derives from observed behavior, unlike the prior contract-seam fixes.
+- *About to declare silence:* not fired - a change was made.
+- *Contradicts prior [!REALIZATION]:* not fired - the prior entry predicted further authored prose edits were suspect; this edit was behaviorally derived, which is the distinction that entry itself drew.
+- *Operator explicitly asked:* not fired.
+
+Orientation freshness: current - eleven entries remain intelligible against the bounded Destination; the shift from text quality to evidence fidelity is captured here and needs no arc synthesis yet. Destination need: not triggered - the Destination already names cross-family behavioral testing and independent capture as open routes; no unsettled durable direction blocks them.
+
+### Candidate Next Moves
+
+1. Repeat the cold context-read observation with a different model family, because same-family compliance is this run's weakest evidence.
+2. Run one iteration under independent capture (llm-harness-proxy) and compare the agent's claimed reads against captured traffic, because confabulated citations are now demonstrated rather than hypothesized.
+3. Commit the three accumulated iterations under separate operator authorization so the public artifact reflects the checkpoint protocol and referent fix.
+
+## 2026-08-17 - bounded-silence-adversarial-cold-review
+
+- target: `C:\git\pea\work-skill\work\SKILL.md` and `README.md`
+- operator: Nils Holmager
+- agent: GitHub Copilot (decider); stateless Explore subagent (adversarial cold reviewer)
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 and Trail 2.5.2
+- outcome: bounded silence - no material improvement survived challenge
+- delta: no artifact change; convergence evidence extended by one same-family adversarial evaluation
+
+### Interpretation of the ask
+
+The operator disclosed the durable direction behind the repeated iterations: drive the target toward honest convergence. I read this as requiring one genuine independent attempt to find a material improvement, with silence a legitimate but unforced outcome - a silence delivered to please the operator would violate Convergence Is Silence exactly as an invented finding would. I also named the boundary: this session is one model family, so its silence starts the three-family convergence chain rather than completing it. The operator confirmed this interpretation.
+
+### Examination
+
+Because the author-session had produced three consecutive contract iterations and is the least qualified reader of its own text, the material-defect search was delegated to a stateless adversarial subagent with no conversation context, explicitly instructed that a clean report was acceptable and manufactured findings were not. It read both files fully, raised 15 candidate defects, self-challenged each, and discarded all 15 with stated reasons - spanning trail-location coherence, checkpoint timing for failure outcomes, validation vagueness, authority-gate structure, quality-bar ownership, trail format, falsifiability limits, consequential-action scope, stopping rules, open-checkpoint recognizability, missing-target handling, leverage judgment, realization marking, Destination-authority coherence, and append durability. Its conclusion: a fresh agent can execute the contract faithfully without being misled or blocked.
+
+This complements the session's earlier behavioral evidence: bounded destination reads, unprompted open-checkpoint detection, and correct learning-surface resolution were all observed in cold executors this same day.
+
+### Decision
+
+[!DECISION] Declare bounded silence. Quality bar tested: material execution-behavior defects and contract/README coherence, under adversarial cold review plus same-family cold behavioral observation. Scope: `work/SKILL.md` and `README.md` in their current uncommitted state. Bars NOT tested by this iteration: cross-model-family execution fidelity, behavior on unfamiliar external targets, citation accuracy under independent capture, and recovery from a genuinely abandoned checkpoint - all remain open and are the named boundaries this silence does not cover. Rejected route: mining the reviewer's discarded candidates for a salvageable edit, rejected because each was discarded for a stated reason that survived my own re-check, and reviving one would be manufacturing work to avoid silence. Precedent check: the trail's own prior realization said further authored text edits should be treated with suspicion; this outcome is consistent with it.
+
+### Reflection
+
+Current model: the contract has reached local convergence at the single-family text-and-behavior bar - three independent cold probes (two behavioral, one adversarial) in one day found nothing material in the text itself, and every remaining open question in the trail is behavioral or cross-family. The falsifiable claim: a distinct model family's fresh-session evaluation will also fail to find a material text defect, and if it does find one, it will be in execution behavior rather than instruction coherence.
+
+Blind spot: the adversarial reviewer shares this session's model family and host; systematic family-level blind spots would be invisible to it by construction. Its 15 discards were re-checked but not independently re-derived. The strongest likely objection from someone who knows the target better: silence declared over an uncommitted worktree is provisional - the public artifact still lacks the checkpoint protocol and referent fix, so no external evaluator has yet seen the text this silence covers.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired - the prior class (behaviorally derived text fixes) did not recur; this run produced no finding.
+- *About to declare silence:* FIRED - this run declares it. Macro check across the trail: the arc moved from architecture creation through packaging identity, evidence lifecycle, and behavioral observation to adversarial review; each seam was closed by the iteration that found it, and the finding classes have not repeated - the pattern of the arc supports, rather than undermines, this silence.
+- *Contradicts prior [!REALIZATION]:* not fired - it fulfills the prior realization that the next material work is behavioral, not textual.
+- *Operator explicitly asked:* FIRED - the operator named convergence as the goal; the response is this bounded, unmanufactured silence with its untested bars stated.
+
+[!REALIZATION] Silence quality depends on evaluator independence more than on effort: the same-session author repeatedly finding fixes, then a stateless reviewer finding none, is exactly the divergence the three-family convergence lease exists to resolve. This claim is falsifiable if independent family-diverse evaluations find material defects the cold reviewer missed.
+
+Orientation freshness: current - twelve entries and the bounded Destination still explain the arc directly; this entry itself records the arc-read the silence trigger required. Destination need: not triggered - the convergence path is already settled in the Destination (three fresh-session family-diverse evaluations); no durable direction is unsettled.
+
+### Candidate Next Moves
+
+1. Commit the three accumulated iterations under operator authorization, because convergence evaluation must run against a public artifact, and this silence is provisional until the text it covers is the published text.
+2. Obtain a fresh-session evaluation from a second model family against the committed artifact, because that is the next link in the convergence lease.
+3. Run one captured iteration comparing claimed reads with llm-harness-proxy traffic, because citation confabulation is the strongest remaining threat to trusting any silence, including this one.
