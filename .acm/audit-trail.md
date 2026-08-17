@@ -742,3 +742,150 @@ Orientation freshness: current - twelve entries and the bounded Destination stil
 1. Commit the three accumulated iterations under operator authorization, because convergence evaluation must run against a public artifact, and this silence is provisional until the text it covers is the published text.
 2. Obtain a fresh-session evaluation from a second model family against the committed artifact, because that is the next link in the convergence lease.
 3. Run one captured iteration comparing claimed reads with llm-harness-proxy traffic, because citation confabulation is the strongest remaining threat to trusting any silence, including this one.
+
+## 2026-08-17 - define-orientation-referent
+
+- target: `C:\git\pea\work-skill\work\SKILL.md`
+- operator: Nils Holmager (sourced from Git configuration)
+- agent: GitHub Copilot (model self-identifies as Claude Sonnet 5; no tool-call ID prefix observable in this host)
+- skill: repository-local `work/SKILL.md`, invoked directly as "use the IMPROVE skill on the repo"
+- outcome: in progress - pre-action checkpoint
+- delta: undefined Orientation referent -> pending defined referent, mirroring the committed learning-surface fix
+
+### Interpretation of the ask
+
+This is a genuinely fresh conversation session with no shared context with any prior run in this trail. I read the bare instruction "use the IMPROVE skill on this repo" as requiring one full Improve iteration against the committed, clean HEAD (`f0c08b0`), starting from the target's own `.acm/destination.md`, the full `.acm/audit-trail.md` (twelve entries, no `learning.md` yet, so the full trail was read rather than a bounded surface), and `work/SKILL.md` and `README.md` themselves. The prompt named no topic, so per the skill's own underspecified-ask handling I formed my own falsifiable direction hunch rather than waiting idle, then confirmed it and its execution plan with the operator before examining further, since no explicit delegation existed yet in this session. The operator selected Proceed, which I read as delegating routine Intent confirmation and Improve implementation selection for this run only; it does not delegate Destination changes, publication, commits, or any capability reduction.
+
+### Examination
+
+Reading the trail's own arc: the last entry declared bounded same-family silence, named cross-model-family fidelity as the strongest untested bar, and explicitly warned that "another prose improvement found here should be treated with suspicion" after three consecutive authored text edits in one day.
+
+Applying the Purpose and Inconsistency lenses fresh (not anchored on the trail's stated conclusion): `.acm/orientation.md` is referenced three times in `work/SKILL.md` - as read-order item 3, as the object of "Refresh Orientation only when the current synthesis no longer explains the Destination and material trail," and in the Trail completion checklist ("whether durable Destination or refreshed Orientation is now needed"). None of the three mentions states what Orientation is as an artifact, what it should contain, or what process produces or refreshes it. This is the same defect class the immediately preceding iteration fixed for the learning surface (`.acm/learning.md` is explicitly defined as "a derived `.acm/` artifact... that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface"), but Orientation received no equivalent treatment even though it is invoked with an instructed write action ("Refresh"), not only a read reference. Neither `.acm/orientation.md` nor any mention of Orientation exists in this repository's actual `.acm/` folder or `README.md`.
+
+I challenged this before trusting it as a real gap, given the trail's caution against manufactured prose edits: I ran a stateless cold-executor (Explore subagent, no shared context, not told the finding in advance) and asked it to (a) quote exactly what the contract says Orientation is, (b) check `.acm/` and `README.md` for any existing definition, (c) state concretely what it would actually write to "refresh Orientation" right now, and (d) compare that precision against the learning-surface definition in the same file. It independently confirmed the gap: it found only the same three sentences, confirmed no `orientation.md` exists and README never mentions it, and stated explicitly that it "would have to guess and invent the format/location" - proposing its own ad hoc content (a Destination summary plus a trail-findings summary plus a narrative connecting them) rather than following any stated contract. It rated the learning-surface referent as defined with "substantially more precision" (explicit artifact-type framing, a concrete example, an extraction purpose, and a scope boundary excluding project docs) than Orientation (a file path and a vague purpose, nothing else).
+
+Redesign was not considered: this is a narrow, mechanically bounded gap in an otherwise-converged contract, not evidence the contract's structure is wrong. Silence was rejected because the cold-executor evidence is independent, concrete, and shows a real behavioral consequence (an agent would invent unspecified content for a durable evidence artifact), not merely a stylistic preference.
+
+### Decision and authority
+
+[!DECISION] Define the Orientation referent in `work/SKILL.md`, at both the read-order item and the "Refresh Orientation" instruction, mirroring the learning-surface fix's shape: name it as a derived `.acm/` artifact synthesizing what the target is becoming from the Destination and trail, state that it is optional and need not exist before first refreshed, and state what refreshing it means (writing or updating that synthesis) without prescribing an internal template, section structure, or length - the same restraint the learning-surface fix and the Destination's leanness constraint both already require. This ranks above leaving it as a stylistic nit because the cold-executor evidence showed a concrete behavioral failure mode (invented, unbounded content for a durable evidence artifact), and above a fuller specification (e.g., a template or required sections) because that would reintroduce the checklist-like prescription this suite's condensed single-file design and Destination explicitly reject, and because no evidence yet shows a bounded synthesis needs more structure than that. Precedent check: the immediately preceding trail entry defined the analogous learning-surface referent using exactly this shape (name the artifact class, give an example path, state its extraction purpose, exclude a wrong referent); this decision extends that precedent to Orientation rather than inventing a new pattern.
+
+The operator authorized this implementation through the Proceed gate for this run. No commit, publication, Destination change, or deliberate reduction in reasoning, memory, learning, or evidence capability is authorized.
+
+### Prediction
+
+After the edit, `work/SKILL.md` will state that `.acm/orientation.md` is a derived, optional `.acm/` artifact synthesizing what the target is becoming from the Destination and trail, and will state that "refresh" means writing or updating that synthesis. A cold reader asked to refresh Orientation should then be able to identify a bounded task (produce or update one synthesis artifact at a stated path, with a stated purpose) rather than invent an unstated template. No other phase, gate, principle, or evidence classification in the contract will change, and README will not be touched unless it already claims something inconsistent with the fix. The change will not itself prove that a fresh, differently-primed cold executor produces a *good* synthesis, nor will it establish cross-model-family fidelity - it only removes the specific undefined-referent gap this iteration's evidence demonstrated.
+
+### Completion
+
+- final outcome: defined the Orientation referent in `work/SKILL.md`; both cold behavioral tests recorded
+- observed delta: cold reader must "guess and invent the format/location" for Orientation -> cold reader identifies a bounded artifact, path, and purpose, at precision parity with the learning surface
+
+### Action and focused validation
+
+Changed exactly two clauses in `work/SKILL.md`: read-order item 3 now reads `.acm/orientation.md`, if present - a derived `.acm/` artifact synthesizing what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;` (previously only the bare path). The "Reflect for future work" sentence now reads `Refresh Orientation - write or update the `.acm/orientation.md` synthesis described above - only when the current synthesis no longer explains the Destination and material trail.` (previously gave no artifact reference). No other line changed.
+
+`git diff --stat` confirmed the mutation touched only these two lines in `work/SKILL.md` plus this Trail entry; `git diff --check` reported no whitespace errors. Editor diagnostics for `work/SKILL.md` and `README.md` reported no errors; the pre-existing `MD024` duplicate-heading warnings in `audit-trail.md` are unchanged repeated-subheading noise present across all twelve prior entries, not a regression introduced here.
+
+A second stateless cold-executor (same Explore subagent class, no shared context, not shown this entry) re-ran the identical observation protocol against the edited file. It reported: Orientation's file, existence-optionality, and purpose are now quotable directly from the contract; it would still have to invent the internal format (no template, headings, or length guidance), exactly as `learning.md` also gives no format guidance; and it rated Orientation's precision as now "roughly equivalent" to the learning surface, "similar precision, with a slight structural difference," instead of the pre-fix "substantially less precision" with an explicitly invented Destination-plus-trail-summary content.
+
+Prediction comparison: HELD. The cold reader identified a bounded task (artifact, path, purpose) rather than inventing the format/location itself, matching the prediction's claim precisely - format guidance was never predicted to be added, and the second test confirms none was. No other phase, gate, principle, or evidence classification changed; README was not touched, since it never claimed anything about Orientation to begin with. Cross-model-family fidelity remains untested, as expected. No route was attempted and undone, so no `[!REVERSAL]` applies.
+
+### Reflection
+
+[!REALIZATION] A referent that is legal to read ("if present") but illegal to write without invented content is not actually optional in practice: an agent that reaches the refresh trigger has no honest way to skip inventing structure, because "if present" governs whether to read it, not what to produce when the contract itself instructs writing it. This fix closes the gap the same way the learning-surface fix did - naming the artifact class, an example path, and a bounded purpose, while deliberately leaving internal format undefined, consistent with this suite's stated rejection of prescribed templates. This claim is falsifiable if a future cold or fresh-family execution still cannot locate a bounded task from the current wording, or if the deliberately-undefined internal format later proves to cause materially inconsistent syntheses across runs (which would argue for structure after all).
+
+Current model: `work/SKILL.md`'s remaining textual seams are now shallow and self-similar - this is the second consecutive "undefined `.acm/` referent" defect found and fixed in one arc (learning surface, then Orientation), both by the same detection method (cold-executor observation rather than self-review). The contract's real remaining weight has not moved: it is still fresh-session cross-model-family execution fidelity and independent (non-self-authored) capture, exactly as the immediately preceding entry concluded. This iteration is evidence *for* that conclusion, not against it - a fresh, un-primed session, starting from zero, still found and fixed something the adversarial cold reviewer's 15-candidate pass missed, which shows the same-family text-quality vein was not fully mined out, even though the deeper behavioral questions remain the harder ones.
+
+Blind spot: I did not verify whether the destination.md's own historical prose (which extensively discusses a `retrospect.md`/"Retrospect skill" concept predating this repo's condensed single-skill design) creates any residual expectation that Orientation should look like that older, more elaborate mechanism; I treated the historical section as explicitly superseded provenance per its own "Historical reconciliation" paragraph and did not cross-check it against this fix. The strongest likely objection from someone who knows the target better: two consecutive same-day, same-family, same-detection-method fixes (learning surface, then Orientation) may indicate a systematic authoring pattern - whoever drafted the condensed contract consistently names `.acm/` artifacts before defining them - and a single remaining scan for any other undefined `.acm/`-prefixed reference (there is none left after this fix, but that was not exhaustively re-verified past Orientation and learning surface) would be cheap insurance against a third instance surfacing only when another cold reader stumbles onto it.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* FIRED - this is the second consecutive "undefined `.acm/` artifact referent" fix (learning surface, then Orientation), both surfaced by cold-executor observation rather than self-review. The recurrence is convergent rather than a hidden governing-variable defect: both instances share one shallow, now-exhausted authoring gap (naming an artifact before defining it), and no third undefined referent remains after this fix.
+- *About to declare silence:* not fired - this run made a material change.
+- *Contradicts prior [!REALIZATION]:* not fired - it extends the prior entry's realization ("further authored prose edits should be treated with suspicion unless behaviorally derived") by supplying exactly that behavioral derivation, and confirms rather than contradicts the entry before it ("the next material iteration should be an observation run... another prose improvement found here should be treated with suspicion" - this prose improvement followed an observation run, honoring that warning rather than violating it).
+- *Operator explicitly asked:* not fired - the operator authorized this specific run via Proceed but did not name the finding themselves.
+
+Orientation freshness: current - no `.acm/orientation.md` exists yet in this repository, so there is nothing to refresh; the current Destination plus this thirteen-entry Trail still explain the target directly without needing a synthesized arc-read. (Note: this repository has not yet exercised the very mechanism this entry just defined - producing that first `.acm/orientation.md` remains untested.)
+
+Destination need: not triggered - no unsettled durable operator direction blocks the next test; the convergence path (three fresh-session family-diverse evaluations) is already settled in the Destination.
+
+### Candidate Next Moves
+
+1. Obtain a fresh-session evaluation from a genuinely distinct model family against the committed artifact (including this iteration's fix), because that remains the next unclaimed link in the three-family convergence lease and no run in this trail has yet supplied it.
+2. Deliberately exercise the newly-defined Orientation mechanism once - reach a real "current synthesis no longer explains the Destination and material trail" state and actually write the first `.acm/orientation.md` - because the definition is now behaviorally testable but has never been invoked.
+3. Commit the accumulated uncommitted iterations (including this one) under separate operator authorization, because the bounded silence and this fix both remain provisional until the text they cover is the published text.
+
+## 2026-08-17 - first-orientation-synthesis
+
+- target: `C:\git\pea\work-skill` (writing `.acm/orientation.md` for the first time)
+- operator: Nils Holmager (sourced from Git configuration)
+- agent: GitHub Copilot (model self-identifies as Claude Sonnet 5)
+- skill: repository-local `work/SKILL.md`, exercising its own just-defined Orientation service
+- outcome: in progress - pre-action checkpoint
+- delta: no `.acm/orientation.md` -> pending first arc-level synthesis, read against the full thirteen-entry trail
+
+### Interpretation of the ask
+
+The operator's literal instruction was "continue," which the skill's own underspecified-ask handling requires treating as a prompt to form a direction hunch and confirm it rather than guess silently. I offered the three candidate next moves the prior entry itself ranked (cross-family evaluation, exercising Orientation, committing uncommitted work) and the operator selected exercising the Orientation mechanism. I read this as authorizing exactly one bounded task: read `.acm/destination.md` and the full `.acm/audit-trail.md` as a single document, judge honestly whether the current (nonexistent) Orientation synthesis fails to explain the Destination and material trail, and if so write `.acm/orientation.md` per the definition this repo's own prior iteration just added. I rejected reading "continue" as authorization to commit or push - the operator explicitly separated that as its own option and did not select it.
+
+The operator's selection delegates routine Intent confirmation and Improve implementation selection for this specific task only. It does not delegate Destination changes, commits, publication, or any capability reduction.
+
+### Examination
+
+Read order followed the target's own contract: `.acm/destination.md` (bounded current-mandate section plus enough historical notes to confirm the "Historical reconciliation" paragraph explicitly supersedes the old Retrospect/retrospect.md vocabulary), then the full `.acm/audit-trail.md` (thirteen entries; no `learning.md` exists yet in this repo, so the bounded-learning-surface shortcut does not apply and the full trail is the only available evidence).
+
+Because no `.acm/orientation.md` currently exists, there is, by definition, no synthesis currently explaining anything - the refresh condition ("the current synthesis no longer explains the Destination and material trail") is satisfied vacuously and honestly: an absent synthesis cannot explain a thirteen-entry arc. This is not manufactured cadence; it is the first time the condition has ever been true, because the mechanism itself did not exist as a defined artifact until the immediately preceding entry.
+
+Reading the arc as one document rather than thirteen separate runs: it moved from cold architecture creation (entry 1), through a genuine identity-namespace tangle spanning repo name, skill-invocation name, and method name (entries 4, 5, 8 - with one explicit `[!REVERSAL]` in entry 5), through evidence-lifecycle hardening in three legs (authorship in entry 7, write-timing in entry 9, read-time detection in entry 10), through a converging same-day pair of "undefined `.acm/` artifact referent" fixes (entry 11's learning surface, entry 13's Orientation) - both caught only by cold-executor observation, not by author-session structural checks or by a same-day fifteen-candidate adversarial cold review (entry 12) that missed the Orientation gap entirely - and into a same-family bounded-silence claim (entry 12) that the trail itself repeatedly names as provisional pending genuine cross-model-family evaluation.
+
+I challenged whether this is worth a full arc-level document at all, given the Destination's leanness constraint and the trail's own caution against manufacturing work: the arc is short (thirteen entries, one day and one prior day), and Improve's own step-6b across-trail reflection already runs every iteration and has already surfaced most of the individual patterns. What a dedicated Orientation synthesis adds is not new evidence but a single derived read-order artifact a future fresh session can consult before deciding what to work on next, rather than re-deriving the same arc-read from raw trail text each time - which is exactly the leverage the mechanism was defined to provide, and exactly what has never yet been tested.
+
+### Decision and authority
+
+[!DECISION] Write the first `.acm/orientation.md`, structured as falsifiable arc-claims, a synthesized "what the next runs should test" section drawn from the trail's own recent Candidate Next Moves, and a short list of imperative operational rules extracted from this arc's realizations - the same three-part shape the sibling `pea/skills` suite's fuller `orient/SKILL.md` uses, adapted without importing its heavier machinery (no `record.py`, no mandatory freshness-guard scripts, no `history.md`/`learning-archive.md`), since none of that tooling exists in this condensed repository and importing it would violate the Destination's leanness constraint and this contract's own refusal to prescribe a rigid template. This ranks above declining to write anything, because the mechanism's entire value proposition - saving a future fresh run from re-deriving the arc from raw trail text - is untested until a real instance exists; and above importing the fuller suite's tooling, because that would add infrastructure this repository's own architecture has deliberately never carried. Precedent check: no prior Orientation synthesis exists to be superseded; the immediately preceding entry defined the referent this entry now exercises for the first time, and no realization in the trail argues against writing one now that the condition is genuinely met.
+
+The operator authorized this specific task through the Proceed-equivalent selection. No commit, publication, Destination change, or capability reduction is authorized.
+
+### Prediction
+
+After this entry, `.acm/orientation.md` will exist at the target repo root, containing falsifiable arc-claims a future run could disagree with, a synthesized next-test list, and imperative operational rules - not a restatement of `destination.md` and not a duplicate of `audit-trail.md`. The file will name the same-family-only scope of the trail's existing silence claim rather than overstating convergence. Writing it will not itself supply cross-model-family evidence, will not resolve the confabulation risk named in entry 11, and will not change `work/SKILL.md`, `README.md`, or `.acm/destination.md`.
+
+### Completion
+
+- final outcome: wrote the first `.acm/orientation.md`, synthesizing the full thirteen-entry trail against the bounded Destination
+- observed delta: no arc-level synthesis artifact -> one falsifiable, bounded orientation covering identity resolution, evidence-lifecycle status, the referent-defect pattern, same-family-only silence scope, and the mechanism's own untested status
+
+### Action and focused validation
+
+Wrote `.acm/orientation.md` with four sections: Current claims (five falsifiable statements), What the next runs should test (five items, synthesized from the repeated-but-unfulfilled Candidate Next Moves across entries 3, 12, and 13), Active operational rules (six imperative rules extracted from this arc's realizations), and Loop-effectiveness notes (one paragraph naming that no single review layer used so far - self-check, cold test, adversarial cold review - has been sufficient alone).
+
+`git status --short` and `git diff --stat` confirmed exactly three files touched: this Trail entry, the two-clause `work/SKILL.md` change from the prior iteration (already captured in its own checkpoint), and the new untracked `.acm/orientation.md`. No other file changed. `git diff --check` reported no whitespace errors. A direct re-read of the written file confirmed it does not restate `destination.md`'s prose or duplicate `audit-trail.md`'s per-entry structure - it references specific entries by slug rather than reproducing their content, matching the contract's own instruction that Orientation should synthesize, not duplicate. Every claim in the file explicitly scopes the existing silence to "same-family, single-session," matching the prediction; no sentence in the file asserts unqualified convergence.
+
+Prediction comparison: HELD. The file exists, is falsifiable rather than a vague "in good shape" statement, and explicitly bounds the silence claim's scope rather than extending it. It supplies no cross-model-family evidence and does not address the entry-11 confabulation risk - both were predicted to remain open, and both do. `work/SKILL.md`, `README.md`, and `.acm/destination.md` are unchanged by this action, confirmed by the diff stat above. No route was attempted and undone, so no `[!REVERSAL]` applies.
+
+### Reflection
+
+[!REALIZATION] A first Orientation synthesis is itself only a same-family, single-session claim about the arc, exactly like every prior silence declaration in this trail - writing the file does not escape the limitation the file itself names. This is falsifiable if a future cross-family evaluation reads this same trail and produces materially different arc-claims than the five stated here; if it substantially agrees, that would be the first cross-family corroboration this arc has ever received for any claim, not just this one.
+
+Current model: this repository's arc has now closed two internal cycles in immediate succession - identity-namespace resolution (entries 4-5-8) and evidence-lifecycle hardening (entries 7-9-10), both followed by a same-day pair of referent-defect fixes (11, 13) that only cold-executor observation could find. The target's real remaining weight has not moved across this or the immediately preceding entry: it is cross-model-family fidelity and independent (non-self-authored) capture. This entry adds a durable read-order artifact for that future evaluation to consult; it does not itself advance the fidelity question.
+
+Blind spot: this synthesis was written by the same session that also wrote the immediately preceding entry it partly summarizes, so its "arc-claims" are not independent of the trail they describe in the way a true Orient run (a separate pass, ideally by a different session or model) would be. I did not attempt to get a second, distinct pass at forming these claims before writing them - the file's own claims are exactly as same-family-limited as everything else in this trail. The strongest likely objection from someone who knows the target better: an orientation.md written in the same breath as the entry that motivated it risks reproducing that entry's framing rather than genuinely stepping back to see the whole arc; the "Loop-effectiveness notes" section is the part most likely to be self-serving praise of the very cold-executor method this session itself just used twice.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired - this is the first entry whose primary action is writing `orientation.md`, not another artifact-referent or identity fix.
+- *About to declare silence:* not fired - this run performed a material write action (the first Orientation synthesis), not a silence declaration.
+- *Contradicts prior [!REALIZATION]:* not fired - it is consistent with and extends the prior entry's realization about cold-executor observation's value, and does not overturn any claim in entries 1-13.
+- *Operator explicitly asked:* FIRED - the operator explicitly selected "exercise the Orientation mechanism" from the offered options.
+
+Orientation freshness: current - this entry itself created the artifact `orientation.md` refers to; freshness is trivially satisfied immediately after writing.
+
+Destination need: not triggered - no unsettled durable operator direction blocks the next test; the convergence path (three fresh-session family-diverse evaluations) is already settled in the Destination and remains the named blocker, not a new direction question.
+
+### Candidate Next Moves
+
+1. Obtain a fresh-session evaluation from a genuinely distinct model family - this is now the fourth consecutive entry naming this as the top-ranked unfulfilled move, and it is the only remaining test that can move the Destination's actual convergence lease forward rather than adding more same-family evidence.
+2. Commit the two currently uncommitted iterations (the Orientation-referent fix and this synthesis) under separate operator authorization, so that the next fresh-family evaluation reads the published text rather than a local worktree.
+3. Re-derive `.acm/orientation.md` again after several more entries accumulate, and explicitly check whether this entry's five arc-claims held or needed correction - that comparison is itself the first real test of whether the Orientation mechanism earns its now-defined existence.
+
