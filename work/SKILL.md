@@ -30,7 +30,7 @@ Read available context in this order:
 
 1. parent-scope `.acm/destination.md` files within the boundary, broadest first;
 2. the target's `.acm/destination.md`;
-3. `.acm/orientation.md`;
+3. `.acm/orientation.md`, if present — a derived `.acm/` artifact synthesizing what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;
 4. a compact learning surface, if one exists — a derived `.acm/` artifact such as `.acm/learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
 5. only the trail evidence needed for the current decision.
 
@@ -78,7 +78,7 @@ Compare the observed outcome with the prediction. State:
 - a specific blind spot left by this iteration;
 - the strongest likely objection from someone who knows the target better.
 
-Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation only when the current synthesis no longer explains the Destination and material trail. Neither service runs by cadence or file absence alone.
+Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation — write or update the `.acm/orientation.md` synthesis described above — only when the current synthesis no longer explains the Destination and material trail. Neither service runs by cadence or file absence alone.
 
 ## Separate trace from evidence
 
