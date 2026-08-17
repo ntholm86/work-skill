@@ -416,3 +416,66 @@ The operator explicitly requested this examination, so across-run reflection fir
 1. Complete `.acm/sessions` migration and Trail-session correlation in `llm-harness-proxy`, because the skill now states a contract the current companion cannot yet satisfy end to end.
 2. Run Improve through the proxy on a real external target and deliberately compare Trail claims with captured LLM events.
 3. Investigate an executor-side state witness only if final-state attestation remains a required assurance level, because the LLM proxy cannot observe that boundary.
+
+## 2026-08-17 - rename-invocation-identity-to-work
+
+- target: `C:\git\pea\work-skill`
+- operator: Nils Holmager
+- agent: GitHub Copilot
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 and Trail 2.5.2
+- outcome: renamed the standalone skill invocation identity from `improve` to `work`
+- delta: `improve/SKILL.md` with `name: improve` -> `work/SKILL.md` with `name: work`
+
+### Interpretation of the ask
+
+I first read the request as renaming the standalone skill as a whole. The operator corrected that reading: `Work` is only the skill's invocation identity, while `Improve` remains the method and conceptual language inside the skill. The accepted mandate was therefore limited to the installable directory, frontmatter name, and README identity and installation paths required by that rename. The `# Improve` heading, workflow language, Destination, historical Trail wording, legacy archive, commit state, and publication state were outside the change.
+
+The operator confirmed the corrected interpretation and explicitly authorized implementation through Improve's Proceed gate.
+
+### Examination
+
+The live collision existed at the Agent Skill discovery boundary: `improve/SKILL.md` declared `name: improve`, which was indistinguishable from the mature Skills Suite's own `improve` skill. README repeated that identity in the repository tree and source and installation paths. The skill body itself consistently defines an improvement method and did not need renaming.
+
+Purpose and inconsistency lenses found one actionable limitation: invocation discovery could not distinguish the standalone artifact from the suite skill. Overburden and waste lenses found no reason to revise the method text, Destination, or historical evidence. The existing Trail precedent established that repository identity and installable skill identity are separate and that directory basename and frontmatter must agree.
+
+### Decision
+
+[!DECISION] Change only the invocation identity: move `improve/` to `work/`, set frontmatter to `name: work`, and update only README's artifact identity and literal paths. Preserve `Improve` as the method name everywhere else.
+
+Renaming the complete method ranked lower because the operator explicitly separated identity from behavior. Keeping `improve` ranked lower because it preserved the discovery collision. Inventing a novel identity ranked lower because `work` already matches the repository's established identity and adds no translation burden. Precedent check: the prior packaging entries require folder/frontmatter agreement and distinguish repository from artifact namespaces; this decision preserves both findings while changing the operator-owned invocation choice.
+
+### Prediction
+
+Exactly one installable skill should remain at `work/SKILL.md`; its containing folder and `name: work` should agree; README should expose no stale live `improve` installation identity; the `Improve` method and skill body should remain unchanged apart from frontmatter; and the Destination SHA-256 should remain `1207E804CF35482CC2CD62A59330F837704E055400858BDFBA79E873A75E8CD4`. No commit or publication should occur.
+
+### Action and validation
+
+Changed frontmatter from `name: improve` to `name: work`. The first PowerShell body-equivalence check falsely returned both predicates as false because its regex and newline normalization were defective. [!REVERSAL] I abandoned that validator result after a direct read and `git diff` showed exactly the one requested line change; I corrected the validation approach rather than changing the artifact.
+
+Moved the installable directory from `improve/` to `work/`. Immediate validation confirmed the old directory was absent, the new skill existed, exactly one `SKILL.md` remained, and folder and frontmatter both equaled `work`.
+
+The first README patch was rejected because it contained duplicate update blocks for one path and made no file change. A corrected single-block patch updated only the artifact directory, frontmatter identity reference, repository tree, and source and installation paths. It preserved `# Improve`, the first-run `Use Improve` language, and all method semantics.
+
+A focused seven-property check passed: exactly one skill; matching `work` folder and frontmatter; skill content otherwise identical to committed `improve/SKILL.md`; both new README paths present; no stale live `improve` install path or identity reference; `Improve` method language preserved; and Destination hash unchanged. The observed result matches the prediction. No commit, tag, push, or publication occurred.
+
+### Reflection
+
+[!REALIZATION] This artifact has two legitimate names at different semantic levels: `Work` is the host-visible invocation identity, while `Improve` is the method it performs. Packaging remains coherent only when documentation distinguishes those levels instead of forcing one word to represent both.
+
+Blind spot: structural checks establish local package identity but do not prove that a clean host installation discovers and invokes `work` without cached `improve` metadata. A reader with deeper host knowledge may object that leaving the internal heading as `Improve` can still surprise a user after invocation; that is intentional under the operator's clarified boundary, but should be tested in actual use rather than resolved by speculative prose changes.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* FIRED - three Trail entries now concern package, repository, or invocation identity, showing that namespace levels were repeatedly conflated.
+- *About to declare silence:* not fired - this run made a material identity change.
+- *Contradicts prior [!REALIZATION]:* not fired - folder/frontmatter agreement and repository/artifact separation remain valid; this run adds method/invocation separation.
+- *Operator explicitly asked:* FIRED - the operator identified the collision, chose `Work`, and narrowed the change to identity only.
+
+Across the arc, the repeated rename drift did not come from filesystem mechanics. It came from treating repository name, invocation name, and method name as one namespace. The current artifact now assigns each explicitly: repository `work-skill`, invocation `work`, method `Improve`. This is a target-level clarification, not a Destination change.
+
+Orientation freshness: current - no orientation file exists, and the current Destination plus Trail directly explain the identity correction. Destination need: not triggered - the operator settled the invocation choice and did not revise the architecture's purpose or constraints.
+
+### Candidate Next Moves
+
+1. Test a clean Agent Skills installation and invoke `work` to verify host discovery without cached `improve` metadata.
+2. Publish the identity correction only under separate operator authorization, because commit and push were outside this run.

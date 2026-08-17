@@ -6,7 +6,7 @@ It is designed for delegated work without assuming unlimited authority. You defi
 
 ## Repository layout
 
-The repository is named `work-skill`. Its sole installable Agent Skill artifact is the `improve` directory:
+The repository is named `work-skill`. Its sole installable Agent Skill artifact is the `work` directory:
 
 ```text
 work-skill/
@@ -14,20 +14,20 @@ work-skill/
     audit-trail.md
     destination.md
   .acm-root
-  improve/
+  work/
     SKILL.md
   README.md
 ```
 
-Repository identity and installable skill identity are intentionally separate. The skill directory basename and the `name: improve` frontmatter agree, while repository-level ACM files remain at the repository root.
+Repository identity and installable skill identity are intentionally separate. The skill directory basename and the `name: work` frontmatter agree, while repository-level ACM files remain at the repository root.
 
 ## Install
 
-Copy this repository's `improve` directory into the skills location for an agent host that supports Agent Skills. The source and installed paths are:
+Copy this repository's `work` directory into the skills location for an agent host that supports Agent Skills. The source and installed paths are:
 
 ```text
-<repository-root>/improve/SKILL.md
-<agent-skills>/improve/SKILL.md
+<repository-root>/work/SKILL.md
+<agent-skills>/work/SKILL.md
 ```
 
 No package, runtime, or project-specific Destination is required.

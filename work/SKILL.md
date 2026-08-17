@@ -1,5 +1,5 @@
 ---
-name: improve
+name: work
 description: Understand a target's purpose, choose and make its highest-leverage justified improvement, validate the result, and leave append-only evidence. Use for improving, fixing, reviewing, refactoring, or continuing work on any target.
 argument-hint: The target to improve and any outcome, concern, or authority boundary that matters
 ---
