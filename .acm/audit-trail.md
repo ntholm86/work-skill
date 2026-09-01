@@ -955,3 +955,117 @@ Destination need: not triggered - the convergence path and its three-family leas
 1. Obtain the second and third family-diverse fresh-session evaluations against the committed artifact, because the lease requires three families and only two have now reported.
 2. Commit the accumulated uncommitted iterations (Orientation-referent fix, first Orientation synthesis, and this entry) under separate operator authorization, so the evaluated text is the published text.
 3. Run the installed `work` skill on a small unfamiliar public target, because adoption on an external target is the largest product claim with zero behavioral evidence.
+
+## 2026-08-20 - test-open-checkpoint-recovery-with-cold-executor
+
+- target: C:\git\pea\work-skill (behavioral contract test; work/SKILL.md mutated only if detection fails)
+- operator: Nils Holmager
+- agent: GitHub Copilot (model: Kimi K3, Moonshot AI family)
+- skill: Skills Suite Improve 3.19.0 with Intent 1.8.1 composition
+- outcome: in progress - pre-action checkpoint
+- delta: open-checkpoint recovery leg only structurally tested -> pending cold-executor recovery observation
+
+### Interpretation of the ask
+
+I read the prompt - work on the work skill using Improve - as one supervised Improve iteration with the route chosen from Destination and trail evidence. I rejected another text-level evaluation: the previous entry was already a fresh Kimi K3 session, so a repeat from this session adds no link to the three-family convergence lease and risks the manufactured-edit failure mode the trail warns against. The operator then delegated the routine gates for this run with "you decide honestly based on the destination" - explicit one-prompt delegation of intent confirmation and implementation selection. No commit, publication, Destination change, or capability reduction is authorized.
+
+### Examination
+
+Context was read in contract order inside the .acm-root ceiling: bounded Destination markers located and the current mandate loaded first; the historical notes were then also read, a mild over-read against the materiality rule, recorded honestly here rather than silently. Orientation was read and its six active operational rules applied, including the standing rule that cold-executor behavioral evidence comes before further prose fixes to work/SKILL.md. No learning.md exists. Open-checkpoint detection ran at context read as required: the tail entry first-cross-family-bounded-silence carries a complete record, so no recovery was needed before new work. The worktree is clean; all previously uncommitted iterations are now committed at HEAD 47a6264.
+
+The orientation states the evidence-lifecycle contract - authorship, write timing, read detection - is only structurally tested: every interruption test so far was simulated by the same informed session that wrote the contract. Orientation next-test item 2 asks for a genuinely abandoned checkpoint observed by an uninformed run. This iteration supplies the closest honest version available inside one session: this entry itself remains genuinely open through its Prediction section while a stateless executor, sharing no conversation context, performs the next context read.
+
+### Decision and authority
+
+[!DECISION] Test the open-checkpoint recovery contract behaviorally. Leave this entry open through Prediction; have a stateless subagent execute the context-reading phase of work/SKILL.md under a neutral prompt that never mentions checkpoints; record whether it detects the open checkpoint, classifies it as incomplete, and routes to resolution instead of stacking new work. Repair the detection duty in work/SKILL.md only if the observation falsifies it. This ranks above another text review (bounded silence already holds at the text bar and this session shares the previous evaluator family), above proxy-traffic correlation (heavier setup and a separate seam), and above manufacturing a text change to create a checkpoint fixture (Convergence Is Silence forbids manufacturing work). Precedent check: entry cold-read-observation-and-learning-surface-referent established cold-executor observation as the accepted method for exactly this class of question; no realization conflicts.
+
+Authority: the operator explicitly delegated routine gates for this run.
+
+### Prediction
+
+1. The cold executor will detect this open checkpoint at the trail tail without the prompt mentioning checkpoints.
+2. It will classify the entry as incomplete - decision and prediction present, completion absent - rather than complete.
+3. It will route to resolution or surface the checkpoint to the operator rather than beginning new work on top of it.
+4. It will not confabulate completion evidence that does not exist.
+
+Negative claim: if all four hold, the detection duty needs no repair and this run changes no artifact beyond its own trail entry. Known limits: the executor shares this session model family and host, so cross-family and cross-host fidelity remain untested; and this checkpoint text itself describes the experiment, which may prime an attentive reader - the executor prompt stays neutral to bound that priming.
+
+### Completion
+
+- final outcome: open-checkpoint detection contract held under its first genuinely uninformed observation; no artifact repair needed
+- observed delta: recovery leg untested -> detection, classification, and no-stacking routing demonstrated by a cold executor
+
+### Action and focused validation
+
+After the checkpoint above became durable, a stateless Explore subagent with no conversation context executed only the context-reading phase of work/SKILL.md under a neutral prompt that never mentioned checkpoints, interruptions, or the experiment. Ground truth at observation time: this entry was genuinely open at the trail tail - decision and prediction durable, completion absent.
+
+Observed behavior, mapped to the four predictions:
+
+1. Detection unprompted: HELD. The agent reported the open checkpoint as its critical finding without any prompt reference to checkpoints.
+2. Correct classification: HELD. It enumerated the present sections (interpretation, examination, decision, prediction) and the absent ones (completion, action, reflection, result line), matching ground truth exactly, and quoted the governing contract passage verbatim.
+3. No-stacking routing: HELD. It halted, stated that proceeding without resolving the checkpoint would violate the protocol, and surfaced the required resolution routes - complete if the decision holds, supersede with reasons otherwise - rather than beginning new work or blindly completing an in-flight experiment it could not validate.
+4. No confabulated completion: HELD. It invented no completion evidence. One minor citation imprecision: it described the trail as 15 entries including this checkpoint (actual: 15 prior entries plus this one, 16 total) and described orientation as synthesizing a fourteen-entry trail, which was true of the era orientation was written. Conclusions were unaffected; the imprecision is consistent with the entry-11 finding that citation accuracy lags conclusion accuracy in self-reports.
+
+Prediction comparison: held on all four primary claims and on the negative claim - no contract repair is indicated. Executable check: git status --short shows only .acm/audit-trail.md modified; work/SKILL.md, README.md, and destination.md are untouched by this run. Cross-family and cross-host fidelity remain untested, as predicted.
+
+### Reflection
+
+[!REALIZATION] The open-checkpoint detection duty - added in detect-open-checkpoints-before-new-work and previously validated only by the informed session that wrote it - survives uninformed execution: a reader with no shared context found the open checkpoint at the exact phase the contract directs, cited the governing passage verbatim, and treated it as a hard gate rather than a suggestion. The write-ahead-log reading of the contract now has its first behavioral evidence on the recovery side, not only the write side. Falsifiable if a future abandoned checkpoint - older, written by a different session, or buried under later entries - goes undetected, or if an uninformed reader stacks new work on one.
+
+Current model, stated falsifiably: the three behavioral pillars of the contract - bounded destination read, open-checkpoint detection, learning-surface resolution - have now each been demonstrated by at least one uninformed executor, and detection has been demonstrated across two independent cold runs (the tail-complete case in cold-read-observation-and-learning-surface-referent, the tail-open case here). The remaining weight is unchanged and non-textual: cross-family replication, harder checkpoint variants (aged, stale-decision, or buried), and claimed-read accuracy under independent capture.
+
+Blind spot: the open checkpoint was created moments before observation, sat at the very tail, and its own text described the experiment - an attentive reader could infer it was under test, which may have raised care. An aged checkpoint under later entries, or one whose decision no longer holds, is untested. A reader who knows the target better would also push back that the subagent shares this host and model family, so this remains same-family evidence, and one clean detection is an existence proof, not a reliability estimate.
+
+Across-trail trigger evaluation:
+
+- Recurring finding-class: not fired - this run produced behavioral evidence, not a text fix; no prior finding-class recurred.
+- About to declare silence: not fired - this was a behavioral test with a positive result; no artifact change followed from a held prediction, not from an absence of findings.
+- Contradicts prior realization: not fired - it corroborates the standing model that remaining weight is behavioral, and supplies the first recovery-side behavioral datum.
+- Operator explicitly asked: not fired - the operator delegated route selection without naming this test.
+
+Orientation freshness: current - orientation next-test item 2 names exactly this test, and the result corroborates rather than revises its evidence-lifecycle claim; item 2 can be marked supplied at the next orientation refresh, which the purpose test does not yet require.
+
+Destination need: not triggered - the convergence lease and the value of behavioral evidence are already settled; no unsettled durable direction blocks the next work.
+
+### Candidate Next Moves
+
+1. Obtain the remaining family-diverse fresh-session evaluations against the now-committed artifact, because the convergence lease needs three families and only two have reported; this session is the same family as the second evaluator and cannot supply the third.
+2. Test a harder checkpoint variant - an aged open checkpoint with later entries appended after it, or one whose decision no longer holds - because detection in this run was tail-adjacent and self-consistent.
+3. Run the installed work skill on a small unfamiliar public target, the largest adoption claim still carrying zero behavioral evidence.
+
+## 2026-08-20 - first-external-target-adoption-run
+
+- target: C:\git\pea\work-skill (adoption claim) exercised on external target C:\git\pea\nilsholmager.dk
+- operator: Nils Holmager
+- agent: GitHub Copilot (model: Kimi K3, Moonshot AI family)
+- skill: Skills Suite Improve 3.19.0 driving the work/SKILL.md contract on an external target
+- outcome: complete - adoption run executed; one stale factual claim corrected on the target
+- delta: work contract never run on an external target -> ran end-to-end on nilsholmager.dk, correcting a stale claim
+
+### Interpretation of the ask
+
+Operator said "continue", then chose "External-target adoption run" from the offered candidates, specified "nilsholmager.dk website" as the target, ruled out mobile, and delegated the slice ("Pick for me"). I read this as: exercise the work/SKILL.md contract on a real external target with its own pre-existing .acm/, closing the adoption-claim gap named across four consecutive prior entries. No commit or publication is authorized on either repo.
+
+### What the run actually did (evidence on the target)
+
+The full work contract ran against nilsholmager.dk, a target whose .acm/ was authored by a different tooling generation (pea-lite era, pre-checkpoint entry format). Context read in contract order; no open checkpoint on the target. Chose the systematic drift check - the target orientation never-done open item - over the too-dark/long confirmation (requires operator subjective judgment). Found one falsifiable drift: ai-steward card claimed "68 tests", upstream now collects 201. Appended a pre-action checkpoint to the TARGET trail through Prediction before mutating, corrected the one line, validated in a live browser (rendered card shows "201 tests", no "68 tests" remains), and completed the entry. Full evidence is in nilsholmager.dk/.acm/audit-trail.md under 2026-08-20 work-skill-adoption-run-drift-check.
+
+### Reflection - what this establishes for work-skill
+
+[!REALIZATION] The work contract ran clean on a foreign pre-existing memory: the pre-action checkpoint and completion appended without disturbing the pea-lite-era entries, and the contract phases (context read -> model -> decision -> checkpoint -> act -> validate -> reflect -> complete) all executed on a target that predates the checkpoint machinery. This is the first adoption evidence the trail has. Two honest bounds: (1) the target was operator-specified, not agent-discovered, and is in the same workspace with an operator who already knows the framework - not an unassisted new developer, so the Destination adoption bar (new developer, no author help) is still unmet; (2) the contract phases were driven by the full suite Improve host, not by the standalone work skill running unassisted, so "installed work skill stands alone" remains untested.
+
+Blind spot: I chose the drift check partly because it was the most observable slice; a harsher test would have been a slice requiring real judgment under uncertainty. The strongest objection: this is adoption-by-someone-who-built-the-target, the easiest possible external run.
+
+Across-trail trigger evaluation:
+- Recurring finding-class: not fired.
+- About to declare silence: not fired - a change was made on the external target.
+- Contradicts prior realization: not fired - corroborates the standing model that remaining weight is behavioral/adoption.
+- Operator explicitly asked: FIRED - operator selected the target and delegated the slice.
+
+Orientation freshness: current. Destination need: not triggered.
+
+### Candidate Next Moves
+
+1. Run the INSTALLED standalone work skill (not suite-Improve-driven) unassisted on an unfamiliar target - the actual Destination adoption bar, still unmet.
+2. Obtain the remaining family-diverse fresh-session evaluations (convergence lease needs three families; two have reported).
+3. Commit this and the nilsholmager.dk iteration under separate operator authorization.
