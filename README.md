@@ -68,3 +68,7 @@ The Trail is an agent-authored semantic record. An independent capture mechanism
 [llm-harness-proxy](https://github.com/ntholm86/llm-harness-proxy) is one optional companion. It writes tamper-evident records of LLM-layer traffic before releasing buffered responses. It can attest what the model received and emitted, including tool calls exposed by the provider, but it does not by itself prove that an executor ran those calls or that the repository reached a claimed final state. Its current default storage is `.harness/sessions/`; target-local `.acm/sessions/` discovery and Trail correlation remain integration work rather than a capability claimed by this skill.
 
 Improve remains fully usable without a harness. It never installs, starts, updates, or routes traffic through one without operator consent, and it reads captured sessions selectively rather than treating surveillance cost as a default.
+
+---
+
+Author: [Nils Wendelboe Holmager](https://nilsholmager.com/) · [Project context and connected work](https://nilsholmager.com/research/work-skill/)
