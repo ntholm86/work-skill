@@ -39,7 +39,7 @@ implementation selection for this run. Do not publish, delete data, change the
 project's destination, or reduce evidence without asking me.
 ```
 
-During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is written to the repository's scope in the shared ACM as create-only records (`records/<time>-<slug>.md`); accepted records are never rewritten, so several people and agents can record at once without overwriting each other.
+During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is written to the repository's scope in the shared ACM as create-only records (`records/<time>-<slug>.md`); a record's content is never changed, so several people and agents can record at once without overwriting each other. Each closed month is sealed into one file, `records/<yyyy-MM>.md`, so the number of files stays small.
 
 ## Optional durable direction
 
