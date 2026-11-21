@@ -1347,3 +1347,21 @@ Fifth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Fixed: the README no lon
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-21 - sixth-review-fixes-work
+
+- target: work/SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: sixth-round findings applied to the Work skill
+
+Sixth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied to Work, matching the Record skill: the checkpoint comes before the first change or other consequential action (R-09); orientation and learning surfaces are used only when their named source revision covers the current records (said in the list itself, where a reader meets it); repository matching applies only to a target with root commits; "(when one exists)" after the path scope; the code-folder escape covers any name ending in .md. The legacy derived-file rule now agrees with Record (regenerated when the helper is available, otherwise may lag).
+
+[!DECISION] Rejected: restating the legacy regeneration procedure in Work (the skill must stay lean; "leave them" is consistent now that Record says they may lag).
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
