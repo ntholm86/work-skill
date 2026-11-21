@@ -30,7 +30,7 @@ Memory lives in its own repository, the shared ACM, never inside the target. Loc
 2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`). Folder names and remote URLs never decide identity.
 3. Across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its folder `repositories/<id>/` is the bound repository scope.
 
-Every scope is a folder with the same three entries: `destination.md` (the mandate), `orientation.md` (derived synthesis) and `trail/` (records). The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope and `tasks/<task>/` a named task's.
+Every scope is a folder with the same three entries: `destination.md` (the mandate), `orientation.md` (derived synthesis) and `records/` (records). The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope and `tasks/<task>/` a named task's.
 
 A missing registry or no matching repository leaves the target unbound; an unreadable registry or memory repository makes memory unavailable; more than one match is ambiguous. Say exactly which. Then read and write no memory, never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer the missing setup step and do it only with confirmation: write the shared ACM's path into the registry, or bind the target by creating its `repository.json` in a memory repository the operator names.
 
@@ -44,7 +44,7 @@ Read available context in this order, never above the memory repository's `.acm-
 2. the repository scope's `destination.md`; then, when the work is inside a code path that has one, `paths/<code/path>/destination.md`; then a task scope's `tasks/<task>/destination.md` only when the operator's stated task names that task — a code path never selects a task;
 3. the scope's `orientation.md`, if present — a derived synthesis of what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;
 4. a compact learning surface, if one exists — a derived artifact such as `learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
-5. only the trail evidence needed for the current decision: a legacy `audit-trail.md` first, then `trail/` records in file-name order.
+5. only the trail evidence needed for the current decision: a legacy `audit-trail.md` first, then `records/` records in file-name order.
 
 The higher scope wins on conflict. A required higher mandate that cannot be read blocks the work that depends on it.
 
@@ -102,7 +102,9 @@ The trail is the agent's own account of what it did and why, not independent evi
 
 After a Change is validated and reflected on, write its completion record: action, focused validation, prediction comparison, reversals, reflection, direction evaluations, and next moves, naming the checkpoint it completes. For Redesign, Silence, and Stopped outcomes, write one complete record now. Finish every iteration's record before beginning another iteration.
 
-Each record is a new file `trail/<UTC yyyyMMddTHHmmssZ>-<slug>.md` in the narrowest scope that applies — the task scope when the operator's stated task names one, else the path scope the work is inside, else the repository scope — created once and never edited, moved, or deleted. If the name already exists with different content, choose a new name; never overwrite. A correction is a new record that references the one it corrects; a legacy `audit-trail.md` in a bound scope is never appended to. Open each record with its attribution: record id, UTC time, scope, repository id and root commit, operator, agent (model family and version, or `unknown`; never invented), authority, the mandate revision read at the start, and for a completion the checkpoint it completes.
+Each record is a new file `records/<UTC yyyyMMddTHHmmssZ>-<slug>.md` in the narrowest scope that applies — the task scope when the operator's stated task names one, else the path scope the work is inside, else the repository scope; its content is never changed or lost. If the name already exists with different content, choose a new name; never overwrite. A correction is a new record that references the one it corrects; a legacy `audit-trail.md` in a bound scope is never appended to. Open each record with its attribution: record id, UTC time, scope, repository id and root commit, operator, agent (model family and version, or `unknown`; never invented), authority, the mandate revision read at the start, and for a completion the checkpoint it completes.
+
+**Sealing.** So the number of files grows with months, not with records, each closed UTC month is sealed. Before writing a record, if the scope's `records/` still holds records from an earlier month, seal that month first as its own commit: create `records/<yyyy-MM>.md` with each of that month's records in file-name order, each preceded by a line `<!-- record: <file name> sha256:<hash> -->` and followed by its content unchanged; remove exactly those records; commit both together. If the sealed file already exists or the push conflicts, someone else sealed it: drop yours and pull. Never edit a sealed file. Sealing needs only git and a SHA-256 tool. Read `records/` in file-name order; sealed months sort first.
 
 Commit or push memory records only as the memory-wide destination allows; otherwise leave them for the operator and say so.
 

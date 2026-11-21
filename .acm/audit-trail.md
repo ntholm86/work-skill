@@ -1180,3 +1180,20 @@ Full record: acm-personal, repositories/acm-spec/trail/*-work-skill-drops-harnes
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+
+## 2026-11-21 - records-folder-and-sealing
+
+- target: memory folder name and sealing text
+- operator: Nils Wendelboe Holmager
+- agent: Claude Opus (family identified by the operator; exact version not exposed); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: trail/ renamed records/; closed months are sealed into records/<yyyy-MM>.md with git and a SHA-256 tool, no script
+
+Full record: acm-personal, repositories/acm-spec/records/*-records-folder-and-sealing.md.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired; new capability (sealing) and an operator-chosen rename.
+- *About to declare silence:* not fired; changes made.
+- *Contradicts prior [!REALIZATION]:* not fired; resolves the sealing-vs-create-only tension recorded in destination-bar-13-sealing.
+- *Operator explicitly asked:* not fired; a change request, not an arc read.
