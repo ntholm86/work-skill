@@ -1311,3 +1311,21 @@ Third fresh-session review (gpt-6.1-sol and claude-opus-5.5). Applied to Work, m
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-21 - fourth-review-fixes-work
+
+- target: work/SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: round-four findings applied to the Work skill
+
+Fourth review with three launched families (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Gemini and Kimi found cold-read defects in the Work skill only, all minor: an undefined "the suite's Record skill", "Neither service" (a suite leftover), the checkpoint step pointing forward to rules not yet given, authority checked before the destination is located, an undefined "precedent check", a grammar slip, and "Stopped" used as an outcome but never defined. Fixed all, plus the material findings shared with the Record skill (reversible path escape, record identifier = path, peer path mandates for a coordinating task, memory-wide route for work outside a repository, per-scope file bound).
+
+[!DECISION] Defined "Stopped" as an outcome next to Change, Redesign and Silence rather than removing the word; it appears in the report result lines. Rejected: a longer explanation of the precedent check (one clause is enough).
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
