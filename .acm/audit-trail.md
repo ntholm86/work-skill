@@ -1329,3 +1329,21 @@ Fourth review with three launched families (gpt-6.1-sol, gemini-4-hydrogen, kimi
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-21 - fifth-review-fixes-work
+
+- target: work/SKILL.md, README.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: round-five findings applied to the Work skill and its README
+
+Fifth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Fixed: the README no longer says Work "works" without reading the specification as if demonstrated (it is the stated bar, not yet shown); work outside a repository is routed to the memory-wide scope at the start of "Find the memory", before the root-commit step; orientation refreshes are labelled derived; the binding id is an unused label, not necessarily the repository's name; the path-folder escape covers destination.md and orientation.md. The author's R-09 decision (relax to "before the first change or other consequential action") matches what Work already did, so Work needed no protocol change.
+
+[!DECISION] Kept Work's checkpoint-before-first-mutation as is: the specification now says exactly that. Rejected: an ingress record for read-only runs.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
