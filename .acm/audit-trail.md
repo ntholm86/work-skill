@@ -1253,3 +1253,19 @@ Blind spot: the orientation was written by the same agent that made the changes,
 - *Operator explicitly asked:* not fired; a decision request, not an arc-level reflection.
 
 Orientation freshness: current. Destination need: satisfied.
+## 2026-11-21 - seal-framing-in-work-skill
+
+- target: work/SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: the sealing text matches the suite's record skill 3.0.2
+
+Followed the independent review's finding on the seal marker (see the suite's seal-framing-and-fork-binding entry): marker now `bytes:<n> sha256:<hash>` with a record being exactly its n bytes; a record already in a sealed file is already accepted; a late record for a sealed month gets a new name. Same sentence as the suite's Record skill, so the two cannot drift. [!DECISION] Work still carries its own copy rather than depending on the suite (Work must work alone).
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired; a change request.
