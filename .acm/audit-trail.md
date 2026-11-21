@@ -1214,3 +1214,42 @@ Full records: acm-personal, repositories/acm-spec/records/*-trail-means-records.
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+
+## 2026-11-21 - work-destination-leftovers-decided
+
+- target: .acm/destination.md and .acm/orientation.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Destination (scheduled by an operator request), with Orient refresh
+- outcome: the suite-era research priority, quality bars and open questions decided for Work; orientation replaced
+
+### Interpretation of the ask
+
+The author asked for the Work skill's housekeeping: its destination still carried suite-era items (research priority, six quality bars, eight open questions) recorded as undecided, and its orientation was from 2026-08-17.
+
+### Decision
+
+[!DECISION] Proposal shown with the confirmed and derived parts separated, then confirmed by the author ("Confirm the Work proposal and refresh its orientation"): one priority (adoption); three quality bars (a useful first run without help; durable records that let a later session or another model continue; claims within evidence); three open questions (where a new user first fails; which instructions earn their reading cost; which actions stay human-gated). Dropped as the suite's own: the research priority, the self-targeting bar, the public-external-target and Active/Passive/Triggered questions. Rejected: keeping the old items "just in case" (the destination exists to say what Work is for, and unresolved suite items left it ambiguous).
+Precedent check: align-work-with-shared-acm recorded the question as open question 1 and said the author would decide.
+
+### Prediction
+
+Destination markers stay unique and ordered; the three "carried forward" sections and all history are unchanged; the orientation names the skill's size and the untested adoption bar.
+
+### Action and verification
+
+Wrote the Priority, Quality bars and Open questions sections and a history note; brought one derived sentence (ACM alignment) in line with the records rule. Replaced the orientation, labelled as a derived view with its source revision. Markers verified 1/1.
+
+### Reflection
+
+[!REALIZATION] Work's destination was ambiguous mainly because it inherited three kinds of item: carried-over principles, items for the suite, and items for Work. Sorting them into those three made most of the open list resolvable in one answer.
+Blind spot: the orientation was written by the same agent that made the changes, so it shares their blind spots.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired; a decision request, not an arc-level reflection.
+
+Orientation freshness: current. Destination need: satisfied.

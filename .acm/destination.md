@@ -26,7 +26,7 @@ _(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-2
 
 ### ACM alignment
 
-Work follows the ACM v0.5.0 draft direction: memory in a separate memory repository, an explicit validated binding, explicit behaviour when memory is unavailable, and create-only records. This repository's own trail stays public as research evidence. *(derived, confirmed by the author 2026-11-21)*
+Work follows the ACM v0.5.0 draft direction: memory in a separate memory repository, an explicit validated binding, explicit behaviour when memory is unavailable, and records that are never changed or lost (one file each, closed months sealed). This repository's own trail stays public as research evidence. *(derived, confirmed by the author 2026-11-21)*
 
 ### Authority and autonomy
 
@@ -54,13 +54,30 @@ _(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-2
 
 The identity copied from the skills suite ("autonomous-agent-skills"; installing the suite; Destination, Orient and Probe as separate skills; the Active/Passive/Triggered operating model) is superseded by the single Work skill. The suite remains the full alternative. *(confirmed by the author 2026-11-21)*
 
+### Priority
+
+Work has one priority: adoption, the bar stated in its Purpose. The research priority of the 2026-08-16 destination belongs to the skills suite, not to Work. *(confirmed by the author, 2026-11-21)*
+
+### Quality bars
+
+1. A person who has cloned the shared ACM names the Work skill and gets a useful first run without help, understanding what the agent will do, why it matters and where they keep control, without first learning the framework's vocabulary.
+2. Every run leaves durable records in the shared ACM that let a later session, or a different model, continue coherently.
+3. Claims made about Work stay within what its records, tests and independent evaluators support.
+
+Leanness is its own section above. *(adapted from bars 2, 3 and 4 of the 2026-08-16 destination; confirmed by the author, 2026-11-21)*
+
 ### Open questions
 
-1. The 2026-08-16 destination's research priority, immediate quality bars and open questions were written for the suite. Whether any of them apply to Work was neither confirmed nor rejected on 2026-11-21; they remain in the history below until the author decides.
+1. Where does an unassisted new user first fail: setting up the registry, the first run, understanding an automatic handoff, or recognizing useful evidence?
+2. Which skill instructions still earn their reading cost?
+3. Which actions stay human-gated whatever the demonstrated capability or trust?
 
+*(adapted from the 2026-08-16 open questions; confirmed by the author, 2026-11-21)*
 <!-- destination-history -->
 
 ## History
+
+**2026-11-21 (leftovers decided).** The author confirmed which suite-era items apply to Work. Kept, adapted: one priority (adoption), three quality bars, three open questions (the old open question 1 is closed). Dropped as the suite's own: the research priority, the self-targeting quality bar, the public-external-target and Active/Passive/Triggered questions. The ACM alignment sentence was brought in line with the records rule (never changed or lost; monthly sealing). The previous text stays below.
 
 **2026-11-21.** The current destination was replaced at the author's direction (purpose, adoption bar, ACM alignment and the superseded suite identity confirmed; carried-forward sections copied verbatim). The previous file, including its header and current section, follows verbatim.
 
