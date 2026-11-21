@@ -1269,3 +1269,27 @@ Followed the independent review's finding on the seal marker (see the suite's se
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired; a change request.
+## 2026-11-21 - second-independent-review-fixes
+
+- target: work/SKILL.md, .acm/destination.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: eleven findings from two fresh-session reviewers applied to the Work skill and its destination
+
+Two reviewers read the Work skill, the Record skill and the ACM specification v0.5.0 in fresh sessions (launched on gpt-6.1-sol and claude-opus-5.5; neither could confirm its own family from inside, and the second is the same family as the author agent, so the independence is weaker than it looks). Both found, among others: legacy memory walked up the code tree while Record forbids it; task selection said "the operator's stated task" where Record says "the confirmed mandate names"; a name collision was resolved silently where the spec requires failing explicitly; the seal marker's separator, a rejected push read as "someone else sealed it", and the no-commit case; no session identifier in attribution; a first run with no mandate not labelled as such; the destination's bar 2 promised records for unbound runs.
+
+[!DECISION] Fixed all in Work and kept the sealing sentence identical to the Record skill's. Collisions are reported and the new record gets a new name; a sealed name is accepted only when its SHA-256 matches; the separator is one LF; a rejected push means pull and compare, not assume; with no permission to commit, closed months stay unsealed and that is said. Legacy memory follows Record's chain (no walking up the code tree). Path scopes are read outermost first; a task spanning paths lives at repository level. Records state a session identifier. A run with no mandate says it is not an ACM-governed interval. Rejected: removing Work's copy of the sealing text to point at the suite (Work must work alone). Known and accepted: the duplication can drift; a sync note belongs in the orientation, not in the skill's reading cost.
+
+The destination changes are clarifications marked derived: bar 2 now says "in a bound repository", and the supervision sentence no longer names suite skills.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* fired for "the two interchangeable skills and the spec disagree on a detail" — the third such round today. The macro-view: the shared text is the problem; one source (the spec, then the Record skill) should be copied, not paraphrased.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
+
+### Macro-Hansei
+
+Across today's rounds the same class recurred: a rule stated in three places (the spec, the Record skill, the Work skill) drifts in small ways, and each new reviewer finds a different detail. Fixing details one by one does not end it. The structural answer is that the spec states each rule once and the skills copy its wording; Work's copy is deliberate (it must work alone), so the drift risk is recorded as accepted and should be checked by a reader comparing the two sealing and binding sections, not by more prose in the skill.

@@ -26,13 +26,13 @@ _(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-2
 
 ### ACM alignment
 
-Work follows the ACM v0.5.0 draft direction: memory in a separate memory repository, an explicit validated binding, explicit behaviour when memory is unavailable, and records that are never changed or lost (one file each, closed months sealed). This repository's own trail stays public as research evidence. *(derived, confirmed by the author 2026-11-21)*
+Work follows ACM v0.5.0 (published 2026-11-21): memory in a separate memory repository, an explicit validated binding, explicit behaviour when memory is unavailable, and records that are never changed or lost (one file each, closed months sealed). This repository's own trail stays public as research evidence. *(derived, confirmed by the author 2026-11-21)*
 
 ### Authority and autonomy
 
 The operator owns the Destination and any change to it. Within a confirmed Destination, the engine may autonomously select and implement the highest-leverage route while leaving observable evidence. The historical claim that a human must approve every implementation choice is superseded; explicit delegation can include choosing what to implement.
 
-Without explicit delegation, routine Improve work is supervised: the operator confirms Intent's interpretation before examination and confirms Improve's proposed change before implementation. The operator may delegate either routine gate for one prompt or durably in Destination after trust is earned. Delegation must be explicit; silence, accumulated trust, and a host-wide autonomy setting do not grant it. Routine delegation never answers a Destination question, authorizes a direction change, or bypasses an operator-declared consequential-action gate. The operator may narrow or revoke delegation at any time.
+Without explicit delegation, routine work is supervised: the operator confirms the interpretation before examination and confirms the proposed change before implementation. The operator may delegate either routine gate for one prompt or durably in Destination after trust is earned. Delegation must be explicit; silence, accumulated trust, and a host-wide autonomy setting do not grant it. Routine delegation never answers a Destination question, authorizes a direction change, or bypasses an operator-declared consequential-action gate. The operator may narrow or revoke delegation at any time.
 
 Direction changes and operator-declared consequential actions remain human-gated. The framework should support explicit boundaries that reasoning quality or accumulated trust cannot override. Private enterprise evidence remains private when confidentiality or ownership obligations apply.
 
@@ -61,7 +61,7 @@ Work has one priority: adoption, the bar stated in its Purpose. The research pri
 ### Quality bars
 
 1. A person who has cloned the shared ACM names the Work skill and gets a useful first run without help, understanding what the agent will do, why it matters and where they keep control, without first learning the framework's vocabulary.
-2. Every run leaves durable records in the shared ACM that let a later session, or a different model, continue coherently.
+2. Every run in a bound repository leaves durable records in the shared ACM that let a later session, or a different model, continue coherently; a run without a bound scope says that it is not recorded.
 3. Claims made about Work stay within what its records, tests and independent evaluators support.
 
 Leanness is its own section above. *(adapted from bars 2, 3 and 4 of the 2026-08-16 destination; confirmed by the author, 2026-11-21)*
@@ -76,6 +76,8 @@ Leanness is its own section above. *(adapted from bars 2, 3 and 4 of the 2026-08
 <!-- destination-history -->
 
 ## History
+
+**2026-11-21 (ACM version).** The ACM specification was published as v0.5.0 the same day; the sentence that said Work follows the v0.5.0 draft direction now names the published version. Meaning unchanged.
 
 **2026-11-21 (leftovers decided).** The author confirmed which suite-era items apply to Work. Kept, adapted: one priority (adoption), three quality bars, three open questions (the old open question 1 is closed). Dropped as the suite's own: the research priority, the self-targeting quality bar, the public-external-target and Active/Passive/Triggered questions. The ACM alignment sentence was brought in line with the records rule (never changed or lost; monthly sealing). The previous text stays below.
 
