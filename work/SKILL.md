@@ -30,7 +30,7 @@ Memory lives in its own repository, the shared ACM, never inside the target. Loc
 2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`). Folder names and remote URLs never decide identity.
 3. Across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its `repositories/<id>/.acm/` is the bound scope.
 
-If the registry is missing or unreadable, no repository matches, or more than one matches, say exactly which. Then read and write no memory, never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer to bind the target by creating its `repository.json` in a memory repository the operator names; do it only with confirmation.
+If the registry is missing or unreadable, no repository matches, or more than one matches, say exactly which. Then read and write no memory, never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer the missing setup step and do it only with confirmation: write the shared ACM's path into the registry, or bind the target by creating its `repository.json` in a memory repository the operator names.
 
 **Legacy memory.** If the target is unbound but already carries an `.acm/` from an earlier ACM version, say so, use it as before (walking upward for parent `.acm/destination.md` files stops at the first `.acm-root`, the filesystem root, or four levels), record in its existing `audit-trail.md`, and recommend moving it to a memory repository. Never create a new in-target `.acm/`.
 
@@ -104,19 +104,7 @@ Independent capture is optional for ordinary use. Do not install, start, update,
 
 After a Change is validated and reflected on, write its completion record: action, focused validation, prediction comparison, reversals, reflection, direction evaluations, and next moves, naming the checkpoint it completes. For Redesign, Silence, and Stopped outcomes, write one complete record now. Finish every iteration's record before beginning another iteration.
 
-Each record is a new file `trail/<UTC yyyyMMddTHHmmssZ>-<slug>.md` in the bound scope, created once and never edited, moved, or deleted. Concurrent writers therefore never touch the same file. If the name already exists with different content, choose a new name; never overwrite. A correction is a new record that references the one it corrects. A legacy `audit-trail.md` is never appended to in a bound scope. Begin each record with:
-
-```markdown
-- record: <file name without .md>
-- time: <UTC>
-- scope: <scope path inside the memory repository>
-- repository: <id> (<root commit>)
-- operator: <who initiated, if known>
-- agent: <model family and version, or unknown; never invented>
-- authority: <source and scope of authority for this iteration>
-- mandate: <memory repository commit or destination hash read at the start>
-- completes: <checkpoint record>   (completion records only)
-```
+Each record is a new file `trail/<UTC yyyyMMddTHHmmssZ>-<slug>.md` in the bound scope, created once and never edited, moved, or deleted. If the name already exists with different content, choose a new name; never overwrite. A correction is a new record that references the one it corrects; a legacy `audit-trail.md` in a bound scope is never appended to. Open each record with its attribution: record id, UTC time, scope, repository id and root commit, operator, agent (model family and version, or `unknown`; never invented), authority, the mandate revision read at the start, and for a completion the checkpoint it completes.
 
 Commit or push memory records only as the memory-wide destination allows; otherwise leave them for the operator and say so.
 

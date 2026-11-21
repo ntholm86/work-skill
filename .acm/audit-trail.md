@@ -1118,3 +1118,24 @@ Orientation freshness: STALE - Orientation describes the suite-copied identity; 
 1. Have a fresh agent install only the Work skill, clone a shared ACM and run unassisted on an unfamiliar repository: the adoption bar.
 2. Refresh Orientation against the new destination.
 3. Decide whether the old research priority, quality bars and open questions apply to Work (destination open question 1).
+
+## 2026-11-21 - work-leanness-and-adoption-follow-up
+
+- target: C:\git\work-skill\work\SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude Opus (family identified by the operator; exact version not exposed); host: Copilot SDK in VS Code
+- skill: Skills Suite Improve
+- outcome: complete - record attribution folded into one sentence; missing-registry setup offered
+- delta: 13,423 -> 13224 bytes; adoption gap at a missing registry closed
+
+Operator: "as long as we are still true to the work skills destination too." Checked the previous entry against Work's destination. Leanness: the +25% growth was the clearest tension. The record-header code block repeated fields already required by the reconstruction list, and one sentence restated rationale kept in the README; both folded into one sentence with the same fields. The remaining growth is binding, unavailable-memory, legacy and create-only rules; removing any would reduce evidence or memory capability, which the destination reserves for the operator. Adoption bar ("after cloning the shared ACM ... use the Work skill, and it works"): with no registry the skill only reported unavailability; it now offers to write the path with confirmation.
+[!DECISION] Keep every guarantee; cut only duplication. Rejected: dropping legacy support to save bytes (would break this repository and older targets, a capability reduction needing operator approval).
+Prediction: same fields and rules present, smaller file, one setup step offered. Verified by direct re-read and size.
+
+Across-trail trigger evaluation:
+- Recurring finding-class: not fired.
+- About to declare silence: not fired - a change was made.
+- Contradicts prior realization: not fired.
+- Operator explicitly asked: FIRED - destination fidelity check requested; answered above against leanness and adoption.
+
+Orientation freshness: STALE (unchanged from align-work-with-shared-acm). Destination need: not triggered.
