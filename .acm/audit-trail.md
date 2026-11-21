@@ -1383,3 +1383,19 @@ Seventh review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied: the checkpoin
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-21 - eighth-review-fixes-work
+
+- target: work/SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: eighth-round findings applied to the Work skill
+
+Eighth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied: an uncommittable checkpoint is left for the operator to accept and the run waits for that before the first change (strict reading of R-09, same rule as Record); a completion states `completes:` naming its checkpoint; "the suite's helper" now names the optional `record.py` helper of the PEA skills suite, which is the one outside referent Work keeps for legacy memory.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
