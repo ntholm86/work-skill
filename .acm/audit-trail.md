@@ -1139,3 +1139,15 @@ Across-trail trigger evaluation:
 - Operator explicitly asked: FIRED - destination fidelity check requested; answered above against leanness and adoption.
 
 Orientation freshness: STALE (unchanged from align-work-with-shared-acm). Destination need: not triggered.
+
+## 2026-11-21 - uniform-scope-layout
+
+- target: memory layout text in this repository
+- operator: Nils Wendelboe Holmager
+- agent: Claude Opus (family identified by the operator; exact version not exposed); host: Copilot SDK in VS Code
+- skill: Improve, iteration 1 of a cross-project bounded-silence run
+- outcome: scope layout now one rule: a scope is a folder with destination.md, orientation.md and trail/; no .acm/ inside memory repositories; path scopes under paths/
+
+Full record (decision, rejected routes, prediction, verification): acm-personal, repositories/acm-spec/trail/*-uniform-scope-layout.md. Here: the layout and read-order text changed to match.
+
+**Across-trail trigger evaluation:** recurring finding-class not fired; silence not fired; no realization contradicted; operator did not ask for an arc read.

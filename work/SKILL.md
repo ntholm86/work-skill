@@ -28,7 +28,9 @@ Memory lives in its own repository, the shared ACM, never inside the target. Loc
 
 1. Read the user-level registry `~/.acm/memories` (Windows: `%USERPROFILE%\.acm\memories`): one absolute path per line, each a memory repository containing `.acm-root`.
 2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`). Folder names and remote URLs never decide identity.
-3. Across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its `repositories/<id>/.acm/` is the bound scope.
+3. Across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its folder `repositories/<id>/` is the bound repository scope.
+
+Every scope is a folder with the same three entries: `destination.md` (the mandate), `orientation.md` (derived synthesis) and `trail/` (records). The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope and `tasks/<task>/` a named task's.
 
 A missing registry or no matching repository leaves the target unbound; an unreadable registry or memory repository makes memory unavailable; more than one match is ambiguous. Say exactly which. Then read and write no memory, never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer the missing setup step and do it only with confirmation: write the shared ACM's path into the registry, or bind the target by creating its `repository.json` in a memory repository the operator names.
 
@@ -38,8 +40,8 @@ A missing registry or no matching repository leaves the target unbound; an unrea
 
 Read available context in this order, never above the memory repository's `.acm-root`:
 
-1. the memory-wide `.acm/destination.md` at the memory repository root;
-2. the bound scope's `destination.md`, then a task scope's `tasks/<task>/destination.md` only when the operator's stated task names that task; a code path never selects one;
+1. the memory-wide `destination.md` at the memory repository root;
+2. the repository scope's `destination.md`; then, when the work is inside a code path that has one, `paths/<code/path>/destination.md`; then a task scope's `tasks/<task>/destination.md` only when the operator's stated task names that task — a code path never selects a task;
 3. the scope's `orientation.md`, if present — a derived synthesis of what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;
 4. a compact learning surface, if one exists — a derived artifact such as `learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
 5. only the trail evidence needed for the current decision: a legacy `audit-trail.md` first, then `trail/` records in file-name order.
