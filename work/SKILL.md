@@ -1,10 +1,10 @@
 ---
 name: work
-description: Understand a target's purpose, choose and make its highest-leverage justified improvement, validate the result, and leave append-only evidence. Use for improving, fixing, reviewing, refactoring, or continuing work on any target.
+description: Understand a target's purpose, choose and make its highest-leverage justified improvement, validate the result, and leave append-only evidence in a shared Agent Context Memory (ACM). Use for improving, fixing, reviewing, refactoring, or continuing work on any target.
 argument-hint: The target to improve and any outcome, concern, or authority boundary that matters
 ---
 
-# Improve
+# Work
 
 Understand purpose. Improve what limits it most. Leave evidence another agent can challenge.
 
@@ -22,21 +22,33 @@ Interpret the operator's prompt as an outcome and reason, not merely a literal i
 
 Determine authority from explicit evidence in the current prompt or the target's confirmed Destination. Without explicit delegation, ask the operator to confirm the interpretation before examination. Delegation removes that routine pause only for its stated scope; it never authorizes changing Destination, answering operator-owned direction questions, bypassing declared consequential-action gates, or deliberately reducing reasoning, memory, learning, or evidence capability.
 
+## Find the memory
+
+Memory lives in its own repository, the shared ACM, never inside the target. Locate it before reading context:
+
+1. Read the user-level registry `~/.acm/memories` (Windows: `%USERPROFILE%\.acm\memories`): one absolute path per line, each a memory repository containing `.acm-root`.
+2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`). Folder names and remote URLs never decide identity.
+3. Across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its `repositories/<id>/.acm/` is the bound scope.
+
+If the registry is missing or unreadable, no repository matches, or more than one matches, say exactly which. Then read and write no memory, never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer to bind the target by creating its `repository.json` in a memory repository the operator names; do it only with confirmation.
+
+**Legacy memory.** If the target is unbound but already carries an `.acm/` from an earlier ACM version, say so, use it as before (walking upward for parent `.acm/destination.md` files stops at the first `.acm-root`, the filesystem root, or four levels), record in its existing `audit-trail.md`, and recommend moving it to a memory repository. Never create a new in-target `.acm/`.
+
 ## Read only the context that can change the decision
 
-Find the target root. When walking upward for governing context, stop at the first `.acm-root`, the filesystem root, or four parent levels, whichever comes first. Never cross a `.acm-root`.
+Read available context in this order, never above the memory repository's `.acm-root`:
 
-Read available context in this order:
+1. the memory-wide `.acm/destination.md` at the memory repository root;
+2. the bound scope's `destination.md`, then a task scope's `tasks/<task>/destination.md` only when the operator's stated task names that task; a code path never selects one;
+3. the scope's `orientation.md`, if present — a derived synthesis of what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;
+4. a compact learning surface, if one exists — a derived artifact such as `learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
+5. only the trail evidence needed for the current decision: a legacy `audit-trail.md` first, then `trail/` records in file-name order.
 
-1. parent-scope `.acm/destination.md` files within the boundary, broadest first;
-2. the target's `.acm/destination.md`;
-3. `.acm/orientation.md`, if present — a derived `.acm/` artifact synthesizing what the target is becoming from the Destination and trail; it is optional and need not exist before first refreshed;
-4. a compact learning surface, if one exists — a derived `.acm/` artifact such as `.acm/learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
-5. only the trail evidence needed for the current decision.
+The higher scope wins on conflict. A required higher mandate that cannot be read blocks the work that depends on it.
 
 For a potentially long Destination, locate `<!-- current-destination: complete -->` and `<!-- destination-history -->` before loading its body. When both exist in that order, read the content between them as the routine current mandate; load history only when provenance, ambiguity, or contradiction makes it material.
 
-Before beginning new work, check the trail tail for an open checkpoint: a Change entry whose decision and prediction were recorded but whose completion evidence never followed. If one exists, an earlier run was interrupted after committing to a route. Complete it if its decision still holds, or append an explicit supersession stating why it no longer does; never start a new iteration on top of an unresolved one.
+Before beginning new work, check for an open checkpoint: a checkpoint record that no completion record names (in a legacy trail, a Change entry whose decision and prediction were recorded but whose completion evidence never followed). If one exists, an earlier run was interrupted after committing to a route. Complete it if its decision still holds, or append an explicit supersession stating why it no longer does; never start a new iteration on top of an unresolved one.
 
 Do not require Destination for a first run. The confirmed prompt and target evidence are enough until continued work genuinely depends on durable direction.
 
@@ -58,7 +70,7 @@ Without delegated implementation authority, say what you want to change and how 
 
 ## Checkpoint the decision
 
-For a **Change** iteration, after implementation authority is established and before the first implementation mutation, append the Trail entry through its prediction. Include the accepted intent, evidence examined, decision and rationale, rejected route, authority source, and falsifiable prediction. This checkpoint makes the decision durable before its outcome is known. Do not rewrite it if later evidence changes the route; append the reversal or correction during completion. If the run is interrupted, leave the open checkpoint in place; the next run's context read is required to detect and resolve it.
+For a **Change** iteration, after implementation authority is established and before the first implementation mutation, write the checkpoint record. Include the accepted intent, evidence examined, decision and rationale, rejected route, authority source, and falsifiable prediction. This checkpoint makes the decision durable before its outcome is known. Never rewrite it if later evidence changes the route; record the reversal or correction in the completion record. If the run is interrupted, leave the open checkpoint in place; the next run's context read is required to detect and resolve it.
 
 Redesign, Silence, and Stopped outcomes do not need a pre-action checkpoint because they perform no implementation mutation; append their complete record once the decision is final.
 
@@ -78,7 +90,7 @@ Compare the observed outcome with the prediction. State:
 - a specific blind spot left by this iteration;
 - the strongest likely objection from someone who knows the target better.
 
-Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation — write or update the `.acm/orientation.md` synthesis described above — only when the current synthesis no longer explains the Destination and material trail. Neither service runs by cadence or file absence alone.
+Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation — write or update the scope's `orientation.md` synthesis described above, naming the trail revision it reflects — only when the current synthesis no longer explains the Destination and material trail. Neither service runs by cadence or file absence alone.
 
 ## Separate trace from evidence
 
@@ -90,17 +102,27 @@ Independent capture is optional for ordinary use. Do not install, start, update,
 
 ## Complete the trail
 
-After a Change is validated and reflected on, append its action, focused validation, prediction comparison, reversals, reflection, direction evaluations, and next moves to the open checkpoint without altering the pre-action record. For Redesign, Silence, and Stopped outcomes, append one complete entry now. Finish every iteration's record before beginning another iteration. Create `<target>/.acm/audit-trail.md` with this header if absent:
+After a Change is validated and reflected on, write its completion record: action, focused validation, prediction comparison, reversals, reflection, direction evaluations, and next moves, naming the checkpoint it completes. For Redesign, Silence, and Stopped outcomes, write one complete record now. Finish every iteration's record before beginning another iteration.
+
+Each record is a new file `trail/<UTC yyyyMMddTHHmmssZ>-<slug>.md` in the bound scope, created once and never edited, moved, or deleted. Concurrent writers therefore never touch the same file. If the name already exists with different content, choose a new name; never overwrite. A correction is a new record that references the one it corrects. A legacy `audit-trail.md` is never appended to in a bound scope. Begin each record with:
 
 ```markdown
-# Audit trail
-
-Append-only ledger of autonomous operations on this repo. Newest entries at the bottom.
-
----
+- record: <file name without .md>
+- time: <UTC>
+- scope: <scope path inside the memory repository>
+- repository: <id> (<root commit>)
+- operator: <who initiated, if known>
+- agent: <model family and version, or unknown; never invented>
+- authority: <source and scope of authority for this iteration>
+- mandate: <memory repository commit or destination hash read at the start>
+- completes: <checkpoint record>   (completion records only)
 ```
 
-Never rewrite, reorder, clean up, or silently correct existing entries. Append a correction when history needs amendment. The completed record must let a later agent reconstruct:
+Commit or push memory records only as the memory-wide destination allows; otherwise leave them for the operator and say so.
+
+In legacy memory, append the checkpoint and its completion to the existing `audit-trail.md` instead; never rewrite, reorder, clean up, or silently correct its entries, and append a correction when history needs amendment.
+
+The completed record must let a later agent reconstruct:
 
 - date, target, operator if known, agent identity, and outcome;
 - the narrated intent and authority source;
@@ -113,7 +135,7 @@ Never rewrite, reorder, clean up, or silently correct existing entries. Append a
 - whether durable Destination or refreshed Orientation is now needed;
 - a short ranked list of next moves already visible from this iteration.
 
-The Trail is authoritative for the agent's decision history. Derived summaries may be generated when trail size makes them earn their maintenance cost, but never replace or outrank it.
+The Trail is authoritative for the agent's decision history. Derived summaries may be generated when trail size makes them earn their maintenance cost, but never replace or outrank it, and ordinary writers do not regenerate and commit shared summaries in parallel.
 
 ## Report
 

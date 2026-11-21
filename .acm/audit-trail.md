@@ -1069,3 +1069,52 @@ Orientation freshness: current. Destination need: not triggered.
 1. Run the INSTALLED standalone work skill (not suite-Improve-driven) unassisted on an unfamiliar target - the actual Destination adoption bar, still unmet.
 2. Obtain the remaining family-diverse fresh-session evaluations (convergence lease needs three families; two have reported).
 3. Commit this and the nilsholmager.dk iteration under separate operator authorization.
+
+## 2026-11-21 - align-work-with-shared-acm
+
+- target: C:\git\work-skill (work/SKILL.md, README.md, .acm/destination.md)
+- operator: Nils Wendelboe Holmager
+- agent: Claude Opus (family identified by the operator; exact version not exposed); host: Copilot SDK in VS Code
+- skill: Skills Suite Improve applied to this repository, with Destination for the new current destination
+- outcome: complete - Work resolves a shared ACM by validated binding and writes create-only records; destination replaced as confirmed
+- delta: memory found by walking up the target for .acm/ -> memory repository bound by root commit; single appended trail -> one file per record; copied suite destination -> Work's own
+
+### Interpretation of the ask
+
+Operator: "C:\git\work-skill is where the work skill currently is - and i guess that this skill also needs a bit of work to align properly with acm-spec. And acm-spec must ofcourse adhere to the pea principles. Ask me any questions i need to answer for you to settle even more on the work." Answers given the same session: align to the v0.5.0 draft direction; "I want the work skill to become that skill - the work skill is both PEA principles in light weight edition so to say and also what enables you to use the shared acm properly. Using the pea skills suite is also an option. Its either The work skill or the pea skills suite - both works with shared ACM ... That way i can tell others to simply use the single work skill after cloning the shared ACM."; this repository's own trail stays public; local commits allowed here, never push. The new destination text was shown with confirmed and derived parts separated and was confirmed.
+
+### Examination
+
+The skill walked up the target for `.acm/destination.md` and created `<target>/.acm/audit-trail.md`: the v0.4.0 model. The v0.5.0 draft requires a separate memory repository (R-12), an explicit validated binding not decided by folder names (R-13), explicit unavailable-memory behaviour (R-11) and create-only records (R-18). The bs-08 replay evidence (acm-spec scope, drafts/archive) showed a shared single trail file conflicting every time with default merge and silently losing lines with merge=union, while one file per record stayed intact. Title read "# Improve" while the skill is named `work`. The destination was a copy of the skills suite's ("autonomous-agent-skills", "install the suite").
+
+### Decision
+
+[!DECISION] Bind by root commit through a user-level registry (`~/.acm/memories`) and `repositories/<id>/repository.json` in the memory repository; write one create-only file per record; checkpoint and completion become separate records linked by `completes:`. Rejected: a binding file inside the target (it would publish the private memory's location in public repositories); a submodule (same exposure, and every record write would need a public commit); keeping one appended file with merge=union (silent line loss in bs-08). Unbound targets with an existing in-repo `.acm/` stay usable as legacy memory so this public repository and older targets keep working; no new in-target `.acm/` is ever created.
+Precedent check: the earlier entry first-external-target-adoption-run showed the contract running on a foreign pre-existing memory; legacy handling preserves that.
+
+### Prediction
+
+A clone renamed on disk still resolves to its scope; a same-named repository with the same remote URL but different history does not; two memories binding one root are reported ambiguous; a missing registry or a non-memory path is reported unavailable; this repository resolves as unbound legacy. The skill does not grow materially.
+
+### Action and validation
+
+Edited work/SKILL.md (heading Work; new "Find the memory" section; context order from memory root; checkpoint/completion records with attribution header; legacy rule; commit policy from the memory-wide destination), rewrote README.md around "clone the shared ACM once, then use the Work skill", replaced the current destination (old file kept verbatim under history). Executed the resolution procedure exactly as written against real data: acm-spec clone BOUND; renamed clone BOUND; same name and remote, other history UNBOUND; this repository UNBOUND (legacy); two memories binding the same root AMBIGUOUS; missing registry UNAVAILABLE; registry pointing at a non-memory UNAVAILABLE. All seven matched the prediction. SKILL.md grew from 10,707 to 13,423 bytes (+25%); the prediction "does not grow materially" did not hold. The added text is the binding, unavailable-memory, legacy and record rules; a later pass should test whether any of it can be shortened without losing a guarantee.
+
+### Reflection
+
+[!REALIZATION] Root-commit identity makes the binding verifiable without publishing anything: the public repository needs no pointer, and the private memory carries the only mapping. It does not survive a history rewrite of the work repository; such a rewrite needs an explicit binding migration (R-13 already says so).
+Blind spot: the procedure was executed by a script reading the text, not by a fresh agent following the installed skill unassisted; record writing was not exercised by a second concurrent writer here. Pushback: a team member must still edit a registry file once; that is setup, not per-prompt configuration, but it is a step the adoption bar must account for.
+
+Across-trail trigger evaluation:
+- Recurring finding-class: not fired.
+- About to declare silence: not fired - a change was made.
+- Contradicts prior realization: not fired - extends the adoption-gap model.
+- Operator explicitly asked: not fired - the request was for alignment work.
+
+Orientation freshness: STALE - Orientation describes the suite-copied identity; refresh against the new destination is the next Orient run. Destination need: satisfied this session.
+
+### Candidate Next Moves
+
+1. Have a fresh agent install only the Work skill, clone a shared ACM and run unassisted on an unfamiliar repository: the adoption bar.
+2. Refresh Orientation against the new destination.
+3. Decide whether the old research priority, quality bars and open questions apply to Work (destination open question 1).

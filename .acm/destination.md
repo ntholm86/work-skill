@@ -1,3 +1,71 @@
+# Destination — work-skill
+
+_Operator-held. Only the operator changes it; an agent may draft and ask, never confirm. The current mandate is between the two markers below._
+
+<!-- current-destination: complete -->
+
+## Current destination (2026-11-21)
+
+### Purpose
+
+Work is the single skill a person names to use the Principles of Earned Autonomy and a shared Agent Context Memory (ACM): the Principles in a lightweight edition, and what lets an agent use a shared ACM properly. Either the Work skill or the Principles of Earned Autonomy skills suite can be used; both work with shared ACM. *(the author, 2026-11-21: "the work skill is both PEA principles in light weight edition so to say and also what enables you to use the shared acm properly. Using the pea skills suite is also an option. Its either The work skill or the pea skills suite - both works with shared ACM. THats how i want it.")*
+
+**Adoption bar.** After cloning the shared ACM, a person tells their agent to use the Work skill, and it works. *(the author, 2026-11-21: "That way i can tell others to simply use the single work skill after cloning the shared ACM.")*
+
+### Fixed boundary
+
+Only the three Principles of Earned Autonomy are architectural constraints:
+
+1. **Operator's Intent:** the operator defines the destination; the agent reasons about the route.
+2. **Observable Autonomy:** autonomous work leaves trustworthy evidence that the agent cannot retroactively rewrite.
+3. **Convergence Is Silence:** completion requires diverse independent evaluators to find nothing material left to change.
+
+Everything else is revisable when reasoning and evidence support a better route. No skill, workflow, lens, memory structure, taxonomy, gate, theory, implementation, or current interpretation is sacred. A mechanism earns its continued existence by serving the purpose while respecting all three principles.
+
+_(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-21)_
+
+### ACM alignment
+
+Work follows the ACM v0.5.0 draft direction: memory in a separate memory repository, an explicit validated binding, explicit behaviour when memory is unavailable, and create-only records. This repository's own trail stays public as research evidence. *(derived, confirmed by the author 2026-11-21)*
+
+### Authority and autonomy
+
+The operator owns the Destination and any change to it. Within a confirmed Destination, the engine may autonomously select and implement the highest-leverage route while leaving observable evidence. The historical claim that a human must approve every implementation choice is superseded; explicit delegation can include choosing what to implement.
+
+Without explicit delegation, routine Improve work is supervised: the operator confirms Intent's interpretation before examination and confirms Improve's proposed change before implementation. The operator may delegate either routine gate for one prompt or durably in Destination after trust is earned. Delegation must be explicit; silence, accumulated trust, and a host-wide autonomy setting do not grant it. Routine delegation never answers a Destination question, authorizes a direction change, or bypasses an operator-declared consequential-action gate. The operator may narrow or revoke delegation at any time.
+
+Direction changes and operator-declared consequential actions remain human-gated. The framework should support explicit boundaries that reasoning quality or accumulated trust cannot override. Private enterprise evidence remains private when confidentiality or ownership obligations apply.
+
+Convergence is a renewable lease tied to the current Destination, artifact, and available model frontier. The operational minimum is three independent fresh-session evaluations by current frontier-capable models from three distinct model families. When a newly available model plausibly extends that frontier, it must independently challenge the converged artifact. Silence renews the lease without forcing the existing evaluators to rerun; a material change resets the chain and requires three fresh family-diverse evaluations of the changed artifact. Any Destination change invalidates all prior convergence evidence for the old Destination and starts a new three-family evaluation chain. Model selection remains an operator judgment based on capability evidence and practical access, rather than a permanent vendor or model list.
+
+_(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-21)_
+
+### Leanness and resource viability
+
+Leanness and resource efficiency are cross-cutting viability constraints, not standing size targets. The skills should resist becoming bloated, too long, or burdened with unnecessary expensive logic, and remain easy to use and understand. Optimize trustworthy capability per unit of resource without treating shorter as automatically better. This must hold across the full improvement lifecycle, including when progress slows and the remaining distance to the Destination narrows. A protocol that remains trustworthy but spends nearly fixed reasoning, verification, reflection, and evidence cost on progressively smaller gains may become operationally ineffective before it reaches honest silence. The engine must preserve its pressure toward the highest-leverage remaining work while discovering for itself how to keep that work worth its resource cost; the Destination does not prescribe iteration size, batching, thresholds, or another mechanism.
+
+The same viability constraint applies to the architecture's own accumulated context. Live skill and orchestration contracts must not keep growing simply because each local flow improvement is defensible, and durable ACM evidence must not require every routine iteration to reprocess the full history. Reasoning and context should remain proportionate to the work while preserving the capabilities and evidence the principles require. Because model ability, context capacity, and token economics are changing, the architecture must repeatedly reconsider what machinery and context are still necessary instead of preserving assumptions optimized for today's frontier. Adaptive reasoning depth and derived memory surfaces are possible routes to investigate, not mandated mechanisms.
+
+The engine may autonomously pursue reductions that preserve reasoning, memory, learning, and evidence capability. Any deliberate reduction in one of those capabilities is a consequential tradeoff that requires explicit operator approval every time, even when evidence predicts a better overall capability-per-resource result; one approval creates no standing authority for another tradeoff. No approval can waive the three principles or reduce operator control or evidence integrity below what they require. A capability improvement is not operationally viable if its cost prevents sustained use. Easier explanation is evidence of lower translation friction, not proof of research validity, adoption, or token efficiency.
+
+_(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-21)_
+
+### Superseded
+
+The identity copied from the skills suite ("autonomous-agent-skills"; installing the suite; Destination, Orient and Probe as separate skills; the Active/Passive/Triggered operating model) is superseded by the single Work skill. The suite remains the full alternative. *(confirmed by the author 2026-11-21)*
+
+### Open questions
+
+1. The 2026-08-16 destination's research priority, immediate quality bars and open questions were written for the suite. Whether any of them apply to Work was neither confirmed nor rejected on 2026-11-21; they remain in the history below until the author decides.
+
+<!-- destination-history -->
+
+## History
+
+**2026-11-21.** The current destination was replaced at the author's direction (purpose, adoption bar, ACM alignment and the superseded suite identity confirmed; carried-forward sections copied verbatim). The previous file, including its header and current section, follows verbatim.
+
+### Previous file, verbatim up to its history marker
+
 # Destination — autonomous-agent-skills
 
 _Operator-held. Stable within runs — no skill changes this file; only the operator revises it. Read by Improve at step 1, before the trail and the retrospect.md. Revisit with the Destination skill whenever the operator's understanding has evolved or after a major arc milestone._
@@ -6,7 +74,7 @@ _Renamed from `vision.md` on 2026-05-28 alongside the Vision→Destination skill
 
 ---
 
-<!-- current-destination: complete -->
+
 
 ## Current destination (reconciled 2026-08-16)
 
@@ -90,7 +158,7 @@ Integration with a particular autonomous harness remains a horizon rather than t
 
 The sections below preserve how the Destination evolved; they are provenance, not additional active instructions. Still-active commitments have been carried into the current mandate. Superseded items include the May 2026 priority sequence, mandatory approval of every implementation choice, fixed use of Retrospect and the old Memory Model vocabulary, and any implication that the current skills or architecture are immutable. Older references to Commander's Intent mean Operator's Intent in the current principles.
 
-<!-- destination-history -->
+<!-- previous: destination-history -->
 
 ---
 
