@@ -68,7 +68,7 @@ Leanness is its own section above. *(adapted from bars 2, 3 and 4 of the 2026-08
 
 ### Open questions
 
-1. Where does an unassisted new user first fail: setting up the registry, the first run, understanding an automatic handoff, or recognizing useful evidence?
+1. Where does an unassisted new user first fail: setting up the registry, the first run, or recognizing useful evidence?
 2. Which skill instructions still earn their reading cost?
 3. Which actions stay human-gated whatever the demonstrated capability or trust?
 

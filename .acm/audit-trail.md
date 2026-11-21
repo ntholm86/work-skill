@@ -1365,3 +1365,21 @@ Sixth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied to Work, matchin
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-21 - seventh-review-fixes-work
+
+- target: work/SKILL.md, .acm/destination.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: seventh-round findings applied to the Work skill and its destination
+
+Seventh review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied: the checkpoint is committed where the memory-wide destination allows before the first change (named by three reviewers); a superseded checkpoint is closed by a record stating `supersedes:`; an unreadable binding makes memory unavailable (not unbound); legacy derived files are regenerated when the suite's helper is available and otherwise may lag (same rule as Record); the folder-escape comparison ignores letter case; the destination's open question no longer mentions an automatic handoff (a suite concept Work does not have).
+
+[!DECISION] The destination edit is a derived clarification (removing a suite-only phrase); noted here because destinations change only with the author's confirmation, and the meaning of the question is unchanged.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
