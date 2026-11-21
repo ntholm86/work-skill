@@ -1293,3 +1293,21 @@ The destination changes are clarifications marked derived: bar 2 now says "in a 
 ### Macro-Hansei
 
 Across today's rounds the same class recurred: a rule stated in three places (the spec, the Record skill, the Work skill) drifts in small ways, and each new reviewer finds a different detail. Fixing details one by one does not end it. The structural answer is that the spec states each rule once and the skills copy its wording; Work's copy is deliberate (it must work alone), so the drift risk is recorded as accepted and should be checked by a reader comparing the two sealing and binding sections, not by more prose in the skill.
+## 2026-11-21 - third-review-fixes-work
+
+- target: work/SKILL.md, .acm/destination.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: round-three findings applied to the Work skill
+
+Third fresh-session review (gpt-6.1-sol and claude-opus-5.5). Applied to Work, matching the Record skill's wording: byte-for-byte storage covers every scope (`**/records/** -text`); a rejected seal push means pull, drop your seal if the month is sealed, re-accept unmatched records under a new name; lowercase-hex marker hash; work not tied to a repository goes to the memory-wide scope; derived views used only when their named revision covers the records; unbound-but-legacy no longer contradicts "read no memory"; binding creation names its fields; the mandate revision form; convergence needs three fresh-session evaluations from three distinct families on an unchanged artifact (the skill omitted what its destination requires); a code folder named like a scope entry is escaped.
+
+[!DECISION] Deferred two design questions for the author: whether Work should write a minimal ingress record before examining (R-09 asks for accepted interpretation before substantive action; Work checkpoints before the first mutation, so a read-only review leaves none), and whether Work and Record should share one lifecycle. Both would cost a record per run.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired beyond the macro-Hansei already recorded today.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired.
