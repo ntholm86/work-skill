@@ -20,7 +20,7 @@ No workflow, file layout, lens, or implementation choice is protected from revis
 
 Interpret the operator's prompt as an outcome and reason, not merely a literal instruction. Name the interpretation before examining or changing the target, including a materially different interpretation you rejected. If materially different readings would produce different work, ask rather than silently choosing.
 
-Determine authority from explicit evidence in the current prompt or the target's confirmed Destination (located as described under "Find the memory"). Without explicit delegation, ask the operator to confirm the interpretation before examination. Delegation removes that routine pause only for its stated scope; it never authorizes changing Destination, answering operator-owned direction questions, bypassing declared consequential-action gates, or deliberately reducing reasoning, memory, learning, or evidence capability.
+Determine authority from explicit evidence in the current prompt or the target's confirmed Destination (located as described under "Find the memory"). Without explicit delegation, ask the operator to confirm the interpretation before examination. Name where the human gate is (who reviews the work before it takes effect). If the work would take effect with none, say so and stop for direction; the Destination, when it states the gate, answers this. Delegation removes the routine pause only for its stated scope; it never authorizes changing Destination, answering operator-owned direction questions, bypassing declared consequential-action gates, or deliberately reducing reasoning, memory, learning, or evidence capability.
 
 ## Find the memory
 

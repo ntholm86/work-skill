@@ -1399,3 +1399,21 @@ Eighth review (gpt-6.1-sol, gemini-4-hydrogen, kimi-k3). Applied: an uncommittab
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired.
+## 2026-11-22 - human-gate-in-authority
+
+- target: work/SKILL.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: Work names the human gate before acting, matching ACM v0.5.1 and the suite
+
+The author decided that independent evidence capture is needed only where work takes effect without a human gate, and that restrictions are reminders (intent first, then detection, then gates). Added one sentence to the authority step: name where the human gate is; if the work would take effect with none, say so and stop for direction; a Destination that states the gate answers it.
+
+[!DECISION] One sentence in the existing step, not a new section: Work's destination makes leanness a first-class constraint, and the question changes what the agent does (stop for direction) only in the ungated case.
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired; a change request.
