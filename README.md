@@ -18,7 +18,7 @@ No package or runtime is required.
 
 ## Connect the shared ACM (once per machine)
 
-The memory lives in its own repository, the shared ACM, never inside the repositories you work on. Clone it once and add its absolute path as one line in `~/.acm/memories` (Windows: `%USERPROFILE%\.acm\memories`).
+The memory lives in its own repository, the shared ACM, never inside the repositories you work on. Clone it once and add its absolute path as one line in `~/.acm/memories` (Windows: `%USERPROFILE%\.acm\memories`; UTF-8, with or without a BOM).
 
 The skill identifies a repository of work by its root commit and finds its scope in the shared ACM (`repositories/<id>/repository.json`), so renaming a clone keeps its memory and two same-named repositories are never mixed up. If a repository is not bound yet, the skill says so, offers to bind it with your confirmation, and records nothing in the meantime; it never creates a hidden local memory. Repositories that still carry an `.acm/` folder from earlier ACM versions keep working as legacy memory.
 
@@ -39,11 +39,11 @@ implementation selection for this run. Do not publish, delete data, change the
 project's destination, or reduce evidence without asking me.
 ```
 
-During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is written to the repository's scope in the shared ACM as create-only records (`records/<time>-<slug>.md`); a record's content is never changed, so several people and agents can record at once without overwriting each other. Each closed month is sealed into one file, `records/<yyyy-MM>.md`, so the number of files stays small.
+During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is written to the repository's scope in the shared ACM as create-only records (`records/<time>-<slug>.md`); a record's content is never changed, so several people and agents can record at once without overwriting each other.
 
 ## Optional durable direction
 
-For work that continues across sessions, add `destination.md` to the repository's scope in the shared ACM and describe the purpose, durable constraints, authority boundaries, and unresolved questions that genuinely change route selection. A `destination.md` at the shared ACM's root governs every repository in it.
+For work that continues across sessions, add `destination.md` to the repository's scope in the shared ACM and describe the purpose, durable constraints, authority boundaries, and unresolved questions that genuinely change route selection, plus a `## Human gate` section saying where a human reviews the work and what the agent may do before that review and without it (a mandate that does not state its gate is incomplete). A `destination.md` at the shared ACM's root governs every repository in it.
 
 Destination remains operator-owned. Work may identify a question that needs your decision, but it cannot answer or alter that direction on your behalf.
 
