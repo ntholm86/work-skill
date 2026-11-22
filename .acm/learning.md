@@ -1,4 +1,4 @@
-# orientation.md — work-skill
+# learning.md — work-skill
 
 _Derived view of the audit trail up to entry `trail-means-records-and-sealing-docs` (repository revision 4911fa3), read against the current destination (2026-11-21). Refreshed 2026-11-21 by the same agent that made the recent changes; not an independent evaluation. Replaces the 2026-08-17 synthesis._
 
@@ -24,5 +24,5 @@ _Derived view of the audit trail up to entry `trail-means-records-and-sealing-do
 - For every authorized Change, write the checkpoint record through the prediction before the first mutation and never rewrite it; record completion, correction or reversal as new records (legacy memory: append).
 - At the start of a run, check for an open checkpoint and complete or explicitly supersede it.
 - Treat any single-session silence in this trail as "same-family, single-session" and say so whenever it is repeated.
-- Do not import the suite's heavier tooling (`record.py`, freshness guards, `history.md`/`learning-archive.md`) into this repository; the destination favours leanness.
+- Do not import the suite's heavier tooling (`record.py`, freshness guards, the `generated/` files) into this repository; the destination favours leanness.
 - Do not treat harness captures as part of the skill: the independent-evidence integration is not built and was removed from the text.

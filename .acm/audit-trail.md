@@ -1417,3 +1417,21 @@ The author decided that independent evidence capture is needed only where work t
 - *About to declare silence:* not fired.
 - *Contradicts prior [!REALIZATION]:* not fired.
 - *Operator explicitly asked:* not fired; a change request.
+## 2026-11-22 - learn-and-learning-md
+
+- target: work/SKILL.md, .acm/learning.md (was orientation.md), .acm/destination.md
+- operator: Nils Wendelboe Holmager
+- agent: Claude (Sonnet 5.5; the session began on Claude Opus 5.5); host: Copilot SDK in VS Code
+- skill: Improve
+- outcome: Work follows the suite's rename (Orient is Learn, orientation.md is learning.md, generated/ for machine-made files)
+
+The author approved the rename proposal. Work's text now says: a scope has three entries (`destination.md`, `learning.md`, `records/`) and an optional `generated/` folder of disposable reading aids; the marker extract is `generated/trail-markers.md`; a code folder named `generated` is escaped like `records`, `tasks` and `evidence`; the learning is refreshed, not "Orientation". This repository's own `.acm/orientation.md` was moved with `git mv` to `learning.md` (content unchanged apart from its heading and one line about the `generated/` files). Destination: one dated naming note; the current section's one mention of Orient now says Learn (then called Orient); history notes keep their names.
+
+[!DECISION] Kept the rename to the text and files Work itself owns; Work does not carry any generated files in this repository (it never adopted the suite's helper), so there was nothing to move into `generated/`. Rejected: adding the helper's generated files here (the destination favours leanness).
+
+**Across-trail trigger evaluation:**
+
+- *Recurring finding-class:* not fired.
+- *About to declare silence:* not fired.
+- *Contradicts prior [!REALIZATION]:* not fired.
+- *Operator explicitly asked:* not fired; a change request.

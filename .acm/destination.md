@@ -52,7 +52,7 @@ _(carried forward unchanged from the 2026-08-16 destination, confirmed 2026-11-2
 
 ### Superseded
 
-The identity copied from the skills suite ("autonomous-agent-skills"; installing the suite; Destination, Orient and Probe as separate skills; the Active/Passive/Triggered operating model) is superseded by the single Work skill. The suite remains the full alternative. *(confirmed by the author 2026-11-21)*
+The identity copied from the skills suite ("autonomous-agent-skills"; installing the suite; Destination, Learn (then called Orient) and Probe as separate skills; the Active/Passive/Triggered operating model) is superseded by the single Work skill. The suite remains the full alternative. *(confirmed by the author 2026-11-21)*
 
 ### Priority
 
@@ -74,6 +74,8 @@ Leanness is its own section above. *(adapted from bars 2, 3 and 4 of the 2026-08
 
 *(adapted from the 2026-08-16 open questions; confirmed by the author, 2026-11-21)*
 <!-- destination-history -->
+
+**2026-11-22 (names).** The suite's Orient skill is now Learn, and `orientation.md` is `learning.md` (so each skill owns one file: Destination `destination.md`, Learn `learning.md`, Record `records/`); machine-made reading aids live in a `generated/` folder. Work follows: its text and its own `.acm/orientation.md` (now `learning.md`) use the new names. Notes below keep the names of their dates. A naming change; no direction, constraint or quality bar changed.
 
 ## History
 

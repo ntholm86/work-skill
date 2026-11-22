@@ -30,11 +30,11 @@ Memory lives in its own repository, the shared ACM, never inside the target. Loc
 2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`). Folder names and remote URLs never decide identity. Work not tied to a repository has no root commit and uses the memory-wide scope of the one registered memory, or of the memory the operator names when several are registered.
 3. For a target with root commits, across the registered memory repositories, find exactly one `repositories/<id>/repository.json` whose `root_commits` include one of them. Its folder `repositories/<id>/` is the bound repository scope.
 
-Every scope is a folder with the same three entries: `destination.md` (the mandate), `orientation.md` (derived synthesis) and `records/` (the trail: what was done and why). The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope; `tasks/<task>/` holds a named task's and may sit under the memory-wide scope, a repository or a path. A code folder named `records`, `tasks` or `evidence`, ending in `.md`, or beginning with `_` (names compared without regard to letter case), is written under `paths/` with one extra leading `_` and its original spelling.
+Every scope is a folder with the same three entries: `destination.md` (the mandate), `learning.md` (what this scope has learned so far) and `records/` (the trail: what was done and why). A fourth, optional entry, `generated/`, holds disposable reading aids made from the trail and is never required reading. The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope; `tasks/<task>/` holds a named task's and may sit under the memory-wide scope, a repository or a path. A code folder named `records`, `tasks`, `evidence` or `generated`, ending in `.md`, or beginning with `_` (names compared without regard to letter case), is written under `paths/` with one extra leading `_` and its original spelling.
 
 A missing registry or no matching repository leaves the target unbound; an unreadable registry, memory repository or binding makes memory unavailable; more than one match is ambiguous. Say exactly which. Then read and write no memory (except legacy memory below), never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer the missing setup step and do it only with confirmation: write the shared ACM's path into the registry, or bind the target by creating `repositories/<id>/repository.json` (`id` an unused label, the repository's name if free; `root_commits`; optional `locators`) in a memory repository the operator names.
 
-**Legacy memory.** If the target is unbound but already carries an `.acm/` from an earlier ACM version, say so, use it (its in-target `.acm/destination.md` and task scopes are the chain; never walk up the code tree), record in its existing `audit-trail.md`, and recommend moving it to a memory repository. Its derived `history.md` and `learning.md` are regenerated when the PEA skills suite's optional `record.py` helper is available and otherwise may lag. Never create a new in-target `.acm/`.
+**Legacy memory.** If the target is unbound but already carries an `.acm/` from an earlier ACM version, say so, use it (its in-target `.acm/destination.md` and task scopes are the chain; never walk up the code tree), record in its existing `audit-trail.md`, and recommend moving it to a memory repository. Its generated `generated/trail-markers.md` is regenerated when the PEA skills suite's optional `record.py` helper is available and otherwise may lag. Never create a new in-target `.acm/`.
 
 ## Read only the context that can change the decision
 
@@ -42,8 +42,8 @@ Read available context in this order, never above the memory repository's `.acm-
 
 1. the memory-wide `destination.md` at the memory repository root;
 2. the repository scope's `destination.md`; then, for each path scope that contains the work, outermost first, `paths/<code/path>/destination.md`; then a task scope's `tasks/<task>/destination.md` only when the confirmed mandate names that task — a code path never selects a task; a task spanning several paths lives at repository level and names those paths in its own `destination.md`, reads those paths' mandates as peers, and pauses the affected action on a conflict between them;
-3. the scope's `orientation.md`, if present and its named source revision covers the current records (otherwise regenerate it or treat it as unusable) — a derived synthesis of what the target is becoming from the Destination and trail; it is optional and need not exist before it is first refreshed;
-4. a compact learning surface, if one exists and is current in the same sense — a derived artifact such as `learning.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a learning surface;
+3. the scope's `learning.md`, if present and its named source revision covers the current records (otherwise refresh it or treat it as unusable) — what this scope has learned so far, a synthesis of what the target is becoming from the Destination and trail; it is optional and need not exist before it is first refreshed;
+4. a compact marker extract, if one exists and is current in the same sense — a generated artifact such as `generated/trail-markers.md` that extracts the trail's recent realizations and reversals; project documentation such as a README is not a marker extract;
 5. only the trail evidence needed for the current decision: a legacy `audit-trail.md` first, then `records/` in file-name order.
 
 The higher scope wins on conflict. A required higher mandate that cannot be read blocks the work that depends on it.
@@ -93,7 +93,7 @@ Compare the observed outcome with the prediction. State:
 - a specific blind spot left by this iteration;
 - the strongest likely objection from someone who knows the target better.
 
-Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh Orientation — write or update the scope's `orientation.md` synthesis described above, labelling it derived and naming the trail revision it reflects — only when the current synthesis no longer explains the Destination and material trail. Neither runs by cadence or file absence alone.
+Check whether repeated findings suggest that a governing assumption, rather than another local action, needs operator reconsideration. Trigger a Destination conversation only when further work depends on unsettled durable direction. Refresh the learning — write or update the scope's `learning.md` synthesis described above, labelling it derived and naming the trail revision it reflects — only when the current synthesis no longer explains the Destination and material trail. Neither runs by cadence or file absence alone.
 
 ## The trail is a self-report
 
@@ -116,12 +116,12 @@ The completed record must let a later agent reconstruct:
 - date, target, operator if known, agent identity, and outcome;
 - the narrated intent and authority source;
 - evidence examined and the purpose limitation found;
-- `[!DECISION]` with rationale, rejected route, and precedent check (what you looked for in the learning surface or earlier records, or that nothing relevant was found);
+- `[!DECISION]` with rationale, rejected route, and precedent check (what you looked for in the learning, the marker extract or earlier records, or that nothing relevant was found);
 - the prediction recorded before action;
 - actions and focused validation evidence, compared with the prediction;
 - `[!REVERSAL]` for any route attempted and undone;
 - reflection, with material learning marked `[!REALIZATION]`;
-- whether durable Destination or refreshed Orientation is now needed;
+- whether durable Destination or a refreshed learning is now needed;
 - a short ranked list of next moves already visible from this iteration.
 
 The Trail is authoritative for the agent's decision history. Derived summaries may be generated when trail size makes them earn their maintenance cost, but never replace or outrank it, and ordinary writers do not regenerate and commit shared summaries in parallel.
