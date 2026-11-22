@@ -4,7 +4,7 @@ Work is a single agent skill: the Principles of Earned Autonomy in a lightweight
 
 Name it in a prompt and it is designed to work without reading the ACM specification; that bar is stated, not yet demonstrated. The [Principles of Earned Autonomy skills suite](https://github.com/ntholm86/principles-of-earned-autonomy-skills-suite) is the full alternative; both work with the same shared ACM.
 
-It is designed for delegated work without assuming unlimited authority. You define the destination and any actions that always require approval. The agent chooses the route only within that boundary, narrates its interpretation and decision, and records each substantive iteration in the shared ACM.
+It is designed for delegated work without assuming unlimited authority. You define the mission and any actions that always require approval. The agent chooses the route only within that boundary, narrates its interpretation and decision, and records each substantive iteration in the shared ACM.
 
 ## Install
 
@@ -36,16 +36,16 @@ By default, the agent pauses twice: once to confirm what it understood before ex
 ```text
 Use the Work skill on this repository. I delegate routine intent confirmation and
 implementation selection for this run. Do not publish, delete data, change the
-project's destination, or reduce evidence without asking me.
+project's mission, or reduce evidence without asking me.
 ```
 
 During the run you should see the interpretation, the selected limitation, a prediction, the action, focused validation, and a final result line. Durable detail is written to the repository's scope in the shared ACM as create-only records (`records/<time>-<slug>.md`); a record's content is never changed, so several people and agents can record at once without overwriting each other.
 
 ## Optional durable direction
 
-For work that continues across sessions, add `destination.md` to the repository's scope in the shared ACM and describe the purpose, durable constraints, authority boundaries, and unresolved questions that genuinely change route selection, plus a `## Human gate` section saying where a human reviews the work and what the agent may do before that review and without it (a mandate that does not state its gate is incomplete). A `destination.md` at the shared ACM's root governs every repository in it.
+For work that continues across sessions, add `mission.md` to the repository's scope in the shared ACM and describe the purpose, durable constraints, authority boundaries, and unresolved questions that genuinely change route selection, plus a `## Human gate` section saying where a human reviews the work and what the agent may do before that review and without it (a mandate that does not state its gate is incomplete). A `mission.md` at the shared ACM's root governs every repository in it.
 
-Destination remains operator-owned. Work may identify a question that needs your decision, but it cannot answer or alter that direction on your behalf.
+Mission remains operator-owned. Work may identify a question that needs your decision, but it cannot answer or alter that direction on your behalf.
 
 ## What to inspect
 
