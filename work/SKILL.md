@@ -52,7 +52,7 @@ For a potentially long Destination, locate `<!-- current-destination: complete -
 
 Before beginning new work, check for an open checkpoint: a checkpoint record that no completion record names and no later record supersedes with `supersedes:` (in a legacy trail, a Change entry whose decision and prediction were recorded but whose completion evidence never followed). If one exists, an earlier run was interrupted after committing to a route. Complete it if its decision still holds, or append a record that says why it no longer does and states `supersedes:` with the checkpoint's identifier; never start a new iteration on top of an unresolved one.
 
-Do not require Destination for a first run. The confirmed prompt and target evidence are enough until continued work genuinely depends on durable direction. Work with no mandate in memory is not an ACM-governed interval; say so in its record.
+Do not require Destination for a first run. The confirmed prompt and target evidence are enough until continued work genuinely depends on durable direction. Work with no destination in memory runs under the operator-confirmed interpretation of the prompt as its mandate; its record states `mandate: none` and the authority acted under.
 
 ## Form a model before a change
 
@@ -73,7 +73,7 @@ Without delegated implementation authority, say what you want to change and how 
 
 ## Checkpoint the decision
 
-For a **Change** iteration, after implementation authority is established and before the first implementation mutation or other consequential action, write the checkpoint record (a record under the rules in "Complete the trail" below) and apply this rule before the first change: if the mandate's Human gate says the agent may proceed before review, proceed; otherwise leave the checkpoint for the operator to accept and wait. Include the accepted intent, evidence examined, decision and rationale, rejected route, authority source, and falsifiable prediction. This checkpoint makes the decision durable before its outcome is known. Never rewrite it if later evidence changes the route; record the reversal or correction in the completion record. If the run is interrupted, leave the open checkpoint in place; the next run's context read is required to detect and resolve it.
+For a **Change** iteration, after implementation authority is established and before the first implementation mutation or other consequential action, write the checkpoint record (a record under the rules in "Complete the trail" below) and apply this rule before the first change: if the mandate's Human gate says the agent may proceed before review, proceed; otherwise leave the checkpoint for the operator to accept and wait (a run with no destination has no Human gate section: the operator's Proceed or delegation for the run is the acceptance). Include the accepted intent, evidence examined, decision and rationale, rejected route, authority source, and falsifiable prediction. This checkpoint makes the decision durable before its outcome is known. Never rewrite it if later evidence changes the route; record the reversal or correction in the completion record. If the run is interrupted, leave the open checkpoint in place; the next run's context read is required to detect and resolve it.
 
 Redesign, Silence, and Stopped outcomes do not need a pre-action checkpoint because they perform no implementation mutation; append their complete record once the decision is final.
 
