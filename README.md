@@ -53,7 +53,7 @@ After a run, the final result line tells you what changed and whether validation
 
 ## This repository
 
-The repository is named `work-skill`; its sole installable artifact is the `work` directory, whose basename matches the `name: work` frontmatter. Its own development memory is kept public in `.acm/` as research evidence, in the legacy in-repository form.
+The repository is named `work-skill`; its sole installable artifact is the `work` directory, whose basename matches the `name: work` frontmatter. Its own development memory is kept in the author's private memory repository (scope `work-skill`), not in this repository; the earlier in-repository `.acm/` remains in git history up to commit 105a1dc.
 
 ---
 
