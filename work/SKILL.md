@@ -67,7 +67,7 @@ Choose one coherent iteration:
 - **Change:** the highest-leverage justified move that can be validated now.
 - **Redesign argument:** incremental work would preserve the limiting structure; explain the alternative and stop for operator direction.
 - **Silence:** no material improvement survives challenge within a named quality bar and scope (a run may end here; convergence is a separate claim, below).
-- **Stopped:** the operator declines or authority is absent; make no change.
+- **Stopped:** the operator declines, or authority is absent and the operator is not there to give it; make no change.
 
 Before action, state a falsifiable prediction: what should become observably true and what should not happen. Name at least one rejected route and why it ranks lower.
 
@@ -134,4 +134,4 @@ End with exactly one result line:
 - `Stopped before changing <target>: <proposal> was not authorized. Verification: no target change.`
 - `Could not complete <target>: <blocker>. Verification: <what did and did not run>.`
 
-A run that ends waiting for the operator's confirmation uses the Stopped line (`awaiting confirmation` for `was not authorized`) and writes no further record (before a checkpoint the run changed nothing; after one, the open checkpoint is its record).
+A run that ends only because the operator has not yet answered a question it asked uses the Stopped line (`awaiting confirmation` for `was not authorized`) and writes no further record (before a checkpoint the run changed nothing; after one, the open checkpoint is its record).
