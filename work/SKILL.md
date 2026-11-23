@@ -1,6 +1,6 @@
 ---
 name: work
-description: Understand a target's purpose, choose and make its highest-leverage justified improvement, validate the result, and leave append-only evidence in a shared Agent Context Memory (ACM). Use for improving, fixing, reviewing, refactoring, or continuing work on any target.
+description: Understand a target's purpose, choose and make its highest-leverage justified improvement, validate the result, and leave append-only evidence in a Shared Agent Context Memory (SACM). Use for improving, fixing, reviewing, refactoring, or continuing work on any target.
 argument-hint: The target to improve and any outcome, concern, or authority boundary that matters
 ---
 
@@ -24,7 +24,7 @@ Determine authority from explicit evidence in the current prompt or the target's
 
 ## Find the memory
 
-Memory lives in its own repository, the shared ACM, never inside the target. Locate it before reading context:
+Memory lives in its own repository, the shared SACM, never inside the target. Locate it before reading context:
 
 1. Read the user-level registry `~/.acm/memories` (Windows: `%USERPROFILE%\.acm\memories`; UTF-8, with or without a BOM): one absolute path per line, each a memory repository containing `.acm-root`.
 2. Identify the target by its root commits (`git rev-list --max-parents=0 HEAD`; in a shallow clone fetch the full history first). Folder names and remote URLs never decide identity. Work not tied to a repository has no root commit and uses the memory-wide scope of the one registered memory, or of the memory the operator names when several are registered.
@@ -32,7 +32,7 @@ Memory lives in its own repository, the shared ACM, never inside the target. Loc
 
 Every scope is a folder with the same three entries: `mission.md` (the mandate), `learning.md` (what this scope has learned so far) and `records/` (the trail: what was done and why). A fourth, optional entry, `generated/`, holds disposable reading aids made from the trail and is never required reading. The memory repository's root is the memory-wide scope; below a repository scope, `paths/<code/path>/` holds a sub-project's scope; `tasks/<task>/` holds a named task's and may sit under the memory-wide scope, a repository or a path. A code folder named `records`, `tasks`, `evidence` or `generated`, ending in `.md`, or beginning with `_` (names compared without regard to letter case), is written under `paths/` with one extra leading `_` and its original spelling.
 
-A missing registry or no matching repository leaves the target unbound; an unreadable registry, memory repository or binding makes memory unavailable; more than one match is ambiguous. Say exactly which. Then read and write no memory (except legacy memory below), never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in ACM. Offer the missing setup step and do it only with confirmation: write the shared ACM's path into the registry, or bind the target by creating `repositories/<id>/repository.json` (`id` an unused label, the repository's name if free; `root_commits`; optional `locators`) in a memory repository the operator names.
+A missing registry or no matching repository leaves the target unbound; an unreadable registry, memory repository or binding makes memory unavailable; more than one match is ambiguous. Say exactly which. Then read and write no memory (except legacy memory below), never create an `.acm/` in the target, and continue only work the prompt authorizes on its own, stating that it is not recorded in SACM. Offer the missing setup step and do it only with confirmation: write the shared SACM's path into the registry, or bind the target by creating `repositories/<id>/repository.json` (`id` an unused label, the repository's name if free; `root_commits`; optional `locators`) in a memory repository the operator names.
 
 **Legacy memory.** If the target is unbound but already carries an `.acm/` from an earlier ACM version, say so, use it (its in-target `.acm/mission.md`, named `destination.md` before 2026-11-22, and task scopes are the chain; never walk up the code tree), record in its existing `audit-trail.md`, and recommend moving it to a memory repository. Its generated `generated/trail-markers.md` is regenerated when the PEA skills suite's optional `record.py` helper is available and otherwise may lag. Never create a new in-target `.acm/`.
 
