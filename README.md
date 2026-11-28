@@ -1,6 +1,6 @@
 # Work
 
-Work is a single agent skill: the Principles of Earned Autonomy in a lightweight edition, and the skill that lets an agent use Agent Context Memory (ACM) properly. It understands a target's purpose, changes what limits it most, validates the result, and records evidence another agent can challenge.
+Work is a single agent skill: the Principles of Earned Autonomy (PEA) in a lightweight edition, and the skill that lets an agent use Agent Context Memory (ACM) properly. It understands a target's purpose, changes what limits it most, validates the result, and records evidence another agent can challenge.
 
 Name it in a prompt and it is designed to work without reading the ACM specification; that bar is stated, not yet demonstrated. [Agent Cognition Skills (ACS)](https://github.com/ntholm86/agent-cognition-skills) is the full alternative; both work with the same ACM, called Shared ACM when a team uses it.
 
