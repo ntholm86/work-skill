@@ -2,7 +2,7 @@
 
 Work is a single agent skill: the Principles of Earned Autonomy in a lightweight edition, and the skill that lets an agent use Agent Context Memory (ACM) properly. It understands a target's purpose, changes what limits it most, validates the result, and records evidence another agent can challenge.
 
-Name it in a prompt and it is designed to work without reading the ACM specification; that bar is stated, not yet demonstrated. [Agent Cognition Skills (ACS)](https://github.com/ntholm86/principles-of-earned-autonomy-skills-suite) is the full alternative; both work with the same ACM, called Shared ACM when a team uses it.
+Name it in a prompt and it is designed to work without reading the ACM specification; that bar is stated, not yet demonstrated. [Agent Cognition Skills (ACS)](https://github.com/ntholm86/agent-cognition-skills) is the full alternative; both work with the same ACM, called Shared ACM when a team uses it.
 
 It is designed for delegated work without assuming unlimited authority. You define the goal and any actions that always require approval. The agent chooses the route only within that boundary, narrates its interpretation and decision, and records each substantive iteration in ACM.
 
